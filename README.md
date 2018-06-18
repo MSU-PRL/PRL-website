@@ -1,4 +1,4 @@
-# PRL-website
+# PRL Website
 Custom code for Mura <br />
 <strong>*UNDER CONSTRUCTION *</strong> <br />
 Include instructions for how you compile and minimize CSS <br />
