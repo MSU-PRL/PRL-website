@@ -1,4 +1,4 @@
-# PRL Website - Custom Code Instructions
+# PRL Website - Custom Code
 <strong>*UNDER CONSTRUCTION *</strong> <br />
 <hr>
 <h2>CSS Folder</h2>
