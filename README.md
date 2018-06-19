@@ -14,5 +14,7 @@ Custom code for Mura <br />
   <li><strong>In Mura, do not change the name of the 'prlCustomCSS.css' file.</strong> Any change will cause the server to not load the custom CSS.</li>
   <li><strong>All the files in the folder are also found in the PRL server.</strong> Ensure that all versions at all locations are up to date.
 </ul>
+<hr>
+<h2>HTML Folder</h2>
     
     Include locations of files (Ex: prl card markup under the website Branding guidelines section; homepage html is for brands section)
