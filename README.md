@@ -1,6 +1,7 @@
 # PRL Website
 Custom code for Mura <br />
 <strong>*UNDER CONSTRUCTION *</strong> <br />
+<hr>
 <h2>CSS Folder</h2>
 <p>The CSS folder contains all custom stylesheets for the PRL website. Instructions for managing the code:</p>
 <ul>
@@ -16,5 +17,7 @@ Custom code for Mura <br />
 </ul>
 <hr>
 <h2>HTML Folder</h2>
-    
+<p> The HTML folder contains files that are used on the PRL website.</p> <strong>All the files in the folder are also found in the PRL server. Ensure that all versions at all locations are up to date.</strong>
+<ul>
+  <li><strong>homepage-brands-2018.html:</strong> The content is used in the first section following the hero image on the <a href="prl.msu.edu">PRL homepage</a>. Change any
     Include locations of files (Ex: prl card markup under the website Branding guidelines section; homepage html is for brands section)
