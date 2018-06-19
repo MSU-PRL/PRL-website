@@ -1,5 +1,4 @@
-# PRL Website
-Custom code for Mura <br />
+# PRL Website - Custom Code Instructions
 <strong>*UNDER CONSTRUCTION *</strong> <br />
 <hr>
 <h2>CSS Folder</h2>
