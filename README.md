@@ -25,3 +25,4 @@
 </ul>
 <hr>
 <h2>History Timeline Folder</h2>
+<p> mention where the Timeline comes from, with link. Then say that the SCSS brings in all the CSS files together in one place. THen say that this file is automatically added to the 'prlCustomCSS-2018.scss' file. Then mention how the HTML is where the biggest changes happen. Finally say that for any changes in the stylesheets, do those from the "About" section of the 'prlCustomCSS-2018.scss' file and not the timeline SCSS file. THe timeline might be updated by the developer, and when we download his new files, they would not include any of our changes.
