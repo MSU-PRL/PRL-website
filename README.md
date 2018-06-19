@@ -20,7 +20,7 @@ Custom code for Mura <br />
 <p> The HTML folder contains files that are used on the PRL website. <strong>All the files in the folder are also found in the PRL server. Ensure that all versions at all locations are up to date.</strong></p>
 <p>File listing</p>
 <ul>
-  <li><strong>homepage-brands-2018.html:</strong> The content is used in the first section following the hero image on the <a href="prl.msu.edu">PRL homepage</a>. Any changes are made on the html file and the code is then pasted in the 'Homepage Three Brands Section' component located in the Mura back end.</li>
+  <li><strong>homepage-brands-2018.html:</strong> The content is used in the first section following the hero image on the <a href="https://prl.natsci.msu.edu/">PRL homepage</a>. Any changes are made on the html file and the code is then pasted in the 'Homepage Three Brands Section' component located in the Mura back end.</li>
   <li><strong>PRL-card-markup.html:</strong>This is the markup for all the PRL card styles. It is also found on the PRL <a href="https://prl.natsci.msu.edu/about/internal-resources/brand-style-guide/">Brand Style Guide page</a>.
   </li>
 </ul>
