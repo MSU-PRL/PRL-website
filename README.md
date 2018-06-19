@@ -4,7 +4,7 @@ Custom code for Mura <br />
 <h2>CSS Folder</h2>
 <p>The CSS folder contains all custom stylesheets for the PRL website. Instructions for modifying the code:</p>
 <ul>
-  <li><strong>Modifications outside of Mura take place in the 'prlCustomCSS-2018.scss' file</strong>. This requires knowledge of SCSS programming language.</li>
+  <li><strong>Modifications outside of Mura take place in the 'prlCustomCSS-2018.scss' file</strong>. This file contains variables that allow for control and consistency of visual components. This requires knowledge of SCSS programming language.</li>
   <li> <strong>Use an automated compile and minimize system</strong>. Mura only reads .css files. Instructions:
     <ol>
       <li>'prlCustomCSS-2018.scss file' is automatically compiled into the 'prlCustomCSS-2018.css' file on each new change.</li>
