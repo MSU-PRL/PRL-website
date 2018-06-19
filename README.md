@@ -1,5 +1,5 @@
-<p><strong>*UNDER CONSTRUCTION *</strong> </p>
 # PRL Website - Custom Code
+<p><strong>*UNDER CONSTRUCTION *</strong> </p>
 <p><em>The Mura Content Management System, as set up by the College of Natural Sciences, comes with a pre-built design to maintain visual consistency across all the College's websites. With that said, we do have the option to customize the content that is included between the header and footer areas. Below are the instructions for the PRL's custom code files, as found in their respective folders in this repository.</em></p>
 <hr>
 <h2>CSS Folder</h2>
