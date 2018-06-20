@@ -33,3 +33,11 @@
   <li><strong>about-page-history-timeline.html</strong>: This file is where the timeline content is modified. It also includes the JS scripts. To modify the timeline content, make the changes in this file, then paste the code in the PRL's About page.</li>
   </ul>
  <p> <strong>Any CSS changes to the timeline should be made separately in the 'prlCustomCSS-2018.scss' file in its relevant 'About' section</strong>. Do not make changes to the "PRLtimelinejQuerycompiled.scss" file. The timeline is constantly updated by the developer, and core files will have to be overwritten. We would lose any custom changes on update if those are included in the core files.</p>
+ <hr>
+<h2>JS Folder</h2>
+<p>The JS folder contains the custom PRL jQuery code. Instructions for managing the code:</p>
+<ol>
+  <li><strong>Modifications outside of Mura take place in the 'prlCustomJS.js' file</strong>.</li>
+  <li>Copy and paste the contents from the 'prlCustomJS.js' file into Mura's dedicated custom JS file. The dedicated file is found in Mura's back end. Go to the File Manager, then look for prl_User_Assets/File/websiteTheme/prlCustomJS.js. Right click and choose 'Edit' under the 'prlCustomJS.js' file and paste the code. Save your changes.</li>
+  <li>In Mura, do not change the name of the 'prlCustomJS.js' file. Any change will cause the server to not load the custom JS.</li>
+  </ol>
