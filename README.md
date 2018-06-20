@@ -29,7 +29,7 @@
 <p> The PRL History Timeline is located in the <a href="https://prl.natsci.msu.edu/about/">About</a> page. The timeline is a CSS and jQUery plugin called <a href="http://preview.codecanyon.net/item/zoomtimeline-css-timeline-pack/full_screen_preview/16918891?_ga=2.76863253.1076320330.1529523907-713049933.1525180595">ZoomTimeline</a> (<a href="http://digitalzoomstudio.net/">developer's site</a>) and allows for different presentation modes. </p>
 <p>File listing:</p>
 <ul>
-  <li><strong>PRLtimelinejQuerycompiled.scss</strong>: The file includes all the CSS files included in the package in one location, for easier use. This file is automatically imported to the "prlCustomCSS-2018.scss" file. Do not make any modifications within.</li>
+  <li><strong>PRLtimelinejQuerycompiled.scss</strong>: The file includes all the package's CSS files in one location. This file is automatically imported to the "prlCustomCSS-2018.scss" file for inclusion on the PRL website. Do not make any modifications to this code.</li>
   <li><strong>about-page-history-timeline.html</strong>: This file includes the timeline content and the JS scripts.  Any changes to the timeline are made on this HTML, and the code is then pasted in the About page.</li>
   </ul>
  <p> <strong>Any CSS changes to the timeline should be made in the 'prlCustomCSS-2018.scss' file in its relevant 'About' section</strong>. Do not make changes to the timeline SCSS file. Tke timeline is constantly updated by the developer, and on download of new versions, we lose any custom changes made.</p>
