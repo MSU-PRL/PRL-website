@@ -30,6 +30,6 @@
 <p>File listing:</p>
 <ul>
   <li><strong>PRLtimelinejQuerycompiled.scss</strong>: The file includes all the package's CSS files in one location. This file is automatically imported to the "prlCustomCSS-2018.scss" file for inclusion on the PRL website. Do not make any modifications to this code.</li>
-  <li><strong>about-page-history-timeline.html</strong>: This file includes the timeline content and the JS scripts.  Any changes to the timeline are made on this HTML, and the code is then pasted in the About page.</li>
+  <li><strong>about-page-history-timeline.html</strong>: This file is where the timeline content is modified. It also includes the JS scripts. To modify the timeline content, make the changes in this file, then paste the code in the PRL's About page.</li>
   </ul>
  <p> <strong>Any CSS changes to the timeline should be made in the 'prlCustomCSS-2018.scss' file in its relevant 'About' section</strong>. Do not make changes to the timeline SCSS file. Tke timeline is constantly updated by the developer, and on download of new versions, we lose any custom changes made.</p>
