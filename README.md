@@ -36,8 +36,10 @@
  <hr>
 <h2>JS Folder</h2>
 <p>The JS folder contains the custom PRL jQuery code. Instructions for managing the code:</p>
-<ol>
+<ul>
   <li><strong>Modifications outside of Mura take place in the 'prlCustomJS.js' file</strong>.</li>
-  <li>Copy and paste the contents from the 'prlCustomJS.js' file into Mura's dedicated custom JS file. The dedicated file is found in Mura's back end. Go to the File Manager, then look for prl_User_Assets/File/websiteTheme/prlCustomJS.js. Right click and choose 'Edit' under the 'prlCustomJS.js' file and paste the code. Save your changes.</li>
+  <li><strong>Copy and paste the contents from the 'prlCustomJS.js' file into Mura's dedicated custom JS file</strong>. The dedicated file is found in Mura's back end. Go to the File Manager, then look for prl_User_Assets/File/websiteTheme/prlCustomJS.js. Right click and choose 'Edit' under the 'prlCustomJS.js' file and paste the code. Save your changes.</li>
   <li>In Mura, do not change the name of the 'prlCustomJS.js' file. Any change will cause the server to not load the custom JS.</li>
-  </ol>
+  <li><strong>In Mura, do not change the name of the 'prlCustomJS.js' file</strong>. Any change will cause the server to not load the custom CSS.
+  <li><strong>All the files in the folder are also found in the PRL server</strong>. Ensure that all versions at all locations are up to date.
+  </ul>
