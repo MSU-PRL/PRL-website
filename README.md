@@ -21,7 +21,7 @@
 <p>File listing:</p>
 <ul>
   <li><strong>homepage-brands-2018.html:</strong> The content is used in the first section following the hero image on the <a href="https://prl.natsci.msu.edu/">PRL homepage</a>. Any changes are made on the html file and the code is then pasted in the 'Homepage Three Brands Section' component located in the Mura back end.</li>
-  <li><strong>PRL-card-markup.html:</strong>This is the markup for all the PRL card styles. It is also found on the PRL <a href="https://prl.natsci.msu.edu/about/internal-resources/brand-style-guide/">Brand Style Guide page</a>.
+  <li><strong>PRL-card-markup.html:</strong> This is the markup for all the PRL card styles. It is also found on the PRL <a href="https://prl.natsci.msu.edu/about/internal-resources/brand-style-guide/">Brand Style Guide page</a>.
   </li>
 </ul>
 <hr>
@@ -29,6 +29,7 @@
 <p> The PRL History Timeline is located in the <a href="https://prl.natsci.msu.edu/about/">About</a> page. The timeline is a CSS and jQUery plugin called <a href="http://preview.codecanyon.net/item/zoomtimeline-css-timeline-pack/full_screen_preview/16918891?_ga=2.76863253.1076320330.1529523907-713049933.1525180595">ZoomTimeline</a> (<a href="http://digitalzoomstudio.net/">developer's site</a>) and allows for different presentation modes. </p>
 <p>File listing:</p>
 <ul>
-  <li><strong>PRLtimelinejQuerycompiled.scss</strong>: includes all the CSS files included in the package in one location, for easier use. This file is automatically imported to the "prlCustomCSS-2018.scss" file. Do not make any modifications within.</li>
-  <li><strong>about-page-history-timeline.html</strong>:in</li>
-Then mention how the HTML is where the biggest changes happen. Finally say that for any changes in the stylesheets, do those from the "About" section of the 'prlCustomCSS-2018.scss' file and not the timeline SCSS file. THe timeline might be updated by the developer, and when we download his new files, they would not include any of our changes.
+  <li><strong>PRLtimelinejQuerycompiled.scss</strong>: The file includes all the CSS files included in the package in one location, for easier use. This file is automatically imported to the "prlCustomCSS-2018.scss" file. Do not make any modifications within.</li>
+  <li><strong>about-page-history-timeline.html</strong>: This file includes the timeline content and the JS scripts.  Any changes to the timeline are made on this HTML, and the code is then pasted in the About page.</li>
+  </ul>
+ <p> <strong>Any CSS changes to the timeline should be made in the 'prlCustomCSS-2018.scss' file in its relevant 'About' section</strong>. Do not make changes to the timeline SCSS file. Tke timeline is constantly updated by the developer, and on download of new versions, we lose any custom changes made.</p>
