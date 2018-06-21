@@ -1,7 +1,9 @@
 # PRL Website - Custom Code
 <p><em>This repository applies to the <a href="https://prl.natsci.msu.edu/">PRL website</a>, as hosted by the MSU College of Natural Sciences on Mura CMS. Although the PRL website has a pre-built design that is visually consistent with all websites within the College, it can contain custom content and styles between the header and footer areas. This repository has instructions for using the PRL custom code files. Each section below refers to its respective folder in the repository.</em></p>
 <hr>
+
 ## CSS Folder
+
 
 The CSS folder contains all custom stylesheets for the PRL website. Instructions for managing the code:
 
