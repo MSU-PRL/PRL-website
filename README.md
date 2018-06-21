@@ -13,14 +13,18 @@
       <li> Copy and paste the minimized code from the 'prlCustomCSS-2018.min.css' file into Mura's dedicated custom CSS file. The dedicated file is found in Mura's File Manager, under <em>prl_User_Assets/File/websiteTheme/prlCustomCSS.css</em>. Right click prlCustomCSS.css, choose 'Edit' and paste the code. Save your changes.</li>
     </ol>
   <li><strong>In Mura, do not change the name of the 'prlCustomCSS.css' file.</strong> Any change will cause the server to not load the custom CSS.</li>
-  <li><strong>Identical copies of the CSS files in this repository are also found in the PRL server.</strong> Ensure that all versions are up to date.
+  <li><strong>Identical copies of the CSS files in this repository are also found on the PRL server.</strong> Ensure that all versions are up to date.
 </ul>
 <hr>
 <h2>HTML Folder</h2>
-<p> The HTML folder contains files that are used on the PRL website. <strong>All the files in the folder are also found in the PRL server. Ensure that all versions at all locations are up to date.</strong></p>
+<p> The HTML folder contains content used on the PRL website. <strong>Identical copies of these files are also found on the PRL server. Ensure that all versions at all locations are up to date.</strong></p>
 <p>File listing:</p>
 <ul>
-  <li><strong>homepage-brands-2018.html:</strong> The content is used in the first section following the hero image on the <a href="https://prl.natsci.msu.edu/">PRL homepage</a>. Any changes are made on the html file and the code is then pasted in the 'Homepage Three Brands Section' component located in the Mura back end.</li>
+  <li><strong>homepage-brands-2018.html:</strong> This content is used on the <a href="https://prl.natsci.msu.edu/">PRL homepage</a> in the section following the hero image. </li>
+    <ul>
+      <li>Any changes should be made in this file and not in Mura.</li>
+      <li>To update the content in Mura, paste the code in the 'Homepage Three Brands Section' component, which can be located in the Mura back end.</li>
+  </ul>
   <li><strong>PRL-card-markup.html:</strong> This is the markup for all the PRL card styles. It is also found on the PRL <a href="https://prl.natsci.msu.edu/about/internal-resources/brand-style-guide/">Brand Style Guide page</a>.
   </li>
 </ul>
