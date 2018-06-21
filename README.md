@@ -12,15 +12,18 @@ The CSS folder contains all custom stylesheets for the PRL website. Instructions
 * **Use an automated compile and minimize system**, as Mura only reads .css files. Instructions:
 
   1. **prlCustomCSS-2018.scss** file should be automatically compiled into the **prlCustomCSS-2018.css** file on each iteration. <a href="http://koala-app.com/">Koala</a> is a good compiler.
-  2. The **prlCustomCSS-2018.css** file should be automatically minimized into the **prlCustomCSS-2018.min.css** file. This can be done in code editors such as Visual Studio Code.</li>
-  3. Copy and paste the minimized code from the <code>prlCustomCSS-2018.min.css</code> file into Mura's dedicated custom CSS file. The dedicated file is found in Mura's File Manager, under <em>prl_User_Assets/File/websiteTheme/prlCustomCSS.css</em>. Right click prlCustomCSS.css, choose 'Edit' and paste the code. Save your changes.</li>
-* **In Mura, do not change the name of the 'prlCustomCSS.css' file.** Any change will cause the server to not load the custom CSS.
+  2. The **prlCustomCSS-2018.css** file should be automatically minimized into the **prlCustomCSS-2018.min.css** file. This can be done in code editors such as Visual Studio Code.
+  3. Copy and paste the minimized code from the **prlCustomCSS-2018.min.css** file into Mura's dedicated custom CSS file. The dedicated file is found in Mura's File Manager, under *prl_User_Assets/File/websiteTheme/prlCustomCSS.css*. Right click **prlCustomCSS.css**, choose 'Edit' and paste the code. Save your changes.
+* **In Mura, do not change the name of the prlCustomCSS.css file.** Any change will cause the server to not load the custom CSS.
 * **Identical copies of the CSS files in this repository are also found on the PRL server.** Ensure that all versions are up to date.
 
 <hr>
-<h2>HTML Folder</h2>
-<p> The HTML folder contains content used on the PRL website. <strong>Identical copies of these files are also found on the PRL server. Ensure that all versions at all locations are up to date.</strong></p>
-<p>File listing:</p>
+
+## HTML Folder
+
+The HTML folder contains content used on the PRL website. **Identical copies of these files are also found on the PRL server. Ensure that all versions at all locations are up to date.**
+
+File listing:
 <ul>
   <li><strong>homepage-brands-2018.html:</strong> This content is used on the <a href="https://prl.natsci.msu.edu/">PRL homepage</a> in the section following the hero image. </li>
     <ul>
