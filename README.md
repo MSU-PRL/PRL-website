@@ -1,12 +1,16 @@
 # PRL Website - Custom Code
 <p><em>This repository applies to the <a href="https://prl.natsci.msu.edu/">PRL website</a>, as hosted by the MSU College of Natural Sciences on Mura CMS. Although the PRL website has a pre-built design that is visually consistent with all websites within the College, it can contain custom content and styles between the header and footer areas. This repository has instructions for using the PRL custom code files. Each section below refers to its respective folder in the repository.</em></p>
 <hr>
-<h2>CSS Folder</h2>
-<p>The CSS folder contains all custom stylesheets for the PRL website. Instructions for managing the code:</p>
+##CSS Folder
+
+
+The CSS folder contains all custom stylesheets for the PRL website. Instructions for managing the code:
+
+
 *
  * <strong>Custom modifications take place in the prlCustomCSS-2018.scss file, outside of Mura</strong>. This file contains variables that allow for control and consistency of custom visual components. It requires knowledge of SCSS programming language and a viable code editor, such as <a href="https://code.visualstudio.com/"> Visual Studio Code</a>.
-  </li>
-  <li> <strong>Use an automated compile and minimize system</strong>, as Mura only reads .css files. Instructions:
+
+* <strong>Use an automated compile and minimize system</strong>, as Mura only reads .css files. Instructions:
     <ol>
       <li> **prlCustomCSS-2018.scss** file</code> should be automatically compiled into the <code>prlCustomCSS-2018.css</code> file on each iteration. <a href="http://koala-app.com/">Koala</a> is a good compiler.</li>
       <li>The <code>prlCustomCSS-2018.css</code> file should be automatically minimized into the <code>prlCustomCSS-2018.min.css</code> file. This can be done in code editors such as Visual Studio Code.</li>
