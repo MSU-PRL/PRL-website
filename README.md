@@ -26,8 +26,7 @@ The HTML folder contains content used on the PRL website. **Identical copies of 
 File listing:
 * **homepage-brands-2018.html:** This content is used on the <a href="https://prl.natsci.msu.edu/">PRL homepage</a> in the section following the hero image.
   * Any changes should be made in this file and not in Mura.
-  *To update the content in Mura, paste the code from this file in the 'Homepage Three Brands Section' component, which can be located in the Mura back end.
-
+  * To update the content in Mura, paste the code from this file in the 'Homepage Three Brands Section' component, which can be located in the Mura back end.
 * **PRL-card-markup.html:** This is the markup for all the PRL card styles. It is also found on the PRL <a href="https://prl.natsci.msu.edu/about/internal-resources/brand-style-guide/">Brand Style Guide page</a>.
 <hr>
 <h2>History Timeline Folder</h2>
