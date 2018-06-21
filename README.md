@@ -11,10 +11,10 @@ The CSS folder contains all custom stylesheets for the PRL website. Instructions
 
 * **Use an automated compile and minimize system**, as Mura only reads .css files. Instructions:
 
-  1. **prlCustomCSS-2018.scss** file</code> should be automatically compiled into the <code>prlCustomCSS-2018.css</code> file on each iteration. <a href="http://koala-app.com/">Koala</a> is a good compiler.</li>
-..* The <code>prlCustomCSS-2018.css</code> file should be automatically minimized into the <code>prlCustomCSS-2018.min.css</code> file. This can be done in code editors such as Visual Studio Code.</li>
-..* Copy and paste the minimized code from the <code>prlCustomCSS-2018.min.css</code> file into Mura's dedicated custom CSS file. The dedicated file is found in Mura's File Manager, under <em>prl_User_Assets/File/websiteTheme/prlCustomCSS.css</em>. Right click prlCustomCSS.css, choose 'Edit' and paste the code. Save your changes.</li>
-* **In Mura, do not change the name of the 'prlCustomCSS.css' file.** Any change will cause the server to not load the custom CSS.</li>
+  1. **prlCustomCSS-2018.scss** file should be automatically compiled into the **prlCustomCSS-2018.css** file on each iteration. <a href="http://koala-app.com/">Koala</a> is a good compiler.
+  2. The **prlCustomCSS-2018.css** file should be automatically minimized into the **prlCustomCSS-2018.min.css** file. This can be done in code editors such as Visual Studio Code.</li>
+  3. Copy and paste the minimized code from the <code>prlCustomCSS-2018.min.css</code> file into Mura's dedicated custom CSS file. The dedicated file is found in Mura's File Manager, under <em>prl_User_Assets/File/websiteTheme/prlCustomCSS.css</em>. Right click prlCustomCSS.css, choose 'Edit' and paste the code. Save your changes.</li>
+* **In Mura, do not change the name of the 'prlCustomCSS.css' file.** Any change will cause the server to not load the custom CSS.
 * **Identical copies of the CSS files in this repository are also found on the PRL server.** Ensure that all versions are up to date.
 
 <hr>
