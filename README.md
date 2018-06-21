@@ -9,7 +9,7 @@
   <li> <strong>Use an automated compile and minimize system</strong>, as Mura only reads .css files. Instructions:
     <ol>
       <li>'prlCustomCSS-2018.scss file' should be automatically compiled into the 'prlCustomCSS-2018.css' file on each iteration. <a href="http://koala-app.com/">Koala</a> is a good compiler.</li>
-      <li>The 'prlCustomCSS-2018.css' file should be automatically minimized into the 'prlCustomCSS-2018.min.css' file.</li>
+      <li>The 'prlCustomCSS-2018.css' file should be automatically minimized into the 'prlCustomCSS-2018.min.css' file. This can be done in code editors such as Visual Studio Code.</li>
       <li> Copy and paste the minimized code from the 'prlCustomCSS-2018.min.css' file into Mura's dedicated custom CSS file. The dedicated file is found in Mura's File Manager, under <em>prl_User_Assets/File/websiteTheme/prlCustomCSS.css</em>. Right click prlCustomCSS.css, choose 'Edit' and paste the code. Save your changes.</li>
     </ol>
   <li><strong>In Mura, do not change the name of the 'prlCustomCSS.css' file.</strong> Any change will cause the server to not load the custom CSS.</li>
