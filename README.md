@@ -4,7 +4,7 @@
 <h2>CSS Folder</h2>
 <p>The CSS folder contains all custom stylesheets for the PRL website. Instructions for managing the code:</p>
 <ul>
-  <li><strong>Custom modifications take place in the 'prlCustomCSS-2018.scss' file, outside of Mura</strong>. This file contains variables that allow for control and consistency of custom visual components. It requires knowledge of SCSS programming language and a viable code editor, such as <a href="https://code.visualstudio.com/"> Visual Studio Code</a>.
+  <li><strong>Custom modifications take place in the <em>'prlCustomCSS-2018.scss'</em> file, outside of Mura</strong>. This file contains variables that allow for control and consistency of custom visual components. It requires knowledge of SCSS programming language and a viable code editor, such as <a href="https://code.visualstudio.com/"> Visual Studio Code</a>.
   </li>
   <li> <strong>Use an automated compile and minimize system</strong>, as Mura only reads .css files. Instructions:
     <ol>
@@ -23,7 +23,7 @@
   <li><strong>homepage-brands-2018.html:</strong> This content is used on the <a href="https://prl.natsci.msu.edu/">PRL homepage</a> in the section following the hero image. </li>
     <ul>
       <li>Any changes should be made in this file and not in Mura.</li>
-      <li>To update the content in Mura, paste the code in the 'Homepage Three Brands Section' component, which can be located in the Mura back end.</li>
+      <li>To update the content in Mura, paste the code from this file in the 'Homepage Three Brands Section' component, which can be located in the Mura back end.</li>
   </ul>
   <li><strong>PRL-card-markup.html:</strong> This is the markup for all the PRL card styles. It is also found on the PRL <a href="https://prl.natsci.msu.edu/about/internal-resources/brand-style-guide/">Brand Style Guide page</a>.
   </li>
