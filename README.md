@@ -35,9 +35,9 @@ The PRL History Timeline is located in the <a href="https://prl.natsci.msu.edu/a
 
 File listing:
 * **PRLtimelinejQuerycompiled.scss**: The file includes all the package's core CSS files in one location. It is setup in Visual Studio Code to automatically import into the **prlCustomCSS-2018.scss** file for inclusion on the PRL website. Do not make any modifications to this code.
-* **about-page-history-timeline.html<**: This file is where the timeline content is modified. It also includes the JS scripts. To modify the timeline content, make the changes in this file, then paste the code in the PRL's About page.<
+* **about-page-history-timeline.html**: This file is where the timeline content is modified. It also includes the JS scripts. To modify the timeline content, make the changes in this file, then paste the code in the PRL's About page.
 
-**Any CSS changes to the timeline should be made separately in the prlCustomCSS-2018.scss file in its relevant 'About' section**. Do not make changes to the **PRLtimelinejQuerycompiled.scss** file. The timeline is constantly updated by the developer, and as core files are overwritten we lose any custom changes within those files on update.
+**Any CSS changes to the timeline should be made separately in the prlCustomCSS-2018.scss file, in the 'About' section**. Do not make changes to the core **PRLtimelinejQuerycompiled.scss** file. The timeline is constantly updated by the developer, and as core files are overwritten, we lose any custom changes within those files on update.
 
  <hr>
  
