@@ -32,7 +32,8 @@ File listing:
 ## History Timeline Folder
 
 The History Timeline Folder contains a CSS and jQUery Timeline plugin called <a href="http://preview.codecanyon.net/item/zoomtimeline-css-timeline-pack/full_screen_preview/16918891?_ga=2.76863253.1076320330.1529523907-713049933.1525180595">ZoomTimeline</a> (<a href="http://digitalzoomstudio.net/">developer's site</a>), which allows for different presentation modes. It is located in the <a href="https://prl.natsci.msu.edu/about/">About</a> page on the PRL website.
-File listing:
+
+### File listing:
 * **PRLtimelinejQuerycompiled.scss**: The file includes all the package's core CSS files in one location. It is setup in Visual Studio Code to automatically import into the **prlCustomCSS-2018.scss** file for inclusion on the PRL website. Do not make any modifications to this code.
 * **about-page-history-timeline.html**: This file is where the timeline content is modified. It also includes the JS scripts. To modify the timeline content, make the changes in this file, then paste the code in the PRL's About page.
 
