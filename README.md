@@ -5,8 +5,9 @@
 ## CSS Folder
 
 
-The CSS folder contains all custom stylesheets for the PRL website. Instructions for managing the code:
+The CSS folder contains all custom stylesheets for the PRL website. 
 
+### Coding instructions:
  * **Custom modifications take place in the prlCustomCSS-2018.scss file, outside of Mura**. This file contains variables that allow for control and consistency of custom visual components. It requires knowledge of SCSS programming language and a viable code editor, such as <a href="https://code.visualstudio.com/"> Visual Studio Code</a>.
 * **Use an automated compile and minimize system**, as Mura only reads .css files. Instructions:
   1. **prlCustomCSS-2018.scss** file should be automatically compiled into the **prlCustomCSS-2018.css** file on each iteration. <a href="http://koala-app.com/">Koala</a> is a good compiler.
@@ -21,7 +22,7 @@ The CSS folder contains all custom stylesheets for the PRL website. Instructions
 
 The HTML folder contains content used on the PRL website. **Identical copies of these files are also found on the PRL server. Ensure that all versions at all locations are up to date.**
 
-File listing:
+### File listing:
 * **homepage-brands-2018.html:** This content is used on the <a href="https://prl.natsci.msu.edu/">PRL homepage</a> in the section right below the hero image and right before the News section.
   * Any changes should be made in this file and not in Mura.
   * To update the content in Mura, paste the code from this file in the **Homepage Three Brands Section** component, which is located in the Mura back end.
