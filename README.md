@@ -4,7 +4,7 @@
 
 ## CSS Folder
 The CSS folder contains all custom stylesheets for the PRL website. 
-### Instructions:
+### Instructions to modify code:
  * **Custom modifications take place in the prlCustomCSS-2018.scss file, outside of Mura**. This file contains variables that allow for control and consistency of custom visual components. It requires knowledge of SCSS programming language and a viable code editor, such as <a href="https://code.visualstudio.com/"> Visual Studio Code</a>.
 * **Use an automated compile and minimize system**, as Mura only reads .css files. Instructions:
   1. **prlCustomCSS-2018.scss** file should be automatically compiled into the **prlCustomCSS-2018.css** file on each iteration. <a href="http://koala-app.com/">Koala</a> is a good compiler.
@@ -31,7 +31,7 @@ The History Timeline Folder contains a CSS and jQUery Timeline plugin called <a 
  
 ## JS Folder
 The JS folder contains the custom PRL jQuery code. 
-### Instructions:
+### Instructions to modify code:
 * **Custom modifications take place in the prlCustomJS.js file,  outside of Mura**.
 * **Copy and paste the contents from the prlCustomJS.js file into Mura's dedicated custom JS file**. The dedicated file is found in Mura's back File Manager, under *prl_User_Assets/File/websiteTheme/prlCustomJS.js*. Right click **prlCustomJS.js**, choose 'Edit,' and paste the code. Save your changes.
 * **In Mura, do not change the name of the prlCustomJS.js file**. Any change will cause the server to not load the custom JS
