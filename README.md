@@ -3,9 +3,9 @@
 <hr>
 
 ## CSS Folder
-The CSS folder contains all custom stylesheets for the PRL website. 
+The CSS folder contains all custom stylesheets for the PRL website. The main PRL CSS file is 
 ### Instructions to modify code:
- * **Custom modifications take place in the prlCustomCSS-2018.scss file, outside of Mura**. This file contains variables that allow for control and consistency of custom visual components. It requires knowledge of SCSS programming language and a viable code editor, such as <a href="https://code.visualstudio.com/"> Visual Studio Code</a>.
+ * **Custom modifications take place in the prlCustomCSS-2018.scss file, outside of Mura**. This is the core PRL custom CSS file. It contains variables that allow for control and consistency of custom visual components. It requires knowledge of SCSS programming language and a viable code editor, such as <a href="https://code.visualstudio.com/"> Visual Studio Code</a>.
 * **Use an automated compile and minimize system**, as Mura only reads .css files. Instructions:
   1. **prlCustomCSS-2018.scss** file should be automatically compiled into the **prlCustomCSS-2018.css** file on each iteration. <a href="http://koala-app.com/">Koala</a> is a good compiler.
   2. The **prlCustomCSS-2018.css** file should be automatically minimized into the **prlCustomCSS-2018.min.css** file. This can be done in code editors such as Visual Studio Code.
@@ -24,7 +24,7 @@ The HTML folder contains content used on the PRL website. **Identical copies of 
 ## History Timeline Folder
 The History Timeline folder contains a CSS and jQUery timeline plugin called <a href="http://preview.codecanyon.net/item/zoomtimeline-css-timeline-pack/full_screen_preview/16918891?_ga=2.76863253.1076320330.1529523907-713049933.1525180595">ZoomTimeline</a> (<a href="http://digitalzoomstudio.net/">developer's site</a>), which allows for a wide range of visual presentation styles. The version on the PRL website is located in the <a href="https://prl.natsci.msu.edu/about/">About</a> page and adopts the 3d slider presentation mode.
 ### File listing:
-* **PRLtimelinejQuerycompiled.scss**: The file includes all the package's core CSS files in one location. Do not make any modifications to this file. The **prlCustomCSS-2018.scss** file (see CSS folder section) is setup to automatically include the contents of this file so all PRL custom CSS is found in one location.
+* **PRLtimelinejQuerycompiled.scss**: The file includes all the package's core CSS files in one location. Do not make any modifications to this file. The **prlCustomCSS-2018.scss** file (see CSS folder section) is setup to automatically include the contents of this file so all PRL custom CSS is uploaded to Mura from one location.
 * **about-page-history-timeline.html**: This file is where the timeline content is modified. It also includes the JS scripts. To modify the timeline content, make the changes in this file, then paste the code in the PRL's About page.
 
 **Any CSS changes to the timeline should be made separately in the prlCustomCSS-2018.scss file, in the 'About' section**. Do not make changes to the core **PRLtimelinejQuerycompiled.scss** file. The timeline is constantly updated by the developer, and as core files are overwritten, we lose any custom changes within those files on update.
