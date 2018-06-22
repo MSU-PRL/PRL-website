@@ -34,7 +34,7 @@ File listing:
 The PRL History Timeline is located in the <a href="https://prl.natsci.msu.edu/about/">About</a> page. It is a CSS and jQUery plugin called <a href="http://preview.codecanyon.net/item/zoomtimeline-css-timeline-pack/full_screen_preview/16918891?_ga=2.76863253.1076320330.1529523907-713049933.1525180595">ZoomTimeline</a> (<a href="http://digitalzoomstudio.net/">developer's site</a>), which allows for different presentation modes. 
 
 File listing:
-* **PRLtimelinejQuerycompiled.scss**: The file includes all the package's core CSS files in one location. This file is automatically imported to the **prlCustomCSS-2018.scss** file for inclusion on the PRL website. Do not make any modifications to this code.
+* **PRLtimelinejQuerycompiled.scss**: The file includes all the package's core CSS files in one location. It is setup in Visual Studio Code to automatically import into the **prlCustomCSS-2018.scss** file for inclusion on the PRL website. Do not make any modifications to this code.
 * **about-page-history-timeline.html<**: This file is where the timeline content is modified. It also includes the JS scripts. To modify the timeline content, make the changes in this file, then paste the code in the PRL's About page.<
 
 **Any CSS changes to the timeline should be made separately in the prlCustomCSS-2018.scss file in its relevant 'About' section**. Do not make changes to the **PRLtimelinejQuerycompiled.scss** file. The timeline is constantly updated by the developer, and as core files are overwritten we lose any custom changes within those files on update.
