@@ -34,5 +34,5 @@ The JS folder contains the custom PRL jQuery code.
 ### Instructions to modify code:
 * **Custom modifications take place in the prlCustomJS.js file,  outside of Mura**. This is the core PRL custom JS file. It requires knowledge of JS and jQuery programming languages and a viable code editor, such as <a href="https://code.visualstudio.com/"> Visual Studio Code</a>.
 * **Copy and paste the contents from the prlCustomJS.js file into Mura's dedicated custom JS file**. The dedicated file is found in Mura's back File Manager, under *prl_User_Assets/File/websiteTheme/prlCustomJS.js*. Right click **prlCustomJS.js**, choose 'Edit,' and paste the code. Save your changes.
-* **In Mura, do not change the name of the prlCustomJS.js file**. Any change will cause the server to not load the custom JS
+* **In Mura, do not change the name of the prlCustomJS.js file**. Any change will cause the server to not load the custom JS.
 * **Identical copies of the JS files in this repository are also found on the PRL server.** Ensure that all versions are up to date.
