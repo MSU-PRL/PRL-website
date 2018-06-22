@@ -2,10 +2,10 @@
 *This repository applies to the <a href="https://prl.natsci.msu.edu/">PRL website</a>, as hosted by the MSU College of Natural Sciences on Mura CMS. Although the PRL website has a pre-built design that is visually consistent with all websites within the College, it can contain custom content and styles between the header and footer areas. This repository has instructions for using the PRL custom code files. Each section below refers to its respective folder in the repository.*
 
 *Modifying PRL's code requires the following:
-** Knowledge of programming languages: HTML, CSS, jQuery, and Javascript.
-** Knowledge of Mura's back-end and front-end interfaces.
-** A code editor, such as <a href="https://code.visualstudio.com/"> Visual Studio Code</a>.
-** A compiler, such as <a href="http://koala-app.com/">Koala</a>.
+* Knowledge of programming languages: HTML, CSS, jQuery, and Javascript.
+* Knowledge of Mura's back-end and front-end interfaces.
+* A code editor, such as <a href="https://code.visualstudio.com/"> Visual Studio Code</a>.
+* A compiler, such as <a href="http://koala-app.com/">Koala</a>.*
 <hr>
 
 ## CSS Folder
