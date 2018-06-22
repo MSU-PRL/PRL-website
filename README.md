@@ -3,7 +3,7 @@
 <hr>
 
 ## CSS Folder
-The CSS folder contains all custom stylesheets for the PRL website. The main PRL CSS file is 
+The CSS folder contains all custom stylesheets for the PRL website.
 ### Instructions to modify code:
  * **Custom modifications take place in the prlCustomCSS-2018.scss file, outside of Mura**. This is the core PRL custom CSS file. It contains variables that allow for control and consistency of custom visual components. It requires knowledge of SCSS programming language and a viable code editor, such as <a href="https://code.visualstudio.com/"> Visual Studio Code</a>.
 * **Use an automated compile and minimize system**, as Mura only reads .css files. Instructions:
