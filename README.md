@@ -27,7 +27,7 @@ The History Timeline folder contains a CSS and jQUery timeline plugin called <a 
 * **PRLtimelinejQuerycompiled.scss**: The file includes all the package's core CSS files in one location. Do not make any modifications to this file. The **prlCustomCSS-2018.scss** file (see CSS folder section) is setup to automatically include the contents of this file so all PRL custom CSS is uploaded to Mura from one location.
 * **about-page-history-timeline.html**: This file houses the timeline content. It also includes the core timeline JS scripts. To modify timeline content, make the changes in this file in a viable code editor, such as <a href="https://code.visualstudio.com/"> Visual Studio Code</a>, then paste the code in the PRL's About page.
 
-**Any CSS changes to the timeline should be made separately in the prlCustomCSS-2018.scss file, in the 'About' section**. Do not make changes to the core **PRLtimelinejQuerycompiled.scss** file. The timeline is constantly updated by the developer, and as core files are overwritten, we lose any custom changes within those files on update.
+**Any CSS changes to the timeline should be made separately in the prlCustomCSS-2018.scss file, in the 'About' section**. Do not make changes to the **PRLtimelinejQuerycompiled.scss** file. The timeline is constantly updated by the developer, and as core files are overwritten, we lose any custom changes within those files on update.
  
 ## JS Folder
 The JS folder contains the custom PRL jQuery code. 
