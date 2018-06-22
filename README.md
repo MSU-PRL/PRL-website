@@ -17,7 +17,7 @@ The CSS folder contains all custom stylesheets for the PRL website.
 The HTML folder contains content used on the PRL website. **Identical copies of these files are also found on the PRL server. Ensure that all versions at all locations are up to date.**
 ### File listing:
 * **homepage-brands-2018.html:** This content is used on the <a href="https://prl.natsci.msu.edu/">PRL homepage</a> in the section right below the hero image and right before the News section.
-  * Any changes should be made in this file and not in Mura, as MURA's editor is messy and difficult to work on.
+  * Any changes should be made in this file on a viable code editor, such as <a href="https://code.visualstudio.com/"> Visual Studio Code</a>, and not in Mura. The reason is that Mura's HTML editor is messy and difficult to work on.
   * To update the content in Mura, paste the code from this file in the **Homepage Three Brands Section** component, which is located in the Mura back end.
 * **PRL-card-markup.html:** This is the markup for all the PRL card styles. It is also found on the PRL <a href="https://prl.natsci.msu.edu/about/internal-resources/brand-style-guide/">Brand Style Guide page</a> under the *Cards* section.
 
@@ -32,7 +32,7 @@ The History Timeline Folder contains a CSS and jQUery Timeline plugin called <a 
 ## JS Folder
 The JS folder contains the custom PRL jQuery code. 
 ### Instructions to modify code:
-* **Custom modifications take place in the prlCustomJS.js file,  outside of Mura**.
+* **Custom modifications take place in the prlCustomJS.js file,  outside of Mura**.  It requires knowledge of JS and jQuery programming languages and a viable code editor, such as <a href="https://code.visualstudio.com/"> Visual Studio Code</a>.
 * **Copy and paste the contents from the prlCustomJS.js file into Mura's dedicated custom JS file**. The dedicated file is found in Mura's back File Manager, under *prl_User_Assets/File/websiteTheme/prlCustomJS.js*. Right click **prlCustomJS.js**, choose 'Edit,' and paste the code. Save your changes.
 * **In Mura, do not change the name of the prlCustomJS.js file**. Any change will cause the server to not load the custom JS
 * **Identical copies of the JS files in this repository are also found on the PRL server.** Ensure that all versions are up to date.
