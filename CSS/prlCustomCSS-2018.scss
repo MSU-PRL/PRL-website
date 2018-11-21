@@ -47,6 +47,14 @@ $tran-short: 0.1s;
 $tran-med: 0.35s;
 $tran-half-sec: 0.5s;
 
+
+/* --------------------------------------------------------
+        BORDER RADIUS MODIFIED
+        Material design asks for 2px border radius, but 8px allowed
+-------------------------------------------------------- */
+
+$border-radius-material-design-card: 12px;
+
 /* --------------------------------------------------------
         BOX SHADOW DEPTHS
         // Shadow Depths from Material Design Web Components: https://material-components-web.appspot.com/elevation.html
@@ -132,7 +140,7 @@ $shadow-depth-24: 0px 11px 15px -7px rgba(0, 0, 0, 0.2),
 .prl-btn {
   // Outline Button Material Design
   border: 2px solid $primary-color !important;
-  border-radius: 2px;
+  border-radius: $border-radius-material-design-card;
   text-decoration: none !important;
   position: relative;
   margin: 0;
@@ -143,14 +151,19 @@ $shadow-depth-24: 0px 11px 15px -7px rgba(0, 0, 0, 0.2),
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  -webkit-transition: 0.28s cubic-bezier(0.4, 0, 0.2, 1);
   transition: 0.28s cubic-bezier(0.4, 0, 0.2, 1);
   overflow: hidden;
   line-height: 36px !important;
   font-size: 14px;
   font-weight: 600 !important;
   -webkit-font-smoothing: antialiased;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
   background-image: none;
+  -ms-touch-action: manipulation;
   touch-action: manipulation;
   white-space: nowrap;
   vertical-align: middle;
@@ -184,8 +197,12 @@ $shadow-depth-24: 0px 11px 15px -7px rgba(0, 0, 0, 0.2),
   font-size: 14px;
   font-weight: 600 !important;
   -webkit-font-smoothing: antialiased;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
   background-image: none;
+  -ms-touch-action: manipulation;
   touch-action: manipulation;
   white-space: nowrap;
   vertical-align: middle;
@@ -202,12 +219,15 @@ $shadow-depth-24: 0px 11px 15px -7px rgba(0, 0, 0, 0.2),
     right: 6px;
     top: calc(50% - 9px);
     width: 16px;
+    -webkit-transition: 0.28s cubic-bezier(0.4, 0, 0.2, 1);
     transition: 0.28s cubic-bezier(0.4, 0, 0.2, 1);
   }
   &:hover:after {
+    -webkit-transform: translateX(4px);
     transform: translateX(4px);
   }
   &:focus:after {
+    -webkit-transform: translateX(4px);
     transform: translateX(4px);
   }
 }
@@ -219,17 +239,21 @@ $shadow-depth-24: 0px 11px 15px -7px rgba(0, 0, 0, 0.2),
   padding: 0px 16px;
   color: $secondary-color;
   border: 0px transparent !important;
+  -webkit-transition: background-color 0.85s;
   transition: background-color 0.85s;
   &:hover {
     background-color: rgba(158, 158, 158, 0.2);
+    -webkit-transition: background-color 0.1s linear;
     transition: background-color 0.1s linear;
   }
   &:focus {
     background-color: rgba(158, 158, 158, 0.2);
+    -webkit-transition: background-color 0.1s linear;
     transition: background-color 0.1s linear;
   }
   &:active {
     background-color: rgba(158, 158, 158, 0.4);
+    -webkit-transition: background-color 0.1s linear;
     transition: background-color 0.1s linear;
   }
 }
@@ -255,7 +279,7 @@ $shadow-depth-24: 0px 11px 15px -7px rgba(0, 0, 0, 0.2),
 }
 
 /* --------------------------------------------------------
-        FIGURE CAPTIONS, BULLETPOINTS
+        FIGURE CAPTIONS & BULLETPOINTS
 -------------------------------------------------------- */
 
 figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figure {
@@ -332,15 +356,21 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
 .prl-h2-alternate {
   // Used as homepage Brand area, News, and Event headers, Participating Faculty in the Research Pages, and Seminar "About the Speaker" Heading
   text-align: center;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.05rem;
   text-transform: capitalize;
   font-weight: 200;
   font-size: 2.4rem;
   color: $primary-color;
 }
 
+.prl-h2-secondary-spacing {
+  // Used to space out Heading 2 in internal pages, such as Seminar & Events, Graduate Program, and Research pages
+  margin-top: 2rem; // Adds some distance above section titles
+  display: inline-block;
+}
+
 .prl-p-subheader {
-  // Used as homepage subheader in Brand Area, News, and Event headers
+  // Used as homepage subheader in Brand Area, News, and Event headers and also on About page
   color: $med-grey-text;
   line-height: 1.7 !important;
   font-size: 1.275rem !important;
@@ -349,19 +379,88 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
   margin-right: auto;
 }
 
+.prl-p-subheader-smaller {
+  // Used as subheader for internal pages: Seminars & Events, Graduate Program Overview, Research Areas, etc.
+  @extend .prl-p-subheader;
+  line-height: 1.6 !important;
+  font-size: 16.8px !important;
+  margin-bottom: 10px;
+}
+
 .prl-narrow-container {
-  // JANUARY 19, 2017; new class; Used as a div class for narrow text container, most prominently in news articles. 
-  max-width: 610px; // margin: 0 auto;   
+  // JANUARY 19, 2017; new class; Used as a div class for narrow text container, most prominently in news articles.
+  max-width: 610px; // margin: 0 auto;
 }
 
 @media (max-width: 767px) {
-  .prl-h2-alternate {
-    font-weight: 300;
-  }
   .prl-p-subheader {
     line-height: 1.6 !important;
   }
+  .prl-p-subheader-smaller {
+    line-height: 1.5 !important;
+  }
 }
+
+/* -----------------------------------------------------------------------------------------------------
+        LOGOS USED ON INTERNAL SECONDARY PAGES: ABOUT, GRADUATE PROGRAM, RESEARCH, etc.
+----------------------------------------------------------------------------------------------------- */
+
+.prl-internal-logo-svg {
+  height: 45px;
+  margin-bottom: 18px;
+}
+
+.prl-internal-logo-content-area {
+  // Margins above and below each of the five essences
+  margin: 36px 0;
+}
+
+.prl-internal-logo-content-title {
+  // Essence title - use as span element
+  font-weight: 900;
+  color: $x-dark-grey-text;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.prl-internal-logo-content-description {
+  // Essence descriptive text - use as span element
+  font-weight: 300;
+  color: $med-grey-text;
+  font-size: 1rem;
+  line-height: 1.6;
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .prl-internal-logo-svg {
+    height: 40px;
+    margin-bottom: 15px;
+  }
+  .prl-internal-logo-content-area {
+    margin: 25px 0 !important;
+  }
+}
+
+/* -------------------------------------------------------------
+       IMAGE SHADOW
+------------------------------------------------------------- */
+
+.prl-section-hero-image {
+  // Adding box shadow to the hero image component on ABOUT page
+  img {
+    -webkit-box-shadow: $shadow-depth-6;
+    box-shadow: $shadow-depth-6;
+  }
+}
+
+// Image shadows extend $shadow-depth 7
+$img-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2),
+  0px 7px 10px 1px rgba(0, 0, 0, 0.14),
+  0px 2px 16px 1px rgba(0, 0, 0, 0.12);
+
+// Opacity effect when hovering over selected images
+$img-hover-opacity: 0.8;
 
 /* -------------------------------------------------------------
        ALTERNATE WELL
@@ -372,8 +471,9 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
   padding: 19px !important;
   margin-bottom: 20px;
   background-color: #f1f1f1;
-  border-radius: 2px;
+  border-radius: $border-radius-material-design-card;
   color: $dark-grey-text;
+  -webkit-box-shadow: $shadow-depth-1;
   box-shadow: $shadow-depth-1;
 }
 
@@ -386,8 +486,9 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
   // Card outline
   background: #fff;
   border-bottom: 0px transparent;
-  border-radius: 2px;
+  border-radius: $border-radius-material-design-card;
   margin-bottom: 16px;
+  -webkit-box-shadow: $shadow-depth-2;
   box-shadow: $shadow-depth-2;
   -webkit-transition: $tran-med;
   transition: $tran-med;
@@ -395,15 +496,17 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
 
 .prl-card-hover {
   // Hover effect
-  box-shadow: $shadow-depth-6;
+  -webkit-box-shadow: $shadow-depth-10;
+  box-shadow: $shadow-depth-10;
 }
 
 // CONTENT AREA: Two parts to it: images and body
 // IMAGES
-.prl-card-image {
+.prl-card-image, .prl-card-image-only {
   // General image area, always on top portion of card, when included
   position: relative;
-  .prl-card-image-overlay {
+  .prl-card-image-overlay, .prl-card-image-no-summary-overlay {
+    // To add title text on bottom of image
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -421,8 +524,9 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
       // Styling for text elements
       color: white !important;
       font-weight: 400 !important;
-      font-size: 1.125rem !important;
+      font-size: 1rem !important;
       margin: 0;
+      padding-bottom: 0 !important;
     }
     p,
     ul,
@@ -432,13 +536,28 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
       margin: 0;
     }
   }
+  .prl-card-image-no-summary-overlay {
+    border-bottom-left-radius: $border-radius-material-design-card;
+    border-bottom-right-radius: $border-radius-material-design-card;
+  }
+}
+
+.prl-card-image-only {
+  // For card that includes only image and title overlay, no summary
+  border-bottom-left-radius: $border-radius-material-design-card;
+  border-bottom-right-radius: $border-radius-material-design-card;
+  img {
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+  }
 }
 
 .prl-card-image-hover {
   // Hover effect for cards with images.
-  transition: 0.5s;
+  -webkit-transition: $tran-half-sec;
+  transition: $tran-half-sec;
   &:hover {
-    opacity: 0.9;
+    opacity: $img-hover-opacity;
   }
 }
 
@@ -459,7 +578,7 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
   a {
     text-decoration: none;
     border-bottom: none !important;
-    color: $dark-grey-text;
+    color: $dark-grey-text !important;
     line-height: 1.2;
   }
 }
@@ -528,8 +647,8 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
     height: 100%;
     padding: 0 !important;
     border-bottom: 1px solid $material-border-bottomORtop-color;
-    border-top-left-radius: 2px;
-    border-top-right-radius: 2px;
+    border-top-left-radius: $border-radius-material-design-card;
+    border-top-right-radius: $border-radius-material-design-card;
   }
   p {
     @extend .prl-card-summary;
@@ -542,6 +661,7 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
 
 .prl-relcontent-body-small {
   // A non-card that imitates the card function. Includes small image and linked title, with border top
+  -webkit-box-shadow: none;
   box-shadow: none;
   margin: 16px 8px;
   padding: 16px 0;
@@ -554,6 +674,7 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
     padding: 0px !important;
     width: 100px;
     float: left;
+    border-radius: $border-radius-material-design-card;
   }
   div.prl-relcontent-body-small-link {
     display: block;
@@ -601,8 +722,8 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
   img {
     padding: 0 !important;
     width: 100%;
-    border-top-left-radius: 2px;
-    border-top-right-radius: 2px;
+    border-top-left-radius: $border-radius-material-design-card;
+    border-top-right-radius: $border-radius-material-design-card;
   }
   h1,
   h2,
@@ -663,10 +784,10 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
   float: left;
   display: block;
   margin-right: 0.625rem;
-  -webkit-transition: $tran-med;
-  transition: $tran-med;
+  -webkit-transition: $tran-half-sec;
+  transition: $tran-half-sec;
   &:hover {
-    opacity: 0.8;
+    opacity: $img-hover-opacity;
   }
 }
 
@@ -725,7 +846,9 @@ aside {
 
 .depth-2.internal-resources,
 .depth-1.people,
-.depth-1.news-events {
+.depth-1.news-events,
+.depth-1.research-tech,
+.depth-1.graduate-program {
   // Font styles for Mura folder display. Currently used on "News & Events," "People," and "Internal Resources"
   #svIndex {
     dt.title {
@@ -935,7 +1058,7 @@ aside {
 -------------------------------------------------------- */
 
 @media (min-width: 768px) and (max-width: 1199px) {
-  // Tablet 
+  // Tablet
   #homepage {
     .coverImage {
       height: 60vh !important;
@@ -967,7 +1090,7 @@ aside {
 -------------------------------------------------------- */
 
 @media (max-width: 767px) {
-  // Mobile 
+  // Mobile
   .coverImage {
     background-position: right 0px !important;
     background-attachment: local !important; // Solves a mobile Safari issue where the background image zooms in dramatically if background attachment = "fixed"
@@ -1096,12 +1219,6 @@ aside {
 -------------------------------------------------------- */
 
 .home {
-  /* .deptHomeComponentWrapper {
-      // Take away the gap between the hero image and the content card
-      .deptHomeComponentHeading {
-          margin-bottom: 0;
-      }
-  } */
   .card-natsci {
     // Take away CNS hover effect on home card
     &:hover {
@@ -1117,468 +1234,6 @@ aside {
     .container {
       width: 1350px;
       max-width: 1350px;
-    }
-  }
-}
-
-/* HOMEPAGE BRANDS SECTION
--------------------------------------------------------- */
-
-.prl-home-brands {
-  margin-top: 0.95rem;
-  margin-bottom: 4rem;
-  h2 {
-    @extend .prl-h2-alternate;
-  }
-  p {
-    @extend .prl-p-subheader;
-    padding: 0 3rem 2rem 3rem;
-    text-align: center;
-    margin-bottom: 0;
-  }
-  div.prl-home-about {
-    // Div containing "More About Us" button
-    display: inline-block;
-    text-align: center;
-    width: 100%;
-    margin-bottom: 2.25rem;
-  }
-}
-
-.prl-brands {
-  border-bottom: 1px solid $x-light-grey;
-  .prl-brand-area {
-    padding: 2.5rem 1.5rem 3rem 2.5rem;
-    img {
-      // Brand icons
-      height: 5.5rem;
-      display: block;
-      margin: 0 auto;
-    }
-    h3 {
-      // Brand titles
-      font-size: 1.25rem;
-      line-height: 1.2;
-      text-transform: capitalize;
-      font-weight: 400;
-      letter-spacing: 1.5px;
-      margin-top: 1.75rem;
-      margin-bottom: 0;
-      color: $primary-color;
-    }
-    p {
-      // Brand descriptions
-      font-weight: 400;
-      color: $med-grey-text;
-      font-size: 0.945rem !important;
-      letter-spacing: 1px;
-      margin-top: 0.5rem;
-      margin-bottom: 0.75rem;
-      padding: 0; // -webkit-font-smoothing: antialiased;
-      text-align: left;
-    }
-  }
-}
-
-/* HOMEPAGE NEWS SECTION
--------------------------------------------------------- */
-
-// Space between news and events sections
-.prl-home-news {
-  margin-bottom: 5rem;
-  margin-right: -15px;
-  margin-left: -15px;
-  clear: both;
-}
-// Title/summary styling
-.prl-home-news-text {
-  .prl-news-title {
-    @extend .prl-h2-alternate;
-  }
-  .prl-news-summary {
-    // Same styling as p for prl brands section, except for margin-bottom 
-    @extend .prl-p-subheader;
-    margin-bottom: 2.2rem;
-    text-align: center;
-  }
-}
-
-// STYLING FEATURE NEWS
-.prl-home-feature {
-  // Feature section becomes wrappable. dark background for fade effects 
-  padding: 0;
-  margin: 0;
-  float: left;
-  .mura-object-meta {
-    margin-bottom: 0;
-  }
-  h2 {
-    // "Feature" title becomes part of the feature picture
-    position: absolute;
-    top: 3.25rem;
-    z-index: 1;
-    left: 10%;
-    color: white;
-    border-left: 3px solid white;
-    text-indent: 0.94rem;
-    font-size: 1.7rem;
-    font-weight: 300;
-    text-shadow: 1px 1px #000;
-  }
-  .mura-index {
-    margin: 0;
-  }
-  div>dl.first.last.hasImage {
-    // Feature image height limits 
-    height: 520px;
-    margin-top: 0rem;
-    margin-bottom: 0rem;
-    dt.title {
-      // Positioning feature title in bottom third
-      position: absolute;
-      bottom: 2.5rem;
-      z-index: 10;
-      left: 1.25rem;
-      text-transform: capitalize;
-      letter-spacing: 1px;
-      line-height: 1.6;
-      margin-right: 1.25rem;
-      -webkit-transition: 0.6s;
-      transition: 0.6s;
-      font-weight: 400;
-      a {
-        // Making title white
-        color: white;
-        text-decoration: none;
-        border-bottom: none !important;
-        font-size: 1.4rem;
-        display: inline-block;
-        width: 100%;
-        height: 100%;
-        line-height: 1.4;
-      }
-    }
-    dd.image {
-      // Image filling the div and transition
-      position: relative;
-      -webkit-transition: 0.9s;
-      transition: 0.9s;
-      width: 100%;
-      height: 100%;
-      a {
-        // Link spans the entire image
-        display: inline-block;
-        width: 100%;
-        height: 100%;
-        z-index: 100;
-        img {
-          height: 100%;
-          width: 100%;
-        }
-      }
-    }
-    dd.summary {
-      // Placement of the summary text 
-      position: absolute;
-      bottom: 1.56rem;
-      left: 1.25rem;
-      color: white;
-      max-width: 90%;
-      opacity: 0;
-      -webkit-transition: 0.7s;
-      transition: 0.7s;
-      -webkit-transition-delay: 0s;
-      transition-delay: 0s;
-      -webkit-transform: translateY(5rem);
-      transform: translateY(5rem);
-      z-index: 11;
-      font-size: 0.875rem;
-      letter-spacing: 1px;
-      line-height: 1.6;
-      font-weight: 300;
-      text-shadow: 1px 1px #000;
-    }
-    dd.readmore.readMore {
-      @extend .prl-readmore-fill-container;
-    }
-    &:after {
-      // The shade at the bottom third of the feature 
-      background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.75)), to(transparent));
-      background: linear-gradient(0deg, rgba(0, 0, 0, 0.75), transparent);
-      background: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0.75), transparent);
-      bottom: 0;
-      left: 0;
-      opacity: 1;
-      content: '';
-      height: 37%;
-      position: absolute;
-      width: 100%;
-      z-index: 0;
-      -webkit-transition: opacity 1s, height 0.5s 0s;
-      transition: opacity 1s, height 0.5s 0s;
-    }
-    &:hover {
-      // On hover, image becomes opaque and summary appears 
-      dd.image {
-        -webkit-filter: brightness(0.4);
-        filter: brightness(0.4);
-        -webkit-transform: scale3d(1.075, 1.075, 1);
-        transform: scale3d(1.075, 1.075, 1);
-      }
-      dt.title {
-        -webkit-transform: translateY(-3.5rem);
-        transform: translateY(-3.5rem);
-      }
-      dd.summary {
-        opacity: 1;
-        -webkit-transform: translateY(1rem);
-        transform: translateY(1rem);
-        -webkit-transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-        transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-        -webkit-transition-delay: 0.2s;
-        transition-delay: 0.2s;
-      }
-      &:after {
-        height: 0%;
-        opacity: 0;
-        -webkit-transition: opacity 1s, height 0s 1s;
-        transition: opacity 1s, height 0s 1s;
-      }
-    }
-  }
-}
-
-// STYLING NON FEATURE NEWS
-.prl-home-nonfeature {
-  // Removing all padding 
-  margin: 0;
-  padding: 0;
-  border-top: transparent;
-  float: none;
-  display: inline;
-  div {
-    margin: 0;
-    dl.hasImage {
-      // Making each news item a third of the length and 250px high 
-      margin: 0;
-      width: 33.333333%;
-      height: 260px;
-      border: transparent;
-      float: left;
-      dd.image {
-        // Image filling the div  
-        height: 100%;
-        width: 100%;
-        -webkit-transition: 0.9s;
-        transition: 0.9s;
-        a {
-          img {
-            height: 100%;
-            width: 100%;
-          }
-        }
-      }
-      dt.title {
-        // Positioning title at the bottom 
-        position: absolute;
-        bottom: 0.45rem;
-        left: 0.625rem;
-        font-size: 0.94rem;
-        margin-right: 0.78em;
-        z-index: 1;
-        font-weight: 300;
-        text-shadow: 1px 1px #000;
-        letter-spacing: 0.5px;
-        a {
-          // Making title white
-          color: white;
-          text-decoration: none;
-          border-bottom: none !important;
-          display: block;
-          line-height: 1.4;
-        }
-      }
-      dd.summary {
-        // Bringing summary to the fore
-        position: absolute;
-        z-index: 2;
-        opacity: 0;
-      }
-      &:after {
-        // Shade in bottom third of images 
-        background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.75)), to(transparent));
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.75), transparent);
-        background: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0.75), transparent);
-        bottom: 0;
-        left: 0;
-        opacity: 1;
-        content: '';
-        height: 47.5%;
-        position: absolute;
-        width: 100%;
-        z-index: 0;
-        -webkit-transition: opacity 1s, height 0.5s 0s;
-        transition: opacity 1s, height 0.5s 0s;
-      }
-      &:hover {
-        // effects on the images of the non-feature stories 
-        dd.image {
-          -webkit-filter: brightness(0.4);
-          filter: brightness(0.4);
-          -webkit-transform: scale3d(1.075, 1.075, 1);
-          transform: scale3d(1.075, 1.075, 1);
-        }
-        &:after {
-          height: 0%;
-          opacity: 0;
-          -webkit-transition: opacity 1s, height 0s 1s;
-          transition: opacity 1s, height 0s 1s;
-        }
-      }
-    }
-  }
-}
-
-/* HOMEPAGE EVENTS SECTION
--------------------------------------------------------- */
-
-.prl-home-events-text {
-  .prl-events-title {
-    @extend .prl-h2-alternate;
-  }
-  .prl-events-summary {
-    // Same styling as p for prl brands section, except for margin-bottom
-    @extend .prl-p-subheader;
-    margin-bottom: 2.2rem;
-    text-align: center;
-  }
-}
-
-.prl-home-event-cards {
-  margin-bottom: 2.75rem;
-  div.mura-collection.mura-grid-three {
-    .mura-collection-item:first-child {
-      float: left;
-      margin-right: 1.75%;
-      margin-left: 1%;
-    }
-    .mura-collection-item:last-child {
-      float: right;
-      margin-right: 1%;
-    }
-  }
-  .mura-collection-item {
-    width: 31.5%;
-    @extend .prl-card-outline;
-    .mura-collection-item__holder {
-      padding: 0;
-      .mura-item-content {
-        position: relative;
-        margin: 0;
-        display: block;
-        overflow: hidden; // Image filling the div
-        height: auto;
-        width: 100%;
-        -webkit-transition: 0.5s;
-        transition: 0.5s;
-        border-bottom: 1px solid $material-border-bottomORtop-color;
-        a {
-          img {
-            width: 100%;
-          }
-        }
-        &:hover {
-          opacity: 0.9;
-        }
-      }
-      .mura-item-meta {
-        @extend .prl-card-body;
-        .mura-item-meta__title {
-          @extend .prl-card-title;
-        }
-        .mura-item-meta__date {
-          @extend .prl-card-date;
-        }
-        .mura-item-meta__summary {
-          @extend .prl-card-summary;
-          height: 6.25rem;
-          .prl-event-type {
-            // CRUCIAL: First <p> should be the event type for this styling
-            display: inline-block;
-            margin-bottom: 3px;
-            border-bottom: 1px solid $material-border-bottomORtop-color;
-            font-weight: 500;
-            color: $light-grey-text;
-          }
-        }
-        .mura-item-meta__readmore {
-          @extend .prl-card-readmore-btns;
-          margin: 0 -16px -16px -16px;
-          a {
-            @extend .prl-flat-btn;
-          }
-        }
-      }
-    }
-  }
-}
-
-.prl-home-btn {
-  // Button to all seminars and events at bottom of events section 
-  margin-bottom: 3rem;
-}
-
-@media (min-width: 992px) and (max-width: 1199px) {
-  // Adjusting dimensions to the small desktop breakpoint 
-  .prl-brands {
-    .col-md-4 {
-      padding-right: 9px;
-      padding-left: 29px;
-    }
-  }
-  .prl-home-feature {
-    div>dl.first.last.hasImage {
-      height: 430px;
-      &:hover {
-        dt.title {
-          -webkit-transform: translateY(-3.75rem);
-          transform: translateY(-3.75rem);
-        }
-      }
-    }
-  }
-  .prl-home-nonfeature {
-    div {
-      dl.hasImage {
-        height: 215px;
-      }
-    }
-  }
-  .prl-home-event-cards {
-    div.mura-collection.mura-grid-three {
-      .mura-collection-item:first-child {
-        float: left;
-        margin-left: 0;
-        margin-right: 1.25%;
-      }
-      .mura-collection-item:last-child {
-        margin-right: 0px;
-      }
-    }
-    .mura-collection-item {
-      width: 32.5%;
-      .mura-collection-item__holder {
-        .mura-item-meta__title {
-          display: block;
-          white-space: nowrap;
-          text-overflow: ellipsis;
-          overflow: hidden;
-        }
-        .mura-item-meta__summary {
-          // Makes the event cards a bit longer, keeping them a similar size. Not the Google card recommendation, since they become potentially too long. But workaround for tablets works, since this is under 2% of our users. 
-          height: 7.5rem !important;
-        }
-      }
     }
   }
 }
@@ -1605,8 +1260,66 @@ aside {
       }
     }
   }
+}
+
+/* HOMEPAGE BRANDS SECTION
+-------------------------------------------------------- */
+
+.prl-home-brands {
+  margin-top: 0.95rem;
+  margin-bottom: 120px;
+  h2 {
+    @extend .prl-h2-alternate;
+  }
+  p {
+    @extend .prl-p-subheader;
+    padding: 0 3rem 0 0;
+    text-align: center;
+    margin-bottom: 0;
+    max-width: 750px;
+  }
+  .prl-home-brands-feature {
+    // Styling the "Featured Research" area on the right of the brand logos
+    .mura-async-object.mura-object {
+      // Adding a margin top to the "Featured Research" component. CSS class from Mura
+      margin-top: 62px;
+    }
+    h3 {
+      font-size: 15.5px;
+      font-weight: 900;
+      color: $x-dark-grey-text;
+      display: block;
+      margin-bottom: 24px;
+      text-transform: uppercase;
+      padding-left: 12px;
+      border-left: 5px solid $primary-color;
+    }
+    span.prl-brand-feature-summary, span {
+      font-weight: 300;
+      color: $med-grey-text;
+      font-size: 15.5px;
+      line-height: 1.5;
+      display: block;
+      margin-bottom: 32px;
+    }
+    img {
+      -webkit-box-shadow: $img-shadow;
+      box-shadow: $img-shadow;
+    }
+  }
+  div.prl-home-about {
+    // Div containing "More About Us" button
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 2.25rem;
+  }
+}
+
+@media (max-width: 767px) {
+  // Adjusting dimensions to mobile breakpoint*/
   .prl-home-brands {
-    margin-bottom: 2rem;
+    margin-bottom: 62px;
     p {
       padding-right: 0;
       padding-left: 0;
@@ -1616,135 +1329,403 @@ aside {
       margin-bottom: 2.75rem;
     }
   }
-  .prl-brands {
-    // margin-left: -8px; can take out since i widened the movile viewport
-    // margin-right: -8px; can take out since i widened the movile viewport
-    .prl-brand-area {
-      margin: 0 auto 1.5rem auto;
-      padding: 0.9rem 0;
-      text-align: center;
-      p {
-        line-height: 1.6;
-        font-size: 1rem !important;
-        max-width: 21rem;
-        text-align: center;
-      }
-    }
-    div:last-child {
-      border-bottom: none;
-    }
+}
+
+@media (min-width: 768px)and(max-width: 991px) {
+  // Adjusting dimensions to tablet breakpoints
+  .prl-home-brands {
+    margin-top: 2rem;
+    margin-bottom: 4rem; // Somehow, this next change makes the entire page fit on the screen in portrait
   }
-  .prl-home-news {
-    margin-bottom: 2.15rem; // margin-left: -8px; can take out since i widened the movile viewport
-    .prl-news-summary {
-      padding: 0 15px;
-    }
+}
+
+@media (min-width: 1370px) {
+  // To accomodate wider container of 1350px larger screen sizes
+  .prl-home-brands {
+    max-width: 1225px;
+    margin-left: auto;
+    margin-right: auto;
   }
-  .prl-home-feature {
-    h2 {
-      top: 1.75rem;
-      left: 5%;
-      font-size: 1.25rem;
-    }
-    div>dl.first.last.hasImage {
-      height: auto;
-      border-radius: 2px;
-      -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
-      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
-      width: 100%;
-      margin-right: auto;
-      margin-left: auto;
-      padding-bottom: 0;
-      margin-bottom: 16px;
-      dd.image {
-        position: relative;
-      }
-      dt.title {
-        line-height: 1.2;
-        margin: 0px;
-        bottom: 0;
-        left: 0;
-        font-weight: 900;
-        width: 100%;
-        -webkit-font-smoothing: antialiased;
-        a {
-          font-size: 1rem;
-          padding: 18% 8px 16px 8px;
-          color: white;
-          background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.95)), to(transparent));
-          background: linear-gradient(0deg, rgba(0, 0, 0, 0.95), transparent);
-        }
-      }
-      dd.summary {
-        display: none;
-      }
-      &:after {
-        display: none;
-      }
-      &:hover {
-        dd.image {
-          -webkit-filter: brightness(1);
-          filter: brightness(1);
-          -webkit-transform: none;
-          transform: none;
-        }
-        dt.title {
-          -webkit-transform: translateY(0rem);
-          transform: translateY(0rem);
-        }
-      }
-    }
+}
+
+/* HOMEPAGE NEWS SECTION
+-------------------------------------------------------- */
+
+// Space between news and events sections
+.prl-home-news {
+  margin-bottom: 120px;
+  margin-right: -8px;
+  margin-left: -8px;
+  h2 {
+    @extend .prl-h2-alternate;
+    margin-bottom: 50px;
   }
-  .prl-home-nonfeature {
-    div {
-      dl.hasImage {
-        height: auto;
-        border-radius: 2px;
-        -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
-        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
-        width: 100%;
-        margin-right: auto;
-        margin-left: auto;
-        padding-bottom: 0;
-        margin-bottom: 16px;
+}
+
+.prl-home-news-feature {
+  // Styling home feature area
+  .mura-async-object.mura-object {
+    div.mura-object-content > div.mura-index {
+      margin: 0;
+      div > dl {
+        margin: 0;
+        padding: 8px 32px 0 8px; // to give image space to have a shadow
+        border-right: 3px solid $primary-color;
         dd.image {
           position: relative;
+          margin: 0 0 32px 0;
+          a {
+            border-bottom: 0px solid transparent;
+            img {
+              border-radius: $border-radius-material-design-card;
+              -webkit-box-shadow: $img-shadow;
+              box-shadow: $img-shadow;
+              -webkit-transition: $tran-half-sec;
+              transition: $tran-half-sec;
+              &:hover {
+                opacity: $img-hover-opacity
+              }
+            }
+          }
         }
         dt.title {
-          line-height: 1.2;
-          margin: 0px;
-          bottom: 0;
-          left: 0;
-          width: 100%;
-          font-weight: 900;
-          -webkit-font-smoothing: antialiased;
+          margin: 0 0 4px 32px;
+          text-transform: uppercase;
           a {
-            font-size: 1rem;
-            padding: 18% 8px 16px 8px;
-            color: white;
-            background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.95)), to(transparent));
-            background: linear-gradient(0deg, rgba(0, 0, 0, 0.95), transparent);
+            text-decoration: none;
+            border-bottom: 0px;
+            color: $x-dark-grey-text;
+          }
+        }
+        dd.summary {
+          // Same as span.prl-brand-feature-summary
+          font-weight: 300;
+          color: $med-grey-text;
+          font-size: 15.5px;
+          line-height: 1.5;
+          display: block;
+          margin: 0 0 0 32px;
+        }
+      }
+    }
+  }
+}
+
+.prl-home-news-nonfeature {
+  // Styling home nonfeature area
+  .mura-async-object.mura-object > div.mura-object-content {
+    div.mura-index {
+      margin: 0 8px 0 32px;
+      div {
+        dl {
+          margin: 0 0 24px 0;
+          padding: 0 !important; // overriding Mura settings
+          min-height: auto !important; // overriding Mura settings
+          dd.image {
+            width: 140px;
+            position: relative;
+            float: left;
+            margin: 0;
+            padding: 8px 16px 16px 16px;
+            a {
+              border-bottom: 0px solid transparent;
+              img {
+                border-radius: $border-radius-material-design-card;
+                -webkit-box-shadow: $img-shadow;
+                box-shadow: $img-shadow;
+                -webkit-transition: $tran-half-sec;
+                transition: $tran-half-sec;
+                &:hover {
+                  opacity: $img-hover-opacity
+                }
+              }
+            }
+          }
+          dt.title {
+            margin: 8px 0 0 0;
+            a {
+              text-decoration: none;
+              border-bottom: 0px;
+              color: $x-dark-grey-text;
+            }
+          }
+          dd.summary {
+            // Same as span.prl-brand-feature-summary, but smaller line-height
+            font-weight: 300;
+            color: #666;
+            font-size: 15.5px;
+            line-height: 1.4;
+            display: block;
+            margin: 0 0 0 32px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  // Adjusting dimensions to the small desktop breakpoint
+  .prl-home-news-feature {
+    // Styling home feature area
+    .mura-async-object.mura-object {
+      div.mura-object-content > div.mura-index {
+        div > dl {
+          padding-right: 24px;
+          dd.image {
+            margin-bottom: 24px;
+          }
+          dd.summary {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+  .prl-home-news-nonfeature {
+    // Styling home nonfeature area
+    .mura-async-object.mura-object > div.mura-object-content {
+      div.mura-index {
+        margin-left: 16px;
+        div {
+          dl {
+            margin-bottom: 8px;
+            dd.image {
+              width: 120px;
+            }
+            dd.summary {
+              font-size: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  // Adjusting dimensions to mobile and tablet breakpoints
+  .prl-home-news {
+    margin-bottom: 62px;
+  }
+  .prl-home-news-feature {
+    // Centering home feature area
+    .mura-async-object.mura-object {
+      div.mura-object-content > div.mura-index {
+        div > dl {
+          // Centering content
+          margin: 0;
+          padding: 0 16px;
+          border-right: 0px transparent;
+          dd.image {
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 24px;
+          }
+          dt.title {
+            margin: 0 auto;
+            padding-left: 16px;
+            max-width: 600px;
+          }
+          dd.summary {
+            // Same as span.prl-brand-feature-summary
+            margin: 0 auto;
+            padding-left: 16px;
+            max-width: 600px;
+          }
+        }
+      }
+    }
+  }
+  .prl-home-news-nonfeature {
+    // Centering home nonfeature area
+    .mura-async-object.mura-object > div.mura-object-content {
+      div.mura-index {
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        div {
+          dl {
+            // Shorter distances between news items
+            margin-bottom: 16px;
+          }
+          dl.last.hasImage {
+            // Hide last news item to shorten news section
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  // Adjusting dimensions to mobile breakpoint*/
+  .prl-home-news-feature {
+    // Styling home feature area
+    .mura-async-object.mura-object {
+      div.mura-object-content > div.mura-index {
+        div > dl {
+          padding: 0;
+          dd.image {
+            margin-bottom: 12px;
+          }
+          dt.title {
+            text-transform: initial;
+            padding: 0;
+            margin-bottom: 4px;
+          }
+          dd.summary {
+            font-size: .91rem;
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+  .prl-home-news-nonfeature {
+    // Styling home nonfeature area
+    .mura-async-object.mura-object > div.mura-object-content {
+      div.mura-index {
+        div {
+          dl {
+            margin-bottom: 8px;
+            dd.image {
+              width: 110px;
+            }
+            dt.title {
+              margin-bottom: 4px;
+            }
+            dd.summary {
+              display: none;
+            }
+          }
+          dl.last.hasImage {
+            // Hide last news item to shorten news section
+            display: initial;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* HOMEPAGE EVENTS SECTION
+-------------------------------------------------------- */
+
+.prl-home-events {
+  h2 {
+  @extend .prl-h2-alternate;
+  margin-bottom: 50px;
+}
+}
+.prl-home-event-cards {
+  margin-bottom: 2.75rem;
+  div.mura-collection.mura-grid-three {
+    .mura-collection-item:first-child {
+      float: left;
+      margin-right: 1.75%;
+      margin-left: 1%;
+    }
+    .mura-collection-item:last-child {
+      float: right;
+      margin-right: 1%;
+    }
+  }
+  .mura-collection-item {
+    width: 31.5%;
+    @extend .prl-card-outline;
+    .mura-collection-item__holder {
+      padding: 0;
+      border-radius: $border-radius-material-design-card;
+      -webkit-transition: $tran-half-sec;
+      transition: $tran-half-sec;
+      .mura-item-content {
+        border-radius: $border-radius-material-design-card $border-radius-material-design-card 0 0;
+        position: relative;
+        margin: 0;
+        display: block;
+        overflow: hidden; // Image filling the div
+        height: auto;
+        width: 100%;
+        -webkit-transition: $tran-half-sec;
+        transition: $tran-half-sec;
+        border-bottom: 1px solid $material-border-bottomORtop-color;
+        a {
+          img {
+            width: 100%;
           }
         }
         &:hover {
-          dd.image {
-            -webkit-filter: brightness(1);
-            filter: brightness(1);
-            -webkit-transform: none;
-            transform: none;
-          }
-        }
-        &:after {
-          display: none;
+          opacity: $img-hover-opacity;
         }
       }
-      dl:nth-child(4),
-      dl.last.hasImage {
-        // Hiding last two news items under mobile, to save space.
-        display: none;
+      .mura-item-meta {
+        @extend .prl-card-body;
+        position: relative;
+        .mura-item-meta__title {
+          @extend .prl-card-title;
+        }
+        .mura-item-meta__date {
+          @extend .prl-card-date;
+        }
+        .mura-item-meta__summary {
+          @extend .prl-card-summary;
+          .prl-event-type {
+            // CRUCIAL: First <p> should be the event type for this styling
+            display: inline-block;
+            margin-bottom: 3px;
+            border-bottom: 1px solid $material-border-bottomORtop-color;
+            font-weight: 500;
+            color: $light-grey-text;
+          }
+        }
+        .mura-item-meta__readmore {
+          @extend .prl-readmore-fill-container;
+        }
+      }
+      &:hover {
+        @extend .prl-card-hover;
       }
     }
   }
+}
+
+.prl-home-events-btn {
+  // Button to all seminars and events at bottom of events section
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  // Adjusting dimensions to the small desktop breakpoint
+  .prl-home-event-cards {
+    div.mura-collection.mura-grid-three {
+      .mura-collection-item:first-child {
+        float: left;
+        margin-left: 0;
+        margin-right: 1.25%;
+      }
+      .mura-collection-item:last-child {
+        margin-right: 0px;
+      }
+    }
+    .mura-collection-item {
+      width: 32.5%;
+      .mura-collection-item__holder {
+        .mura-item-meta__title {
+          display: block;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  // Adjusting dimensions to mobile breakpoint*/
   .prl-home-events {
     .prl-events-summary {
       padding: 0 15px;
@@ -1768,9 +1749,6 @@ aside {
       float: left;
       width: 100%;
       margin: 0 auto 16px auto;
-      .mura-item-meta__summary {
-        height: auto !important;
-      }
       .mura-item-meta__readmore {
         margin: 16px -16px -16px !important; // Creates distance between button and summary
       }
@@ -1779,29 +1757,7 @@ aside {
 }
 
 @media (min-width: 768px)and(max-width: 991px) {
-  // Adjusting dimensions to tablet breakpoints 
-  .prl-home-brands {
-    margin-top: 2rem;
-    margin-bottom: 4rem; // Somehow, this next change makes the entire page fit on the screen in portrait 
-  }
-  .prl-home-feature {
-    div {
-      dl.hasImage {
-        height: 470px !important;
-      }
-    }
-  }
-  .prl-home-nonfeature {
-    div {
-      dl.hasImage {
-        width: 50%;
-        height: 250px;
-      }
-      dl.last.hasImage {
-        display: none;
-      }
-    }
-  }
+  // Adjusting dimensions to tablet breakpoints
   .prl-home-event-cards {
     div.mura-collection.mura-grid-three {
       .mura-collection-item:first-child {
@@ -1820,7 +1776,6 @@ aside {
         overflow: hidden;
       }
       .mura-item-meta__summary {
-        height: 10.15rem !important;
         .prl-event-type {
           display: block;
         }
@@ -1831,11 +1786,6 @@ aside {
 
 @media (min-width: 1370px) {
   // To accomodate wider container of 1350px larger screen sizes
-  .prl-home-brands {
-    max-width: 1225px;
-    margin-left: auto;
-    margin-right: auto;
-  }
   .prl-home-news,
   .prl-home-event-cards div.mura-collection.mura-grid-three {
     max-width: 1170px;
@@ -1848,7 +1798,7 @@ aside {
                 ABOUT PAGE
 -------------------------------------------------------- */
 
-.about-prl-design {
+.about {
   .mainCol {
     // Overrides .col-md-8 default Natsci layout
     width: 100%;
@@ -1856,57 +1806,242 @@ aside {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
-  }
-}
-
-.prl-about-logos {
-  text-align: center;
-  .col-xs-12 {
-    // Main DOE-BES logo separated from the rest of the logos
-    margin-bottom: 35px;
-    small {
-      // BES Grant #
-      display: block;
-      color: $light-grey-text;
-      margin-top: 4px;
+    margin-bottom: 60px;
+    nav {
+      // Hide breadcrumbs
+      display: none;
     }
-  }
-  a {
-    // Removing underline under all images
-    border-bottom: 0px solid transparent !important;
-    img {
-      // Subtle hover effect on all logos
-      -webkit-transition: 0.4s;
-      transition: 0.4s;
-      &:hover {
-        -webkit-filter: grayscale(100%);
-        filter: grayscale(100%);
+    .pageTitle {
+      // Making h1 similar to the h2s.
+      @extend .prl-h2-alternate;
+      margin-top: 80px;
+    }
+    section {
+      margin: 150px 0; // Adding top and bottom margins between sections
+    }
+    section:first-child {
+      // Getting first text block up to h1
+      margin-top: 0px;
+    }
+    section.prl-about-essence {
+      svg {
+        @extend .prl-internal-logo-svg;
+      }
+      .col-lg-4.col-md-6 {
+        @extend .prl-internal-logo-content-area;
+      }
+      span.prl-essence-title {
+        @extend .prl-internal-logo-content-title;
+      }
+      span.prl-essence-description {
+        @extend .prl-internal-logo-content-description;
       }
     }
-  }
-  .prl-funder-logo {
-    // Lining up 4 non-DOE BES logos per line
-    width: 25%;
-    height: 125px;
-    float: left;
-  }
-}
-
-@media (max-width: 768px) {
-  // Phones
-  .prl-about-logos {
-    a {
-      height: 115px;
+    section.prl-about-what {
+      // "What we do" section
+      color: $med-grey-text;
+      font-weight: 300;
+      .row {
+        // Keeps each of the driver brands separate
+        margin: 160px 0;
+      }
+      .prl-about-what-first-row {
+        // First driver brand closer to title
+        margin-top: 100px !important;
+      }
+      div.col-md-7.col-sm-12 {
+        // Divs with images have no padding
+        padding: 0;
+      }
+      .prl-about-what-text-right {
+        // Divs with text have padding to separate from images
+        padding: 15px 0px 15px 40px;
+      }
+      .prl-about-what-text-left {
+        // Divs with text have padding to separate from images
+        padding: 15px 40px 15px 0px;
+      }
+      h3 {
+        // Primary color for driver brand text
+        color: $primary-color;
+      }
+      ul {
+        // Smaller text for buller points
+        font-size: 1rem !important;
+      }
       img {
-        // Negates individual inline styles for non-DOE BES logos for better alignment
-        margin-left: 0 !important;
-        margin-right: 0 !important;
+        // Driver brand images
+        padding: 0;
+        border-radius: $border-radius-material-design-card;
+        -webkit-box-shadow: $img-shadow;
+        box-shadow: $img-shadow;
       }
     }
-    .prl-funder-logo {
-      // 2 non-DOE BES logos per line
-      width: 45%;
-      margin-right: 5%;
+    .prl-about-header-area {
+      // Styling introductory blocks in About page
+      max-width: 850px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .prl-p-subheader {
+      // Customizing opening subheader
+      text-align: center;
+      font-size: 1.2rem !important;
+    }
+    blockquote {
+      // Customizing blockquote
+      margin: 100px auto;
+      padding: 16px 0;
+      max-width: 75%;
+    }
+    .zoomtimeline {
+      // Overrides on custom timeline plugin
+      margin-top: 70px;
+      margin-bottom: 150px;
+      .details-container {
+        .detail {
+          .detail-image {
+            border-radius: $border-radius-material-design-card;
+          }
+          .detail-excerpt {
+            p {
+              font-family: Helvetica, arial,sans-serif;
+              font-size: 16.5px;
+              font-weight: 300;
+              letter-spacing: 0.3px;
+              color: $med-grey-text;
+            }
+          }
+        }
+      }
+    }
+    .prl-about-logos {
+      text-align: center;
+      .col-xs-12 {
+        // Main DOE-BES logo separated from the rest of the logos
+        margin-bottom: 35px;
+        margin-top: 60px;
+        small {
+          // BES Grant #
+          display: block;
+          color: $light-grey-text;
+          margin-top: 4px;
+        }
+      }
+      a {
+        // Removing underline under all images
+        border-bottom: 0px solid transparent !important;
+        img {
+          // Subtle hover effect on all logos
+          -webkit-transition: 0.4s;
+          transition: 0.4s;
+          &:hover {
+            -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+          }
+        }
+      }
+      .prl-funder-logo {
+        // Lining up 4 non-DOE BES logos per line
+        width: 25%;
+        height: 125px;
+        float: left;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  // Phones
+  .about {
+    .mainCol {
+      .pageTitle {
+        margin-top: 55px;
+      }
+      .prl-h2-alternate, .pageTitle {
+        font-size: 2rem;
+      }
+      .prl-p-subheader {
+        font-size: 1rem !important;
+      }
+      .zoomtimeline {
+        margin-top: 30px;
+        margin-bottom: 120px;
+        .details-container {
+          .detail {
+            .detail-excerpt {
+              width: 53% !important;
+              margin: 0 auto;
+            }
+          }
+        }
+      }
+      blockquote {
+        max-width: 100%;
+        margin: -10px auto !important;
+        p {
+          font-size: 1.2rem !important;
+        }
+      }
+      section.prl-about-what {
+        .prl-about-what-first-row {
+          margin-top: 65px;
+        }
+        .row {
+          margin: 65px 0 !important;
+        }
+        h3 {
+          font-size: 1.55rem;
+        }
+        .prl-about-what-text-right, .prl-about-what-text-left {
+          padding: 0 15px;
+        }
+        img {
+          margin-bottom: 30px;
+        }
+      }
+      .prl-about-logos {
+        a {
+          height: 115px;
+          img {
+            // Negates individual inline styles for non-DOE BES logos for better alignment
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+          }
+        }
+        .prl-funder-logo {
+          // 2 non-DOE BES logos per line
+          width: 45%;
+          margin-right: 5%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .about {
+    .mainCol {
+      .zoomtimeline {
+        margin-bottom: 120px;
+      }
+      section {
+        margin: 120px 0; // Adding top and bottom margins between sections
+      }
+      section.prl-about-essence {
+        padding: 0 15px;
+        .col-lg-4.col-md-6 {
+          margin: 30px 0;
+        }
+      }
+      blockquote {
+        margin: -10px auto;
+      }
+      section.prl-about-what {
+        .row {
+          margin: 90px 0;
+        }
+      }
     }
   }
 }
@@ -1996,7 +2131,7 @@ aside {
       display: inline-block;
       >h2:first-child {
         // Inspired by "page-header" Bootstrap class
-        font-size: calc(30px + 10%); // Font slightly bigger than default 
+        font-size: calc(30px + 10%); // Font slightly bigger than default
         font-weight: 400;
         border-bottom: 1px solid #eee;
         padding-bottom: 9px;
@@ -2005,7 +2140,7 @@ aside {
       }
       h3 {
         font-weight: 400;
-        font-size: calc(24px + 7%); // Font slightly bigger than default 
+        font-size: calc(24px + 7%); // Font slightly bigger than default
       }
       div.prl-code-area:last-child>code {
         margin-bottom: 0;
@@ -2141,7 +2276,7 @@ aside {
       }
     }
     .pagination {
-      // Ensuring pagination stays to left 
+      // Ensuring pagination stays to left
       float: left;
       clear: both;
     }
@@ -2464,454 +2599,38 @@ aside {
                 RESEARCH PAGES
 -------------------------------------------------------- */
 
-.all-research-projects {
-  // Styling for the All Research Projects Page. This is duplicated for the other research project pages.
-  #svIndex {
-    margin-right: -30px;
-    div {
-      dl {
-        // Setting card width and slide-up transition
-        width: 47.5%;
-        @extend .prl-card-outline;
-        padding-bottom: 0px;
-        margin-right: 2%;
-        margin-bottom: 16px;
-        float: left;
-        -webkit-transition: 0.4s;
-        transition: 0.4s;
-        -webkit-transition-delay: $tran-short;
-        transition-delay: $tran-short;
-        dd.image {
-          position: relative;
-          margin: 0;
-          overflow: hidden;
-          a {
-            display: inline-block;
-            width: 100%;
-            height: 100%;
-            background-color: $primary-color;
-          }
-          img {
-            margin: 0;
-            padding: 0;
-            -webkit-transition: 0.4s;
-            transition: 0.4s;
-            -webkit-transition-delay: $tran-short;
-            transition-delay: $tran-short;
-            height: 100%;
-            width: 100%;
-          }
-        }
-        dt.title {
-          position: absolute;
-          top: 150px; // Using px for maximum cross-browser conformity
-          width: 100%;
-          margin-bottom: 0;
-          padding: 0.47rem 0.78rem;
-          font-size: 0.97rem;
-          font-weight: 400;
-          background: rgba(0, 0, 0, 0.5);
-          -webkit-transition: $tran-med;
-          transition: $tran-med;
-          -webkit-transition-delay: $tran-short;
-          transition-delay: $tran-short;
-          a {
-            color: #fff;
-            font-weight: 400;
-            line-height: 1.55;
-            text-decoration: none !important;
-            border-bottom: transparent !important;
-            text-transform: capitalize;
-          }
-        }
-        dd.summary {
-          position: absolute;
-          bottom: -120px; // Summary not visible before hover effect
-          padding: 0 16px;
-          color: white;
-          font-weight: 300;
-          -webkit-transition: 0.2s;
-          transition: 0.2s;
-          -webkit-transition-delay: 0.1s;
-          transition-delay: 0.1s;
-          p {
-            // To override custom p text styling
-            font-size: 0.875rem !important;
-            line-height: 1.4 !important;
-            margin-bottom: 10px !important;
-          }
-        }
-        dd.readmore.readMore {
-          @extend .prl-readmore-fill-container;
-        }
-        &:hover {
-          // Hover effect
-          -webkit-box-shadow: $shadow-depth-6;
-          box-shadow: $shadow-depth-6;
-          dd.image {
-            img {
-              -webkit-transform: translate3d(0, -130px, 0);
-              transform: translate3d(0, -130px, 0);
-            }
-          }
-          dt.title {
-            top: 71px;
-          }
-          dd.summary {
-            bottom: 8px;
-            opacity: 1;
-            -webkit-transition: 0.45s;
-            transition: 0.45s;
-            -webkit-transition-timing-function: cubic-bezier(0, 0, 0.2, 1) !important;
-            transition-timing-function: cubic-bezier(0, 0, 0.2, 1) !important;
-            -webkit-transition-delay: 0.25s !important;
-            transition-delay: 0.25s !important;
-          }
-        }
-      }
+#researchtech {
+  #MainContent {
+    li.mura-categories {
+      //display none of the Mura categories after titles
+      display: none;
     }
   }
 }
 
-#sysResearchAllAreas,
-#sysResearchDoeProjects,
-#sysResearchFundamentalResearchProjects,
-#sysResearchGreenSolutions {
-  // Styling for all research project pages, except for the All Research Projects Page. Stylings identical to previous class.
-  margin-right: -30px;
-  div {
-    dl {
-      width: 47.5%;
-      @extend .prl-card-outline;
-      padding-bottom: 0px;
-      margin-right: 2%;
-      margin-bottom: 16px;
-      float: left;
-      -webkit-transition: 0.4s;
-      transition: 0.4s;
-      -webkit-transition-delay: $tran-short;
-      transition-delay: $tran-short;
-      dd.image {
-        position: relative;
-        margin: 0;
-        overflow: hidden;
-        a {
-          display: inline-block;
-          width: 100%;
-          height: 100%;
-          background-color: $primary-color;
-        }
-        img {
-          margin: 0;
-          padding: 0;
-          -webkit-transition: 0.4s;
-          transition: 0.4s;
-          -webkit-transition-delay: $tran-short;
-          transition-delay: $tran-short;
-          height: 100%;
-          width: 100%;
-        }
-      }
-      dt.title {
-        position: absolute;
-        top: 150px;
-        width: 100%;
-        margin-bottom: 0;
-        padding: 0.47rem 0.78rem;
-        font-size: 0.97rem;
-        font-weight: 400;
-        background: rgba(0, 0, 0, 0.5);
-        -webkit-transition: $tran-med;
-        transition: $tran-med;
-        -webkit-transition-delay: $tran-short;
-        transition-delay: $tran-short;
-        a {
-          color: #fff;
-          font-weight: 400;
-          line-height: 1.55;
-          text-decoration: none !important;
-          border-bottom: transparent !important;
-          text-transform: capitalize;
-        }
-      }
-      dd.summary {
-        position: absolute;
-        bottom: -120px; // Summary not visible before hover effect
-        padding: 0 16px;
-        color: white;
-        font-weight: 300;
-        -webkit-transition: 0.2s;
-        transition: 0.2s;
-        -webkit-transition-delay: 0.1s;
-        transition-delay: 0.1s;
-        p {
-          // To override custom p text styling
-          font-size: 0.875rem !important;
-          line-height: 1.4 !important;
-          margin-bottom: 10px !important;
-        }
-      }
-      dd.readmore.readMore {
-        @extend .prl-readmore-fill-container;
-      }
-      &:hover {
-        -webkit-box-shadow: $shadow-depth-6;
-        box-shadow: $shadow-depth-6;
-        dd.image {
-          img {
-            -webkit-transform: translate3d(0, -130px, 0);
-            transform: translate3d(0, -130px, 0);
-          }
-        }
-        dt.title {
-          top: 71px;
-        }
-        dd.summary {
-          bottom: 8px;
-          opacity: 1;
-          -webkit-transition-timing-function: cubic-bezier(0, 0, 0.2, 1) !important;
-          transition-timing-function: cubic-bezier(0, 0, 0.2, 1) !important;
-          -webkit-transition-delay: 0.25s !important;
-          transition-delay: 0.25s !important;
-          -webkit-transition: 0.45s;
-          transition: 0.45s;
-        }
-      }
-    }
+.research-projects {
+  h2 {
+    @extend .prl-h2-secondary-spacing;
   }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  // Tablet width
-  .all-research-projects {
-    // Styling for the All Research Projects Page. This is duplicated for the other research project pages.
-    #svIndex {
-      margin-right: -15px;
-      div {
-        dl {
-          height: 350px;
-        }
-      }
+  section.prl-research-projects {
+    // The CAAPP services
+    .row {
+      // Spacing between each service
+      margin: 70px 0;
     }
-  }
-  #sysResearchAllAreas,
-  #sysResearchDoeProjects,
-  #sysResearchFundamentalResearchProjects,
-  #sysResearchGreenSolutions {
-    // Styling for all research project pages, except for the All Research Projects Page. Stylings identical to previous class.
-    margin-right: -15px;
-    div {
-      dl {
-        height: 350px;
-      }
+    .row.first {
+      margin-top: 50px;
     }
-  }
-}
-
-@media (max-width: 767px) {
-  // Mobile width
-  .all-research-projects {
-    // Styling for the All Research Projects Page. This is duplicated for the other research project pages.
-    #svIndex {
-      margin-right: 0px;
-      div {
-        dl {
-          width: 100%; // each project card takes an entire row
-          margin-top: 0;
-          margin-bottom: 16px;
-        }
-        dd.summary {
-          margin-bottom: 0;
-        }
-      }
+    h3 {
+      font-size: 1.65rem;
     }
-  }
-  #sysResearchAllAreas,
-  #sysResearchDoeProjects,
-  #sysResearchFundamentalResearchProjects,
-  #sysResearchGreenSolutions {
-    // Styling for all research project pages, except for the All Research Projects Page. Stylings identical to previous class.
-    margin-right: 0px;
-    div {
-      dl {
-        width: 100%; // Each project card takes an entire row
-        margin-top: 0;
-        margin-bottom: 16px;
-        dd.summary {
-          margin-bottom: 0;
-        }
-      }
-    }
-  }
-}
-
-@media (min-width: 992px) and (max-width: 1199px) {
-  // Small Desktop
-  .all-research-projects {
-    // Styling for the All Research Projects Page. This is duplicated for the other research project pages.
-    #svIndex {
-      div {
-        dl {
-          height: 350px;
-          dt.title {
-            // adjusting title fit
-            margin-top: -37px !important;
-            font-size: 0.875rem !important;
-          }
-        }
-      }
-    }
-  }
-  #sysResearchAllAreas,
-  #sysResearchDoeProjects,
-  #sysResearchFundamentalResearchProjects,
-  #sysResearchGreenSolutions {
-    // Styling for all research project pages, except for the All Research Projects Page. Stylings identical to previous class.
-    div {
-      dl {
-        height: 350px;
-        dt.title {
-          // adjusting title fit
-          margin-top: -37px !important;
-          font-size: 0.875rem !important;
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 1199px) {
-  // Styling for the All Research Projects Page. This is duplicated for the other research project pages.
-  // Styling for all research cards from Small Desktop and down.
-  .all-research-projects {
-    #svIndex {
-      div {
-        dl {
-          dt.title {
-            // adjusting title fit.
-            position: relative;
-            margin-top: -39px;
-            top: 0;
-            font-size: 0.93rem;
-            a {
-              line-height: 1.6;
-            }
-          }
-          dd.summary {
-            // Extending .prl-card-summary from prl-components.scss. Cannot use @extend under @media
-            // Summary becomes visible without need for hover effect
-            padding: 16px;
-            position: relative;
-            bottom: 0;
-            color: #444;
-          }
-          &:hover {
-            // Taking away most of the slide-up hover effect animations
-            -webkit-box-shadow: $shadow-depth-6;
-            box-shadow: $shadow-depth-6;
-            dd.image {
-              img {
-                -webkit-transform: translate3d(0, -0, 0);
-                transform: translate3d(0, -0, 0);
-              }
-            }
-            dt.title {
-              top: 0;
-            }
-            dd.summary {
-              bottom: 0;
-            }
-          }
-        }
-      }
-    }
-  }
-  #sysResearchAllAreas,
-  #sysResearchDoeProjects,
-  #sysResearchFundamentalResearchProjects,
-  #sysResearchGreenSolutions {
-    // Styling for all research project pages, except for the All Research Projects Page. Stylings identical to previous class.
-    div {
-      dl {
-        dt.title {
-          position: relative;
-          margin-top: -39px;
-          top: 0;
-          font-size: 0.93rem;
-          a {
-            line-height: 1.6;
-          }
-        }
-        dd.summary {
-          // Extending .prl-card-summary from prl-components.scss. Cannot use @extend under @media
-          padding: 16px;
-          position: relative;
-          bottom: 0;
-          color: #444;
-        }
-        &:hover {
-          -webkit-box-shadow: $shadow-depth-6;
-          box-shadow: $shadow-depth-6;
-          dd.image {
-            img {
-              -webkit-transform: translate3d(0, -0, 0);
-              transform: translate3d(0, -0, 0);
-            }
-          }
-          dt.title {
-            top: 0;
-          }
-          dd.summary {
-            bottom: 0;
-          }
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 360px) {
-  // XS mobile width - working on research card titles so they fit one line
-  .all-research-projects {
-    // Styling for the All Research Projects Page. This is duplicated for the other research project pages.
-    #svIndex {
-      div {
-        dl {
-          dt.title {
-            // Adjusting title to fit in super small screens. Ellipsis effect for safety.
-            font-size: 0.875rem;
-            margin-top: -37px;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            overflow: hidden;
-            color: #fff !important; // Ellipsis color white
-            a {
-              letter-spacing: -0.4px;
-            }
-          }
-        }
-      }
-    }
-  }
-  #sysResearchAllAreas,
-  #sysResearchDoeProjects,
-  #sysResearchFundamentalResearchProjects,
-  #sysResearchGreenSolutions {
-    // Styling for all research project pages, except for the All Research Projects Page. Stylings identical to previous class.
-    div {
-      dl {
-        dt.title {
-          font-size: 0.875rem;
-          margin-top: -37px;
-          white-space: nowrap;
-          text-overflow: ellipsis;
-          overflow: hidden;
-          color: #fff !important; // Ellipsis color white
-          a {
-            letter-spacing: -0.4px;
-          }
-        }
-      }
+    img {
+      // Services images
+      padding: 0;
+      border-radius: $border-radius-material-design-card;
+      -webkit-box-shadow: $img-shadow;
+      box-shadow: $img-shadow;
+      margin-bottom: 30px;
     }
   }
 }
@@ -2952,8 +2671,8 @@ aside {
           transition: $tran-med;
           width: 110px; // In pixels so the size is the same on all screens
           &:hover {
-            -webkit-box-shadow: $shadow-depth-5;
-            box-shadow: $shadow-depth-5;
+            -webkit-box-shadow: $img-shadow;
+            box-shadow: $img-shadow;
           }
         }
       }
@@ -2985,14 +2704,116 @@ aside {
 }
 
 /* --------------------------------------------------------
+                GRADUATE PROGRAM OVERVIEW PAGE
+-------------------------------------------------------- */
+
+.graduate-program-overview {
+  #MainContent {
+    h2 {
+      @extend .prl-h2-secondary-spacing;
+    }
+    section.prl-grad-puv {
+      svg {
+        @extend .prl-internal-logo-svg;
+      }
+      .col-md-6 {
+        @extend .prl-internal-logo-content-area;
+      }
+      span.prl-grad-puv-title {
+        @extend .prl-internal-logo-content-title;
+      }
+      span.prl-grad-puv-description {
+        @extend .prl-internal-logo-content-description;
+      }
+    }
+    blockquote {
+      margin: 36px auto;
+      padding: 16px 0;
+      max-width: 100%;
+    }
+    .prl-student-alumni-profiles {
+      margin-top: 16px;
+      a.view-all {
+        // Styling Mura's "See all" link
+        @extend .prl-btn;
+        margin: 16px 0 32px 0;
+      }
+      div.mura-next-n {
+        // Hides pagination
+        display: none;
+      }
+      .mura-collection.mura-grid-two {
+        .mura-collection-item {
+          .mura-collection-item__holder {
+            padding: 0 16px 0 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 539px) {
+  .graduate-program-overview {
+    #MainContent {
+      .prl-student-alumni-profiles {
+        .mura-collection.mura-grid-two {
+          .mura-collection-item {
+            .mura-collection-item__holder {
+              padding: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/* CENTER FOR ADVANCED ALGAL AND PLANT PHENOTYPING
+-------------------------------------------------------- */
+.center-for-advanced-algal-and-plant-phenotyping {
+  h2 {
+    @extend .prl-h2-secondary-spacing;
+  }
+  section.prl-caapp-services {
+    // The CAAPP services
+    .row {
+      // Spacing between each service
+      margin: 70px 0;
+    }
+    .row.first {
+      margin-top: 50px;
+    }
+    h3 {
+      font-size: 1.65rem;
+    }
+    img {
+      // Services images
+      padding: 0;
+      border-radius: $border-radius-material-design-card;
+      -webkit-box-shadow: $img-shadow;
+      box-shadow: $img-shadow;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+/* --------------------------------------------------------
                 SEMINARS & EVENTS PAGE
 -------------------------------------------------------- */
 
+#newsevents.depth-2.seminars-events {
+  h2 {
+    @extend .prl-h2-secondary-spacing;
+  }
+}
+
 .prl-seminars-events {
-  margin-bottom: 35px;
+  margin-top: 0.5rem;
   border: 1px solid #eaeaea;
   dl:nth-child(odd) {
-    background: #f4f4f4;
+    background: rgba(132, 110, 40, 0.16) // Lighter version of secondary color #846E28
   }
   dl {
     margin: 0 !important;
@@ -3025,7 +2846,7 @@ aside {
       }
     }
     &:hover {
-      background: #f4f4f4;
+      background: rgba(132, 110, 40, 0.26) // Lighter version of secondary color #846E28
     }
   }
   dl.last {
@@ -3033,7 +2854,7 @@ aside {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .prl-seminars-events {
     dl {
       dt.date.releaseDate {
@@ -3061,15 +2882,10 @@ aside {
       display: none;
     }
     h1.pageTitle {
-      margin-bottom: 20px;
+      margin-bottom: 22px;
     }
     .mura-asset {
       margin-top: 0;
-    }
-    .prl-about-speaker {
-      @extend .prl-h2-alternate;
-      font-size: 2.125rem; // 34px
-      text-align: left;
     }
     .prl-event-detail-btns {
       display: inline-block;
@@ -3153,20 +2969,20 @@ aside {
         .mura-item-content {
           position: relative;
           float: left;
-          z-index: 0;
+          z-index: 2;
           margin-right: 4%;
           a {
             border-bottom: none;
             img {
               border-radius: 100%;
               padding: 0; // Hover effect for cards with images.
-              -webkit-transition: 0.5s;
-              transition: 0.5s;
+              -webkit-transition: $tran-half-sec;
+              transition: $tran-half-sec;
             }
           }
           &:hover img,
           &:focus img {
-            opacity: 0.9;
+            opacity: $img-hover-opacity;
           }
         }
         .mura-item-meta {
@@ -3590,7 +3406,7 @@ aside {
 -------------------------------------------------- */
 
 #people.depth-3 {
-  // Giving Faculty title different h2 and intro, for contrast. 
+  // Giving Faculty title different h2 and intro, for contrast.
   .mainColContent {
     h2:nth-of-type(1) {
       // Faculty main title
@@ -3814,6 +3630,131 @@ aside {
   .prl-staff-contact-info {
     p {
       font-size: 16.5px !important;
+    }
+  }
+}
+
+
+/* --------------------------------------------------------
+                BERKLEY WALKER LAB
+-------------------------------------------------------- */
+
+/* HOMEPAGE
+-------------------------------------------------- */
+
+#walkerlabhome.depth-1 {
+  div.walker-hero-image {
+    // Hero image
+    background-image: url('/sites/_prl/assets/Image/Berkley%20Walker%20Lab/wp_20140804_14_29_52_pro-edit-web.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-box-shadow: $shadow-depth-6;
+    box-shadow: $shadow-depth-6;
+    padding: 180px 191px;
+    margin-bottom: 50px;
+    h1 {
+      // Hero image text
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 60px;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 29px;
+      font-weight: 200;
+    }
+  }
+  .mainCol {
+    // Overrides .col-md-8 default Natsci layout
+    width: 100%;
+    max-width: 100%;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    margin-bottom: 60px;
+    nav {
+      // Removing breadcrumbs from Walker lab home page
+      display: none;
+    }
+    .pageTitle {
+      // Removing default h1 from Walker lab home page
+      display: none;
+    }
+    .lead {
+      // Centering lead text
+      margin: 0 auto;
+      text-align: center;
+      max-width: 800px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  // Mobile
+  #walkerlabhome.depth-1 {
+    div.walker-hero-image {
+      padding: 75px 37px;
+      h1 {
+        font-size: 2.25rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  // Tablets
+  #walkerlabhome.depth-1 {
+    div.walker-hero-image {
+      padding: 108px 191px;
+      h1 {
+        font-size: 2.5rem;
+      }
+    }
+  }
+}
+
+#walkerlabhome {
+  nav {
+    li.first {
+      // Removing "Home" fonticon so it doesn't link back to PRL main website
+      display: none;
+    }
+    li:nth-child(2):before {
+      // Removing the slash before "Walker Lab Home" breadcrumb item
+      display: none;
+    }
+  }
+}
+
+/* LAB NEWS PAGE
+-------------------------------------------------- */
+
+#walkerlabhome.lab-news {
+  #svIndex {
+    div {
+      dl.hasImage {
+        padding-top: 12px !important; // Important declaration to override the dl.last styling
+        padding-right: 12px;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 767px) {
+    // Mobile devices
+    #svIndex {
+      // Image center aligned and border-bottom after each story.
+      div {
+        dl.hasImage {
+          padding: 0 0 6px 0 !important;
+          border-bottom: 1px solid #f5f5f5;
+          dd.image {
+            position: relative;
+            text-align: center;
+          }
+          dt.date.releaseDate {
+            margin-top: 0.6rem;
+          }
+        }
+      }
     }
   }
 }
