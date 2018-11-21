@@ -6800,7 +6800,8 @@ aside {
     margin-bottom: 32px; }
   .prl-home-brands .prl-home-brands-feature img {
     -webkit-box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0, 0, 0.12);
-    box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0, 0, 0.12); }
+    box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0, 0, 0.12);
+    border-radius: 12px; }
   .prl-home-brands div.prl-home-about {
     display: inline-block;
     text-align: center;
@@ -6952,7 +6953,7 @@ aside {
       display: none; } }
 @media (max-width: 767px) {
   .prl-home-news-feature .mura-async-object.mura-object div.mura-object-content > div.mura-index div > dl {
-    padding: 0; }
+    padding: 0 8px; }
     .prl-home-news-feature .mura-async-object.mura-object div.mura-object-content > div.mura-index div > dl dd.image {
       margin-bottom: 12px; }
     .prl-home-news-feature .mura-async-object.mura-object div.mura-object-content > div.mura-index div > dl dt.title {
