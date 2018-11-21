@@ -1305,6 +1305,7 @@ aside {
     img {
       -webkit-box-shadow: $img-shadow;
       box-shadow: $img-shadow;
+      border-radius: $border-radius-material-design-card;
     }
   }
   div.prl-home-about {
@@ -1567,7 +1568,7 @@ aside {
     .mura-async-object.mura-object {
       div.mura-object-content > div.mura-index {
         div > dl {
-          padding: 0;
+          padding: 0 8px;
           dd.image {
             margin-bottom: 12px;
           }
