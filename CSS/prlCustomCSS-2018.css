@@ -5901,15 +5901,19 @@ body.scroller-con.skin_blackwhite .scrollbary_bg {
         TRANSITION EFFECTS
 -------------------------------------------------------- */
 /* --------------------------------------------------------
+        BORDER RADIUS MODIFIED
+        Material design asks for 2px border radius, but 8px allowed
+-------------------------------------------------------- */
+/* --------------------------------------------------------
         BOX SHADOW DEPTHS
         // Shadow Depths from Material Design Web Components: https://material-components-web.appspot.com/elevation.html
 -------------------------------------------------------- */
 /* --------------------------------------------------------
         BUTTONS
 -------------------------------------------------------- */
-.prl-btn, .prl-flat-btn, .prl-home-event-cards .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__readmore a {
+.prl-btn, .prl-flat-btn, .graduate-program-overview #MainContent .prl-student-alumni-profiles a.view-all, .graduate-program-overview #MainContent .prl-student-alumni-profiles .breadcrumb a, .breadcrumb .graduate-program-overview #MainContent .prl-student-alumni-profiles a {
   border: 2px solid #2E4D4D !important;
-  border-radius: 2px;
+  border-radius: 12px;
   text-decoration: none !important;
   position: relative;
   margin: 0;
@@ -5928,20 +5932,20 @@ body.scroller-con.skin_blackwhite .scrollbary_bg {
   font-weight: 600 !important;
   -webkit-font-smoothing: antialiased;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   background-image: none;
   -ms-touch-action: manipulation;
-      touch-action: manipulation;
+  touch-action: manipulation;
   white-space: nowrap;
   vertical-align: middle;
   cursor: pointer; }
-  .prl-btn:hover, .prl-flat-btn:hover, .prl-home-event-cards .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__readmore a:hover {
+  .prl-btn:hover, .prl-flat-btn:hover, .graduate-program-overview #MainContent .prl-student-alumni-profiles a.view-all:hover, .graduate-program-overview #MainContent .prl-student-alumni-profiles .breadcrumb a:hover, .breadcrumb .graduate-program-overview #MainContent .prl-student-alumni-profiles a:hover {
     background-color: rgba(46, 77, 77, 0.09); }
-  .prl-btn:focus, .prl-flat-btn:focus, .prl-home-event-cards .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__readmore a:focus {
+  .prl-btn:focus, .prl-flat-btn:focus, .graduate-program-overview #MainContent .prl-student-alumni-profiles a.view-all:focus, .graduate-program-overview #MainContent .prl-student-alumni-profiles .breadcrumb a:focus, .breadcrumb .graduate-program-overview #MainContent .prl-student-alumni-profiles a:focus {
     background-color: rgba(46, 77, 77, 0.09); }
-  .prl-btn:active, .prl-flat-btn:active, .prl-home-event-cards .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__readmore a:active {
+  .prl-btn:active, .prl-flat-btn:active, .graduate-program-overview #MainContent .prl-student-alumni-profiles a.view-all:active, .graduate-program-overview #MainContent .prl-student-alumni-profiles .breadcrumb a:active, .breadcrumb .graduate-program-overview #MainContent .prl-student-alumni-profiles a:active {
     background-color: rgba(46, 77, 77, 0.18); }
 
 .prl-arrow-btn, #newsevents.depth-4 .secondaryPageContainer #MainContent .prl-event-detail-btns a {
@@ -5963,12 +5967,12 @@ body.scroller-con.skin_blackwhite .scrollbary_bg {
   font-weight: 600 !important;
   -webkit-font-smoothing: antialiased;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   background-image: none;
   -ms-touch-action: manipulation;
-      touch-action: manipulation;
+  touch-action: manipulation;
   white-space: nowrap;
   vertical-align: middle;
   cursor: pointer; }
@@ -5988,27 +5992,27 @@ body.scroller-con.skin_blackwhite .scrollbary_bg {
     transition: 0.28s cubic-bezier(0.4, 0, 0.2, 1); }
   .prl-arrow-btn:hover:after, #newsevents.depth-4 .secondaryPageContainer #MainContent .prl-event-detail-btns a:hover:after {
     -webkit-transform: translateX(4px);
-            transform: translateX(4px); }
+    transform: translateX(4px); }
   .prl-arrow-btn:focus:after, #newsevents.depth-4 .secondaryPageContainer #MainContent .prl-event-detail-btns a:focus:after {
     -webkit-transform: translateX(4px);
-            transform: translateX(4px); }
+    transform: translateX(4px); }
 
-.prl-flat-btn, .prl-home-event-cards .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__readmore a {
+.prl-flat-btn {
   background: 0 0;
   padding: 0px 16px;
   color: #846E28;
   border: 0px transparent !important;
   -webkit-transition: background-color 0.85s;
   transition: background-color 0.85s; }
-  .prl-flat-btn:hover, .prl-home-event-cards .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__readmore a:hover {
+  .prl-flat-btn:hover {
     background-color: rgba(158, 158, 158, 0.2);
     -webkit-transition: background-color 0.1s linear;
     transition: background-color 0.1s linear; }
-  .prl-flat-btn:focus, .prl-home-event-cards .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__readmore a:focus {
+  .prl-flat-btn:focus {
     background-color: rgba(158, 158, 158, 0.2);
     -webkit-transition: background-color 0.1s linear;
     transition: background-color 0.1s linear; }
-  .prl-flat-btn:active, .prl-home-event-cards .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__readmore a:active {
+  .prl-flat-btn:active {
     background-color: rgba(158, 158, 158, 0.4);
     -webkit-transition: background-color 0.1s linear;
     transition: background-color 0.1s linear; }
@@ -6029,7 +6033,7 @@ body.scroller-con.skin_blackwhite .scrollbary_bg {
   .prl-back-to-top-btn {
     display: none; } }
 /* --------------------------------------------------------
-        FIGURE CAPTIONS, BULLETPOINTS
+        FIGURE CAPTIONS & BULLETPOINTS
 -------------------------------------------------------- */
 figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figure {
   display: inline-block;
@@ -6079,15 +6083,19 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
 /* --------------------------------------------------------
         ALTERNATE HEADERS, SUBHEADERS, TEXT
 -------------------------------------------------------- */
-.prl-h2-alternate, .prl-home-brands h2, .prl-home-news-text .prl-news-title, .prl-home-events-text .prl-events-title, .prl-participating-faculty h2, #newsevents.depth-4 .secondaryPageContainer #MainContent .prl-about-speaker {
+.prl-h2-alternate, .prl-home-brands h2, .prl-home-news h2, .prl-home-events h2, .about .mainCol .pageTitle, .prl-participating-faculty h2 {
   text-align: center;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.05rem;
   text-transform: capitalize;
   font-weight: 200;
   font-size: 2.4rem;
   color: #2E4D4D; }
 
-.prl-p-subheader, .prl-home-brands p, .prl-home-news-text .prl-news-summary, .prl-home-events-text .prl-events-summary {
+.prl-h2-secondary-spacing, .research-projects h2, .graduate-program-overview #MainContent h2, .center-for-advanced-algal-and-plant-phenotyping h2, #newsevents.depth-2.seminars-events h2 {
+  margin-top: 2rem;
+  display: inline-block; }
+
+.prl-p-subheader, .prl-p-subheader-smaller, .prl-home-brands p {
   color: #666;
   line-height: 1.7 !important;
   font-size: 1.275rem !important;
@@ -6095,15 +6103,57 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
   margin-left: auto;
   margin-right: auto; }
 
+.prl-p-subheader-smaller {
+  line-height: 1.6 !important;
+  font-size: 16.8px !important;
+  margin-bottom: 10px; }
+
 .prl-narrow-container {
   max-width: 610px; }
 
 @media (max-width: 767px) {
-  .prl-h2-alternate, .prl-home-brands h2, .prl-home-news-text .prl-news-title, .prl-home-events-text .prl-events-title, .prl-participating-faculty h2, #newsevents.depth-4 .secondaryPageContainer #MainContent .prl-about-speaker {
-    font-weight: 300; }
+  .prl-p-subheader, .prl-p-subheader-smaller, .prl-home-brands p {
+    line-height: 1.6 !important; }
 
-  .prl-p-subheader, .prl-home-brands p, .prl-home-news-text .prl-news-summary, .prl-home-events-text .prl-events-summary {
-    line-height: 1.6 !important; } }
+  .prl-p-subheader-smaller {
+    line-height: 1.5 !important; } }
+/* -----------------------------------------------------------------------------------------------------
+        LOGOS USED ON INTERNAL SECONDARY PAGES: ABOUT, GRADUATE PROGRAM, RESEARCH, etc.
+----------------------------------------------------------------------------------------------------- */
+.prl-internal-logo-svg, .about .mainCol section.prl-about-essence svg, .graduate-program-overview #MainContent section.prl-grad-puv svg {
+  height: 45px;
+  margin-bottom: 18px; }
+
+.prl-internal-logo-content-area, .about .mainCol section.prl-about-essence .col-lg-4.col-md-6, .graduate-program-overview #MainContent section.prl-grad-puv .col-md-6 {
+  margin: 36px 0; }
+
+.prl-internal-logo-content-title, .about .mainCol section.prl-about-essence span.prl-essence-title, .graduate-program-overview #MainContent section.prl-grad-puv span.prl-grad-puv-title {
+  font-weight: 900;
+  color: #111;
+  display: block;
+  margin-bottom: 12px; }
+
+.prl-internal-logo-content-description, .about .mainCol section.prl-about-essence span.prl-essence-description, .graduate-program-overview #MainContent section.prl-grad-puv span.prl-grad-puv-description {
+  font-weight: 300;
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.6;
+  display: block; }
+
+@media (max-width: 767px) {
+  .prl-internal-logo-svg, .about .mainCol section.prl-about-essence svg, .graduate-program-overview #MainContent section.prl-grad-puv svg {
+    height: 40px;
+    margin-bottom: 15px; }
+
+  .prl-internal-logo-content-area, .about .mainCol section.prl-about-essence .col-lg-4.col-md-6, .graduate-program-overview #MainContent section.prl-grad-puv .col-md-6 {
+    margin: 25px 0 !important; } }
+/* -------------------------------------------------------------
+       IMAGE SHADOW
+------------------------------------------------------------- */
+.prl-section-hero-image img {
+  -webkit-box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12); }
+
 /* -------------------------------------------------------------
        ALTERNATE WELL
 ------------------------------------------------------------- */
@@ -6112,34 +6162,31 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
   padding: 19px !important;
   margin-bottom: 20px;
   background-color: #f1f1f1;
-  border-radius: 2px;
+  border-radius: 12px;
   color: #444;
   -webkit-box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
-          box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12); }
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12); }
 
 /* ---------------------------------------------------------------------------------
         CARD COMPONENTS - USED FOR MURA AND DL ITEMS IN NEWS AND HOMEPAGE EVENTS
 ------------------------------------------------------------------------------------ */
-.prl-card-outline, .prl-relcontent-body, .prl-card, .prl-card-w-border, .prl-card-hover-effect, .prl-home-event-cards .mura-collection-item, #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder, .all-research-projects #svIndex div dl, #sysResearchAllAreas div dl,
-#sysResearchDoeProjects div dl,
-#sysResearchFundamentalResearchProjects div dl,
-#sysResearchGreenSolutions div dl {
+.prl-card-outline, .prl-relcontent-body, .prl-card, .prl-card-w-border, .prl-card-hover-effect, .prl-home-event-cards .mura-collection-item, #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder {
   background: #fff;
   border-bottom: 0px transparent;
-  border-radius: 2px;
+  border-radius: 12px;
   margin-bottom: 16px;
   -webkit-box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
-          box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
   -webkit-transition: 0.35s;
   transition: 0.35s; }
 
-.prl-card-hover, .prl-relcontent-body:hover, .prl-card-hover-effect:hover, #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder:hover {
-  -webkit-box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
-          box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12); }
+.prl-card-hover, .prl-relcontent-body:hover, .prl-card-hover-effect:hover, .prl-home-event-cards .mura-collection-item .mura-collection-item__holder:hover, #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder:hover {
+  -webkit-box-shadow: 0px 6px 6px -3px rgba(0, 0, 0, 0.2), 0px 10px 14px 1px rgba(0, 0, 0, 0.14), 0px 4px 18px 3px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 6px 6px -3px rgba(0, 0, 0, 0.2), 0px 10px 14px 1px rgba(0, 0, 0, 0.14), 0px 4px 18px 3px rgba(0, 0, 0, 0.12); }
 
-.prl-card-image {
+.prl-card-image, .prl-card-image-only {
   position: relative; }
-  .prl-card-image .prl-card-image-overlay {
+  .prl-card-image .prl-card-image-overlay, .prl-card-image .prl-card-image-no-summary-overlay, .prl-card-image-only .prl-card-image-overlay, .prl-card-image-only .prl-card-image-no-summary-overlay {
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -6153,23 +6200,55 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
     .prl-card-image .prl-card-image-overlay h3,
     .prl-card-image .prl-card-image-overlay h4,
     .prl-card-image .prl-card-image-overlay h5,
-    .prl-card-image .prl-card-image-overlay h6 {
+    .prl-card-image .prl-card-image-overlay h6, .prl-card-image .prl-card-image-no-summary-overlay h1,
+    .prl-card-image .prl-card-image-no-summary-overlay h2,
+    .prl-card-image .prl-card-image-no-summary-overlay h3,
+    .prl-card-image .prl-card-image-no-summary-overlay h4,
+    .prl-card-image .prl-card-image-no-summary-overlay h5,
+    .prl-card-image .prl-card-image-no-summary-overlay h6, .prl-card-image-only .prl-card-image-overlay h1,
+    .prl-card-image-only .prl-card-image-overlay h2,
+    .prl-card-image-only .prl-card-image-overlay h3,
+    .prl-card-image-only .prl-card-image-overlay h4,
+    .prl-card-image-only .prl-card-image-overlay h5,
+    .prl-card-image-only .prl-card-image-overlay h6, .prl-card-image-only .prl-card-image-no-summary-overlay h1,
+    .prl-card-image-only .prl-card-image-no-summary-overlay h2,
+    .prl-card-image-only .prl-card-image-no-summary-overlay h3,
+    .prl-card-image-only .prl-card-image-no-summary-overlay h4,
+    .prl-card-image-only .prl-card-image-no-summary-overlay h5,
+    .prl-card-image-only .prl-card-image-no-summary-overlay h6 {
       color: white !important;
       font-weight: 400 !important;
-      font-size: 1.125rem !important;
-      margin: 0; }
+      font-size: 1rem !important;
+      margin: 0;
+      padding-bottom: 0 !important; }
     .prl-card-image .prl-card-image-overlay p,
     .prl-card-image .prl-card-image-overlay ul,
-    .prl-card-image .prl-card-image-overlay ol {
+    .prl-card-image .prl-card-image-overlay ol, .prl-card-image .prl-card-image-no-summary-overlay p,
+    .prl-card-image .prl-card-image-no-summary-overlay ul,
+    .prl-card-image .prl-card-image-no-summary-overlay ol, .prl-card-image-only .prl-card-image-overlay p,
+    .prl-card-image-only .prl-card-image-overlay ul,
+    .prl-card-image-only .prl-card-image-overlay ol, .prl-card-image-only .prl-card-image-no-summary-overlay p,
+    .prl-card-image-only .prl-card-image-no-summary-overlay ul,
+    .prl-card-image-only .prl-card-image-no-summary-overlay ol {
       color: white !important;
       font-weight: 400 !important;
       margin: 0; }
+  .prl-card-image .prl-card-image-no-summary-overlay, .prl-card-image-only .prl-card-image-no-summary-overlay {
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px; }
+
+.prl-card-image-only {
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px; }
+  .prl-card-image-only img {
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px; }
 
 .prl-card-image-hover {
   -webkit-transition: 0.5s;
   transition: 0.5s; }
   .prl-card-image-hover:hover {
-    opacity: 0.9; }
+    opacity: 0.8; }
 
 .prl-card-body, .prl-home-event-cards .mura-collection-item .mura-collection-item__holder .mura-item-meta, #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta {
   padding: 16px; }
@@ -6214,7 +6293,7 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
   .prl-card-hover-effect h6 a, .prl-home-event-cards .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__title a, #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__title a {
     text-decoration: none;
     border-bottom: none !important;
-    color: #444;
+    color: #444 !important;
     line-height: 1.2; }
 
 .prl-card-date, .prl-home-event-cards .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__date, #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__date {
@@ -6264,20 +6343,15 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
   #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__summary ol {
     margin: 0; }
 
-.prl-card-readmore-btns, .prl-home-event-cards .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__readmore {
+.prl-card-readmore-btns {
   border-top: 1px solid rgba(160, 160, 160, 0.2);
   padding: 4px; }
-  .prl-card-readmore-btns a, .prl-home-event-cards .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__readmore a,
-  .prl-card-readmore-btns .prl-flat-btn,
-  .prl-home-event-cards .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__readmore .prl-flat-btn,
-  .prl-home-event-cards .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__readmore a {
+  .prl-card-readmore-btns a,
+  .prl-card-readmore-btns .prl-flat-btn {
     margin: 4px;
     display: inline-block !important; }
 
-.prl-readmore-fill-container, .prl-home-feature div > dl.first.last.hasImage dd.readmore.readMore, #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__readmore, .all-research-projects #svIndex div dl dd.readmore.readMore, #sysResearchAllAreas div dl dd.readmore.readMore,
-#sysResearchDoeProjects div dl dd.readmore.readMore,
-#sysResearchFundamentalResearchProjects div dl dd.readmore.readMore,
-#sysResearchGreenSolutions div dl dd.readmore.readMore {
+.prl-readmore-fill-container, .prl-home-event-cards .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__readmore, #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__readmore {
   position: absolute;
   top: 0;
   left: 0;
@@ -6285,10 +6359,7 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
   height: 100%;
   font-size: 0;
   z-index: 100; }
-  .prl-readmore-fill-container a, .prl-home-feature div > dl.first.last.hasImage dd.readmore.readMore a, #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__readmore a, .all-research-projects #svIndex div dl dd.readmore.readMore a, #sysResearchAllAreas div dl dd.readmore.readMore a,
-  #sysResearchDoeProjects div dl dd.readmore.readMore a,
-  #sysResearchFundamentalResearchProjects div dl dd.readmore.readMore a,
-  #sysResearchGreenSolutions div dl dd.readmore.readMore a {
+  .prl-readmore-fill-container a, .prl-home-event-cards .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__readmore a, #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__readmore a {
     display: inline-block;
     width: 100%;
     height: 100%;
@@ -6307,14 +6378,14 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
     height: 100%;
     padding: 0 !important;
     border-bottom: 1px solid rgba(160, 160, 160, 0.2);
-    border-top-left-radius: 2px;
-    border-top-right-radius: 2px; }
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px; }
   .prl-relcontent-body p {
     margin-bottom: 0 !important; }
 
 .prl-relcontent-body-small {
   -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
   margin: 16px 8px;
   padding: 16px 0;
   position: relative;
@@ -6325,7 +6396,8 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
   .prl-relcontent-body-small img {
     padding: 0px !important;
     width: 100px;
-    float: left; }
+    float: left;
+    border-radius: 12px; }
   .prl-relcontent-body-small div.prl-relcontent-body-small-link {
     display: block;
     line-height: 1.43;
@@ -6360,8 +6432,8 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
   .prl-card img, .prl-card-w-border img, .prl-card-hover-effect img {
     padding: 0 !important;
     width: 100%;
-    border-top-left-radius: 2px;
-    border-top-right-radius: 2px; }
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px; }
   .prl-card h1, .prl-card-w-border h1, .prl-card-hover-effect h1,
   .prl-card h2,
   .prl-card-w-border h2,
@@ -6412,8 +6484,8 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
   float: left;
   display: block;
   margin-right: 0.625rem;
-  -webkit-transition: 0.35s;
-  transition: 0.35s; }
+  -webkit-transition: 0.5s;
+  transition: 0.5s; }
   .prl-aside-relcontent-img:hover, #newsevents aside .prl-top-stories dl dd.image:hover, #MainContent .prl-news-relcontent div dl dd.image:hover, #people .prl-faculty-member-news div dl dd.image:hover {
     opacity: 0.8; }
 
@@ -6467,7 +6539,9 @@ aside {
 
 .depth-2.internal-resources #svIndex dt.title,
 .depth-1.people #svIndex dt.title,
-.depth-1.news-events #svIndex dt.title {
+.depth-1.news-events #svIndex dt.title,
+.depth-1.research-tech #svIndex dt.title,
+.depth-1.graduate-program #svIndex dt.title {
   font-size: 23px;
   font-size: 1.45rem; }
 
@@ -6675,260 +6749,234 @@ aside {
 -------------------------------------------------------- */
 /* HOMEPAGE CNS LAYOUT OVERRIDES
 -------------------------------------------------------- */
-.home {
-  /* .deptHomeComponentWrapper {
-      // Take away the gap between the hero image and the content card
-      .deptHomeComponentHeading {
-          margin-bottom: 0;
-      }
-  } */ }
-  .home .card-natsci:hover {
-    -webkit-box-shadow: none;
-    box-shadow: none; }
+.home .card-natsci:hover {
+  -webkit-box-shadow: none;
+  box-shadow: none; }
 
 @media (min-width: 1370px) {
   .deptHomeComponentWrapper .container {
     width: 1350px;
     max-width: 1350px; } }
+@media (max-width: 767px) {
+  .home .deptHomeComponentWrapper .deptHomeComponentHeading {
+    margin-bottom: 0; }
+  .home .deptHomeComponentWrapper {
+    background: #fff; }
+  .home .deptHomeComponentWrapper {
+    padding-bottom: 0; }
+  .home .card-natsci {
+    border: none;
+    overflow: visible; }
+    .home .card-natsci:hover {
+      -webkit-box-shadow: none;
+      box-shadow: none; } }
 /* HOMEPAGE BRANDS SECTION
 -------------------------------------------------------- */
 .prl-home-brands {
   margin-top: 0.95rem;
-  margin-bottom: 4rem; }
+  margin-bottom: 120px; }
   .prl-home-brands p {
-    padding: 0 3rem 2rem 3rem;
+    padding: 0 3rem 0 0;
     text-align: center;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    max-width: 750px; }
+  .prl-home-brands .prl-home-brands-feature .mura-async-object.mura-object {
+    margin-top: 62px; }
+  .prl-home-brands .prl-home-brands-feature h3 {
+    font-size: 15.5px;
+    font-weight: 900;
+    color: #111;
+    display: block;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+    padding-left: 12px;
+    border-left: 5px solid #2E4D4D; }
+  .prl-home-brands .prl-home-brands-feature span.prl-brand-feature-summary, .prl-home-brands .prl-home-brands-feature span {
+    font-weight: 300;
+    color: #666;
+    font-size: 15.5px;
+    line-height: 1.5;
+    display: block;
+    margin-bottom: 32px; }
+  .prl-home-brands .prl-home-brands-feature img {
+    -webkit-box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0, 0, 0.12); }
   .prl-home-brands div.prl-home-about {
     display: inline-block;
     text-align: center;
     width: 100%;
     margin-bottom: 2.25rem; }
 
-.prl-brands {
-  border-bottom: 1px solid #e6e6e6; }
-  .prl-brands .prl-brand-area {
-    padding: 2.5rem 1.5rem 3rem 2.5rem; }
-    .prl-brands .prl-brand-area img {
-      height: 5.5rem;
-      display: block;
-      margin: 0 auto; }
-    .prl-brands .prl-brand-area h3 {
-      font-size: 1.25rem;
-      line-height: 1.2;
-      text-transform: capitalize;
-      font-weight: 400;
-      letter-spacing: 1.5px;
-      margin-top: 1.75rem;
-      margin-bottom: 0;
-      color: #2E4D4D; }
-    .prl-brands .prl-brand-area p {
-      font-weight: 400;
-      color: #666;
-      font-size: 0.945rem !important;
-      letter-spacing: 1px;
-      margin-top: 0.5rem;
-      margin-bottom: 0.75rem;
-      padding: 0;
-      text-align: left; }
-
+@media (max-width: 767px) {
+  .prl-home-brands {
+    margin-bottom: 62px; }
+    .prl-home-brands p {
+      padding-right: 0;
+      padding-left: 0;
+      padding-bottom: 1.5rem; }
+    .prl-home-brands div.prl-home-about {
+      margin-bottom: 2.75rem; } }
+@media (min-width: 768px) and (max-width: 991px) {
+  .prl-home-brands {
+    margin-top: 2rem;
+    margin-bottom: 4rem; } }
+@media (min-width: 1370px) {
+  .prl-home-brands {
+    max-width: 1225px;
+    margin-left: auto;
+    margin-right: auto; } }
 /* HOMEPAGE NEWS SECTION
 -------------------------------------------------------- */
 .prl-home-news {
-  margin-bottom: 5rem;
-  margin-right: -15px;
-  margin-left: -15px;
-  clear: both; }
+  margin-bottom: 120px;
+  margin-right: -8px;
+  margin-left: -8px; }
+  .prl-home-news h2 {
+    margin-bottom: 50px; }
 
-.prl-home-news-text .prl-news-summary {
-  margin-bottom: 2.2rem;
-  text-align: center; }
-
-.prl-home-feature {
-  padding: 0;
-  margin: 0;
-  float: left; }
-  .prl-home-feature .mura-object-meta {
-    margin-bottom: 0; }
-  .prl-home-feature h2 {
-    position: absolute;
-    top: 3.25rem;
-    z-index: 1;
-    left: 10%;
-    color: white;
-    border-left: 3px solid white;
-    text-indent: 0.94rem;
-    font-size: 1.7rem;
-    font-weight: 300;
-    text-shadow: 1px 1px #000; }
-  .prl-home-feature .mura-index {
-    margin: 0; }
-  .prl-home-feature div > dl.first.last.hasImage {
-    height: 520px;
-    margin-top: 0rem;
-    margin-bottom: 0rem; }
-    .prl-home-feature div > dl.first.last.hasImage dt.title {
-      position: absolute;
-      bottom: 2.5rem;
-      z-index: 10;
-      left: 1.25rem;
-      text-transform: capitalize;
-      letter-spacing: 1px;
-      line-height: 1.6;
-      margin-right: 1.25rem;
-      -webkit-transition: 0.6s;
-      transition: 0.6s;
-      font-weight: 400; }
-      .prl-home-feature div > dl.first.last.hasImage dt.title a {
-        color: white;
-        text-decoration: none;
-        border-bottom: none !important;
-        font-size: 1.4rem;
-        display: inline-block;
-        width: 100%;
-        height: 100%;
-        line-height: 1.4; }
-    .prl-home-feature div > dl.first.last.hasImage dd.image {
+.prl-home-news-feature .mura-async-object.mura-object div.mura-object-content > div.mura-index {
+  margin: 0; }
+  .prl-home-news-feature .mura-async-object.mura-object div.mura-object-content > div.mura-index div > dl {
+    margin: 0;
+    padding: 8px 32px 0 8px;
+    border-right: 3px solid #2E4D4D; }
+    .prl-home-news-feature .mura-async-object.mura-object div.mura-object-content > div.mura-index div > dl dd.image {
       position: relative;
-      -webkit-transition: 0.9s;
-      transition: 0.9s;
-      width: 100%;
-      height: 100%; }
-      .prl-home-feature div > dl.first.last.hasImage dd.image a {
-        display: inline-block;
-        width: 100%;
-        height: 100%;
-        z-index: 100; }
-        .prl-home-feature div > dl.first.last.hasImage dd.image a img {
-          height: 100%;
-          width: 100%; }
-    .prl-home-feature div > dl.first.last.hasImage dd.summary {
-      position: absolute;
-      bottom: 1.56rem;
-      left: 1.25rem;
-      color: white;
-      max-width: 90%;
-      opacity: 0;
-      -webkit-transition: 0.7s;
-      transition: 0.7s;
-      -webkit-transition-delay: 0s;
-      transition-delay: 0s;
-      -webkit-transform: translateY(5rem);
-      transform: translateY(5rem);
-      z-index: 11;
-      font-size: 0.875rem;
-      letter-spacing: 1px;
-      line-height: 1.6;
+      margin: 0 0 32px 0; }
+      .prl-home-news-feature .mura-async-object.mura-object div.mura-object-content > div.mura-index div > dl dd.image a {
+        border-bottom: 0px solid transparent; }
+        .prl-home-news-feature .mura-async-object.mura-object div.mura-object-content > div.mura-index div > dl dd.image a img {
+          border-radius: 12px;
+          -webkit-box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0, 0, 0.12);
+          -webkit-transition: 0.5s;
+          transition: 0.5s; }
+          .prl-home-news-feature .mura-async-object.mura-object div.mura-object-content > div.mura-index div > dl dd.image a img:hover {
+            opacity: 0.8; }
+    .prl-home-news-feature .mura-async-object.mura-object div.mura-object-content > div.mura-index div > dl dt.title {
+      margin: 0 0 4px 32px;
+      text-transform: uppercase; }
+      .prl-home-news-feature .mura-async-object.mura-object div.mura-object-content > div.mura-index div > dl dt.title a {
+        text-decoration: none;
+        border-bottom: 0px;
+        color: #111; }
+    .prl-home-news-feature .mura-async-object.mura-object div.mura-object-content > div.mura-index div > dl dd.summary {
       font-weight: 300;
-      text-shadow: 1px 1px #000; }
-    .prl-home-feature div > dl.first.last.hasImage:after {
-      background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.75)), to(transparent));
-      background: linear-gradient(0deg, rgba(0, 0, 0, 0.75), transparent);
-      background: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0.75), transparent);
-      bottom: 0;
-      left: 0;
-      opacity: 1;
-      content: '';
-      height: 37%;
-      position: absolute;
-      width: 100%;
-      z-index: 0;
-      -webkit-transition: opacity 1s, height 0.5s 0s;
-      transition: opacity 1s, height 0.5s 0s; }
-    .prl-home-feature div > dl.first.last.hasImage:hover dd.image {
-      -webkit-filter: brightness(0.4);
-      filter: brightness(0.4);
-      -webkit-transform: scale3d(1.075, 1.075, 1);
-      transform: scale3d(1.075, 1.075, 1); }
-    .prl-home-feature div > dl.first.last.hasImage:hover dt.title {
-      -webkit-transform: translateY(-3.5rem);
-      transform: translateY(-3.5rem); }
-    .prl-home-feature div > dl.first.last.hasImage:hover dd.summary {
-      opacity: 1;
-      -webkit-transform: translateY(1rem);
-      transform: translateY(1rem);
-      -webkit-transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-      transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-      -webkit-transition-delay: 0.2s;
-      transition-delay: 0.2s; }
-    .prl-home-feature div > dl.first.last.hasImage:hover:after {
-      height: 0%;
-      opacity: 0;
-      -webkit-transition: opacity 1s, height 0s 1s;
-      transition: opacity 1s, height 0s 1s; }
+      color: #666;
+      font-size: 15.5px;
+      line-height: 1.5;
+      display: block;
+      margin: 0 0 0 32px; }
 
-.prl-home-nonfeature {
-  margin: 0;
-  padding: 0;
-  border-top: transparent;
-  float: none;
-  display: inline; }
-  .prl-home-nonfeature div {
-    margin: 0; }
-    .prl-home-nonfeature div dl.hasImage {
+.prl-home-news-nonfeature .mura-async-object.mura-object > div.mura-object-content div.mura-index {
+  margin: 0 8px 0 32px; }
+  .prl-home-news-nonfeature .mura-async-object.mura-object > div.mura-object-content div.mura-index div dl {
+    margin: 0 0 24px 0;
+    padding: 0 !important;
+    min-height: auto !important; }
+    .prl-home-news-nonfeature .mura-async-object.mura-object > div.mura-object-content div.mura-index div dl dd.image {
+      width: 140px;
+      position: relative;
+      float: left;
       margin: 0;
-      width: 33.333333%;
-      height: 260px;
-      border: transparent;
-      float: left; }
-      .prl-home-nonfeature div dl.hasImage dd.image {
-        height: 100%;
-        width: 100%;
-        -webkit-transition: 0.9s;
-        transition: 0.9s; }
-        .prl-home-nonfeature div dl.hasImage dd.image a img {
-          height: 100%;
-          width: 100%; }
-      .prl-home-nonfeature div dl.hasImage dt.title {
-        position: absolute;
-        bottom: 0.45rem;
-        left: 0.625rem;
-        font-size: 0.94rem;
-        margin-right: 0.78em;
-        z-index: 1;
-        font-weight: 300;
-        text-shadow: 1px 1px #000;
-        letter-spacing: 0.5px; }
-        .prl-home-nonfeature div dl.hasImage dt.title a {
-          color: white;
-          text-decoration: none;
-          border-bottom: none !important;
-          display: block;
-          line-height: 1.4; }
-      .prl-home-nonfeature div dl.hasImage dd.summary {
-        position: absolute;
-        z-index: 2;
-        opacity: 0; }
-      .prl-home-nonfeature div dl.hasImage:after {
-        background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.75)), to(transparent));
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.75), transparent);
-        background: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0.75), transparent);
-        bottom: 0;
-        left: 0;
-        opacity: 1;
-        content: '';
-        height: 47.5%;
-        position: absolute;
-        width: 100%;
-        z-index: 0;
-        -webkit-transition: opacity 1s, height 0.5s 0s;
-        transition: opacity 1s, height 0.5s 0s; }
-      .prl-home-nonfeature div dl.hasImage:hover dd.image {
-        -webkit-filter: brightness(0.4);
-        filter: brightness(0.4);
-        -webkit-transform: scale3d(1.075, 1.075, 1);
-        transform: scale3d(1.075, 1.075, 1); }
-      .prl-home-nonfeature div dl.hasImage:hover:after {
-        height: 0%;
-        opacity: 0;
-        -webkit-transition: opacity 1s, height 0s 1s;
-        transition: opacity 1s, height 0s 1s; }
+      padding: 8px 16px 16px 16px; }
+      .prl-home-news-nonfeature .mura-async-object.mura-object > div.mura-object-content div.mura-index div dl dd.image a {
+        border-bottom: 0px solid transparent; }
+        .prl-home-news-nonfeature .mura-async-object.mura-object > div.mura-object-content div.mura-index div dl dd.image a img {
+          border-radius: 12px;
+          -webkit-box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0, 0, 0.12);
+          -webkit-transition: 0.5s;
+          transition: 0.5s; }
+          .prl-home-news-nonfeature .mura-async-object.mura-object > div.mura-object-content div.mura-index div dl dd.image a img:hover {
+            opacity: 0.8; }
+    .prl-home-news-nonfeature .mura-async-object.mura-object > div.mura-object-content div.mura-index div dl dt.title {
+      margin: 8px 0 0 0; }
+      .prl-home-news-nonfeature .mura-async-object.mura-object > div.mura-object-content div.mura-index div dl dt.title a {
+        text-decoration: none;
+        border-bottom: 0px;
+        color: #111; }
+    .prl-home-news-nonfeature .mura-async-object.mura-object > div.mura-object-content div.mura-index div dl dd.summary {
+      font-weight: 300;
+      color: #666;
+      font-size: 15.5px;
+      line-height: 1.4;
+      display: block;
+      margin: 0 0 0 32px; }
 
+@media (min-width: 992px) and (max-width: 1199px) {
+  .prl-home-news-feature .mura-async-object.mura-object div.mura-object-content > div.mura-index div > dl {
+    padding-right: 24px; }
+    .prl-home-news-feature .mura-async-object.mura-object div.mura-object-content > div.mura-index div > dl dd.image {
+      margin-bottom: 24px; }
+    .prl-home-news-feature .mura-async-object.mura-object div.mura-object-content > div.mura-index div > dl dd.summary {
+      font-size: 15px; }
+
+  .prl-home-news-nonfeature .mura-async-object.mura-object > div.mura-object-content div.mura-index {
+    margin-left: 16px; }
+    .prl-home-news-nonfeature .mura-async-object.mura-object > div.mura-object-content div.mura-index div dl {
+      margin-bottom: 8px; }
+      .prl-home-news-nonfeature .mura-async-object.mura-object > div.mura-object-content div.mura-index div dl dd.image {
+        width: 120px; }
+      .prl-home-news-nonfeature .mura-async-object.mura-object > div.mura-object-content div.mura-index div dl dd.summary {
+        font-size: 15px; } }
+@media (max-width: 991px) {
+  .prl-home-news {
+    margin-bottom: 62px; }
+
+  .prl-home-news-feature .mura-async-object.mura-object div.mura-object-content > div.mura-index div > dl {
+    margin: 0;
+    padding: 0 16px;
+    border-right: 0px transparent; }
+    .prl-home-news-feature .mura-async-object.mura-object div.mura-object-content > div.mura-index div > dl dd.image {
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 24px; }
+    .prl-home-news-feature .mura-async-object.mura-object div.mura-object-content > div.mura-index div > dl dt.title {
+      margin: 0 auto;
+      padding-left: 16px;
+      max-width: 600px; }
+    .prl-home-news-feature .mura-async-object.mura-object div.mura-object-content > div.mura-index div > dl dd.summary {
+      margin: 0 auto;
+      padding-left: 16px;
+      max-width: 600px; }
+
+  .prl-home-news-nonfeature .mura-async-object.mura-object > div.mura-object-content div.mura-index {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto; }
+    .prl-home-news-nonfeature .mura-async-object.mura-object > div.mura-object-content div.mura-index div dl {
+      margin-bottom: 16px; }
+    .prl-home-news-nonfeature .mura-async-object.mura-object > div.mura-object-content div.mura-index div dl.last.hasImage {
+      display: none; } }
+@media (max-width: 767px) {
+  .prl-home-news-feature .mura-async-object.mura-object div.mura-object-content > div.mura-index div > dl {
+    padding: 0; }
+    .prl-home-news-feature .mura-async-object.mura-object div.mura-object-content > div.mura-index div > dl dd.image {
+      margin-bottom: 12px; }
+    .prl-home-news-feature .mura-async-object.mura-object div.mura-object-content > div.mura-index div > dl dt.title {
+      text-transform: initial;
+      padding: 0;
+      margin-bottom: 4px; }
+    .prl-home-news-feature .mura-async-object.mura-object div.mura-object-content > div.mura-index div > dl dd.summary {
+      font-size: .91rem;
+      padding: 0; }
+
+  .prl-home-news-nonfeature .mura-async-object.mura-object > div.mura-object-content div.mura-index div dl {
+    margin-bottom: 8px; }
+    .prl-home-news-nonfeature .mura-async-object.mura-object > div.mura-object-content div.mura-index div dl dd.image {
+      width: 110px; }
+    .prl-home-news-nonfeature .mura-async-object.mura-object > div.mura-object-content div.mura-index div dl dt.title {
+      margin-bottom: 4px; }
+    .prl-home-news-nonfeature .mura-async-object.mura-object > div.mura-object-content div.mura-index div dl dd.summary {
+      display: none; }
+  .prl-home-news-nonfeature .mura-async-object.mura-object > div.mura-object-content div.mura-index div dl.last.hasImage {
+    display: initial; } }
 /* HOMEPAGE EVENTS SECTION
 -------------------------------------------------------- */
-.prl-home-events-text .prl-events-summary {
-  margin-bottom: 2.2rem;
-  text-align: center; }
+.prl-home-events h2 {
+  margin-bottom: 50px; }
 
 .prl-home-event-cards {
   margin-bottom: 2.75rem; }
@@ -6942,8 +6990,12 @@ aside {
   .prl-home-event-cards .mura-collection-item {
     width: 31.5%; }
     .prl-home-event-cards .mura-collection-item .mura-collection-item__holder {
-      padding: 0; }
+      padding: 0;
+      border-radius: 12px;
+      -webkit-transition: 0.5s;
+      transition: 0.5s; }
       .prl-home-event-cards .mura-collection-item .mura-collection-item__holder .mura-item-content {
+        border-radius: 12px 12px 0 0;
         position: relative;
         margin: 0;
         display: block;
@@ -6956,35 +7008,20 @@ aside {
         .prl-home-event-cards .mura-collection-item .mura-collection-item__holder .mura-item-content a img {
           width: 100%; }
         .prl-home-event-cards .mura-collection-item .mura-collection-item__holder .mura-item-content:hover {
-          opacity: 0.9; }
-      .prl-home-event-cards .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__summary {
-        height: 6.25rem; }
+          opacity: 0.8; }
+      .prl-home-event-cards .mura-collection-item .mura-collection-item__holder .mura-item-meta {
+        position: relative; }
         .prl-home-event-cards .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__summary .prl-event-type {
           display: inline-block;
           margin-bottom: 3px;
           border-bottom: 1px solid rgba(160, 160, 160, 0.2);
           font-weight: 500;
           color: #757575; }
-      .prl-home-event-cards .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__readmore {
-        margin: 0 -16px -16px -16px; }
 
-.prl-home-btn {
+.prl-home-events-btn {
   margin-bottom: 3rem; }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  .prl-brands .col-md-4 {
-    padding-right: 9px;
-    padding-left: 29px; }
-
-  .prl-home-feature div > dl.first.last.hasImage {
-    height: 430px; }
-    .prl-home-feature div > dl.first.last.hasImage:hover dt.title {
-      -webkit-transform: translateY(-3.75rem);
-      transform: translateY(-3.75rem); }
-
-  .prl-home-nonfeature div dl.hasImage {
-    height: 215px; }
-
   .prl-home-event-cards div.mura-collection.mura-grid-three .mura-collection-item:first-child {
     float: left;
     margin-left: 0;
@@ -6997,129 +7034,8 @@ aside {
       display: block;
       white-space: nowrap;
       text-overflow: ellipsis;
-      overflow: hidden; }
-    .prl-home-event-cards .mura-collection-item .mura-collection-item__holder .mura-item-meta__summary {
-      height: 7.5rem !important; } }
+      overflow: hidden; } }
 @media (max-width: 767px) {
-  .home .deptHomeComponentWrapper .deptHomeComponentHeading {
-    margin-bottom: 0; }
-  .home .deptHomeComponentWrapper {
-    background: #fff; }
-  .home .deptHomeComponentWrapper {
-    padding-bottom: 0; }
-  .home .card-natsci {
-    border: none;
-    overflow: visible; }
-    .home .card-natsci:hover {
-      -webkit-box-shadow: none;
-      box-shadow: none; }
-
-  .prl-home-brands {
-    margin-bottom: 2rem; }
-    .prl-home-brands p {
-      padding-right: 0;
-      padding-left: 0;
-      padding-bottom: 1.5rem; }
-    .prl-home-brands div.prl-home-about {
-      margin-bottom: 2.75rem; }
-
-  .prl-brands .prl-brand-area {
-    margin: 0 auto 1.5rem auto;
-    padding: 0.9rem 0;
-    text-align: center; }
-    .prl-brands .prl-brand-area p {
-      line-height: 1.6;
-      font-size: 1rem !important;
-      max-width: 21rem;
-      text-align: center; }
-  .prl-brands div:last-child {
-    border-bottom: none; }
-
-  .prl-home-news {
-    margin-bottom: 2.15rem; }
-    .prl-home-news .prl-news-summary {
-      padding: 0 15px; }
-
-  .prl-home-feature h2 {
-    top: 1.75rem;
-    left: 5%;
-    font-size: 1.25rem; }
-  .prl-home-feature div > dl.first.last.hasImage {
-    height: auto;
-    border-radius: 2px;
-    -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
-    width: 100%;
-    margin-right: auto;
-    margin-left: auto;
-    padding-bottom: 0;
-    margin-bottom: 16px; }
-    .prl-home-feature div > dl.first.last.hasImage dd.image {
-      position: relative; }
-    .prl-home-feature div > dl.first.last.hasImage dt.title {
-      line-height: 1.2;
-      margin: 0px;
-      bottom: 0;
-      left: 0;
-      font-weight: 900;
-      width: 100%;
-      -webkit-font-smoothing: antialiased; }
-      .prl-home-feature div > dl.first.last.hasImage dt.title a {
-        font-size: 1rem;
-        padding: 18% 8px 16px 8px;
-        color: white;
-        background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.95)), to(transparent));
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.95), transparent); }
-    .prl-home-feature div > dl.first.last.hasImage dd.summary {
-      display: none; }
-    .prl-home-feature div > dl.first.last.hasImage:after {
-      display: none; }
-    .prl-home-feature div > dl.first.last.hasImage:hover dd.image {
-      -webkit-filter: brightness(1);
-      filter: brightness(1);
-      -webkit-transform: none;
-      transform: none; }
-    .prl-home-feature div > dl.first.last.hasImage:hover dt.title {
-      -webkit-transform: translateY(0rem);
-      transform: translateY(0rem); }
-
-  .prl-home-nonfeature div dl.hasImage {
-    height: auto;
-    border-radius: 2px;
-    -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
-    width: 100%;
-    margin-right: auto;
-    margin-left: auto;
-    padding-bottom: 0;
-    margin-bottom: 16px; }
-    .prl-home-nonfeature div dl.hasImage dd.image {
-      position: relative; }
-    .prl-home-nonfeature div dl.hasImage dt.title {
-      line-height: 1.2;
-      margin: 0px;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      font-weight: 900;
-      -webkit-font-smoothing: antialiased; }
-      .prl-home-nonfeature div dl.hasImage dt.title a {
-        font-size: 1rem;
-        padding: 18% 8px 16px 8px;
-        color: white;
-        background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.95)), to(transparent));
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.95), transparent); }
-    .prl-home-nonfeature div dl.hasImage:hover dd.image {
-      -webkit-filter: brightness(1);
-      filter: brightness(1);
-      -webkit-transform: none;
-      transform: none; }
-    .prl-home-nonfeature div dl.hasImage:after {
-      display: none; }
-  .prl-home-nonfeature div dl:nth-child(4),
-  .prl-home-nonfeature div dl.last.hasImage {
-    display: none; }
-
   .prl-home-events .prl-events-summary {
     padding: 0 15px; }
 
@@ -7136,24 +7052,9 @@ aside {
     float: left;
     width: 100%;
     margin: 0 auto 16px auto; }
-    .prl-home-event-cards .mura-collection-item .mura-item-meta__summary {
-      height: auto !important; }
     .prl-home-event-cards .mura-collection-item .mura-item-meta__readmore {
       margin: 16px -16px -16px !important; } }
 @media (min-width: 768px) and (max-width: 991px) {
-  .prl-home-brands {
-    margin-top: 2rem;
-    margin-bottom: 4rem; }
-
-  .prl-home-feature div dl.hasImage {
-    height: 470px !important; }
-
-  .prl-home-nonfeature div dl.hasImage {
-    width: 50%;
-    height: 250px; }
-  .prl-home-nonfeature div dl.last.hasImage {
-    display: none; }
-
   .prl-home-event-cards div.mura-collection.mura-grid-three .mura-collection-item:first-child {
     margin-right: 2.25%;
     margin-left: 0.5%; }
@@ -7164,16 +7065,9 @@ aside {
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden; }
-  .prl-home-event-cards .mura-collection-item .mura-item-meta__summary {
-    height: 10.15rem !important; }
-    .prl-home-event-cards .mura-collection-item .mura-item-meta__summary .prl-event-type {
-      display: block; } }
+  .prl-home-event-cards .mura-collection-item .mura-item-meta__summary .prl-event-type {
+    display: block; } }
 @media (min-width: 1370px) {
-  .prl-home-brands {
-    max-width: 1225px;
-    margin-left: auto;
-    margin-right: auto; }
-
   .prl-home-news,
   .prl-home-event-cards div.mura-collection.mura-grid-three {
     max-width: 1170px;
@@ -7182,43 +7076,136 @@ aside {
 /* --------------------------------------------------------
                 ABOUT PAGE
 -------------------------------------------------------- */
-.about-prl-design .mainCol {
+.about .mainCol {
   width: 100%;
   max-width: 100%;
   -webkit-box-flex: 0;
   -ms-flex: 0 0 100%;
-  flex: 0 0 100%; }
+  flex: 0 0 100%;
+  margin-bottom: 60px; }
+  .about .mainCol nav {
+    display: none; }
+  .about .mainCol .pageTitle {
+    margin-top: 80px; }
+  .about .mainCol section {
+    margin: 150px 0; }
+  .about .mainCol section:first-child {
+    margin-top: 0px; }
+  .about .mainCol section.prl-about-what {
+    color: #666;
+    font-weight: 300; }
+    .about .mainCol section.prl-about-what .row {
+      margin: 160px 0; }
+    .about .mainCol section.prl-about-what .prl-about-what-first-row {
+      margin-top: 100px !important; }
+    .about .mainCol section.prl-about-what div.col-md-7.col-sm-12 {
+      padding: 0; }
+    .about .mainCol section.prl-about-what .prl-about-what-text-right {
+      padding: 15px 0px 15px 40px; }
+    .about .mainCol section.prl-about-what .prl-about-what-text-left {
+      padding: 15px 40px 15px 0px; }
+    .about .mainCol section.prl-about-what h3 {
+      color: #2E4D4D; }
+    .about .mainCol section.prl-about-what ul {
+      font-size: 1rem !important; }
+    .about .mainCol section.prl-about-what img {
+      padding: 0;
+      border-radius: 12px;
+      -webkit-box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0, 0, 0.12);
+      box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0, 0, 0.12); }
+  .about .mainCol .prl-about-header-area {
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto; }
+  .about .mainCol .prl-p-subheader, .about .mainCol .prl-p-subheader-smaller, .about .mainCol .prl-home-brands p, .prl-home-brands .about .mainCol p {
+    text-align: center;
+    font-size: 1.2rem !important; }
+  .about .mainCol blockquote {
+    margin: 100px auto;
+    padding: 16px 0;
+    max-width: 75%; }
+  .about .mainCol .zoomtimeline {
+    margin-top: 70px;
+    margin-bottom: 150px; }
+    .about .mainCol .zoomtimeline .details-container .detail .detail-image {
+      border-radius: 12px; }
+    .about .mainCol .zoomtimeline .details-container .detail .detail-excerpt p {
+      font-family: Helvetica, arial,sans-serif;
+      font-size: 16.5px;
+      font-weight: 300;
+      letter-spacing: 0.3px;
+      color: #666; }
+  .about .mainCol .prl-about-logos {
+    text-align: center; }
+    .about .mainCol .prl-about-logos .col-xs-12 {
+      margin-bottom: 35px;
+      margin-top: 60px; }
+      .about .mainCol .prl-about-logos .col-xs-12 small {
+        display: block;
+        color: #757575;
+        margin-top: 4px; }
+    .about .mainCol .prl-about-logos a {
+      border-bottom: 0px solid transparent !important; }
+      .about .mainCol .prl-about-logos a img {
+        -webkit-transition: 0.4s;
+        transition: 0.4s; }
+        .about .mainCol .prl-about-logos a img:hover {
+          -webkit-filter: grayscale(100%);
+          filter: grayscale(100%); }
+    .about .mainCol .prl-about-logos .prl-funder-logo {
+      width: 25%;
+      height: 125px;
+      float: left; }
 
-.prl-about-logos {
-  text-align: center; }
-  .prl-about-logos .col-xs-12 {
-    margin-bottom: 35px; }
-    .prl-about-logos .col-xs-12 small {
-      display: block;
-      color: #757575;
-      margin-top: 4px; }
-  .prl-about-logos a {
-    border-bottom: 0px solid transparent !important; }
-    .prl-about-logos a img {
-      -webkit-transition: 0.4s;
-      transition: 0.4s; }
-      .prl-about-logos a img:hover {
-        -webkit-filter: grayscale(100%);
-        filter: grayscale(100%); }
-  .prl-about-logos .prl-funder-logo {
-    width: 25%;
-    height: 125px;
-    float: left; }
-
-@media (max-width: 768px) {
-  .prl-about-logos a {
+@media (max-width: 767px) {
+  .about .mainCol .pageTitle {
+    margin-top: 55px; }
+  .about .mainCol .prl-h2-alternate, .about .mainCol .prl-home-brands h2, .prl-home-brands .about .mainCol h2, .about .mainCol .prl-home-news h2, .prl-home-news .about .mainCol h2, .about .mainCol .prl-home-events h2, .prl-home-events .about .mainCol h2, .about .mainCol .pageTitle, .about .mainCol .prl-participating-faculty h2, .prl-participating-faculty .about .mainCol h2, .about .mainCol .pageTitle {
+    font-size: 2rem; }
+  .about .mainCol .prl-p-subheader, .about .mainCol .prl-p-subheader-smaller, .about .mainCol .prl-home-brands p, .prl-home-brands .about .mainCol p {
+    font-size: 1rem !important; }
+  .about .mainCol .zoomtimeline {
+    margin-top: 30px;
+    margin-bottom: 120px; }
+    .about .mainCol .zoomtimeline .details-container .detail .detail-excerpt {
+      width: 53% !important;
+      margin: 0 auto; }
+  .about .mainCol blockquote {
+    max-width: 100%;
+    margin: -10px auto !important; }
+    .about .mainCol blockquote p {
+      font-size: 1.2rem !important; }
+  .about .mainCol section.prl-about-what .prl-about-what-first-row {
+    margin-top: 65px; }
+  .about .mainCol section.prl-about-what .row {
+    margin: 65px 0 !important; }
+  .about .mainCol section.prl-about-what h3 {
+    font-size: 1.55rem; }
+  .about .mainCol section.prl-about-what .prl-about-what-text-right, .about .mainCol section.prl-about-what .prl-about-what-text-left {
+    padding: 0 15px; }
+  .about .mainCol section.prl-about-what img {
+    margin-bottom: 30px; }
+  .about .mainCol .prl-about-logos a {
     height: 115px; }
-    .prl-about-logos a img {
+    .about .mainCol .prl-about-logos a img {
       margin-left: 0 !important;
       margin-right: 0 !important; }
-  .prl-about-logos .prl-funder-logo {
+  .about .mainCol .prl-about-logos .prl-funder-logo {
     width: 45%;
     margin-right: 5%; } }
+@media (max-width: 991px) {
+  .about .mainCol .zoomtimeline {
+    margin-bottom: 120px; }
+  .about .mainCol section {
+    margin: 120px 0; }
+  .about .mainCol section.prl-about-essence {
+    padding: 0 15px; }
+    .about .mainCol section.prl-about-essence .col-lg-4.col-md-6 {
+      margin: 30px 0; }
+  .about .mainCol blockquote {
+    margin: -10px auto; }
+  .about .mainCol section.prl-about-what .row {
+    margin: 90px 0; } }
 /* --------------------------------------------------------
                 BRAND STYLE GUIDE PAGE
 -------------------------------------------------------- */
@@ -7525,363 +7512,22 @@ aside {
 /* --------------------------------------------------------
                 RESEARCH PAGES
 -------------------------------------------------------- */
-.all-research-projects #svIndex {
-  margin-right: -30px; }
-  .all-research-projects #svIndex div dl {
-    width: 47.5%;
-    padding-bottom: 0px;
-    margin-right: 2%;
-    margin-bottom: 16px;
-    float: left;
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
-    -webkit-transition-delay: 0.1s;
-    transition-delay: 0.1s; }
-    .all-research-projects #svIndex div dl dd.image {
-      position: relative;
-      margin: 0;
-      overflow: hidden; }
-      .all-research-projects #svIndex div dl dd.image a {
-        display: inline-block;
-        width: 100%;
-        height: 100%;
-        background-color: #2E4D4D; }
-      .all-research-projects #svIndex div dl dd.image img {
-        margin: 0;
-        padding: 0;
-        -webkit-transition: 0.4s;
-        transition: 0.4s;
-        -webkit-transition-delay: 0.1s;
-        transition-delay: 0.1s;
-        height: 100%;
-        width: 100%; }
-    .all-research-projects #svIndex div dl dt.title {
-      position: absolute;
-      top: 150px;
-      width: 100%;
-      margin-bottom: 0;
-      padding: 0.47rem 0.78rem;
-      font-size: 0.97rem;
-      font-weight: 400;
-      background: rgba(0, 0, 0, 0.5);
-      -webkit-transition: 0.35s;
-      transition: 0.35s;
-      -webkit-transition-delay: 0.1s;
-      transition-delay: 0.1s; }
-      .all-research-projects #svIndex div dl dt.title a {
-        color: #fff;
-        font-weight: 400;
-        line-height: 1.55;
-        text-decoration: none !important;
-        border-bottom: transparent !important;
-        text-transform: capitalize; }
-    .all-research-projects #svIndex div dl dd.summary {
-      position: absolute;
-      bottom: -120px;
-      padding: 0 16px;
-      color: white;
-      font-weight: 300;
-      -webkit-transition: 0.2s;
-      transition: 0.2s;
-      -webkit-transition-delay: 0.1s;
-      transition-delay: 0.1s; }
-      .all-research-projects #svIndex div dl dd.summary p {
-        font-size: 0.875rem !important;
-        line-height: 1.4 !important;
-        margin-bottom: 10px !important; }
-    .all-research-projects #svIndex div dl:hover {
-      -webkit-box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
-      box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12); }
-      .all-research-projects #svIndex div dl:hover dd.image img {
-        -webkit-transform: translate3d(0, -130px, 0);
-        transform: translate3d(0, -130px, 0); }
-      .all-research-projects #svIndex div dl:hover dt.title {
-        top: 71px; }
-      .all-research-projects #svIndex div dl:hover dd.summary {
-        bottom: 8px;
-        opacity: 1;
-        -webkit-transition: 0.45s;
-        transition: 0.45s;
-        -webkit-transition-timing-function: cubic-bezier(0, 0, 0.2, 1) !important;
-        transition-timing-function: cubic-bezier(0, 0, 0.2, 1) !important;
-        -webkit-transition-delay: 0.25s !important;
-        transition-delay: 0.25s !important; }
+#researchtech #MainContent li.mura-categories {
+  display: none; }
 
-#sysResearchAllAreas,
-#sysResearchDoeProjects,
-#sysResearchFundamentalResearchProjects,
-#sysResearchGreenSolutions {
-  margin-right: -30px; }
-  #sysResearchAllAreas div dl,
-  #sysResearchDoeProjects div dl,
-  #sysResearchFundamentalResearchProjects div dl,
-  #sysResearchGreenSolutions div dl {
-    width: 47.5%;
-    padding-bottom: 0px;
-    margin-right: 2%;
-    margin-bottom: 16px;
-    float: left;
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
-    -webkit-transition-delay: 0.1s;
-    transition-delay: 0.1s; }
-    #sysResearchAllAreas div dl dd.image,
-    #sysResearchDoeProjects div dl dd.image,
-    #sysResearchFundamentalResearchProjects div dl dd.image,
-    #sysResearchGreenSolutions div dl dd.image {
-      position: relative;
-      margin: 0;
-      overflow: hidden; }
-      #sysResearchAllAreas div dl dd.image a,
-      #sysResearchDoeProjects div dl dd.image a,
-      #sysResearchFundamentalResearchProjects div dl dd.image a,
-      #sysResearchGreenSolutions div dl dd.image a {
-        display: inline-block;
-        width: 100%;
-        height: 100%;
-        background-color: #2E4D4D; }
-      #sysResearchAllAreas div dl dd.image img,
-      #sysResearchDoeProjects div dl dd.image img,
-      #sysResearchFundamentalResearchProjects div dl dd.image img,
-      #sysResearchGreenSolutions div dl dd.image img {
-        margin: 0;
-        padding: 0;
-        -webkit-transition: 0.4s;
-        transition: 0.4s;
-        -webkit-transition-delay: 0.1s;
-        transition-delay: 0.1s;
-        height: 100%;
-        width: 100%; }
-    #sysResearchAllAreas div dl dt.title,
-    #sysResearchDoeProjects div dl dt.title,
-    #sysResearchFundamentalResearchProjects div dl dt.title,
-    #sysResearchGreenSolutions div dl dt.title {
-      position: absolute;
-      top: 150px;
-      width: 100%;
-      margin-bottom: 0;
-      padding: 0.47rem 0.78rem;
-      font-size: 0.97rem;
-      font-weight: 400;
-      background: rgba(0, 0, 0, 0.5);
-      -webkit-transition: 0.35s;
-      transition: 0.35s;
-      -webkit-transition-delay: 0.1s;
-      transition-delay: 0.1s; }
-      #sysResearchAllAreas div dl dt.title a,
-      #sysResearchDoeProjects div dl dt.title a,
-      #sysResearchFundamentalResearchProjects div dl dt.title a,
-      #sysResearchGreenSolutions div dl dt.title a {
-        color: #fff;
-        font-weight: 400;
-        line-height: 1.55;
-        text-decoration: none !important;
-        border-bottom: transparent !important;
-        text-transform: capitalize; }
-    #sysResearchAllAreas div dl dd.summary,
-    #sysResearchDoeProjects div dl dd.summary,
-    #sysResearchFundamentalResearchProjects div dl dd.summary,
-    #sysResearchGreenSolutions div dl dd.summary {
-      position: absolute;
-      bottom: -120px;
-      padding: 0 16px;
-      color: white;
-      font-weight: 300;
-      -webkit-transition: 0.2s;
-      transition: 0.2s;
-      -webkit-transition-delay: 0.1s;
-      transition-delay: 0.1s; }
-      #sysResearchAllAreas div dl dd.summary p,
-      #sysResearchDoeProjects div dl dd.summary p,
-      #sysResearchFundamentalResearchProjects div dl dd.summary p,
-      #sysResearchGreenSolutions div dl dd.summary p {
-        font-size: 0.875rem !important;
-        line-height: 1.4 !important;
-        margin-bottom: 10px !important; }
-    #sysResearchAllAreas div dl:hover,
-    #sysResearchDoeProjects div dl:hover,
-    #sysResearchFundamentalResearchProjects div dl:hover,
-    #sysResearchGreenSolutions div dl:hover {
-      -webkit-box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
-      box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12); }
-      #sysResearchAllAreas div dl:hover dd.image img,
-      #sysResearchDoeProjects div dl:hover dd.image img,
-      #sysResearchFundamentalResearchProjects div dl:hover dd.image img,
-      #sysResearchGreenSolutions div dl:hover dd.image img {
-        -webkit-transform: translate3d(0, -130px, 0);
-        transform: translate3d(0, -130px, 0); }
-      #sysResearchAllAreas div dl:hover dt.title,
-      #sysResearchDoeProjects div dl:hover dt.title,
-      #sysResearchFundamentalResearchProjects div dl:hover dt.title,
-      #sysResearchGreenSolutions div dl:hover dt.title {
-        top: 71px; }
-      #sysResearchAllAreas div dl:hover dd.summary,
-      #sysResearchDoeProjects div dl:hover dd.summary,
-      #sysResearchFundamentalResearchProjects div dl:hover dd.summary,
-      #sysResearchGreenSolutions div dl:hover dd.summary {
-        bottom: 8px;
-        opacity: 1;
-        -webkit-transition-timing-function: cubic-bezier(0, 0, 0.2, 1) !important;
-        transition-timing-function: cubic-bezier(0, 0, 0.2, 1) !important;
-        -webkit-transition-delay: 0.25s !important;
-        transition-delay: 0.25s !important;
-        -webkit-transition: 0.45s;
-        transition: 0.45s; }
+.research-projects section.prl-research-projects .row {
+  margin: 70px 0; }
+.research-projects section.prl-research-projects .row.first {
+  margin-top: 50px; }
+.research-projects section.prl-research-projects h3 {
+  font-size: 1.65rem; }
+.research-projects section.prl-research-projects img {
+  padding: 0;
+  border-radius: 12px;
+  -webkit-box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0, 0, 0.12);
+  margin-bottom: 30px; }
 
-@media (min-width: 768px) and (max-width: 991px) {
-  .all-research-projects #svIndex {
-    margin-right: -15px; }
-    .all-research-projects #svIndex div dl {
-      height: 350px; }
-
-  #sysResearchAllAreas,
-  #sysResearchDoeProjects,
-  #sysResearchFundamentalResearchProjects,
-  #sysResearchGreenSolutions {
-    margin-right: -15px; }
-    #sysResearchAllAreas div dl,
-    #sysResearchDoeProjects div dl,
-    #sysResearchFundamentalResearchProjects div dl,
-    #sysResearchGreenSolutions div dl {
-      height: 350px; } }
-@media (max-width: 767px) {
-  .all-research-projects #svIndex {
-    margin-right: 0px; }
-    .all-research-projects #svIndex div dl {
-      width: 100%;
-      margin-top: 0;
-      margin-bottom: 16px; }
-    .all-research-projects #svIndex div dd.summary {
-      margin-bottom: 0; }
-
-  #sysResearchAllAreas,
-  #sysResearchDoeProjects,
-  #sysResearchFundamentalResearchProjects,
-  #sysResearchGreenSolutions {
-    margin-right: 0px; }
-    #sysResearchAllAreas div dl,
-    #sysResearchDoeProjects div dl,
-    #sysResearchFundamentalResearchProjects div dl,
-    #sysResearchGreenSolutions div dl {
-      width: 100%;
-      margin-top: 0;
-      margin-bottom: 16px; }
-      #sysResearchAllAreas div dl dd.summary,
-      #sysResearchDoeProjects div dl dd.summary,
-      #sysResearchFundamentalResearchProjects div dl dd.summary,
-      #sysResearchGreenSolutions div dl dd.summary {
-        margin-bottom: 0; } }
-@media (min-width: 992px) and (max-width: 1199px) {
-  .all-research-projects #svIndex div dl {
-    height: 350px; }
-    .all-research-projects #svIndex div dl dt.title {
-      margin-top: -37px !important;
-      font-size: 0.875rem !important; }
-
-  #sysResearchAllAreas div dl,
-  #sysResearchDoeProjects div dl,
-  #sysResearchFundamentalResearchProjects div dl,
-  #sysResearchGreenSolutions div dl {
-    height: 350px; }
-    #sysResearchAllAreas div dl dt.title,
-    #sysResearchDoeProjects div dl dt.title,
-    #sysResearchFundamentalResearchProjects div dl dt.title,
-    #sysResearchGreenSolutions div dl dt.title {
-      margin-top: -37px !important;
-      font-size: 0.875rem !important; } }
-@media (max-width: 1199px) {
-  .all-research-projects #svIndex div dl dt.title {
-    position: relative;
-    margin-top: -39px;
-    top: 0;
-    font-size: 0.93rem; }
-    .all-research-projects #svIndex div dl dt.title a {
-      line-height: 1.6; }
-  .all-research-projects #svIndex div dl dd.summary {
-    padding: 16px;
-    position: relative;
-    bottom: 0;
-    color: #444; }
-  .all-research-projects #svIndex div dl:hover {
-    -webkit-box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
-    box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12); }
-    .all-research-projects #svIndex div dl:hover dd.image img {
-      -webkit-transform: translate3d(0, 0, 0);
-      transform: translate3d(0, 0, 0); }
-    .all-research-projects #svIndex div dl:hover dt.title {
-      top: 0; }
-    .all-research-projects #svIndex div dl:hover dd.summary {
-      bottom: 0; }
-
-  #sysResearchAllAreas div dl dt.title,
-  #sysResearchDoeProjects div dl dt.title,
-  #sysResearchFundamentalResearchProjects div dl dt.title,
-  #sysResearchGreenSolutions div dl dt.title {
-    position: relative;
-    margin-top: -39px;
-    top: 0;
-    font-size: 0.93rem; }
-    #sysResearchAllAreas div dl dt.title a,
-    #sysResearchDoeProjects div dl dt.title a,
-    #sysResearchFundamentalResearchProjects div dl dt.title a,
-    #sysResearchGreenSolutions div dl dt.title a {
-      line-height: 1.6; }
-  #sysResearchAllAreas div dl dd.summary,
-  #sysResearchDoeProjects div dl dd.summary,
-  #sysResearchFundamentalResearchProjects div dl dd.summary,
-  #sysResearchGreenSolutions div dl dd.summary {
-    padding: 16px;
-    position: relative;
-    bottom: 0;
-    color: #444; }
-  #sysResearchAllAreas div dl:hover,
-  #sysResearchDoeProjects div dl:hover,
-  #sysResearchFundamentalResearchProjects div dl:hover,
-  #sysResearchGreenSolutions div dl:hover {
-    -webkit-box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
-    box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12); }
-    #sysResearchAllAreas div dl:hover dd.image img,
-    #sysResearchDoeProjects div dl:hover dd.image img,
-    #sysResearchFundamentalResearchProjects div dl:hover dd.image img,
-    #sysResearchGreenSolutions div dl:hover dd.image img {
-      -webkit-transform: translate3d(0, 0, 0);
-      transform: translate3d(0, 0, 0); }
-    #sysResearchAllAreas div dl:hover dt.title,
-    #sysResearchDoeProjects div dl:hover dt.title,
-    #sysResearchFundamentalResearchProjects div dl:hover dt.title,
-    #sysResearchGreenSolutions div dl:hover dt.title {
-      top: 0; }
-    #sysResearchAllAreas div dl:hover dd.summary,
-    #sysResearchDoeProjects div dl:hover dd.summary,
-    #sysResearchFundamentalResearchProjects div dl:hover dd.summary,
-    #sysResearchGreenSolutions div dl:hover dd.summary {
-      bottom: 0; } }
-@media (max-width: 360px) {
-  .all-research-projects #svIndex div dl dt.title {
-    font-size: 0.875rem;
-    margin-top: -37px;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    color: #fff !important; }
-    .all-research-projects #svIndex div dl dt.title a {
-      letter-spacing: -0.4px; }
-
-  #sysResearchAllAreas div dl dt.title,
-  #sysResearchDoeProjects div dl dt.title,
-  #sysResearchFundamentalResearchProjects div dl dt.title,
-  #sysResearchGreenSolutions div dl dt.title {
-    font-size: 0.875rem;
-    margin-top: -37px;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    color: #fff !important; }
-    #sysResearchAllAreas div dl dt.title a,
-    #sysResearchDoeProjects div dl dt.title a,
-    #sysResearchFundamentalResearchProjects div dl dt.title a,
-    #sysResearchGreenSolutions div dl dt.title a {
-      letter-spacing: -0.4px; } }
 /* PARTICIPATING FACULTY MEMBERS AT THE BOTTOM OF EACH RESEARCH AREA
 -------------------------------------------------- */
 .prl-participating-faculty h2 {
@@ -7912,8 +7558,8 @@ aside {
       transition: 0.35s;
       width: 110px; }
       .prl-participating-faculty div dl dd.image img:hover {
-        -webkit-box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 5px 8px 0px rgba(0, 0, 0, 0.14), 0px 1px 14px 0px rgba(0, 0, 0, 0.12);
-        box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 5px 8px 0px rgba(0, 0, 0, 0.14), 0px 1px 14px 0px rgba(0, 0, 0, 0.12); }
+        -webkit-box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0, 0, 0.12);
+        box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0, 0, 0.12); }
 
 @media (min-width: 768px) and (max-width: 1199px) {
   .prl-participating-faculty div dl {
@@ -7924,13 +7570,47 @@ aside {
     margin-bottom: 0rem;
     min-height: 11.5rem !important; } }
 /* --------------------------------------------------------
+                GRADUATE PROGRAM OVERVIEW PAGE
+-------------------------------------------------------- */
+.graduate-program-overview #MainContent blockquote {
+  margin: 36px auto;
+  padding: 16px 0;
+  max-width: 100%; }
+.graduate-program-overview #MainContent .prl-student-alumni-profiles {
+  margin-top: 16px; }
+  .graduate-program-overview #MainContent .prl-student-alumni-profiles a.view-all, .graduate-program-overview #MainContent .prl-student-alumni-profiles .breadcrumb a, .breadcrumb .graduate-program-overview #MainContent .prl-student-alumni-profiles a {
+    margin: 16px 0 32px 0; }
+  .graduate-program-overview #MainContent .prl-student-alumni-profiles div.mura-next-n {
+    display: none; }
+  .graduate-program-overview #MainContent .prl-student-alumni-profiles .mura-collection.mura-grid-two .mura-collection-item .mura-collection-item__holder {
+    padding: 0 16px 0 0; }
+
+@media (max-width: 539px) {
+  .graduate-program-overview #MainContent .prl-student-alumni-profiles .mura-collection.mura-grid-two .mura-collection-item .mura-collection-item__holder {
+    padding: 0; } }
+/* CENTER FOR ADVANCED ALGAL AND PLANT PHENOTYPING
+-------------------------------------------------------- */
+.center-for-advanced-algal-and-plant-phenotyping section.prl-caapp-services .row {
+  margin: 70px 0; }
+.center-for-advanced-algal-and-plant-phenotyping section.prl-caapp-services .row.first {
+  margin-top: 50px; }
+.center-for-advanced-algal-and-plant-phenotyping section.prl-caapp-services h3 {
+  font-size: 1.65rem; }
+.center-for-advanced-algal-and-plant-phenotyping section.prl-caapp-services img {
+  padding: 0;
+  border-radius: 12px;
+  -webkit-box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0, 0, 0.12);
+  margin-bottom: 30px; }
+
+/* --------------------------------------------------------
                 SEMINARS & EVENTS PAGE
 -------------------------------------------------------- */
 .prl-seminars-events {
-  margin-bottom: 35px;
+  margin-top: 0.5rem;
   border: 1px solid #eaeaea; }
   .prl-seminars-events dl:nth-child(odd) {
-    background: #f4f4f4; }
+    background: rgba(132, 110, 40, 0.16); }
   .prl-seminars-events dl {
     margin: 0 !important;
     padding-top: 12px !important;
@@ -7956,11 +7636,11 @@ aside {
       .prl-seminars-events dl dd.summary .prl-event-type {
         display: none; }
     .prl-seminars-events dl:hover {
-      background: #f4f4f4; }
+      background: rgba(132, 110, 40, 0.26); }
   .prl-seminars-events dl.last {
     border-bottom: 1px solid #e6e6e6; }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .prl-seminars-events dl dt.date.releaseDate {
     width: 100%; }
   .prl-seminars-events dl dt.title {
@@ -7973,12 +7653,9 @@ aside {
 #newsevents.depth-4 .secondaryPageContainer #MainContent ul.list-inline {
   display: none; }
 #newsevents.depth-4 .secondaryPageContainer #MainContent h1.pageTitle {
-  margin-bottom: 20px; }
+  margin-bottom: 22px; }
 #newsevents.depth-4 .secondaryPageContainer #MainContent .mura-asset {
   margin-top: 0; }
-#newsevents.depth-4 .secondaryPageContainer #MainContent .prl-about-speaker {
-  font-size: 2.125rem;
-  text-align: left; }
 #newsevents.depth-4 .secondaryPageContainer #MainContent .prl-event-detail-btns {
   display: inline-block;
   margin-bottom: 20px; }
@@ -8044,7 +7721,7 @@ aside {
     .staff #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-content {
       position: relative;
       float: left;
-      z-index: 0;
+      z-index: 2;
       margin-right: 4%; }
       .faculty #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-content a,
       .staff #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-content a {
@@ -8058,7 +7735,7 @@ aside {
       .faculty #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-content:hover img, .faculty #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-content:focus img,
       .staff #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-content:hover img,
       .staff #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-content:focus img {
-        opacity: 0.9; }
+        opacity: 0.8; }
     .faculty #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__title,
     .staff #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__title {
       font-size: 1.1rem;
@@ -8480,3 +8157,69 @@ aside {
 @media (min-width: 1400px) {
   .prl-staff-contact-info p {
     font-size: 16.5px !important; } }
+/* --------------------------------------------------------
+                BERKLEY WALKER LAB
+-------------------------------------------------------- */
+/* HOMEPAGE
+-------------------------------------------------- */
+#walkerlabhome.depth-1 div.walker-hero-image {
+  background-image: url("/sites/_prl/assets/Image/Berkley%20Walker%20Lab/wp_20140804_14_29_52_pro-edit-web.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+  padding: 180px 191px;
+  margin-bottom: 50px; }
+  #walkerlabhome.depth-1 div.walker-hero-image h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 60px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 29px;
+    font-weight: 200; }
+#walkerlabhome.depth-1 .mainCol {
+  width: 100%;
+  max-width: 100%;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  margin-bottom: 60px; }
+  #walkerlabhome.depth-1 .mainCol nav {
+    display: none; }
+  #walkerlabhome.depth-1 .mainCol .pageTitle {
+    display: none; }
+  #walkerlabhome.depth-1 .mainCol .lead {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 800px; }
+
+@media (max-width: 767px) {
+  #walkerlabhome.depth-1 div.walker-hero-image {
+    padding: 75px 37px; }
+    #walkerlabhome.depth-1 div.walker-hero-image h1 {
+      font-size: 2.25rem; } }
+@media (min-width: 768px) and (max-width: 991px) {
+  #walkerlabhome.depth-1 div.walker-hero-image {
+    padding: 108px 191px; }
+    #walkerlabhome.depth-1 div.walker-hero-image h1 {
+      font-size: 2.5rem; } }
+#walkerlabhome nav li.first {
+  display: none; }
+#walkerlabhome nav li:nth-child(2):before {
+  display: none; }
+
+/* LAB NEWS PAGE
+-------------------------------------------------- */
+#walkerlabhome.lab-news #svIndex div dl.hasImage {
+  padding-top: 12px !important;
+  padding-right: 12px; }
+@media only screen and (max-width: 767px) {
+  #walkerlabhome.lab-news #svIndex div dl.hasImage {
+    padding: 0 0 6px 0 !important;
+    border-bottom: 1px solid #f5f5f5; }
+    #walkerlabhome.lab-news #svIndex div dl.hasImage dd.image {
+      position: relative;
+      text-align: center; }
+    #walkerlabhome.lab-news #svIndex div dl.hasImage dt.date.releaseDate {
+      margin-top: 0.6rem; } }
