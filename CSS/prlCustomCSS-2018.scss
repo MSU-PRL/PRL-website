@@ -1273,7 +1273,7 @@ aside {
   }
   p {
     @extend .prl-p-subheader;
-    padding: 0 3rem 0 0;
+    padding: 0 3rem;
     text-align: center;
     margin-bottom: 0;
     max-width: 750px;
@@ -1604,7 +1604,7 @@ aside {
           }
           dl.last.hasImage {
             // Hide last news item to shorten news section
-            display: initial;
+            display: inherit;
           }
         }
       }
@@ -1686,9 +1686,9 @@ aside {
           @extend .prl-readmore-fill-container;
         }
       }
-      &:hover {
-        @extend .prl-card-hover;
-      }
+    }
+    &:hover {
+      @extend .prl-card-hover;
     }
   }
 }
