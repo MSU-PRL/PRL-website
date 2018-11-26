@@ -6180,7 +6180,7 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
   -webkit-transition: 0.35s;
   transition: 0.35s; }
 
-.prl-card-hover, .prl-relcontent-body:hover, .prl-card-hover-effect:hover, .prl-home-event-cards .mura-collection-item .mura-collection-item__holder:hover, #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder:hover {
+.prl-card-hover, .prl-relcontent-body:hover, .prl-card-hover-effect:hover, .prl-home-event-cards .mura-collection-item:hover, #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder:hover {
   -webkit-box-shadow: 0px 6px 6px -3px rgba(0, 0, 0, 0.2), 0px 10px 14px 1px rgba(0, 0, 0, 0.14), 0px 4px 18px 3px rgba(0, 0, 0, 0.12);
   box-shadow: 0px 6px 6px -3px rgba(0, 0, 0, 0.2), 0px 10px 14px 1px rgba(0, 0, 0, 0.14), 0px 4px 18px 3px rgba(0, 0, 0, 0.12); }
 
@@ -6776,7 +6776,7 @@ aside {
   margin-top: 0.95rem;
   margin-bottom: 120px; }
   .prl-home-brands p {
-    padding: 0 3rem 0 0;
+    padding: 0 3rem;
     text-align: center;
     margin-bottom: 0;
     max-width: 750px; }
@@ -6973,7 +6973,7 @@ aside {
     .prl-home-news-nonfeature .mura-async-object.mura-object > div.mura-object-content div.mura-index div dl dd.summary {
       display: none; }
   .prl-home-news-nonfeature .mura-async-object.mura-object > div.mura-object-content div.mura-index div dl.last.hasImage {
-    display: initial; } }
+    display: inherit; } }
 /* HOMEPAGE EVENTS SECTION
 -------------------------------------------------------- */
 .prl-home-events h2 {
