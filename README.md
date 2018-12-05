@@ -7,14 +7,15 @@
 ## CSS Folder
 The CSS folder contains all custom stylesheets for the PRL website.
 ### Instructions to modify code:
- * **Custom modifications take place in the prlCustomCSS-2018.scss file, outside of Mura**. This is the core PRL custom CSS file. It contains variables that allow for control and consistency of custom visual components. It requires knowledge of SCSS programming language and a viable code editor, such as <a href="https://code.visualstudio.com/"> Visual Studio Code</a>.
+This section applies to the three files, **prlCustomCSS-2018.scss**, **prlCustomCSS-2018.css**, and **prlCustomCSS-2018.min.css**.
+ * **Custom modifications take place in the prlCustomCSS-2018.scss file, outside of Mura**. This is the core PRL custom styles file. It allows for control and consistency of custom visual components. It requires knowledge of SCSS programming language and a viable code editor, such as <a href="https://code.visualstudio.com/"> Visual Studio Code</a>.
 * **Use an automated compile and minimize system**, as Mura only reads .css files. Instructions:
-  1. **prlCustomCSS-2018.scss** file should be automatically compiled into the **prlCustomCSS-2018.css** file on each iteration. <a href="http://koala-app.com/">Koala</a> is a good compiler.
-  2. The **prlCustomCSS-2018.css** file should be automatically minimized into the **prlCustomCSS-2018.min.css** file. This can be done in code editors such as Visual Studio Code.
+  1. **prlCustomCSS-2018.scss** file should be compiled into the **prlCustomCSS-2018.css** file on each iteration. <a href="http://koala-app.com/">Koala</a> is a good automatic compiler.
+  2. The **prlCustomCSS-2018.css** file should be minimized into the **prlCustomCSS-2018.min.css** file. This can be automatically done in code editors such as Visual Studio Code.
   3. Copy and paste the minimized code from the **prlCustomCSS-2018.min.css** file into Mura's dedicated custom CSS file. The dedicated file is found in Mura's File Manager, under *prl_User_Assets/File/websiteTheme/prlCustomCSS.css*. Right click **prlCustomCSS.css**, choose 'Edit,' and paste the code. Save your changes.
-* **In Mura, do not change the name of the prlCustomCSS.css file.** Any change will cause the server to not load the custom CSS.
+* **In Mura, do not change the name of the prlCustomCSS.css file.** Any name change will cause the server to not load the custom CSS.
 * **Identical copies of the CSS files in this repository are also found on the PRL server.** Ensure that all versions are up to date.
-### Note on PRL-about-page-timeline-jQuery-compiled.scss* file:
+### Note on PRL-about-page-timeline-jQuery-compiled.scss file:
 The History Timeline on the <a href="https://prl.natsci.msu.edu/about/">About page</a> rely on a CSS and jQuery timeline plugin called <a href="http://preview.codecanyon.net/item/zoomtimeline-css-timeline-pack/full_screen_preview/16918891?_ga=2.76863253.1076320330.1529523907-713049933.1525180595">ZoomTimeline</a> (<a href="http://digitalzoomstudio.net/">developer's site</a>), which allows for a wide range of visual presentation styles. The version on the PRL website is located in the <a href="https://prl.natsci.msu.edu/about/">About</a> page and adopts the 3d slider presentation mode. This file includes all the package's core CSS files in one location. Do not make any modifications to this file. The **prlCustomCSS-2018.scss** file (see CSS folder section) is setup to automatically include the contents of this file so all PRL custom CSS is uploaded to Mura from one location.
 
 **Any CSS changes to the timeline should be made separately in the prlCustomCSS-2018.scss file, under the 'About' section**. Do not make changes to the **PRL-about-page-timeline-jQuery-compiled.scss** file. The timeline is constantly updated by the developer, and as core files are overwritten, we lose any custom changes within those files on update. *
