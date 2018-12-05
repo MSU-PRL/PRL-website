@@ -18,16 +18,17 @@ The CSS folder contains all custom stylesheets for the PRL website.
 ## HTML Folder
 The HTML folder contains content used on the PRL website. **Identical copies of these files are also found on the PRL server. Ensure that all versions at all locations are up to date.**
 ### File listing:
-* **About page.html:** This is the markup for the <a href="https://prl.natsci.msu.edu/about/">About page</a>.
-* **CAAPP Overview.html:** This is the markup for the <a href="https://prl.natsci.msu.edu/research-tech/center-for-advanced-algal-and-plant-phenotyping/">CAAPP Overview page</a>.
-* **Graduate Program Overview Page.html:** This is the markup for the <a href="https://prl.natsci.msu.edu/graduate-program/graduate-program-overview/">Graduate Program Overview Page</a>.
+* **PRL-about-page.html:** This is the markup for the <a href="https://prl.natsci.msu.edu/about/">About page</a>.
+* **PRL-CAAPP-overview-page.html:** This is the markup for the <a href="https://prl.natsci.msu.edu/research-tech/center-for-advanced-algal-and-plant-phenotyping/">CAAPP Overview page</a>.
+* **PRL-graduate-program-overview-page.html:** This is the markup for the <a href="https://prl.natsci.msu.edu/graduate-program/graduate-program-overview/">Graduate Program Overview Page</a>.
 * **PRL-card-markup.html:** This is the markup for all the PRL card styles. It is also found on the PRL <a href="https://prl.natsci.msu.edu/about/internal-resources/brand-style-guide/">Brand Style Guide page</a> under the *Cards* section.
-* **Research Projects Page.html:** This is the markup for the <a href="https://prl.natsci.msu.edu/research-tech/research-projects/">Research Projects Page</a>.
-* **homepage-brands-2018.html:** This content is used on the <a href="https://prl.natsci.msu.edu/">PRL homepage</a> in the section right below the hero image and right before the News section.
+* **PRL-research-projects-page.html:** This is the markup for the <a href="https://prl.natsci.msu.edu/research-tech/research-projects/">Research Projects Page</a>.
+* **PRL-brand-style-guide-markup.html:** This is the markup for the <a href="https://prl.natsci.msu.edu/about/internal-resources/brand-style-guide/">Brand Style Guide page</a>.
+* **PRL-homepage-brands-2018.html:** This content is used on the <a href="https://prl.natsci.msu.edu/">PRL homepage</a> in the section right below the hero image and right before the News section.
   * Any changes should be made in this file on a viable code editor, such as <a href="https://code.visualstudio.com/"> Visual Studio Code</a>, and not in Mura. The reason is that Mura's HTML editor is messy and difficult to work on.
   * To update the content in Mura, paste the code from this file in the **Homepage - Brands Section** component, which can be located in Mura's File Manager.
   * To update the Featured Research content (right side of this section, as seen on a desktop), modify the **Homepage - Brands Section - Featured Research** component **in Mura**. There is no external HTML file for this component.
-* **homepage-news-events-2018.html:** This content is used on the <a href="https://prl.natsci.msu.edu/">PRL homepage</a> in the section right below the Brands section.
+* **PRL-homepage-news-events-2018.html:** This content is used on the <a href="https://prl.natsci.msu.edu/">PRL homepage</a> in the section right below the Brands section.
   * Any changes should be made in this file on a viable code editor, such as <a href="https://code.visualstudio.com/"> Visual Studio Code</a>, and not in Mura. The reason is that Mura's HTML editor is messy and difficult to work on.
   * To update the content in Mura, paste the code from this file in the **Homepage - News & Events** component, which can be located in Mura's File Manager.
 
