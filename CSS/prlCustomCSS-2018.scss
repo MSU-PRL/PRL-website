@@ -4,7 +4,7 @@
                 IMPORTS
 -------------------------------------------------------- */
 
-@import 'PRLtimelinejQuerycompiled'; // Zoom Timeline Slider Plugin for About page
+@import 'PRL-about-page-timeline-jQuery-compiled'; // Zoom Timeline Slider Plugin for About page
 
 /* --------------------------------------------------------
                 COMPONENTS
@@ -1416,7 +1416,7 @@ aside {
   // Styling home nonfeature area
   .mura-async-object.mura-object > div.mura-object-content {
     div.mura-index {
-      margin: 0 8px 0 32px;
+      margin: 0 8px 0 24px;
       div {
         dl {
           margin: 0 0 24px 0;
@@ -1427,7 +1427,7 @@ aside {
             position: relative;
             float: left;
             margin: 0;
-            padding: 8px 16px 16px 16px;
+            padding: 8px 16px 16px 8px;
             a {
               border-bottom: 0px solid transparent;
               img {
@@ -1578,7 +1578,7 @@ aside {
             margin-bottom: 4px;
           }
           dd.summary {
-            font-size: .91rem;
+            font-size: 0.91rem;
             padding: 0;
           }
         }
@@ -1617,10 +1617,11 @@ aside {
 
 .prl-home-events {
   h2 {
-  @extend .prl-h2-alternate;
-  margin-bottom: 50px;
+    @extend .prl-h2-alternate;
+    margin-bottom: 50px;
+  }
 }
-}
+
 .prl-home-event-cards {
   margin-bottom: 2.75rem;
   div.mura-collection.mura-grid-three {
@@ -2641,8 +2642,7 @@ aside {
 
 .prl-participating-faculty {
   h2 {
-    @extend .prl-h2-alternate;
-    margin-bottom: 1.875rem;
+    @extend .prl-h2-secondary-spacing;
     text-transform: capitalize;
   }
   div {
@@ -2665,9 +2665,8 @@ aside {
         img {
           padding: 0;
           border-radius: 50%;
-          border: 0.25rem solid $secondary-color;
-          -webkit-box-shadow: $shadow-depth-1;
-          box-shadow: $shadow-depth-1;
+          -webkit-box-shadow: $shadow-depth-2;
+          box-shadow: $shadow-depth-2;
           -webkit-transition: $tran-med;
           transition: $tran-med;
           width: 110px; // In pixels so the size is the same on all screens
