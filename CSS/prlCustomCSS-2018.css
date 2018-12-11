@@ -6083,7 +6083,7 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
 /* --------------------------------------------------------
         ALTERNATE HEADERS, SUBHEADERS, TEXT
 -------------------------------------------------------- */
-.prl-h2-alternate, .prl-home-brands h2, .prl-home-news h2, .prl-home-events h2, .about .mainCol .pageTitle, .prl-participating-faculty h2 {
+.prl-h2-alternate, .prl-home-brands h2, .prl-home-news h2, .prl-home-events h2, .about .mainCol .pageTitle {
   text-align: center;
   margin-bottom: 1.05rem;
   text-transform: capitalize;
@@ -6091,7 +6091,7 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
   font-size: 2.4rem;
   color: #2E4D4D; }
 
-.prl-h2-secondary-spacing, .research-projects h2, .graduate-program-overview #MainContent h2, .center-for-advanced-algal-and-plant-phenotyping h2, #newsevents.depth-2.seminars-events h2 {
+.prl-h2-secondary-spacing, .research-projects h2, .prl-participating-faculty h2, .graduate-program-overview #MainContent h2, .center-for-advanced-algal-and-plant-phenotyping h2, #newsevents.depth-2.seminars-events h2 {
   margin-top: 2rem;
   display: inline-block; }
 
@@ -6870,7 +6870,7 @@ aside {
       margin: 0 0 0 32px; }
 
 .prl-home-news-nonfeature .mura-async-object.mura-object > div.mura-object-content div.mura-index {
-  margin: 0 8px 0 32px; }
+  margin: 0 8px 0 24px; }
   .prl-home-news-nonfeature .mura-async-object.mura-object > div.mura-object-content div.mura-index div dl {
     margin: 0 0 24px 0;
     padding: 0 !important;
@@ -6880,7 +6880,7 @@ aside {
       position: relative;
       float: left;
       margin: 0;
-      padding: 8px 16px 16px 16px; }
+      padding: 8px 16px 16px 8px; }
       .prl-home-news-nonfeature .mura-async-object.mura-object > div.mura-object-content div.mura-index div dl dd.image a {
         border-bottom: 0px solid transparent; }
         .prl-home-news-nonfeature .mura-async-object.mura-object > div.mura-object-content div.mura-index div dl dd.image a img {
@@ -6961,7 +6961,7 @@ aside {
       padding: 0;
       margin-bottom: 4px; }
     .prl-home-news-feature .mura-async-object.mura-object div.mura-object-content > div.mura-index div > dl dd.summary {
-      font-size: .91rem;
+      font-size: 0.91rem;
       padding: 0; }
 
   .prl-home-news-nonfeature .mura-async-object.mura-object > div.mura-object-content div.mura-index div dl {
@@ -7161,7 +7161,7 @@ aside {
 @media (max-width: 767px) {
   .about .mainCol .pageTitle {
     margin-top: 55px; }
-  .about .mainCol .prl-h2-alternate, .about .mainCol .prl-home-brands h2, .prl-home-brands .about .mainCol h2, .about .mainCol .prl-home-news h2, .prl-home-news .about .mainCol h2, .about .mainCol .prl-home-events h2, .prl-home-events .about .mainCol h2, .about .mainCol .pageTitle, .about .mainCol .prl-participating-faculty h2, .prl-participating-faculty .about .mainCol h2, .about .mainCol .pageTitle {
+  .about .mainCol .prl-h2-alternate, .about .mainCol .prl-home-brands h2, .prl-home-brands .about .mainCol h2, .about .mainCol .prl-home-news h2, .prl-home-news .about .mainCol h2, .about .mainCol .prl-home-events h2, .prl-home-events .about .mainCol h2, .about .mainCol .pageTitle, .about .mainCol .pageTitle {
     font-size: 2rem; }
   .about .mainCol .prl-p-subheader, .about .mainCol .prl-p-subheader-smaller, .about .mainCol .prl-home-brands p, .prl-home-brands .about .mainCol p {
     font-size: 1rem !important; }
@@ -7532,7 +7532,6 @@ aside {
 /* PARTICIPATING FACULTY MEMBERS AT THE BOTTOM OF EACH RESEARCH AREA
 -------------------------------------------------- */
 .prl-participating-faculty h2 {
-  margin-bottom: 1.875rem;
   text-transform: capitalize; }
 .prl-participating-faculty div dl {
   border-bottom: transparent;
@@ -7552,9 +7551,8 @@ aside {
     .prl-participating-faculty div dl dd.image img {
       padding: 0;
       border-radius: 50%;
-      border: 0.25rem solid #846E28;
-      -webkit-box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
-      box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+      -webkit-box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+      box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
       -webkit-transition: 0.35s;
       transition: 0.35s;
       width: 110px; }
