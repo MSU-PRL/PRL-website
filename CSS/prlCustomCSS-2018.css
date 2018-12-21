@@ -7019,9 +7019,6 @@ aside {
           font-weight: 500;
           color: #757575; }
 
-.prl-home-events-btn {
-  margin-bottom: 3rem; }
-
 @media (min-width: 992px) and (max-width: 1199px) {
   .prl-home-event-cards div.mura-collection.mura-grid-three .mura-collection-item:first-child {
     float: left;
