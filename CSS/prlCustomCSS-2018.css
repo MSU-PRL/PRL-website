@@ -7344,7 +7344,10 @@ aside {
         width: 100%;
         padding: 0;
         -webkit-transform: translateY(-0.625rem);
-        transform: translateY(-0.625rem); }
+        transform: translateY(-0.625rem);
+        border-radius: 0;
+        -webkit-box-shadow: none;
+                box-shadow: none; }
       #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-content a:focus {
         opacity: 0.9; }
     #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__summary {
