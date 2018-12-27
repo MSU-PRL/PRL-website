@@ -2227,6 +2227,9 @@ aside {
               padding: 0;
               -webkit-transform: translateY(-0.625rem);
               transform: translateY(-0.625rem); // makes the card slightly smaller
+              border-radius: 0; // Overrides Natsci CSS
+              -webkit-box-shadow: none;
+                      box-shadow: none; // Overrides Natsci CSS
             }
             &:focus {
               opacity: 0.9;
