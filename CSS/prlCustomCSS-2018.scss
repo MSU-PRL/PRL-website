@@ -1465,6 +1465,17 @@ aside {
   }
 }
 
+@media (min-width: 1200px) {
+  // Larger Desktops
+  .prl-home-news-nonfeature > .mura-async-object.mura-object > div.mura-object-content > div.mura-index > div > dl {
+    // Styling home nonfeature area
+    dd.summary {
+      // Adding margin-left to summary so that long content doesn't wrap under the associated image. This only applies to large desktop screens.
+      margin-left: 140px;
+    }
+  }
+}
+
 @media (min-width: 992px) and (max-width: 1199px) {
   // Adjusting dimensions to the small desktop breakpoint
   .prl-home-news-feature {
@@ -2229,7 +2240,7 @@ aside {
               transform: translateY(-0.625rem); // makes the card slightly smaller
               border-radius: 0; // Overrides Natsci CSS
               -webkit-box-shadow: none;
-                      box-shadow: none; // Overrides Natsci CSS
+              box-shadow: none; // Overrides Natsci CSS
             }
             &:focus {
               opacity: 0.9;
