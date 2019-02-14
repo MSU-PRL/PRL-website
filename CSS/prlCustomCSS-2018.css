@@ -6905,6 +6905,9 @@ aside {
       display: block;
       margin: 0 0 0 32px; }
 
+@media (min-width: 1200px) {
+  .prl-home-news-nonfeature > .mura-async-object.mura-object > div.mura-object-content > div.mura-index > div > dl dd.summary {
+    margin-left: 140px; } }
 @media (min-width: 992px) and (max-width: 1199px) {
   .prl-home-news-feature .mura-async-object.mura-object div.mura-object-content > div.mura-index div > dl {
     padding-right: 24px; }
