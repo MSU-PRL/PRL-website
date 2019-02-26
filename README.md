@@ -28,7 +28,8 @@ The HTML folder contains content used on the PRL website. **Identical copies of 
 * **PRL-graduate-program-overview-page.html:** This is the markup for the <a href="https://prl.natsci.msu.edu/graduate-program/graduate-program-overview/">Graduate Program Overview Page</a>.
 * **PRL-card-markup.html:** This is the markup for all the PRL card styles. It is also found on the PRL <a href="https://prl.natsci.msu.edu/about/internal-resources/brand-style-guide/">Brand Style Guide page</a> under the *Cards* section.
 * **PRL-research-projects-page.html:** This is the markup for the <a href="https://prl.natsci.msu.edu/research-tech/research-projects/">Research Projects Page</a>.
-* **PRL-brand-style-guide-markup.html:** This is the markup for the <a href="https://prl.natsci.msu.edu/about/internal-resources/brand-style-guide/">Brand Style Guide page</a>.
+* **PRL-community-brand-toolkit.html:** This is the markup for the <a href="https://prl.natsci.msu.edu/about/internal-resources/brand-guides/prl-community-brand-toolkit/">PRL Community Brand Toolkit page</a>.
+* **PRL-web-components-demo.html:** This is the markup for the <a href="https://prl.natsci.msu.edu/about/internal-resources/brand-guides/communications-department-resources/web-components-demo/">Web Components Demo page</a>.
 * **PRL-homepage-brands-2018.html:** This content is used on the <a href="https://prl.natsci.msu.edu/">PRL homepage</a> in the section right below the hero image and right before the News section.
   * Any changes should be made in this file on a viable code editor, such as <a href="https://code.visualstudio.com/"> Visual Studio Code</a>, and not in Mura. The reason is that Mura's HTML editor is messy and difficult to work on.
   * To update the content in Mura, paste the code from this file in the **Homepage - Brands Section** component, which can be located in Mura's File Manager.
