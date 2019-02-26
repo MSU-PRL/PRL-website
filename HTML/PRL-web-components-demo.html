@@ -1,0 +1,622 @@
+<div class="mura-async-object mura-object mura-object-select d-lg-none d-xl-none prl-brand-guide-main-page-TOC" data-async="false" data-class="d-lg-none d-xl-none prl-brand-guide-main-page-TOC" data-cssclass="d-lg-none d-xl-none prl-brand-guide-main-page-TOC" data-inited="true" data-instanceid="C533C329-FB4F-40E4-A171A77720DF07F6" data-listtype="ul" data-maxdepth="2" data-object="toc" data-objecticonclass="mi-list" data-objectid="EA5FFCCD-5338-4743-978E78C479173945" data-objectname="Table of Contents" data-render="client" data-title="Table of Contents" style=""></div>
+
+<section class="introduction">
+	<h2>Introduction</h2>
+	<p>Below are some of the more used custom components on the PRL website, with markup and instructions. All components below exist as individual components in the Mura back-end "Components" section. These can be inserted and further edited on any website page.</p>
+</section>
+
+<section class="bullet-points">
+	<h2>Bullet points</h2>
+
+	<p>In addition to regular bulleted lists, the stylized option offers more space and contrast around the bulleted material.</p>
+
+	<div class="prl-bulletpoint-fancy">
+		<ul>
+			<li>Unordered List - Bullet 1</li>
+			<li>Bullet 2</li>
+			<li>Bullet 3</li>
+		</ul>
+	</div>
+
+	<div class="prl-code-area"><code>&lt;!-- Stylized Unordered List --&gt;&nbsp;&nbsp; &nbsp;<br />
+		&lt;div class=&quot;prl-bulletpoint-fancy&quot;&gt;<br />
+		&nbsp; &lt;ul&gt;<br />
+		&nbsp; &nbsp; &lt;li&gt;Unordered List - Bullet 1&lt;/li&gt;<br />
+		&nbsp; &nbsp; &lt;li&gt;Bullet 2&lt;/li&gt;<br />
+		&nbsp; &nbsp; &lt;li&gt;Bullet 3&lt;/li&gt;<br />
+		&nbsp; &lt;/ul&gt;<br />
+		&lt;/div&gt;</code></div>
+
+	<div class="prl-bulletpoint-fancy">
+		<ol>
+			<li>Ordered List - Bullet 1</li>
+			<li>Bullet 2</li>
+			<li>Bullet 3</li>
+		</ol>
+	</div>
+
+	<div class="prl-code-area"><code>&lt;!-- Stylized Ordered List --&gt;&nbsp;&nbsp; &nbsp;<br />
+		&lt;div class=&quot;prl-bulletpoint-fancy&quot;&gt;<br />
+		&nbsp; &lt;ol&gt;<br />
+		&nbsp; &nbsp; &lt;li&gt;Ordered List - Bullet 1&lt;/li&gt;<br />
+		&nbsp; &nbsp; &lt;li&gt;Bullet 2&lt;/li&gt;<br />
+		&nbsp; &nbsp; &lt;li&gt;Bullet 3&lt;/li&gt;<br />
+		&nbsp; &lt;/ol&gt;<br />
+		&lt;/div&gt;</code></div>
+</section>
+
+<section class="buttons">
+	<h2>Buttons</h2>
+
+	<p>Buttons trigger a reaction on press.</p>
+
+	<p>Use active verbs for button language, such as:</p>
+
+	<ul>
+		<li>&quot;Find Out More&quot;</li>
+		<li>&quot;View All Events&quot;</li>
+		<li>&quot;Apply Here&quot;</li>
+	</ul>
+
+	<p>Don't use&nbsp;passive language, such as:</p>
+
+	<ul>
+		<li>&quot;More&quot;</li>
+		<li>&quot;More Information&quot;</li>
+		<li>&quot;Events.&quot;</li>
+	</ul>
+
+	<h3>Primary button</h3>
+
+	<p>The main PRL button, which fills with color on hover and press.</p>
+
+	<div><a class="prl-btn" href="#">Find Out More </a></div>
+
+	<div class="prl-code-area"><code>&lt;!-- Raised Button --&gt;<br />
+		&lt;div&gt;<br />
+		&nbsp; &lt;a class=&quot;prl-btn&quot; href=&quot;#&quot;&gt;Find Out More&lt;/a&gt;<br />
+		&lt;/div&gt;</code></div>
+
+	<h3>Secondary arrow button</h3>
+
+	<p>The secondary button includes an arrow animation on hover to indicate a link.</p>
+
+	<p><a class="prl-arrow-btn" href="#">Find Out More</a></p>
+
+	<div class="prl-code-area"><code>&lt;!--&nbsp;Button With Animated Arrow --&gt;<br />
+		&lt;div&gt;<br />
+		&nbsp; &lt;a class=&quot;prl-arrow-btn&quot; href=&quot;#&quot;&gt;Find Out More&lt;/a&gt;<br />
+		&lt;/div&gt;</code></div>
+
+	<h3>Tertiary flat button</h3>
+
+	<p>The flat button is primarily used in cards. Although it can be used on its own, the secondary button, with arrow animation, is a better visual indicator for links.</p>
+
+	<div><a class="prl-flat-btn" href="#">Find Out More</a></div>
+
+	<div class="prl-code-area"><code>&lt;!--&nbsp;Flat Button --&gt;<br />
+		&lt;div&gt;<br />
+		&nbsp; &lt;a class=&quot;prl-flat-btn&quot; href=&quot;#&quot;&gt;Find Out More&lt;/a&gt;<br />
+		&lt;/div&gt;</code></div>
+
+	<h3>Back to top button</h3>
+
+	<p>Shrink the browser window to see an example on this page. The button consists of a &quot;chevron circle up&quot; fonticon, uses the secondary PRL red color, and is set on the bottom right corner of mobile and tablet screens only.  On press, the user is redirected to the top of the page, with an added jQuery scroll effect.</p>
+
+	<div class="prl-code-area"><code>&lt;!-- Back To Top Button --&gt;<br />
+		&lt;div&gt;&lt;a class=&quot;prl-back-to-top-btn&quot; href=&quot;#&quot;&gt;&lt;span class=&quot;fa fa-chevron-circle-up&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;span class=&quot;sr-only&quot;&gt;Chevron circle up&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;</code></div>
+</section>
+
+<section class="cards">
+	<h2>Cards</h2>
+
+	<p>Cards are entry points to more detailed information. They may contain a photo, text, and a link about a single subject. Cards can be used alone or in a collection (<a href="/news-events/news/">see News page</a>). Use cards to display content that:</p>
+
+	<ul>
+		<li>Comprises multiple data types, like images, movies, and text</li>
+		<li>Does not require direct comparison (users don't compare the images or text)</li>
+		<li>Contains interactive content, such as one or more buttons</li>
+	</ul>
+
+	<p>Don't:</p>
+
+	<ul>
+		<li>Overload cards with too many actions or extraneous information</li>
+		<li>Include inline links</li>
+	</ul>
+
+	<h3>Design and code resources</h3>
+
+	<p>The card examples below contain code snippets, but for access to cleaner code, use these options:</p>
+
+	<ul>
+		<li><a href="/about/internal-resources/brand-style-guide/card-examples-and-markup/">Card examples and markup</a></li>
+		<li><a href="/sites/_prl/assets/File/Employee%20Documents/PRL-card-markup.html">Download HTML file</a></li>
+	</ul>
+
+	<hr />
+	<div class="prl-well">
+		<p style="line-height:1.4"><small><em>Image sources for examples: </em></small><small><em>Cyanobacteria bloom by brewbooks from near Seattle, USA (Grand Prismatic Spring) <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a>, <a href="https://commons.wikimedia.org/wiki/File%3AGrand_Prismatic_Spring_-_Flickr_-_brewbooks_(5).jpg">via Wikimedia Commons</a>; </em></small><small><em>Solar panel: <a href="https://pixabay.com/en/grass-sky-solar-panels-sunrise-1842296/">Pexels</a>, <a href="https://pixabay.com/en/service/terms/#usage">CC0 Creative Commons</a></em></small></p>
+	</div>
+
+	<h3>Basic card</h3>
+
+	<div class="row">
+		<div class="col-md-6">
+			<div class="prl-card">
+				<div class="prl-card-image"><img alt="Cyanobacteria bloom by a hot spring" data-instanceid="118E0F9B-C1D2-4A1E-811508ACE8F1D96F" src="/sites/_prl/assets/Image/Stories%20and%20Event%20Images/Cyano-bloom-600x400-sm.jpg" /></div>
+
+				<div class="prl-card-body">
+					<h3>Card Title</h3>
+
+					<p>The information falls here. Be brief and avoid extraneous information.</p>
+				</div>
+
+				<div class="prl-card-readmore-btns"><a class="prl-flat-btn" href="#">Action 1</a><a class="prl-flat-btn" href="#">Action 2</a></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="prl-code-area"><code>&lt;!-- Basic Card --&gt;<br />
+		&lt;div class=&quot;prl-card&quot;&gt;<br />
+		&nbsp; &lt;!-- Image --&gt;<br />
+		&nbsp; &lt;div class=&quot;prl-card-image&quot;&gt;<br />
+		&nbsp; &nbsp; &lt;img alt=&quot;&quot; src=&quot;&quot; /&gt;<br />
+		&nbsp; &lt;/div&gt;<br />
+		&nbsp;&nbsp;&lt;!-- Content --&gt;<br />
+		&nbsp; &lt;div class=&quot;prl-card-body&quot;&gt;<br />
+		&nbsp; &nbsp; &lt;h3&gt;Card Title&lt;/h3&gt;<br />
+		&nbsp; &nbsp; &lt;p&gt;The information falls here. Be brief and avoid extraneous information.&lt;/p&gt;<br />
+		&nbsp; &lt;/div&gt;<br />
+		&nbsp; &lt;!-- Buttons&nbsp;--&gt;<br />
+		&nbsp; &lt;div class=&quot;prl-card-readmore-btns&quot;&gt;<br />
+		&nbsp; &nbsp; &lt;a class=&quot;prl-flat-btn&quot; href=&quot;#&quot;&gt;Action 1&lt;/a&gt;<br />
+		&nbsp; &nbsp; &lt;a class=&quot;prl-flat-btn&quot; href=&quot;#&quot;&gt;Action 2&lt;/a&gt;<br />
+		&nbsp; &lt;/div&gt;<br />
+		&lt;/div&gt;</code></div>
+
+	<h3>Without image</h3>
+
+	<div class="row">
+		<div class="col-md-6">
+			<div class="prl-card">
+				<div class="prl-card-body">
+					<h3>Card Title</h3>
+
+					<p>The information falls here. Be brief and avoid extraneous information.</p>
+				</div>
+
+				<div class="prl-card-readmore-btns"><a class="prl-flat-btn" href="#">Action 1</a><a class="prl-flat-btn" href="#">Action 2</a></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="prl-code-area"><code>&lt;!-- Basic Card Without Image --&gt;<br />
+		&lt;div class=&quot;prl-card&quot;&gt;<br />
+		&nbsp;&nbsp;&lt;!-- Content --&gt;<br />
+		&nbsp; &lt;div class=&quot;prl-card-body&quot;&gt;<br />
+		&nbsp; &nbsp; &lt;h3&gt;Card Title&lt;/h3&gt;<br />
+		&nbsp; &nbsp; &lt;p&gt;The information falls here. Be brief and avoid extraneous information.&lt;/p&gt;<br />
+		&nbsp; &lt;/div&gt;<br />
+		&nbsp; &lt;!-- Buttons --&gt;<br />
+		&nbsp; &lt;div class=&quot;prl-card-readmore-btns&quot;&gt;<br />
+		&nbsp; &nbsp; &lt;a class=&quot;prl-flat-btn&quot; href=&quot;#&quot;&gt;Action 1&lt;/a&gt;<br />
+		&nbsp; &nbsp; &lt;a class=&quot;prl-flat-btn&quot; href=&quot;#&quot;&gt;Action 2&lt;/a&gt;<br />
+		&nbsp; &lt;/div&gt;<br />
+		&lt;/div&gt;</code></div>
+
+	<h3>With bottom border</h3>
+
+	<div class="row">
+		<div class="col-md-6">
+			<div class="prl-card-w-border">
+				<div class="prl-card-body">
+					<h3>Card With Bottom Border</h3>
+
+					<p>The information falls here. Be brief and avoid extraneous information.</p>
+				</div>
+
+				<div class="prl-card-readmore-btns"><a class="prl-flat-btn" href="#">Action 1</a><a class="prl-flat-btn" href="#">Action 2</a></div>
+			</div>
+		</div>
+
+		<div class="col-md-6">
+			<div class="prl-card-w-border">
+				<div class="prl-card-image"><img alt="Solar panels on an evening" data-instanceid="52B286B6-5CEA-484E-905A2CE99859325B" src="/sites/_prl/assets/Image/Stories%20and%20Event%20Images/solar%20panel-sm.jpg" /></div>
+
+				<div class="prl-card-body">
+					<h3>Card With Bottom Border</h3>
+
+					<p>The information falls here. Be brief and avoid extraneous information.</p>
+				</div>
+
+				<div class="prl-card-readmore-btns"><a class="prl-flat-btn" href="#">Action 1</a><a class="prl-flat-btn" href="#">Action 2</a></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="prl-code-area"><code>&lt;!-- Card Without Image and With Bottom Border --&gt;<br />
+		&lt;div class=&quot;prl-card-w-border&quot;&gt;<br />
+		&nbsp;&nbsp;&lt;!-- Content --&gt;<br />
+		&nbsp; &lt;div class=&quot;prl-card-body&quot;&gt;<br />
+		&nbsp; &nbsp; &lt;h3&gt;Card With Bottom Border&lt;/h3&gt;<br />
+		&nbsp; &nbsp; &lt;p&gt;The information falls here. Be brief and avoid extraneous information.&lt;/p&gt;<br />
+		&nbsp; &lt;/div&gt;<br />
+		&nbsp; &lt;!-- Buttons --&gt;<br />
+		&nbsp; &lt;div class=&quot;prl-card-readmore-btns&quot;&gt;<br />
+		&nbsp; &nbsp; &lt;a class=&quot;prl-flat-btn&quot; href=&quot;#&quot;&gt;Action 1&lt;/a&gt;<br />
+		&nbsp; &nbsp; &lt;a class=&quot;prl-flat-btn&quot; href=&quot;#&quot;&gt;Action 2&lt;/a&gt;<br />
+		&nbsp; &lt;/div&gt;<br />
+		&lt;/div&gt;<br />
+		<br />
+		&lt;!-- Card with Image and Bottom Border --&gt;<br />
+		&lt;div class=&quot;prl-card-w-border&quot;&gt;<br />
+		&nbsp; &lt;!-- Image --&gt;<br />
+		&nbsp; &lt;div class=&quot;prl-card-image&quot;&gt;<br />
+		&nbsp; &nbsp; &lt;img alt=&quot;&quot; src=&quot;&quot; /&gt;<br />
+		&nbsp; &lt;/div&gt;<br />
+		&nbsp;&nbsp;&lt;!-- Content --&gt;<br />
+		&nbsp; &lt;div class=&quot;prl-card-body&quot;&gt;<br />
+		&nbsp; &nbsp; &lt;h3&gt;Card With Bottom Border&lt;/h3&gt;<br />
+		&nbsp; &nbsp; &lt;p&gt;The information falls here. Be brief and avoid extraneous information.&lt;/p&gt;<br />
+		&nbsp; &lt;/div&gt;<br />
+		&nbsp; &lt;!-- Buttons&nbsp;--&gt;<br />
+		&nbsp; &lt;div class=&quot;prl-card-readmore-btns&quot;&gt;<br />
+		&nbsp; &nbsp; &lt;a class=&quot;prl-flat-btn&quot; href=&quot;#&quot;&gt;Action 1&lt;/a&gt;<br />
+		&nbsp; &nbsp; &lt;a class=&quot;prl-flat-btn&quot; href=&quot;#&quot;&gt;Action 2&lt;/a&gt;<br />
+		&nbsp; &lt;/div&gt;<br />
+		&lt;/div&gt;</code></div>
+
+	<h3>Title overlaying image</h3>
+
+	<div class="row">
+		<div class="col-md-6">
+			<div class="prl-card">
+				<div class="prl-card-image"><img alt="Solar panels on an evening" data-instanceid="F206C373-FA54-453F-B140FE00574BC4BE" src="/sites/_prl/assets/Image/Stories%20and%20Event%20Images/solar%20panel-sm.jpg" />
+					<div class="prl-card-image-overlay">
+						<h3>Card Title</h3>
+					</div>
+				</div>
+
+				<div class="prl-card-body">
+					<p>The information falls here. Be brief and avoid extraneous information.</p>
+				</div>
+
+				<div class="prl-card-readmore-btns"><a class="prl-flat-btn" href="#">Action 1</a><a class="prl-flat-btn" href="#">Action 2</a></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="prl-code-area"><code>&lt;!-- Card With Image and Title Overlay --&gt;<br />
+		&lt;div class=&quot;prl-card&quot;&gt;<br />
+		&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Image--&gt;<br />
+		&nbsp; &lt;div class=&quot;prl-card-image&quot;&gt;<br />
+		&nbsp; &nbsp;&nbsp;&lt;img alt=&quot;&quot; src=&quot;&quot;&gt;<br />
+		&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Title Overlay --&gt;<br />
+		&nbsp; &nbsp; &lt;div class=&quot;prl-card-image-overlay&quot;&gt;<br />
+		&nbsp; &nbsp; &nbsp; &lt;h3&gt;Card Title&lt;/h3&gt;<br />
+		&nbsp; &nbsp; &lt;/div&gt;<br />
+		&nbsp; &lt;/div&gt;<br />
+		&nbsp;&nbsp;&lt;!-- Content --&gt;<br />
+		&nbsp;&nbsp;&lt;div class=&quot;prl-card-body&quot;&gt;<br />
+		&nbsp; &nbsp; &lt;p&gt;The information falls here. Be brief and avoid extraneous information.&lt;/p&gt;<br />
+		&nbsp; &lt;/div&gt;<br />
+		&nbsp; &lt;!-- Buttons&nbsp;--&gt;<br />
+		&nbsp;&nbsp;&lt;div class=&quot;prl-card-readmore-btns&quot;&gt;<br />
+		&nbsp; &nbsp;&nbsp;&lt;a class=&quot;prl-flat-btn&quot; href=&quot;#&quot;&gt;Action 1&lt;/a&gt;<br />
+		&nbsp; &nbsp;&nbsp;&lt;a class=&quot;prl-flat-btn&quot; href=&quot;#&quot;&gt;Action 2&lt;/a&gt;<br />
+		&nbsp;&nbsp;&lt;/div&gt;<br />
+		&lt;/div&gt;</code></div>
+
+	<h3>Title overlay and hover effect</h3>
+
+	<div>Hover effects indicate the presence of a links on cards that do not include visible action buttons. Usage examples include &quot;Related Content&quot; in news articles (<a href="/news-events/news/how-to-build-artificial-nanofactories-to-power-our-futures-logistics/">See example</a>). </div>
+
+	<div>&nbsp;</div>
+
+	<div class="row">
+		<div class="col-md-6">
+			<div class="prl-card-hover-effect">
+				<div class="prl-card-image-only"><img alt="Cyanobacteria bloom by a hot spring" data-instanceid="EEEA701D-54AB-4E42-BDAD74615DB8BEB8" src="/sites/_prl/assets/Image/Stories%20and%20Event%20Images/Cyano-bloom-600x400-sm.jpg" />
+					<div class="prl-card-image-no-summary-overlay">
+						<h3>Card Title</h3>
+
+						<p>Optional text can go here too</p>
+					</div>
+				</div>
+
+				<div class="prl-readmore-fill-container"><a href="#">Action 1</a></div>
+			</div>
+		</div>
+
+		<div class="col-md-6">
+			<div class="prl-card-hover-effect">
+				<div class="prl-card-image"><img alt="Cyanobacteria bloom by a hot spring" data-instanceid="F8F073BA-31C8-4076-BF4D28EB6FEAB2FB" src="/sites/_prl/assets/Image/Stories%20and%20Event%20Images/Cyano-bloom-600x400-sm.jpg" />
+					<div class="prl-card-image-overlay">
+						<h3>Card Title</h3>
+					</div>
+				</div>
+
+				<div class="prl-card-body">
+					<p>Related Story: This is the summary of the story</p>
+
+					<div class="prl-readmore-fill-container"><a href="#">Action 1</a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="prl-code-area"><code>&lt;!-- Card With Image and Text Overlay&nbsp;--&gt;<br />
+		&lt;div class=&quot;prl-card-hover-effect&quot;&gt;<br />
+		&nbsp; &lt;div class=&quot;prl-card-image-only&quot;&gt;<br />
+		&nbsp; &lt;!-- Image--&gt;<br />
+		&nbsp; &lt;img alt=&quot;&quot; src=&quot;&quot;&gt;<br />
+		&nbsp; &nbsp;&nbsp;&lt;!-- Text Overlay --&gt;<br />
+		&nbsp; &nbsp; &lt;div class=&quot;prl-card-image-no-summary-overlay&quot;&gt;<br />
+		&nbsp; &nbsp; &nbsp; &lt;h3&gt;Card Title&lt;/h3&gt;<br />
+		&nbsp; &nbsp; &nbsp;&nbsp;&lt;p&gt;Optional text can go here too&lt;/p&gt;<br />
+		&nbsp; &nbsp; &lt;/div&gt;<br />
+		&nbsp;&nbsp;&lt;/div&gt;<br />
+		&nbsp; &lt;!-- Link Area --&gt;<br />
+		&nbsp;&nbsp;&lt;div class=&quot;prl-readmore-fill-container&quot;&gt;<br />
+		&nbsp; &nbsp;&nbsp;&lt;a href=&quot;#&quot;&gt;Action 1&lt;/a&gt;<br />
+		&nbsp; &lt;/div&gt;<br />
+		&lt;/div&gt;<br />
+		<br />
+		&lt;!-- Card With Image, Title Overlay, and Content&nbsp;--&gt;<br />
+		&lt;div class=&quot;prl-card-hover-effect&quot;&gt;<br />
+		&nbsp; &lt;div class=&quot;prl-card-image&quot;&gt;<br />
+		&nbsp; &lt;!-- Image--&gt;<br />
+		&nbsp; &lt;img alt=&quot;&quot; src=&quot;&quot;&gt;<br />
+		&nbsp; &nbsp;&nbsp;&lt;!-- Title Overlay --&gt;<br />
+		&nbsp; &nbsp; &lt;div class=&quot;prl-card-image-overlay&quot;&gt;<br />
+		&nbsp; &nbsp; &nbsp; &lt;h3&gt;Card Title&lt;/h3&gt;<br />
+		&nbsp; &nbsp; &lt;/div&gt;<br />
+		&nbsp;&nbsp;&lt;/div&gt;<br />
+		&nbsp; &lt;!-- Content --&gt;<br />
+		&nbsp; &lt;div class=&quot;prl-card-body&quot;&gt;<br />
+		&nbsp; &nbsp; &lt;p&gt; Related Story: This is the summary of the story &lt;/p&gt;<br />
+		&nbsp; &lt;/div&gt;<br />
+		&nbsp; &lt;!-- Link Area --&gt;<br />
+		&nbsp;&nbsp;&lt;div class=&quot;prl-readmore-fill-container&quot;&gt;<br />
+		&nbsp; &nbsp;&nbsp;&lt;a href=&quot;#&quot;&gt;Action 1&lt;/a&gt;<br />
+		&nbsp; &lt;/div&gt;<br />
+		&lt;/div&gt;</code></div>
+
+	<h3>Small borderless card</h3>
+
+	<p>The card takes minimal space and is useful as &quot;Related Content&quot; in news stories (<a href="/news-events/news/from-the-lab-to-the-world-solving-big-problems-in-agriculture-and-energy/">See example</a>). Recommended bootstrap grid definition is &quot;col-sm-6 col-xs-12&quot; class with a &quot;pull-right&quot; class.</p>
+
+	<div class="col-sm-6 col-xs-12 prl-relcontent-body-small pull-right"><img alt="Solar panels on an evening" data-instanceid="B0EE31CD-289F-493D-951A73062FC896FF" src="/sites/_prl/assets/Image/Stories%20and%20Event%20Images/solar%20panel-sm.jpg" />
+		<div class="prl-relcontent-body-small-link">
+			<h3 style="font-weight:600">Card Title</h3>
+			<a href="#">Link here.</a></div>
+	</div>
+
+	<div class="prl-code-area" style="clear:both"><code>&lt;!-- Small Borderless Card --&gt;<br />
+		&lt;div class=&quot;col-sm-6 col-xs-12 prl-relcontent-body-small pull-right&quot;&gt;<br />
+		&lt;img alt=&quot;&quot; src=&quot;&quot;&gt;<br />
+		&nbsp; &lt;!-- Text Area&nbsp;--&gt;<br />
+		&nbsp; &lt;div class=&quot;prl-relcontent-body-small-link&quot;&gt;<br />
+		&nbsp; &nbsp; &lt;h3&gt;Card Title&lt;/h3&gt;<br />
+		&nbsp; &nbsp; &lt;p&gt;Link here.&lt;/p&gt;<br />
+		&nbsp; &lt;/div&gt;<br />
+		&lt;/div&gt;</code></div>
+</section>
+
+<section class="doe-acknowledgment">
+	<h2>DOE-BES Funding Acknowledgment</h2>
+
+	<p>Use this at the end of news stories that are funded by the DOE grant. See News section for usage examples</p>
+
+	<hr />
+	<p class="prl-news-support-tag"><small>This work was primarily funded by the <a href="https://science.energy.gov/bes/csgb/research-areas/photochemistry-and-biochemistry/">US Department of Energy, Office of Basic Energy Sciences</a>.</small></p>
+
+	<div class="prl-code-area" style="clear:both">
+		<p class="prl-news-support-tag"><code>&lt;!-- Content - DOE-BES Support Tag --&gt;<br />
+			&lt;hr /&gt;<br />
+			&lt;p class=&quot;prl-news-support-tag&quot;&gt;&lt;small&gt;This work was primarily funded by the<br />
+			&lt;a href=&quot;https://science.energy.gov/bes/csgb/research-areas/photochemistry-and-biochemistry/&quot;&gt;US Department of Energy, Office of Basic Energy Sciences&lt;/a&gt;.&lt;/small&gt;&lt;/p&gt;</code></p>
+	</div>
+</section>
+
+<section class="faculty-contact-information">
+	<h2>Faculty & Staff Contact Components</h2>
+	<p>Refer to the <a href="/about/internal-resources/brand-guides/communications-department-resources/brand-manual/">brand manual</a> for instructions on adding components found under the "People" folder of the components section in the Mura back-end</p> 
+</section>
+
+<section class="fonticons">
+	<h2>Fonticons</h2>
+
+	<p>Pre-designed icons are useful visual representations that load faster than traditional images. The PRL uses a custom icon font called <a href="https://web.natsci.msu.edu/mura-7-kb/technology-used/">natsci-icon-font</a>, based on <a href="https://fontawesome.com/">Font Awesome</a>, that has over 300 icons to choose from that span many use scenarios. Icon size, rotation, and other effects can be controlled.</p>
+
+	<h3>How to use</h3>
+
+	<p>Fonticons are inserted in the HTML editor. For more, see:</p>
+
+	<ul>
+		<li><a href="https://web.natsci.msu.edu/mura-7-kb/fonticons-cheat-sheet/">Fonticon cheat sheet</a></li>
+		<li><a href="https://web.natsci.msu.edu/mura-7-kb/fonticon-placement/">Instructions for placing Fonticons</a>: accessible HTML markup is addressed</li>
+	</ul>
+
+	<h3>Fonticon Examples</h3>
+
+	<p>Map Marker:&nbsp;&nbsp;<span class="fa fa-map-marker">&nbsp;</span><span class="sr-only">Map marker</span></p>
+
+	<p>Envelope (2x original size):&nbsp;&nbsp;<span class="fa fa-2x fa-envelope">&nbsp;</span><span class="sr-only">Envelope</span></p>
+
+	<p>Spartan Shield (2x original size): <span class="fa fa-2x fa-spartanShield">&nbsp;</span><span class="sr-only">Spartan Shield</span></p>
+
+	<p>Spartan Helmet (4x original size):&nbsp;<span class="fa fa-4x fa-spartanHelmet">&nbsp;</span><span class="sr-only">Spartan Helmet</span></p>
+
+	<ul></ul>
+</section>
+
+<section class="popover-component">
+		<h2>Popover</h2>
+	
+		<p>This component is used mostly for hover definitions in news stories. Insert the following code at the top of relevant pages. See the <a href="/about/internal-resources/brand-guides/communications-department-resources/brand-manual/">brand manual</a> for how to add hover definitions in stories. Popovers will display as a link with an 'expand' fonticon preceding it to indicate it is a popover.</p>
+	
+		<div class="prl-code-area">
+			<div><code>&lt;!--&nbsp;Content - Popover --&gt;<br />
+				[m]$.dspThemeInclude('display_objects/custom/dsp_contentPopover.cfm')[/m]</code></div>
+		</div>
+	</section>
+	
+
+<section class="images">
+		<h2>Images</h2>
+	
+		<div class="mx-auto d-block mw-100 text-center"><!-- 1) could add .row if wanted 2) Using Bootstrap 4 classes to center image-->
+			<figure class="prl-figure"><img alt="blank image" height="538" src="/sites/_prl/assets/Image/placeholder-callout-555x365.jpg" width="818" />
+				<figcaption>The first line is the caption. Custom CSS will style this.<br />
+					<em>By [Name of owner, in italics, with link to original.] Indicate CC0, Public Domain, with link to license. </em></figcaption>
+			</figure>
+		</div>
+	
+		<div class="prl-code-area"><code>&lt;!--Content - Image&nbsp;--&gt;<br />
+			&lt;div class=&quot;mx-auto d-block mw-100 text-center&quot;&gt;<br />
+			&lt;!-- 1) could add .row if wanted 2) Using Bootstrap 4 classes to center image--&gt;<br />
+			&nbsp; &lt;figure class=&quot;prl-figure&quot;&gt;<br />
+			&nbsp; &nbsp; &lt;img alt=&quot;&quot; height=&quot;538&quot; src=&quot;/sites/_prl/assets/Image/placeholder-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; callout-555x365.jpg&quot; width=&quot;818&quot; /&gt;<br />
+			&nbsp; &nbsp; &lt;figcaption&gt;The first line is the caption. Custom CSS will style this.<br />
+			&nbsp; &nbsp; &lt;br/&gt;<br />
+			&nbsp; &nbsp; &lt;em&gt;By [Name of owner, in italics, with link to original.] Indicate CC0,&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Public Domain, with link to license. &lt;/em&gt;&lt;/figcaption&gt;<br />
+			&nbsp;&nbsp;&lt;/figure&gt;<br />
+			&lt;/div&gt;</code></div>
+	</section>
+	
+
+
+<section class="layout">
+	<h2>Layout</h2>
+
+	<h3>Bootstrap grid system</h3>
+
+	<p>The College of Natural Sciences theme uses the Bootstrap grid system that divides the page up into 12 columns across the page. Columns can be combined in various combinations that add up to a total of 12 per row. In the example below, the first row combines twelve 1-column-width columns, the second combines three 4-column-width columns, while the last has a single 12-column-width column. </p>
+
+	<ul></ul>
+
+	<p><img alt="Bootstrap grid examples" data-instanceid="7D3167D2-FD12-4359-849B60BBED43BC7A" height="171" src="/sites/_prl/assets/Image/About_PRL/bootstrap-grid.jpg" width="748" /></p>
+
+	<h3>How to use bootstrap grid</h3>
+
+	<p>Check out the following resources:</p>
+
+	<ul>
+		<li><a href="https://www.youtube.com/watch?v=OfJ-Nlo8qwI">Easy 10-minute video</a></li>
+		<li><a href="https://www.sitepoint.com/understanding-bootstrap-grid-system/">Article explaining basic principles</a></li>
+		<li><a href="https://getbootstrap.com/docs/3.3/css/#grid">Bootstrap documentation</a></li>
+	</ul>
+
+	<h3>College of Natural Sciences additional layouts</h3>
+
+	<p>The <a href="https://web.natsci.msu.edu/mura-7-kb/page-layouts/">CNS theme includes a number of page layouts</a> housed within Mura. </p>
+
+	<h3>Custom web layouts</h3>
+
+	<p>The research, news, faculty, staff, and events pages have custom layouts. Those are created through Mura components and styled with CSS automatically when added. Contact the PRL communications office for Instructions on how to add these components.</p>
+
+	<h3>Narrow container</h3>
+
+	<p>The narrow container limits the line length to <a href="http://www.smashingmagazine.com/2014/09/balancing-line-length-font-size-responsive-web-design/#line-length-measure-and-reading">approximately 65-75 characters per line</a> for an accessible online reading experience. This is ideal for news articles. An example (italics added for contrast):</p>
+
+	<div class="prl-narrow-container">
+		<p><em>When photosynthetic organisms have enough resources to grow &ndash; nutrients, the right temperature, enough water &ndash; photosynthesis hums along and they thrive.</em></p>
+
+		<p><em>But during difficult times &ndash; say, nutrients are scarce, or the environment is too cold or dry &ndash; neither can the organisms grow nor can they hide from the hostile environment.</em></p>
+
+		<p><em>In those cases, they must dial back photosynthesis until the stress blows over. This ability to change the rates of photosynthesis is a matter of life and death. Without it, the organisms produce bad toxins that inflict self-harm that can be fatal.</em></p>
+	</div>
+
+	<div class="prl-code-area"><code>&lt;!--Custom Narrow Container --&gt;<br />
+		&lt;div class=&quot;prl-narrow-container&quot;&gt;<br />
+		&nbsp; &lt;p&gt;Content goes in here&lt;/p&gt;<br />
+		&lt;/div&gt;</code></div>
+</section>
+
+<section class="typography">
+	<h2>Typography</h2>
+
+		<h3>Custom &lt;h2&gt;</h3>
+
+		<h4 class="prl-h2-alternate" style="text-align:left; margin-top: ">h2 for Primary Pages</h4>
+    <p>Larger, thinner, capitalized, and uses primary color; used on primary pages for contrast. For examples, see Homepage or About Page.</p>
+	<div class="prl-code-area"><code>&lt;!--Title Page h2 &nbsp;--&gt;<br />
+    &lt;h2 class=&quot;prl-h2-alternate&quot;&gt; H2 tag&nbsp;&lt;/h2&gt;</code></div>
+
+  <h4 class="prl-h2-secondary-spacing" style="text-align:left">h2 for Inner Splash Page</h4>
+  <p>Default h2 with an added upper margin; used on secondary 'splash' pages, for spacing between blocks of content. For examples, see Research Projects, Graduate Program Overview, and Center for Advanced Algal and Plant Phenotyping pages.</p>
+  <div class="prl-code-area"><code>&lt;!--Inner Page h2 &nbsp;--&gt;<br />
+    &lt;h2 class=&quot;prl-h2-secondary-spacing&quot;&gt; H2 tag&nbsp;&lt;/h2&gt;</code></div>
+
+    <h3>Custom &lt;p&gt;</h3>
+	<p class="prl-p-subheader">Lead &lt;p&gt; for Primary Pages</p>
+	<p>Acts as a lead paragraph, with larger font and light grey color. Used for contrast. For examples, see Homepage or About Page. </p>
+	<div class="prl-code-area"><code>&lt;!--Custom&nbsp;p Tag&nbsp;--&gt;<br />
+    &lt;h2 class=&quot;prl-p-subheader&quot;&gt; Paragraph tag&nbsp;&lt;/h2&gt;</code></div>
+    
+    <p class="prl-p-subheader-smaller">Lead &lt;p&gt; for Secondary Splash Pages</p>
+    <p>Acts as a lead paragraph, with larger font and light grey color. Smaller than the lead paragraph styling for Primary Pages. For examples, see Seminars & Events, Graduate Program Overview, Research Areas, etc. </p>
+    <div class="prl-code-area"><code>&lt;!--Custom&nbsp;p Tag&nbsp;--&gt;<br />
+      &lt;h2 class=&quot;prl-p-subheader-smaller&quot;&gt; Paragraph tag&nbsp;&lt;/h2&gt;</code></div>
+</section>
+
+<section class="wells">
+	<h2>Wells</h2>
+
+	<p>Wells are an effective way of highlighting content by adding an inset to it. </p>
+
+	<h3>Default well</h3>
+
+	<div class="well">
+		<p>This is some text in a well.</p>
+	</div>
+
+	<div class="prl-code-area"><code>&lt;!-- Well --&gt;<br />
+		<span style="font-size:14.4px; letter-spacing:0.05px">&lt;div class=&quot;well&quot;&gt;</span><br />
+		<span style="font-size:14.4px; letter-spacing:0.05px">&nbsp;&nbsp;</span><span style="font-size:14.4px; letter-spacing:0.05px">&lt;p&gt;This is some text in a well.&lt;/p&gt;</span><br />
+		<span style="font-size:14.4px; letter-spacing:0.05px">&lt;/div&gt;</span></code></div>
+
+	<h3>Custom well</h3>
+
+	<p>The custom well is slightly darker for elegance, and it has no hover effect.</p>
+
+	<div class="prl-well">
+		<p>This is some text in a prl well.</p>
+	</div>
+
+	<div class="prl-code-area"><code>&lt;!-- Custom Well --&gt;<br />
+		<span style="font-size:14.4px; letter-spacing:0.05px">&lt;div class=&quot;prl-well&quot;&gt;</span><br />
+		<span style="font-size:14.4px; letter-spacing:0.05px">&nbsp;&nbsp;</span><span style="font-size:14.4px; letter-spacing:0.05px">&lt;p&gt;This is some text in a prl well.&lt;/p&gt;</span><br />
+		<span style="font-size:14.4px; letter-spacing:0.05px">&lt;/div&gt;</span></code></div>
+
+		<h3>Informational well with card</h3>
+
+		<p>Use this component to nest one or multiple cards in a well. In this case, the well is used to delineate and highlight the card content. <a href="/news-events/news/how-detecting-light-in-the-water-affects-how-much-food-cyanobacteria-get/">See an example here.</a></p>
+		
+		<div class="col-md-10 col-md-offset-1 prl-well">
+			<div class="prl-card-w-border">
+				<div class="prl-card-body">
+					<h3>Tracking light wavelength quality</h3>
+		
+					<p>Cyanos sink or float in water to position themselves favorably in their environments, and the surrounding light quality varies with depth.<br />
+						For example, on the surface, cyanos are exposed to rich amounts of red light. As they sink deeper, red light grows scarcer while green light remains abundant. Cyanos constantly track light quality and <a href="https://prl.natsci.msu.edu/news-events/news/montgomery-publishes-on-light-harvesting-efficiency/">adjust themselves to capture the most available wavelength at any time</a>.&nbsp;</p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="prl-code-area">
+			<p><code><span style="font-size: 14.85px; letter-spacing: -0.1px;">&lt;!--&nbsp;Content - Informational Well Section with Cards --&gt;</span><br />
+				<span style="font-size: 14.85px; letter-spacing: -0.1px;">&lt;div class=&quot;col-md-10 col-md-offset-1 prl-well&quot;&gt;<br />
+				&nbsp; </span><span style="font-size: 14.85px; letter-spacing: -0.1px;">&lt;div class=&quot;prl-card-w-border&quot;&gt;<br />
+				&nbsp; &nbsp; </span><span style="font-size: 14.85px; letter-spacing: -0.1px;">&lt;div class=&quot;prl-card-body&quot;&gt;<br />
+				&nbsp; &nbsp; </span><span style="font-size: 14.85px; letter-spacing: -0.1px;">&lt;h3&gt;Tracking light wavelength quality&lt;/h3&gt;<br />
+				&nbsp; &nbsp;&nbsp;</span><span style="font-size: 14.85px; letter-spacing: -0.1px;">&lt;p&gt;Cyanos sink or float in water to position themselves favorably in&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; their environments, and the surrounding light quality varies with&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; depth.&lt;br /&gt;</span><span style="font-size: 14.85px; letter-spacing: -0.1px;">For example, on the surface, cyanos are exposed to rich&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; amounts of red light. As they sink deeper, red light grows scarcer&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; while green light remains abundant. Cyanos constantly track light&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; quality and &lt;a href=&quot;https://prl.natsci.msu.edu/news-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; events/news/montgomery-publishes-on-light-harvesting-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; efficiency/&quot;&gt;adjust themselves to capture the most available&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; wavelength at any time&lt;/a&gt;.&amp;nbsp;&lt;br /&gt;<br />
+				&nbsp; &lt;/div&gt;<br />
+				&lt;/div&gt;</span></code></p>
+		</div>
+
+</section>
+
+<div><a class="prl-back-to-top-btn" href="#"><span class="fa fa-chevron-circle-up">&nbsp;</span><span class="sr-only">Chevron circle up</span></a></div>
