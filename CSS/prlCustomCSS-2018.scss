@@ -848,7 +848,8 @@ aside {
 .depth-1.people,
 .depth-1.news-events,
 .depth-1.research-tech,
-.depth-1.graduate-program {
+.depth-1.graduate-program,
+.depth-4.communications-department-resources {
   // Font styles for Mura folder display. Currently used on "News & Events," "People," and "Internal Resources"
   #svIndex {
     dt.title {
@@ -2060,10 +2061,10 @@ aside {
 }
 
 /* --------------------------------------------------------
-                BRAND STYLE GUIDE PAGE
+                BRAND GUIDES PAGES
 -------------------------------------------------------- */
 
-.brand-style-guide {
+.prl-community-brand-toolkit, .web-components-demo {
   .sideCol {
     position: -webkit-sticky;
     position: sticky;
@@ -2174,7 +2175,7 @@ aside {
 }
 
 @media (max-width: 991px) {
-  .brand-style-guide {
+  .prl-community-brand-toolkit, .web-components-demo {
     .sideCol {
       display: none;
     }
@@ -2948,6 +2949,8 @@ aside {
 ------------------------------------------------------------- */
 
 .faculty,
+.fixed-term-faculty,
+.emeritus-faculty,
 .staff {
   #MainContent {
     .mura-collection.mura-grid-two {
@@ -3095,7 +3098,7 @@ aside {
         font-size: 0.9rem;
         text-align: left; // Position the tooltip
         position: absolute;
-        z-index: 1;
+        z-index: 10;
         top: -59px;
         left: -11px;
         min-height: 56px;
@@ -3192,6 +3195,8 @@ aside {
 @media (min-width: 992px) and (max-width: 1199px) {
   // Small desktops Faculty page
   .faculty,
+  .fixed-term-faculty,
+  .emeritus-faculty,
   .staff {
     #MainContent {
       .mura-collection.mura-grid-two {
@@ -3235,6 +3240,8 @@ aside {
 @media (min-width: 710px) and (max-width: 991px) {
   // Tablets and larger phones
   .faculty,
+  .fixed-term-faculty,
+  .emeritus-faculty,
   .staff {
     #MainContent {
       .mura-collection.mura-grid-two {
@@ -3271,8 +3278,10 @@ aside {
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  .faculty {
-    // Adjusting News page cards to iPads specifically
+  .faculty,
+  .fixed-term-faculty,
+  .emeritus-faculty {
+    // Adjusting to iPads specifically
     #MainContent {
       .mura-collection.mura-grid-two {
         display: inline-block;
@@ -3287,6 +3296,8 @@ aside {
 @media (max-width: 767px) {
   // Phones general
   .faculty,
+  .fixed-term-faculty,
+  .emeritus-faculty,
   .staff {
     #MainContent {
       .mura-collection.mura-grid-two {
@@ -3368,6 +3379,8 @@ aside {
 @media (max-width: 649px) {
   // One column for smaller phones
   .faculty,
+  .fixed-term-faculty,
+  .emeritus-faculty,
   .staff {
     #MainContent {
       .mura-collection.mura-grid-two {
@@ -3394,6 +3407,8 @@ aside {
 @media (max-width: 360px) {
   // XS phone sizes, adjusting dimensions for Faculty page
   .faculty,
+  .fixed-term-faculty,
+  .emeritus-faculty,
   .staff {
     #MainContent {
       .mura-collection.mura-grid-two {
