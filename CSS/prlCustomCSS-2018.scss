@@ -3788,24 +3788,19 @@ aside {
 /* LAB NEWS AND PEOPLE PAGES
 -------------------------------------------------- */
 
-#walkerlabhome.lab-news > div > div > div > #MainContent > div > div > .mura-editable-attribute > div > div > .mura-index > div,
+#walkerlabhome.lab-news > div > div > div > #MainContent > div > div > div > div > div > .mura-index > div,
 #walkerlabhome.people > div > div > div > #MainContent > div > .mura-object-content > .mura-index > div {
   // Applies to both lab news and people pages
   .item {
     padding-top: 12px !important; // Important declaration to override the .last styling
     padding-right: 12px;
-    .image {
-      a {
-        border: none;
-      }
-    }
   }
 }
 
 
 @media only screen and (max-width: 767px) {
   // Applies only to lab news page on Mobile devices
-  #walkerlabhome.lab-news > div > div > div > #MainContent > div > div > .mura-editable-attribute > div > div > .mura-index > div {
+  #walkerlabhome.lab-news > div > div > div > #MainContent > div > div > div > div > div > .mura-index > div {
     // Image center aligned and border-bottom after each story.
     .item {
       padding: 0 0 6px 0 !important;
