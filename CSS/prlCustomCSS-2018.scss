@@ -478,7 +478,7 @@ $img-hover-opacity: 0.8;
 }
 
 /* ---------------------------------------------------------------------------------
-        CARD COMPONENTS - USED FOR MURA AND DL ITEMS IN NEWS AND HOMEPAGE EVENTS
+        CARD COMPONENTS - ALSO USED FOR ITEMS IN NEWS AND HOMEPAGE EVENTS
 ------------------------------------------------------------------------------------ */
 
 // OUTLINE AND HOVER EFFECT
@@ -736,15 +736,15 @@ $img-hover-opacity: 0.8;
   }
   p {
     @extend .prl-card-summary;
-    font-size: 0.95rem !important; // Larger than cards used in news and homepage, which are DL items
-    line-height: 1.6 !important; // Larger than cards used in news and homepage, which are DL items
+    font-size: 0.95rem !important; // Larger than cards used in news and homepage
+    line-height: 1.6 !important; // Larger than cards used in news and homepage
     margin-bottom: 0 !important; // Overrides CNS and PRL <p> margins in card
   }
   ul,
   ol {
     @extend .prl-card-summary;
-    font-size: 0.95rem !important; // Larger than cards used in news and homepage, which are DL items
-    line-height: 1.6 !important; // Larger than cards used in news and homepage, which are DL items
+    font-size: 0.95rem !important; // Larger than cards used in news and homepage
+    line-height: 1.6 !important; // Larger than cards used in news and homepage
     margin-bottom: 0 !important; // Overrides CNS and PRL <p> margins in card
   }
 }
@@ -851,8 +851,8 @@ aside {
 .depth-1.graduate-program,
 .depth-4.communications-department-resources {
   // Font styles for Mura folder display. Currently used on "News & Events," "People," and "Internal Resources"
-  #svIndex {
-    dt.title {
+  .mura-index {
+    .title {
       font-size: 23px;
       font-size: 1.45rem;
     }
@@ -890,9 +890,12 @@ aside {
   }
   .depth-2.internal-resources,
   .depth-1.people,
-  .depth-1.news-events {
+  .depth-1.news-events,
+  .depth-1.research-tech,
+  .depth-1.graduate-program,
+  .depth-4.communications-department-resources {
     // Font styles for Mura folder display. Currently used on "News & Events," "People," and "Internal Resources"
-    #svIndex {
+    .mura-index {
       p,
       ul,
       ol {
@@ -1142,6 +1145,7 @@ aside {
 
 #MainContent {
   dd.image a,
+  .image a,
   #svAsset,
   .social-share a {
     // MURA INDEX IMAGES: Override new link display
@@ -1378,13 +1382,13 @@ aside {
 .prl-home-news-feature {
   // Styling home feature area
   .mura-async-object.mura-object {
-    div.mura-object-content > div.mura-index {
+    .mura-object-content > .mura-index {
       margin: 0;
-      div > dl {
+      div > .item {
         margin: 0;
         padding: 16px 40px 0 16px; // to give image space to have a shadow
         border-right: 3px solid $primary-color;
-        dd.image {
+        .image {
           position: relative;
           margin: 0 0 32px 0;
           a {
@@ -1401,16 +1405,17 @@ aside {
             }
           }
         }
-        dt.title {
+        .title {
           margin: 0 0 4px 32px;
           text-transform: uppercase;
           a {
             text-decoration: none;
             border-bottom: 0px;
             color: $x-dark-grey-text;
+            font-weight: 600;
           }
         }
-        dd.summary {
+        .summary {
           // Same as span.prl-brand-feature-summary
           font-weight: 300;
           color: $med-grey-text;
@@ -1429,15 +1434,15 @@ aside {
 
 .prl-home-news-nonfeature {
   // Styling home nonfeature area
-  .mura-async-object.mura-object > div.mura-object-content {
-    div.mura-index {
+  .mura-async-object.mura-object > .mura-object-content {
+    .mura-index {
       margin: 4px 8px 0 24px; // index outer margins
       div {
-        dl {
+        .item {
           margin: 0 0 24px 0;
           padding: 0 !important; // overriding Mura settings
           min-height: auto !important; // overriding Mura settings
-          dd.image {
+          .image {
             width: 140px;
             position: relative;
             float: left;
@@ -1457,15 +1462,16 @@ aside {
               }
             }
           }
-          dt.title {
+          .title {
             margin: 12px 0 0 0;
             a {
               text-decoration: none;
               border-bottom: 0px;
               color: $x-dark-grey-text;
+              font-weight: 600;
             }
           }
-          dd.summary {
+          .summary {
             // Same as span.prl-brand-feature-summary, but smaller line-height
             font-weight: 300;
             color: #666;
@@ -1485,9 +1491,9 @@ aside {
 
 @media (min-width: 1200px) {
   // Larger Desktops
-  .prl-home-news-nonfeature > .mura-async-object.mura-object > div.mura-object-content > div.mura-index > div > dl {
+  .prl-home-news-nonfeature > .mura-async-object.mura-object > .mura-object-content > .mura-index > div > .item {
     // Styling home nonfeature area
-    dd.summary {
+    .summary {
       // Adding margin-left to summary so that long content doesn't wrap under the associated image. This only applies to large desktop screens.
       margin-left: 140px;
     }
@@ -1499,13 +1505,13 @@ aside {
   .prl-home-news-feature {
     // Styling home feature area
     .mura-async-object.mura-object {
-      div.mura-object-content > div.mura-index {
-        div > dl {
+      .mura-object-content > .mura-index {
+        div > .item {
           padding-right: 24px;
-          dd.image {
+          .image {
             margin-bottom: 24px;
           }
-          dd.summary {
+          .summary {
             font-size: 14.5px;
             margin-bottom: 32px;
           }
@@ -1515,16 +1521,16 @@ aside {
   }
   .prl-home-news-nonfeature {
     // Styling home nonfeature area
-    .mura-async-object.mura-object > div.mura-object-content {
-      div.mura-index {
+    .mura-async-object.mura-object > .mura-object-content {
+      .mura-index {
         margin-left: 8px;
         div {
-          dl {
+          .item {
             margin-bottom: 8px;
-            dd.image {
+            .image {
               width: 120px;
             }
-            dd.summary {
+            .summary {
               font-size: 14.5px;
             }
           }
@@ -1542,24 +1548,24 @@ aside {
   .prl-home-news-feature {
     // Centering home feature area
     .mura-async-object.mura-object {
-      div.mura-object-content > div.mura-index {
-        div > dl {
+      .mura-object-content > .mura-index {
+        div > .item {
           // Centering content
           margin: 0;
           padding: 16px 16px 0 16px;
           border-right: 0px transparent;
-          dd.image {
+          .image {
             max-width: 600px;
             margin-left: auto;
             margin-right: auto;
             margin-bottom: 24px;
           }
-          dt.title {
+          .title {
             margin: 0 auto;
             padding-left: 16px;
             max-width: 600px;
           }
-          dd.summary {
+          .summary {
             // Same as span.prl-brand-feature-summary
             margin-left: auto;
             margin-right: auto;
@@ -1572,17 +1578,17 @@ aside {
   }
   .prl-home-news-nonfeature {
     // Centering home nonfeature area
-    .mura-async-object.mura-object > div.mura-object-content {
-      div.mura-index {
+    .mura-async-object.mura-object > .mura-object-content {
+      .mura-index {
         max-width: 600px;
         margin-left: auto;
         margin-right: auto;
         div {
-          dl {
+          .item {
             // Shorter distances between news items
             margin-bottom: 16px;
           }
-          dl.last.hasImage {
+          .last.hasImage {
             // Hide last news item to shorten news section
             display: none;
           }
@@ -1597,18 +1603,18 @@ aside {
   .prl-home-news-feature {
     // Styling home feature area
     .mura-async-object.mura-object {
-      div.mura-object-content > div.mura-index {
-        div > dl {
+      .mura-object-content > .mura-index {
+        div > .item {
           padding: 12px 12px 0 12px;
-          dd.image {
+          .image {
             margin-bottom: 16px;
           }
-          dt.title {
+          .title {
             text-transform: initial;
             padding: 0;
             margin-bottom: 4px;
           }
-          dd.summary {
+          .summary {
             font-size: 15px;
             padding: 0;
           }
@@ -1618,23 +1624,23 @@ aside {
   }
   .prl-home-news-nonfeature {
     // Styling home nonfeature area
-    .mura-async-object.mura-object > div.mura-object-content {
+    .mura-async-object.mura-object > .mura-object-content {
       div.mura-index {
         div {
-          dl {
+          .item {
             margin-bottom: 8px;
-            dd.image {
+            .image {
               width: 110px;
               padding: 12px 16px 16px 12px;
             }
-            dt.title {
+            .title {
               margin-bottom: 4px;
             }
-            dd.summary {
+            .summary {
               display: none;
             }
           }
-          dl.last.hasImage {
+          .last.hasImage {
             // Hide last news item to shorten news section
             display: inherit;
           }
@@ -2343,16 +2349,16 @@ aside {
 #newsevents {
   aside {
     // Styling the "Top News" stories to be closer to Material Design card dimensions for "News" and all descendants
-    .prl-top-stories {
-      dl {
+    .prl-top-stories > .mura-object-content > .mura-index {
+      .item.hasImage {
         padding-left: 0 !important;
-        dd.image {
+        .image {
           @extend .prl-aside-relcontent-img;
         }
-        dt.title {
+        .title {
           @extend .prl-aside-relcontent-title;
         }
-        dd.summary {
+        .summary {
           @extend .prl-aside-relcontent-summary;
         }
       }
@@ -2580,11 +2586,11 @@ aside {
         @extend .prl-aside-relcontent-header;
       }
     }
-    div {
-      dl {
+    .mura-object-content > .mura-index > div {
+      .item {
         // Some of these styles are like the #sysTopStories aside ones
         padding-left: 0 !important;
-        dd.image {
+        .image {
           @extend .prl-aside-relcontent-img;
           a {
             img {
@@ -2592,16 +2598,16 @@ aside {
             }
           }
         }
-        dt.title {
+        .title {
           // News title
           @extend .prl-aside-relcontent-title;
           margin-bottom: 0.25rem;
         }
-        dt.date {
+        .date {
           font-size: 14px;
           margin-bottom: 0.25rem;
         }
-        dd.summary {
+        .summary {
           width: 90%;
           p {
             // Summary
@@ -2619,9 +2625,9 @@ aside {
   #MainContent {
     // For all styles, summary is 100% wide from Tablet and down
     .prl-news-relcontent {
-      div {
-        dl {
-          dd.summary {
+      .mura-object-content > .mura-index > div {
+        .item {
+          .summary {
             width: 100%;
           }
         }
@@ -2685,21 +2691,21 @@ aside {
     @extend .prl-h2-secondary-spacing;
     text-transform: capitalize;
   }
-  div {
-    dl {
+  .mura-object-content > .mura-index > div {
+    .item {
       border-bottom: transparent;
       padding: 0rem 5px !important;
       width: 20%;
       margin: 0;
-      float: left; // Height: 15rem; Not needed since dl styling gives it minimum 200px height, which is fine.
-      dt.title {
+      float: left; // Height: 15rem; Not needed since styling gives it minimum 200px height, which is fine.
+      .title {
         font-size: 0.9rem;
         font-weight: 400;
         text-align: center;
         position: relative;
         top: 7.5rem;
       }
-      dd.image {
+      .image {
         width: 100%;
         text-align: center;
         img {
@@ -2723,8 +2729,8 @@ aside {
 @media (min-width: 768px) and (max-width: 1199px) {
   .prl-participating-faculty {
     // Changing the number of faculty to four per line on the "Participating Faculty" area.*/
-    div {
-      dl {
+    .mura-object-content > .mura-index > div {
+      .item {
         width: 25%;
       }
     }
@@ -2733,8 +2739,8 @@ aside {
 
 @media (max-width: 767px) {
   .prl-participating-faculty {
-    div {
-      dl {
+    .mura-object-content > .mura-index > div {
+      .item {
         width: 100%;
         margin-bottom: 0rem;
         min-height: 11.5rem !important;
@@ -2852,26 +2858,26 @@ aside {
 .prl-seminars-events {
   margin-top: 0.5rem;
   border: 1px solid #eaeaea;
-  dl:nth-child(odd) {
+  .item:nth-child(odd) {
     background: rgba(132, 110, 40, 0.16) // Lighter version of secondary color #846E28
   }
-  dl {
+  .item {
     margin: 0 !important;
-    padding-top: 12px !important; // Overrides .last class for last dl item
-    padding-left: 12px !important; // Overrides .last class for last dl item
-    dt.date.releaseDate {
+    padding-top: 12px !important; // Overrides .last class for last item
+    padding-left: 12px !important; // Overrides .last class for last item
+    .date.releaseDate {
       width: 20%;
       float: left;
       margin-right: 0.625rem;
       font-size: 0.85rem;
       line-height: 1.6;
     }
-    dt.title {
+    .title {
       float: left;
       width: 25%;
       margin-right: 0.625rem;
     }
-    dd.summary {
+    .summary {
       margin-left: 0;
       float: left;
       width: 50%;
@@ -2889,21 +2895,21 @@ aside {
       background: rgba(132, 110, 40, 0.26) // Lighter version of secondary color #846E28
     }
   }
-  dl.last {
+  .item.last {
     border-bottom: 1px solid $x-light-grey;
   }
 }
 
 @media (max-width: 767px) {
   .prl-seminars-events {
-    dl {
-      dt.date.releaseDate {
+    .item {
+      .date.releaseDate {
         width: 100%;
       }
-      dt.title {
+      .title {
         width: 100%;
       }
-      dd.summary {
+      .summary {
         width: 100%;
         margin-top: 1rem;
       }
@@ -3620,24 +3626,24 @@ aside {
       color: $dark-grey-text;
       text-transform: capitalize;
     }
-    div {
-      dl {
+    .mura-object-content > .mura-index > div {
+      .item {
         // Some of these styles are like the #sysTopStories aside ones
         padding-left: 0 !important;
-        dd.image {
+        .image {
           @extend .prl-aside-relcontent-img;
         }
-        dt.title {
+        .title {
           // News title
           @extend .prl-aside-relcontent-title;
           font-size: 1rem;
           margin-bottom: 0.25rem;
         }
-        dt.date {
+        .date {
           font-size: 14px;
           margin-bottom: 0.25rem;
         }
-        dd.summary {
+        .summary {
           // Summary
           @extend .prl-aside-relcontent-summary;
         }
@@ -3779,36 +3785,39 @@ aside {
   }
 }
 
-/* LAB NEWS PAGE
+/* LAB NEWS AND PEOPLE PAGES
 -------------------------------------------------- */
 
-#walkerlabhome.lab-news {
-  #svIndex {
-    div {
-      dl.hasImage {
-        padding-top: 12px !important; // Important declaration to override the dl.last styling
-        padding-right: 12px;
-      }
-    }
-  }
-
-  @media only screen and (max-width: 767px) {
-    // Mobile devices
-    #svIndex {
-      // Image center aligned and border-bottom after each story.
-      div {
-        dl.hasImage {
-          padding: 0 0 6px 0 !important;
-          border-bottom: 1px solid #f5f5f5;
-          dd.image {
-            position: relative;
-            text-align: center;
-          }
-          dt.date.releaseDate {
-            margin-top: 0.6rem;
-          }
-        }
+#walkerlabhome.lab-news > div > div > div > #MainContent > div > div > .mura-editable-attribute > div > div > .mura-index > div,
+#walkerlabhome.people > div > div > div > #MainContent > div > .mura-object-content > .mura-index > div {
+  // Applies to both lab news and people pages
+  .item {
+    padding-top: 12px !important; // Important declaration to override the .last styling
+    padding-right: 12px;
+    .image {
+      a {
+        border: none;
       }
     }
   }
 }
+
+
+@media only screen and (max-width: 767px) {
+  // Applies only to lab news page on Mobile devices
+  #walkerlabhome.lab-news > div > div > div > #MainContent > div > div > .mura-editable-attribute > div > div > .mura-index > div {
+    // Image center aligned and border-bottom after each story.
+    .item {
+      padding: 0 0 6px 0 !important;
+      border-bottom: 1px solid #f5f5f5;
+      .image {
+        position: relative;
+        text-align: center;
+      }
+      .date.releaseDate {
+        margin-top: 0.6rem;
+      }
+    }
+  }
+}
+
