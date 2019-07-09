@@ -3834,13 +3834,17 @@ aside {
     display: none;
   }
   .departmentFooterPromo {
-    // Removing Natsci logo from footer
+    // Remove Natsci logo from footer
+    display: none;
+  }
+  .msuFooterWrapper {
+    // Remove MSU footer
     display: none;
   }
 }
 
 .midwest-photosynthesis.depth-1 {
-  // Removing page title from conference home page
+  // Remove page title from conference home page
   .mainCol {
     h1.pageTitle {
       display: none;
