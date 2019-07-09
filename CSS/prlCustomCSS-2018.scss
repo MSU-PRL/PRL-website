@@ -3816,3 +3816,34 @@ aside {
   }
 }
 
+/* ----------------------------------------------------------------------------------------------------
+                TEMP - 45th ANNUAL MIDWEST/SOUTHEAST PHOTOSYNTHESIS MEETING
+---------------------------------------------------------------------------------------------------- */
+
+#fortyfivemidwestphotosynthesis {
+  main nav {
+    // Hide nav
+    display: none;
+  }
+  header .msuMasthead {
+    //  Hide MSU logo in header
+    display: none;
+  }
+  .departmentNameWrapper {
+    // Hide Department and College names in header area
+    display: none;
+  }
+  .departmentFooterPromo {
+    // Removing Natsci logo from footer
+    display: none;
+  }
+}
+
+.midwest-photosynthesis.depth-1 {
+  // Removing page title from conference home page
+  .mainCol {
+    h1.pageTitle {
+      display: none;
+    }
+  }
+}
