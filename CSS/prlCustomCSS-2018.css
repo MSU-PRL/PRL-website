@@ -8389,3 +8389,17 @@ aside {
       text-align: center; }
     #walkerlabhome.lab-news > div > div > div > #MainContent > div > div > div > div > div > .mura-index > div .item .date.releaseDate {
       margin-top: 0.6rem; } }
+/* ----------------------------------------------------------------------------------------------------
+                TEMP - 45th ANNUAL MIDWEST/SOUTHEAST PHOTOSYNTHESIS MEETING
+---------------------------------------------------------------------------------------------------- */
+#fortyfivemidwestphotosynthesis main nav {
+  display: none; }
+#fortyfivemidwestphotosynthesis header .msuMasthead {
+  display: none; }
+#fortyfivemidwestphotosynthesis .departmentNameWrapper {
+  display: none; }
+#fortyfivemidwestphotosynthesis .departmentFooterPromo {
+  display: none; }
+
+.midwest-photosynthesis.depth-1 .mainCol h1.pageTitle {
+  display: none; }
