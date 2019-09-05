@@ -7752,6 +7752,7 @@ aside {
     width: 100%;
     padding: 16px !important;
     border: 1px solid #e6e6e6;
+    border-radius: 12px;
     height: auto; }
     .faculty #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-content,
     .fixed-term-faculty #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-content,
@@ -8176,7 +8177,8 @@ aside {
     .emeritus-faculty #MainContent .mura-collection.mura-grid-two .mura-collection-item .mura-collection-item__holder,
     .staff #MainContent .mura-collection.mura-grid-two .mura-collection-item .mura-collection-item__holder {
       border: none;
-      border-top: 1px solid #e6e6e6; } }
+      border-top: 1px solid #e6e6e6;
+      border-radius: 0px; } }
 @media (max-width: 360px) {
   .faculty #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-content,
   .fixed-term-faculty #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-content,
