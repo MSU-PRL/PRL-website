@@ -2209,7 +2209,79 @@ aside {
 }
 
 /* --------------------------------------------------------
-                MAIN NEWS PAGE
+                MAIN NEWS / RESEARCH HIGHLIGHTS LAYOUT
+-------------------------------------------------------- */
+
+@media (min-width: 992px) {
+  // Changing the layout widths only for desktop computers on the main "News" page only
+  #newsevents.news, #newsevents.research-highlights {
+    #MainContent {
+      width: 73%;
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 73%;
+      flex: 0 0 73%;
+      max-width: 73%;
+    }
+    aside {
+      width: 27%;
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 27%;
+      flex: 0 0 27%;
+      max-width: 27%;
+    }
+  }
+}
+
+#newsevents.news, #newsevents.research-highlights {
+  // Giving the "Top Stories" more space on the main "News" page only
+  aside {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 991px) {
+  #newsevents.news, #newsevents.research-highlights {
+    // Bringing back the "Top Stories" padding to default setting from tablet and down
+    aside {
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+  }
+}
+
+#newsevents {
+  aside {
+    // Styling the "Top Stories" collection to be closer to Material Design card dimensions for "News" and all descendants
+    .prl-top-stories > .mura-object-content > .mura-index {
+      .item.hasImage {
+        padding-left: 0 !important;
+        .image {
+          @extend .prl-aside-relcontent-img;
+        }
+        .title {
+          @extend .prl-aside-relcontent-title;
+        }
+        .summary {
+          @extend .prl-aside-relcontent-summary;
+        }
+      }
+    }
+    .prl-categories-aside {
+      // Styling the Category Summaries
+      @extend .prl-well;
+      border: none;
+      ul {
+        -webkit-padding-start: 0px;
+        padding: 0px;
+        list-style-type: none;
+      }
+    }
+  }
+}
+
+/* --------------------------------------------------------
+                MAIN NEWS PAGE CARD DISPLAY
 -------------------------------------------------------- */
 
 #newsevents.news {
@@ -2322,74 +2394,6 @@ aside {
       // Ensuring pagination stays to left
       float: left;
       clear: both;
-    }
-  }
-}
-
-@media (min-width: 992px) {
-  // Changing the layout widths only for desktop computers on the main "News" page only
-  #newsevents.news {
-    #MainContent {
-      width: 73%;
-      -webkit-box-flex: 0;
-      -ms-flex: 0 0 73%;
-      flex: 0 0 73%;
-      max-width: 73%;
-    }
-    aside {
-      width: 27%;
-      -webkit-box-flex: 0;
-      -ms-flex: 0 0 27%;
-      flex: 0 0 27%;
-      max-width: 27%;
-    }
-  }
-}
-
-#newsevents {
-  aside {
-    // Styling the "Top News" stories to be closer to Material Design card dimensions for "News" and all descendants
-    .prl-top-stories > .mura-object-content > .mura-index {
-      .item.hasImage {
-        padding-left: 0 !important;
-        .image {
-          @extend .prl-aside-relcontent-img;
-        }
-        .title {
-          @extend .prl-aside-relcontent-title;
-        }
-        .summary {
-          @extend .prl-aside-relcontent-summary;
-        }
-      }
-    }
-    .prl-categories-aside {
-      // Styling the Category Summaries
-      @extend .prl-well;
-      border: none;
-      ul {
-        -webkit-padding-start: 0px;
-        padding: 0px;
-        list-style-type: none;
-      }
-    }
-  }
-}
-
-#newsevents.news {
-  // Giving the "Top Stories" more space on the main "News" page only
-  aside {
-    padding-right: 0;
-    padding-left: 0;
-  }
-}
-
-@media (max-width: 991px) {
-  #newsevents.news {
-    // Bringing back the "Top Stories" padding to default setting from tablet and down
-    aside {
-      padding-right: 15px;
-      padding-left: 15px;
     }
   }
 }
@@ -2640,6 +2644,101 @@ aside {
   // Hide "Categories" menu in news stories.
   .prl-categories-aside {
     display: none;
+  }
+}
+
+/* --------------------------------------------------------
+                MAIN RESEARCH HIGHLIGHTS PAGE
+-------------------------------------------------------- */
+// This is a new website section, as of October 2019. Two new approaches are used: 1. CSS Grid for layout and 2. Mobile-first design.
+div.prl-research-highlights {
+  .hasImage {
+    // Container around each item
+    @extend .prl-card-outline; // For outline, but number of overrides, below.
+    min-height: 0px !important;
+    padding: 0 0 16px !important;
+    border-bottom: 1px solid #e6e6e6;
+    border-radius: 0px;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    .image {
+      //position: relative;
+      @extend .prl-card-image;
+      grid-area: im;
+      margin: 0 0 8px 8px;
+      width: 35%;
+      float: right;
+      img {
+        padding: 0px;
+        @extend .prl-card-image-hover;
+        border-radius: $border-radius-material-design-card;
+      }
+    }
+    .title {
+      grid-area: tt;
+      font-size: 1rem !important;
+      @extend .prl-card-title;
+    }
+    .summary {
+      @extend .prl-card-summary; 
+      grid-area: sm;
+    }
+    .date.releaseDate {
+      @extend .prl-card-date;
+      grid-area: dt;
+      padding: 8px 0 0 0;
+      line-height: 1.4;
+      font-size: 12px;
+    }
+    .tags {
+      grid-area: tg;
+      padding-top: 8px;
+      font-size: 12px;
+      line-height: 1.4;
+      .labelel {
+        display: none;
+      }
+    }
+  }
+  .last.hasImage {
+    border-bottom: 0px;
+  }
+}
+@media (min-width: 568px) {
+  // Styles for small mobile, landscape, and larger screens. Uses CSS Grid.
+  div.prl-research-highlights {
+    .hasImage {
+      display: grid;
+      // Container around each item
+      grid-template-areas:
+      "tt tt tt tt tt tt tt im im im"
+      "sm sm sm sm sm sm sm im im im"
+      "dt tg tg tg tg tg tg tg . .";
+      grid-template-columns: [col] auto repeat(9, 1fr);
+      grid-column-gap: 5px;
+      padding: 16px !important;
+      border: 1px solid #e6e6e6;
+      border-radius: 12px;
+      .image {
+        width: 100%;
+        margin: 0 0 8px 0;
+      }
+      .title {
+        font-size: 1.125rem !important;
+        padding-right: 16px;
+      }
+      .summary {
+        padding-right: 16px;
+      }
+      .date.releaseDate {
+        &:after {
+          content: "|"
+        }
+      }
+    }
+    .last.hasImage {
+      border: 1px solid #e6e6e6;
+    }
   }
 }
 
