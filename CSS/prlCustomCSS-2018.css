@@ -6170,7 +6170,7 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
 /* ---------------------------------------------------------------------------------
         CARD COMPONENTS - ALSO USED FOR ITEMS IN NEWS AND HOMEPAGE EVENTS
 ------------------------------------------------------------------------------------ */
-.prl-card-outline, .prl-relcontent-body, .prl-card, .prl-card-w-border, .prl-card-hover-effect, .prl-home-event-cards .mura-collection-item, #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder {
+.prl-card-outline, .prl-relcontent-body, .prl-card, .prl-card-w-border, .prl-card-hover-effect, .prl-home-event-cards .mura-collection-item, #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder, div.prl-research-highlights .hasImage {
   background: #fff;
   border-bottom: 0px transparent;
   border-radius: 12px;
@@ -6184,9 +6184,9 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
   -webkit-box-shadow: 0px 6px 6px -3px rgba(0, 0, 0, 0.2), 0px 10px 14px 1px rgba(0, 0, 0, 0.14), 0px 4px 18px 3px rgba(0, 0, 0, 0.12);
   box-shadow: 0px 6px 6px -3px rgba(0, 0, 0, 0.2), 0px 10px 14px 1px rgba(0, 0, 0, 0.14), 0px 4px 18px 3px rgba(0, 0, 0, 0.12); }
 
-.prl-card-image, .prl-card-image-only {
+.prl-card-image, div.prl-research-highlights .hasImage .image, .prl-card-image-only {
   position: relative; }
-  .prl-card-image .prl-card-image-overlay, .prl-card-image .prl-card-image-no-summary-overlay, .prl-card-image-only .prl-card-image-overlay, .prl-card-image-only .prl-card-image-no-summary-overlay {
+  .prl-card-image .prl-card-image-overlay, div.prl-research-highlights .hasImage .image .prl-card-image-overlay, .prl-card-image .prl-card-image-no-summary-overlay, div.prl-research-highlights .hasImage .image .prl-card-image-no-summary-overlay, .prl-card-image-only .prl-card-image-overlay, .prl-card-image-only .prl-card-image-no-summary-overlay {
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -6195,17 +6195,27 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
     font-weight: 400 !important;
     margin: 0;
     padding: 16px; }
-    .prl-card-image .prl-card-image-overlay h1,
+    .prl-card-image .prl-card-image-overlay h1, div.prl-research-highlights .hasImage .image .prl-card-image-overlay h1,
     .prl-card-image .prl-card-image-overlay h2,
+    div.prl-research-highlights .hasImage .image .prl-card-image-overlay h2,
     .prl-card-image .prl-card-image-overlay h3,
+    div.prl-research-highlights .hasImage .image .prl-card-image-overlay h3,
     .prl-card-image .prl-card-image-overlay h4,
+    div.prl-research-highlights .hasImage .image .prl-card-image-overlay h4,
     .prl-card-image .prl-card-image-overlay h5,
-    .prl-card-image .prl-card-image-overlay h6, .prl-card-image .prl-card-image-no-summary-overlay h1,
+    div.prl-research-highlights .hasImage .image .prl-card-image-overlay h5,
+    .prl-card-image .prl-card-image-overlay h6,
+    div.prl-research-highlights .hasImage .image .prl-card-image-overlay h6, .prl-card-image .prl-card-image-no-summary-overlay h1, div.prl-research-highlights .hasImage .image .prl-card-image-no-summary-overlay h1,
     .prl-card-image .prl-card-image-no-summary-overlay h2,
+    div.prl-research-highlights .hasImage .image .prl-card-image-no-summary-overlay h2,
     .prl-card-image .prl-card-image-no-summary-overlay h3,
+    div.prl-research-highlights .hasImage .image .prl-card-image-no-summary-overlay h3,
     .prl-card-image .prl-card-image-no-summary-overlay h4,
+    div.prl-research-highlights .hasImage .image .prl-card-image-no-summary-overlay h4,
     .prl-card-image .prl-card-image-no-summary-overlay h5,
-    .prl-card-image .prl-card-image-no-summary-overlay h6, .prl-card-image-only .prl-card-image-overlay h1,
+    div.prl-research-highlights .hasImage .image .prl-card-image-no-summary-overlay h5,
+    .prl-card-image .prl-card-image-no-summary-overlay h6,
+    div.prl-research-highlights .hasImage .image .prl-card-image-no-summary-overlay h6, .prl-card-image-only .prl-card-image-overlay h1,
     .prl-card-image-only .prl-card-image-overlay h2,
     .prl-card-image-only .prl-card-image-overlay h3,
     .prl-card-image-only .prl-card-image-overlay h4,
@@ -6221,11 +6231,15 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
       font-size: 1rem !important;
       margin: 0;
       padding-bottom: 0 !important; }
-    .prl-card-image .prl-card-image-overlay p,
+    .prl-card-image .prl-card-image-overlay p, div.prl-research-highlights .hasImage .image .prl-card-image-overlay p,
     .prl-card-image .prl-card-image-overlay ul,
-    .prl-card-image .prl-card-image-overlay ol, .prl-card-image .prl-card-image-no-summary-overlay p,
+    div.prl-research-highlights .hasImage .image .prl-card-image-overlay ul,
+    .prl-card-image .prl-card-image-overlay ol,
+    div.prl-research-highlights .hasImage .image .prl-card-image-overlay ol, .prl-card-image .prl-card-image-no-summary-overlay p, div.prl-research-highlights .hasImage .image .prl-card-image-no-summary-overlay p,
     .prl-card-image .prl-card-image-no-summary-overlay ul,
-    .prl-card-image .prl-card-image-no-summary-overlay ol, .prl-card-image-only .prl-card-image-overlay p,
+    div.prl-research-highlights .hasImage .image .prl-card-image-no-summary-overlay ul,
+    .prl-card-image .prl-card-image-no-summary-overlay ol,
+    div.prl-research-highlights .hasImage .image .prl-card-image-no-summary-overlay ol, .prl-card-image-only .prl-card-image-overlay p,
     .prl-card-image-only .prl-card-image-overlay ul,
     .prl-card-image-only .prl-card-image-overlay ol, .prl-card-image-only .prl-card-image-no-summary-overlay p,
     .prl-card-image-only .prl-card-image-no-summary-overlay ul,
@@ -6233,7 +6247,7 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
       color: white !important;
       font-weight: 400 !important;
       margin: 0; }
-  .prl-card-image .prl-card-image-no-summary-overlay, .prl-card-image-only .prl-card-image-no-summary-overlay {
+  .prl-card-image .prl-card-image-no-summary-overlay, div.prl-research-highlights .hasImage .image .prl-card-image-no-summary-overlay, .prl-card-image-only .prl-card-image-no-summary-overlay {
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px; }
 
@@ -6244,10 +6258,10 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px; }
 
-.prl-card-image-hover {
+.prl-card-image-hover, div.prl-research-highlights .hasImage .image img {
   -webkit-transition: 0.5s;
   transition: 0.5s; }
-  .prl-card-image-hover:hover {
+  .prl-card-image-hover:hover, div.prl-research-highlights .hasImage .image img:hover {
     opacity: 0.8; }
 
 .prl-card-body, .prl-home-event-cards .mura-collection-item .mura-collection-item__holder .mura-item-meta, #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta {
@@ -6268,7 +6282,7 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
 .prl-card-hover-effect h5,
 .prl-card h6,
 .prl-card-w-border h6,
-.prl-card-hover-effect h6, .prl-home-event-cards .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__title, #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__title {
+.prl-card-hover-effect h6, .prl-home-event-cards .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__title, #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__title, div.prl-research-highlights .hasImage .title {
   padding-bottom: 8px;
   margin-bottom: 0px;
   font-size: 1.125rem !important;
@@ -6290,13 +6304,13 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
   .prl-card-hover-effect h5 a,
   .prl-card h6 a,
   .prl-card-w-border h6 a,
-  .prl-card-hover-effect h6 a, .prl-home-event-cards .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__title a, #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__title a {
+  .prl-card-hover-effect h6 a, .prl-home-event-cards .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__title a, #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__title a, div.prl-research-highlights .hasImage .title a {
     text-decoration: none;
     border-bottom: none !important;
     color: #444 !important;
     line-height: 1.2; }
 
-.prl-card-date, .prl-home-event-cards .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__date, #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__date {
+.prl-card-date, .prl-home-event-cards .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__date, #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__date, div.prl-research-highlights .hasImage .date.releaseDate {
   padding-bottom: 16px;
   margin: 0;
   color: #757575;
@@ -6306,7 +6320,7 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
 .prl-card-summary, .prl-relcontent-body p, .prl-card p, .prl-card-w-border p, .prl-card-hover-effect p, .prl-card ul, .prl-card-w-border ul, .prl-card-hover-effect ul,
 .prl-card ol,
 .prl-card-w-border ol,
-.prl-card-hover-effect ol, .prl-home-event-cards .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__summary, #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__summary {
+.prl-card-hover-effect ol, .prl-home-event-cards .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__summary, #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__summary, div.prl-research-highlights .hasImage .summary {
   font-size: 0.91rem !important;
   line-height: 1.5 !important;
   font-weight: 400;
@@ -6314,7 +6328,7 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
   .prl-card-summary p, .prl-relcontent-body p p, .prl-card p p, .prl-card-w-border p p, .prl-card-hover-effect p p, .prl-card ul p, .prl-card-w-border ul p, .prl-card-hover-effect ul p,
   .prl-card ol p,
   .prl-card-w-border ol p,
-  .prl-card-hover-effect ol p, .prl-home-event-cards .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__summary p, #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__summary p,
+  .prl-card-hover-effect ol p, .prl-home-event-cards .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__summary p, #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__summary p, div.prl-research-highlights .hasImage .summary p,
   .prl-card-summary ul,
   .prl-relcontent-body p ul,
   .prl-card p ul,
@@ -6328,6 +6342,7 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
   .prl-card-hover-effect ol ul,
   .prl-home-event-cards .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__summary ul,
   #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__summary ul,
+  div.prl-research-highlights .hasImage .summary ul,
   .prl-card-summary ol,
   .prl-relcontent-body p ol,
   .prl-card p ol,
@@ -6340,7 +6355,8 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
   .prl-card-w-border ol ol,
   .prl-card-hover-effect ol ol,
   .prl-home-event-cards .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__summary ol,
-  #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__summary ol {
+  #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__summary ol,
+  div.prl-research-highlights .hasImage .summary ol {
     margin: 0; }
 
 .prl-card-readmore-btns {
@@ -7316,7 +7332,40 @@ aside {
   .prl-community-brand-toolkit .sideCol, .web-components-demo .sideCol {
     display: none; } }
 /* --------------------------------------------------------
-                MAIN NEWS PAGE
+                MAIN NEWS / RESEARCH HIGHLIGHTS LAYOUT
+-------------------------------------------------------- */
+@media (min-width: 992px) {
+  #newsevents.news #MainContent, #newsevents.research-highlights #MainContent {
+    width: 73%;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 73%;
+    flex: 0 0 73%;
+    max-width: 73%; }
+  #newsevents.news aside, #newsevents.research-highlights aside {
+    width: 27%;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 27%;
+    flex: 0 0 27%;
+    max-width: 27%; } }
+#newsevents.news aside, #newsevents.research-highlights aside {
+  padding-right: 0;
+  padding-left: 0; }
+
+@media (max-width: 991px) {
+  #newsevents.news aside, #newsevents.research-highlights aside {
+    padding-right: 15px;
+    padding-left: 15px; } }
+#newsevents aside .prl-top-stories > .mura-object-content > .mura-index .item.hasImage {
+  padding-left: 0 !important; }
+#newsevents aside .prl-categories-aside {
+  border: none; }
+  #newsevents aside .prl-categories-aside ul {
+    -webkit-padding-start: 0px;
+    padding: 0px;
+    list-style-type: none; }
+
+/* --------------------------------------------------------
+                MAIN NEWS PAGE CARD DISPLAY
 -------------------------------------------------------- */
 #newsevents.news form#search {
   margin-bottom: 20px;
@@ -7402,36 +7451,6 @@ aside {
   float: left;
   clear: both; }
 
-@media (min-width: 992px) {
-  #newsevents.news #MainContent {
-    width: 73%;
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 73%;
-    flex: 0 0 73%;
-    max-width: 73%; }
-  #newsevents.news aside {
-    width: 27%;
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 27%;
-    flex: 0 0 27%;
-    max-width: 27%; } }
-#newsevents aside .prl-top-stories > .mura-object-content > .mura-index .item.hasImage {
-  padding-left: 0 !important; }
-#newsevents aside .prl-categories-aside {
-  border: none; }
-  #newsevents aside .prl-categories-aside ul {
-    -webkit-padding-start: 0px;
-    padding: 0px;
-    list-style-type: none; }
-
-#newsevents.news aside {
-  padding-right: 0;
-  padding-left: 0; }
-
-@media (max-width: 991px) {
-  #newsevents.news aside {
-    padding-right: 15px;
-    padding-left: 15px; } }
 @media (min-width: 992px) and (max-width: 1199px) {
   #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item {
     width: 47% !important; }
@@ -7541,6 +7560,65 @@ aside {
 #newsevents.depth-3 .prl-categories-aside {
   display: none; }
 
+/* --------------------------------------------------------
+                MAIN RESEARCH HIGHLIGHTS PAGE
+-------------------------------------------------------- */
+div.prl-research-highlights .hasImage {
+  min-height: 0px !important;
+  padding: 0 0 16px !important;
+  border-bottom: 1px solid #e6e6e6;
+  border-radius: 0px;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+  div.prl-research-highlights .hasImage .image {
+    grid-area: im;
+    margin: 0 0 8px 8px;
+    width: 35%;
+    float: right; }
+    div.prl-research-highlights .hasImage .image img {
+      padding: 0px;
+      border-radius: 12px; }
+  div.prl-research-highlights .hasImage .title {
+    grid-area: tt;
+    font-size: 1rem !important; }
+  div.prl-research-highlights .hasImage .summary {
+    grid-area: sm; }
+  div.prl-research-highlights .hasImage .date.releaseDate {
+    grid-area: dt;
+    padding: 8px 0 0 0;
+    line-height: 1.4;
+    font-size: 12px; }
+  div.prl-research-highlights .hasImage .tags {
+    grid-area: tg;
+    padding-top: 8px;
+    font-size: 12px;
+    line-height: 1.4; }
+    div.prl-research-highlights .hasImage .tags .labelel {
+      display: none; }
+div.prl-research-highlights .last.hasImage {
+  border-bottom: 0px; }
+
+@media (min-width: 568px) {
+  div.prl-research-highlights .hasImage {
+    display: grid;
+    grid-template-areas: "tt tt tt tt tt tt tt im im im" "sm sm sm sm sm sm sm im im im" "dt tg tg tg tg tg tg tg . .";
+    grid-template-columns: [col] auto repeat(9, 1fr);
+    grid-column-gap: 5px;
+    padding: 16px !important;
+    border: 1px solid #e6e6e6;
+    border-radius: 12px; }
+    div.prl-research-highlights .hasImage .image {
+      width: 100%;
+      margin: 0 0 8px 0; }
+    div.prl-research-highlights .hasImage .title {
+      font-size: 1.125rem !important;
+      padding-right: 16px; }
+    div.prl-research-highlights .hasImage .summary {
+      padding-right: 16px; }
+    div.prl-research-highlights .hasImage .date.releaseDate:after {
+      content: "|"; }
+  div.prl-research-highlights .last.hasImage {
+    border: 1px solid #e6e6e6; } }
 /* --------------------------------------------------------
                 RESEARCH PAGES
 -------------------------------------------------------- */
