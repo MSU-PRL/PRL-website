@@ -7577,7 +7577,8 @@ div.prl-research-highlights .hasImage {
     float: right; }
     div.prl-research-highlights .hasImage .image img {
       padding: 0px;
-      border-radius: 12px; }
+      border-radius: 12px;
+      border: 1px solid #e6e6e6; }
   div.prl-research-highlights .hasImage .title {
     grid-area: tt;
     font-size: 1rem !important; }
@@ -7619,6 +7620,14 @@ div.prl-research-highlights .last.hasImage {
       padding: 5px; }
   div.prl-research-highlights .last.hasImage {
     border: 1px solid #e6e6e6; } }
+/* ---------------------------------------------------
+                RESEARCH HIGHLIGHTS
+--------------------------------------------------- */
+@media (min-width: 568px) {
+  #newsevents.depth-3 .prl-research-highlights-figure {
+    max-width: 48%;
+    float: right;
+    margin: 8px; } }
 /* --------------------------------------------------------
                 RESEARCH PAGES
 -------------------------------------------------------- */
