@@ -2208,9 +2208,9 @@ aside {
   }
 }
 
-/* --------------------------------------------------------
-                MAIN NEWS / RESEARCH HIGHLIGHTS LAYOUT
--------------------------------------------------------- */
+/* ---------------------------------------------------------------
+                MAIN NEWS / RESEARCH HIGHLIGHTS PAGES: LAYOUT
+--------------------------------------------------------------- */
 
 @media (min-width: 992px) {
   // Changing the layout widths only for desktop computers on the main "News" page only
@@ -2711,17 +2711,16 @@ div.prl-research-highlights {
       display: grid;
       // Container around each item
       grid-template-areas:
-      "tt tt tt tt tt tt tt im im im"
-      "sm sm sm sm sm sm sm im im im"
-      "dt tg tg tg tg tg tg tg . .";
-      grid-template-columns: [col] auto repeat(9, 1fr);
-      grid-column-gap: 5px;
+      "tt tt im im im"
+      "sm sm im im im"
+      "dt tg tg tg . ";
+      grid-template-columns: [col] auto 1fr repeat(3,9%);
       padding: 16px !important;
       border: 1px solid #e6e6e6;
       border-radius: 12px;
       .image {
-        width: 100%;
-        margin: 0 0 8px 0;
+        width: auto;
+        margin: 0 0 8px 8px;
       }
       .title {
         font-size: 1.125rem !important;
@@ -2732,7 +2731,8 @@ div.prl-research-highlights {
       }
       .date.releaseDate {
         &:after {
-          content: "|"
+          content: "|";
+          padding: 5px;
         }
       }
     }
