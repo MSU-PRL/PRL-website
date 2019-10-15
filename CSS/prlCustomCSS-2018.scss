@@ -2650,6 +2650,7 @@ aside {
 /* --------------------------------------------------------
                 MAIN RESEARCH HIGHLIGHTS PAGE
 -------------------------------------------------------- */
+
 // This is a new website section, as of October 2019. Two new approaches are used: 1. CSS Grid for layout and 2. Mobile-first design.
 div.prl-research-highlights {
   .hasImage {
@@ -2657,7 +2658,7 @@ div.prl-research-highlights {
     @extend .prl-card-outline; // For outline, but number of overrides, below.
     min-height: 0px !important;
     padding: 0 0 16px !important;
-    border-bottom: 1px solid #e6e6e6;
+    border-bottom: 1px solid $x-light-grey;
     border-radius: 0px;
     -webkit-box-shadow: none;
             box-shadow: none;
@@ -2672,6 +2673,7 @@ div.prl-research-highlights {
         padding: 0px;
         @extend .prl-card-image-hover;
         border-radius: $border-radius-material-design-card;
+        border: 1px solid $x-light-grey;
       }
     }
     .title {
@@ -2716,7 +2718,7 @@ div.prl-research-highlights {
       "dt tg tg tg . ";
       grid-template-columns: [col] auto 1fr repeat(3,9%);
       padding: 16px !important;
-      border: 1px solid #e6e6e6;
+      border: 1px solid $x-light-grey;
       border-radius: 12px;
       .image {
         width: auto;
@@ -2737,10 +2739,27 @@ div.prl-research-highlights {
       }
     }
     .last.hasImage {
-      border: 1px solid #e6e6e6;
+      border: 1px solid $x-light-grey;
     }
   }
 }
+
+/* ---------------------------------------------------
+                RESEARCH HIGHLIGHTS
+--------------------------------------------------- */
+
+@media (min-width: 568px) {
+  // Figure for Research Highlights. This component is an extension of the .prl-figure class, with the added .prl-research-highlights-figure class. 
+  // It adds max-width: 50% + float: right for larger displays, to mimic DOE PowerPoint highlight display.
+  #newsevents.depth-3 {
+    .prl-research-highlights-figure {
+      max-width: 48%;
+      float: right;
+      margin: 8px;
+    }
+  }
+}
+
 
 /* --------------------------------------------------------
                 RESEARCH PAGES
