@@ -7617,7 +7617,7 @@ div.prl-research-highlights .last.hasImage {
       padding-right: 16px; }
     div.prl-research-highlights .hasImage .date.releaseDate:after {
       content: "|";
-      padding: 5px; }
+      padding-right: 5px; }
   div.prl-research-highlights .last.hasImage {
     border: 1px solid #e6e6e6; } }
 /* ---------------------------------------------------
