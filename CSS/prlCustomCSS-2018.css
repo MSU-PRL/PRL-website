@@ -7331,9 +7331,9 @@ aside {
 @media (max-width: 991px) {
   .prl-community-brand-toolkit .sideCol, .web-components-demo .sideCol {
     display: none; } }
-/* --------------------------------------------------------
-                MAIN NEWS / RESEARCH HIGHLIGHTS LAYOUT
--------------------------------------------------------- */
+/* ---------------------------------------------------------------
+                MAIN NEWS / RESEARCH HIGHLIGHTS PAGES: LAYOUT
+--------------------------------------------------------------- */
 @media (min-width: 992px) {
   #newsevents.news #MainContent, #newsevents.research-highlights #MainContent {
     width: 73%;
@@ -7601,22 +7601,22 @@ div.prl-research-highlights .last.hasImage {
 @media (min-width: 568px) {
   div.prl-research-highlights .hasImage {
     display: grid;
-    grid-template-areas: "tt tt tt tt tt tt tt im im im" "sm sm sm sm sm sm sm im im im" "dt tg tg tg tg tg tg tg . .";
-    grid-template-columns: [col] auto repeat(9, 1fr);
-    grid-column-gap: 5px;
+    grid-template-areas: "tt tt im im im" "sm sm im im im" "dt tg tg tg . ";
+    grid-template-columns: [col] auto 1fr repeat(3, 9%);
     padding: 16px !important;
     border: 1px solid #e6e6e6;
     border-radius: 12px; }
     div.prl-research-highlights .hasImage .image {
-      width: 100%;
-      margin: 0 0 8px 0; }
+      width: auto;
+      margin: 0 0 8px 8px; }
     div.prl-research-highlights .hasImage .title {
       font-size: 1.125rem !important;
       padding-right: 16px; }
     div.prl-research-highlights .hasImage .summary {
       padding-right: 16px; }
     div.prl-research-highlights .hasImage .date.releaseDate:after {
-      content: "|"; }
+      content: "|";
+      padding: 5px; }
   div.prl-research-highlights .last.hasImage {
     border: 1px solid #e6e6e6; } }
 /* --------------------------------------------------------
