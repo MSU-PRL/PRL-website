@@ -134,6 +134,52 @@ $shadow-depth-24: 0px 11px 15px -7px rgba(0, 0, 0, 0.2),
   0px 9px 46px 8px rgba(0, 0, 0, 0.12);
 
 /* --------------------------------------------------------
+        ACCORDION
+-------------------------------------------------------- */
+
+// The accordion is built with accessibility in mind.
+// The component is built with HTML markup and JavaScript ShadowRoot.
+// prl-accordion-section is the HTML tag.
+// .controls applies to the Expand all and Collapse all buttons
+
+.controls { 
+  text-align: right;
+  margin-bottom: 1em;
+ }
+ 
+ .controls li {
+   display: inline;
+ }
+ 
+ button {
+   // Copies elements from .prl-btn, such as border-radius
+   // but has different background and foreground colors
+   // and different padding and font size.
+   background: $primary-color;
+   color: #fff;
+   border-color: transparent;
+   font-size: 0.85rem;
+   border-radius: $border-radius-material-design-card;
+   padding: 2px 8px;
+ }
+ 
+ prl-accordion-section {
+  // Custom elements are inline by default
+  display: block;
+ }
+ 
+ prl-accordion-section[role="region"] {
+  // Only applies if script runs and `role="region"` is added
+  border-width: 2px 0;
+  border-style: solid;
+  border-color: $light-grey-text;
+ }
+ 
+ prl-accordion-section[role="region"] + prl-accordion-section {
+   border-top: 0;
+ }
+
+/* --------------------------------------------------------
         BUTTONS
 -------------------------------------------------------- */
 
