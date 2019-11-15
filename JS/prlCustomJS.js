@@ -30,6 +30,7 @@ $(function() {
       <style>
         h2 {
           margin: 0;
+          color: #2E4D4D;
         }
 
         h2 button {
@@ -39,7 +40,6 @@ $(function() {
           justify-content: space-between;
           width: 100%;
           padding: 0.5em 0;
-          color: #2E4D4D;
         }
 
         h2 button:focus svg {
