@@ -58,6 +58,7 @@ $(function() {
         [aria-expanded] rect {
           fill: currentColor;
         }
+        
         @media only screen and (max-width: 599px) {
           button svg {
             display: none;
