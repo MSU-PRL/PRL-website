@@ -1911,17 +1911,49 @@ aside {
       margin-top: 0px;
     }
     section.prl-about-essence {
-      svg {
-        @extend .prl-internal-logo-svg;
-      }
-      .col-lg-4.col-md-6 {
-        @extend .prl-internal-logo-content-area;
-      }
-      span.prl-essence-title {
-        @extend .prl-internal-logo-content-title;
-      }
-      span.prl-essence-description {
-        @extend .prl-internal-logo-content-description;
+      .prl-essence-items {
+        // Lining up the items in a row
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px;
+        .prl-essence-item {
+          // Styling each individual brand essence
+          -ms-flex-preferred-size: 33.333333%;
+          flex-basis: 33.333333%;
+          @extend .prl-internal-logo-content-area;
+        }
+        div:last-child {
+          // Code of ethics button centered in container
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+          -webkit-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+          -webkit-box-align: start;
+              -ms-flex-align: start;
+                  align-items: flex-start;
+        }
+        svg {
+          // Styling the logo
+          @extend .prl-internal-logo-svg;
+        }
+        span.prl-essence-title {
+          // Styling the title
+          @extend .prl-internal-logo-content-title;
+        }
+        span.prl-essence-description {
+          // Styling the description
+          @extend .prl-internal-logo-content-description;
+        }
       }
     }
     section.prl-about-what {
@@ -2087,6 +2119,15 @@ aside {
           margin-bottom: 30px;
         }
       }
+      section.prl-about-essence {
+        // Each essence item spans entire container
+        div.prl-essence-items {
+          div.prl-essence-item {
+            -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
+          }
+        }
+      }
       .prl-about-logos {
         a {
           height: 115px;
@@ -2117,8 +2158,13 @@ aside {
       }
       section.prl-about-essence {
         padding: 0 15px;
-        .col-lg-4.col-md-6 {
-          margin: 30px 0;
+        .prl-essence-items {
+          .prl-essence-item {
+            // Each essence item spans half the page
+            -ms-flex-preferred-size: 50%;
+            flex-basis: 50%;
+            margin: 30px 0;
+          }
         }
       }
       blockquote {
