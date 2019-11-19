@@ -5,6 +5,48 @@
 	<p>Below are some of the more used custom components on the PRL website, with markup and instructions. All components below exist as individual components in the Mura back-end "Components" section. These can be inserted and further edited on any website page.</p>
 </section>
 
+<section class="accordion">
+	<h2>Accordion</h2>
+	<h3>Description</h3>
+	<p>The accordion is a collapsible container which allows the user to show and hide content. 
+		The collapsible functionality is useful for displaying long chunks of content without overwhelming the user.
+	</p>
+
+	<p>The accordion stylings include: expandable buttons with primary color background and white text; 
+		collapsible section titles with primary color font-color; 
+		dividers between accordion sections. 
+		See the example below:</p>
+
+	<prl-accordion-section>
+		<h2 id="section1">Section 1</h2>
+		<p>This is the first section</p>
+	</prl-accordion-section>
+
+	<prl-accordion-section>
+			<h2 id="section2">Section 2</h2>
+			<p>You could include any type of content within an accordion, including tables, images, etc.</p>
+			<img alt="Solar panels on an evening" data-instanceid="52B286B6-5CEA-484E-905A2CE99859325B" src="/sites/_prl/assets/Image/Stories%20and%20Event%20Images/solar%20panel-sm.jpg" />
+	</prl-accordion-section>
+	<p>&nbsp;</p>
+	<h3>Markup</h3>
+	<p>The accordion is a progressive web component, designed for accessible use. 
+		It requires very little markup to write, which facilitates editing. 
+		The markup applies to one accordion section. You can string multiple accordion sections together. Each accordion section requires the following markup:</p>
+	<ul>
+		<li><strong>&lt;prl-accordion-section&gt;</strong>: this component should wrap all the accordion content.</li>
+		<li><strong>&lt;h2&gt;</strong>: this is the section title. Make sure to include an id attribute for accessibile browsing.</li>
+		<li><strong>Content</strong>: this includes tables, text, images, etc. This content is what is hidden or shown.</li>
+	</ul>
+	<div class="prl-code-area">
+		<code>&lt;!-- Accordion --&gt;&nbsp;&nbsp; &nbsp;<br />
+		&lt;prl-accordion-section&gt;<br />
+		&nbsp; &lt;h2&gt;Section Title&nbsp;&lt;/h2&gt;<br />
+		&nbsp; &lt;p&gt;Content goes here. Doesn't have to be &lt;p&gt;. Can be text, images, etc.&lt;/p&gt;<br />
+		&lt;/prl-accordion-section&gt;<br />
+		</code>
+	</div>
+</section>
+
 <section class="bullet-points">
 	<h2>Bullet points</h2>
 
