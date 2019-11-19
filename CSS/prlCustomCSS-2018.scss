@@ -306,23 +306,24 @@ $shadow-depth-24: 0px 11px 15px -7px rgba(0, 0, 0, 0.2),
 
 .prl-back-to-top-btn {
   /* IMPORTANT: use with chevron circle up fonticon and this exact markup:
-​​​​​​​  <div><a class="prl-back-to-top-btn" href="#"><span class="fa fa-chevron-circle-up">&nbsp;</span><span class="sr-only">Chevron circle up</span></a></div> */
+​​​​​​​  <div><a class="prl-back-to-top-btn" href="#"><span class="fa fa-chevron-circle-up" role="button">&nbsp;</span><span class="sr-only">Chevron circle up</span></a></div> */
   // This button has jQuery scroll associated with it
   display: inline-block;
   position: fixed;
   bottom: 30px;
-  right: 5px;
+  right: 50px;
   color: $quaternary-color !important;
   font-size: 3rem;
   border-bottom: 0px !important;
   z-index: 10000;
 }
 
-@media (min-width: 992px) {
+@media (max-width: 767px) {
   .prl-back-to-top-btn {
-    display: none;
+    right: 5px;
   }
 }
+
 
 /* --------------------------------------------------------
         FIGURE CAPTIONS & BULLETPOINTS
