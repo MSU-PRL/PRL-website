@@ -49,6 +49,7 @@ $(function() {
         button svg {
           height: 1em;
           margin-left: 0.5em;
+          flex-shrink: 0;
         }
 
         [aria-expanded="true"] .vert {
@@ -57,12 +58,6 @@ $(function() {
 
         [aria-expanded] rect {
           fill: currentColor;
-        }
-        
-        @media only screen and (max-width: 599px) {
-          button svg {
-            display: none;
-          }
         }
       </style>
     `
