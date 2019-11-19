@@ -6149,20 +6149,20 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
 /* -----------------------------------------------------------------------------------------------------
         LOGOS USED ON INTERNAL SECONDARY PAGES: ABOUT, GRADUATE PROGRAM, RESEARCH, etc.
 ----------------------------------------------------------------------------------------------------- */
-.prl-internal-logo-svg, .about .mainCol section.prl-about-essence svg, .graduate-program-overview #MainContent section.prl-grad-puv svg {
+.prl-internal-logo-svg, .about .mainCol section.prl-about-essence .prl-essence-items svg, .graduate-program-overview #MainContent section.prl-grad-puv svg {
   height: 45px;
   margin-bottom: 18px; }
 
-.prl-internal-logo-content-area, .about .mainCol section.prl-about-essence .col-lg-4.col-md-6, .graduate-program-overview #MainContent section.prl-grad-puv .col-md-6 {
+.prl-internal-logo-content-area, .about .mainCol section.prl-about-essence .prl-essence-items .prl-essence-item, .graduate-program-overview #MainContent section.prl-grad-puv .col-md-6 {
   margin: 36px 0; }
 
-.prl-internal-logo-content-title, .about .mainCol section.prl-about-essence span.prl-essence-title, .graduate-program-overview #MainContent section.prl-grad-puv span.prl-grad-puv-title {
+.prl-internal-logo-content-title, .about .mainCol section.prl-about-essence .prl-essence-items span.prl-essence-title, .graduate-program-overview #MainContent section.prl-grad-puv span.prl-grad-puv-title {
   font-weight: 900;
   color: #111;
   display: block;
   margin-bottom: 12px; }
 
-.prl-internal-logo-content-description, .about .mainCol section.prl-about-essence span.prl-essence-description, .graduate-program-overview #MainContent section.prl-grad-puv span.prl-grad-puv-description {
+.prl-internal-logo-content-description, .about .mainCol section.prl-about-essence .prl-essence-items span.prl-essence-description, .graduate-program-overview #MainContent section.prl-grad-puv span.prl-grad-puv-description {
   font-weight: 300;
   color: #666;
   font-size: 1rem;
@@ -6170,11 +6170,11 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
   display: block; }
 
 @media (max-width: 767px) {
-  .prl-internal-logo-svg, .about .mainCol section.prl-about-essence svg, .graduate-program-overview #MainContent section.prl-grad-puv svg {
+  .prl-internal-logo-svg, .about .mainCol section.prl-about-essence .prl-essence-items svg, .graduate-program-overview #MainContent section.prl-grad-puv svg {
     height: 40px;
     margin-bottom: 15px; }
 
-  .prl-internal-logo-content-area, .about .mainCol section.prl-about-essence .col-lg-4.col-md-6, .graduate-program-overview #MainContent section.prl-grad-puv .col-md-6 {
+  .prl-internal-logo-content-area, .about .mainCol section.prl-about-essence .prl-essence-items .prl-essence-item, .graduate-program-overview #MainContent section.prl-grad-puv .col-md-6 {
     margin: 25px 0 !important; } }
 /* -------------------------------------------------------------
        IMAGE SHADOW
@@ -7162,6 +7162,31 @@ aside {
     margin: 150px 0; }
   .about .mainCol section:first-child {
     margin-top: 0px; }
+  .about .mainCol section.prl-about-essence .prl-essence-items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px; }
+    .about .mainCol section.prl-about-essence .prl-essence-items .prl-essence-item {
+      -ms-flex-preferred-size: 33.333333%;
+      flex-basis: 33.333333%; }
+    .about .mainCol section.prl-about-essence .prl-essence-items div:last-child {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+      align-items: flex-start; }
   .about .mainCol section.prl-about-what {
     color: #666;
     font-weight: 300; }
@@ -7256,6 +7281,9 @@ aside {
     padding: 0 15px; }
   .about .mainCol section.prl-about-what img {
     margin-bottom: 30px; }
+  .about .mainCol section.prl-about-essence div.prl-essence-items div.prl-essence-item {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%; }
   .about .mainCol .prl-about-logos a {
     height: 115px; }
     .about .mainCol .prl-about-logos a img {
@@ -7271,7 +7299,9 @@ aside {
     margin: 120px 0; }
   .about .mainCol section.prl-about-essence {
     padding: 0 15px; }
-    .about .mainCol section.prl-about-essence .col-lg-4.col-md-6 {
+    .about .mainCol section.prl-about-essence .prl-essence-items .prl-essence-item {
+      -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
       margin: 30px 0; }
   .about .mainCol blockquote {
     margin: -10px auto; }
