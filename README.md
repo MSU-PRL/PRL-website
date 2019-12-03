@@ -37,7 +37,7 @@ The HTML folder contains content used on the PRL website. **Identical copies of 
 * **PRL-homepage-news-events-2018.html:** This content is used on the <a href="https://prl.natsci.msu.edu/">PRL homepage</a> in the section right below the Brands section.
   * Any changes should be made in this file on a viable code editor, such as <a href="https://code.visualstudio.com/"> Visual Studio Code</a>, and not in Mura. The reason is that Mura's HTML editor is messy and difficult to work on.
   * To update the content in Mura, paste the code from this file in the **Homepage - News & Events** component, which can be located in Mura's File Manager.
-  * **PRL-Code-of-Ethics.html:** This page was added in November 2019. The content is used on the <a href="https://prl.natsci.msu.edu/about/internal-resources/employee-documents/code-of-ethics/">Code of Ethics page</a>. **Warning:** due to the way Mura's inline editor works, make sure to edit the markup in the back-end editor or in Visual Studio Code. Editing on the front-end will break the accordion component in this page.
+* **PRL-Code-of-Ethics.html:** This page was added in November 2019. The content is used on the <a href="https://prl.natsci.msu.edu/about/internal-resources/employee-documents/code-of-ethics/">Code of Ethics page</a>. **Warning:** due to the way Mura's inline editor works, make sure to edit the markup in the back-end editor or in Visual Studio Code. Editing on the front-end will break the accordion component in this page.
  
 ## JS Folder
 The JS folder contains the custom PRL jQuery code. 
