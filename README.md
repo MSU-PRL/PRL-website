@@ -7,7 +7,7 @@
 ## CSS Folder
 The CSS folder contains all custom stylesheets for the PRL website.
 ### Instructions to modify code:
-*This section applies to the three files, prlCustomCSS-2019.scss, prlCustomCSS-2019.css, and prlCustomCSS-2019.min.css.*
+*This section applies **only** to the three files, prlCustomCSS-2019.scss, prlCustomCSS-2019.css, and prlCustomCSS-2019.min.css.*
  * **Custom modifications take place in the prlCustomCSS-2019.scss file, outside of Mura**. This is the core PRL custom styles file. It allows for control and consistency of custom visual components. It requires knowledge of SCSS programming language and a viable code editor, such as <a href="https://code.visualstudio.com/"> Visual Studio Code</a>.
 * **Use an automated compile and minimize system**, as Mura only reads .css files. Instructions:
   1. **prlCustomCSS-2019.scss** file should be compiled into the **prlCustomCSS-2019.css** file on each iteration. The Visual Studio Code extension, Live Sass Compiler is recommended. Otherwise, <a href="http://koala-app.com/">Koala</a> is also a good automatic compiler.
