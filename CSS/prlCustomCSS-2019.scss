@@ -850,6 +850,23 @@ $img-hover-opacity: 0.8;
   color: $dark-grey-text;
 }
 
+
+/* -------------------------------------------------------------------
+        GRID SYSTEM - JANUARY 2020 (CNS REMOVED BOOTSTRAP
+-------------------------------------------------------------------- */
+
+.prl-row {
+  // Copied from Bootstrap .row class
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+
 /* --------------------------------------------------------
         CNS STYLING OVERRIDES
 -------------------------------------------------------- */
@@ -1916,15 +1933,7 @@ aside {
       margin-top: 0px;
     }
     section.prl-about-essence {
-      .prl-essence-items {
-        // Lining up the items in a row
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
-        margin-right: -15px;
-        margin-left: -15px;
+      .prl-row {
         .prl-essence-item {
           // Styling each individual brand essence
           -ms-flex-preferred-size: 33.333333%;
