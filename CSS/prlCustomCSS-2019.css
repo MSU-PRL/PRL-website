@@ -6149,7 +6149,7 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
   height: 45px;
   margin-bottom: 18px; }
 
-.prl-internal-logo-content-area, .about .mainCol section.prl-about-essence .prl-row .prl-essence-item, .graduate-program-overview #MainContent section.prl-grad-puv .col-md-6 {
+.prl-internal-logo-content-area, .about .mainCol section.prl-about-essence .prl-row .prl-essence-item, .graduate-program-overview #MainContent section.prl-grad-puv .prl-grad-icon {
   margin: 36px 0; }
 
 .prl-internal-logo-content-title, .about .mainCol section.prl-about-essence .prl-row span.prl-essence-title, .graduate-program-overview #MainContent section.prl-grad-puv span.prl-grad-puv-title {
@@ -6169,7 +6169,7 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
   .prl-internal-logo-svg, .about .mainCol section.prl-about-essence .prl-row svg, .graduate-program-overview #MainContent section.prl-grad-puv svg {
     height: 40px;
     margin-bottom: 15px; }
-  .prl-internal-logo-content-area, .about .mainCol section.prl-about-essence .prl-row .prl-essence-item, .graduate-program-overview #MainContent section.prl-grad-puv .col-md-6 {
+  .prl-internal-logo-content-area, .about .mainCol section.prl-about-essence .prl-row .prl-essence-item, .graduate-program-overview #MainContent section.prl-grad-puv .prl-grad-icon {
     margin: 25px 0 !important; } }
 
 /* -------------------------------------------------------------
@@ -7174,7 +7174,9 @@ aside {
     margin-top: 0px; }
   .about .mainCol section.prl-about-essence .prl-row .prl-essence-item {
     -ms-flex-preferred-size: 33.333333%;
-    flex-basis: 33.333333%; }
+    flex-basis: 33.333333%;
+    padding-left: 15px;
+    padding-right: 15px; }
   .about .mainCol section.prl-about-essence .prl-row div:last-child {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -7255,6 +7257,20 @@ aside {
       height: 125px;
       float: left; }
 
+@media (max-width: 991px) {
+  .about .mainCol .zoomtimeline {
+    margin-bottom: 120px; }
+  .about .mainCol section {
+    margin: 120px 0; }
+  .about .mainCol section.prl-about-essence .prl-row .prl-essence-item {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    max-width: 50%; }
+  .about .mainCol blockquote {
+    margin: -10px auto; }
+  .about .mainCol section.prl-about-what .row {
+    margin: 90px 0; } }
+
 @media (max-width: 767px) {
   .about .mainCol .pageTitle {
     margin-top: 55px; }
@@ -7283,9 +7299,10 @@ aside {
     padding: 0 15px; }
   .about .mainCol section.prl-about-what img {
     margin-bottom: 30px; }
-  .about .mainCol section.prl-about-essence div.prl-essence-items div.prl-essence-item {
+  .about .mainCol section.prl-about-essence .prl-row .prl-essence-item {
     -ms-flex-preferred-size: 100%;
-        flex-basis: 100%; }
+        flex-basis: 100%;
+    max-width: 100%; }
   .about .mainCol .prl-about-logos a {
     height: 115px; }
     .about .mainCol .prl-about-logos a img {
@@ -7294,22 +7311,6 @@ aside {
   .about .mainCol .prl-about-logos .prl-funder-logo {
     width: 45%;
     margin-right: 5%; } }
-
-@media (max-width: 991px) {
-  .about .mainCol .zoomtimeline {
-    margin-bottom: 120px; }
-  .about .mainCol section {
-    margin: 120px 0; }
-  .about .mainCol section.prl-about-essence {
-    padding: 0 15px; }
-    .about .mainCol section.prl-about-essence .prl-essence-items .prl-essence-item {
-      -ms-flex-preferred-size: 48%;
-          flex-basis: 48%;
-      margin: 30px 6px; }
-  .about .mainCol blockquote {
-    margin: -10px auto; }
-  .about .mainCol section.prl-about-what .row {
-    margin: 90px 0; } }
 
 /* --------------------------------------------------------
                 BRAND GUIDES PAGES
@@ -7777,6 +7778,10 @@ div.prl-research-highlights .last.hasImage {
 /* --------------------------------------------------------
                 GRADUATE PROGRAM OVERVIEW PAGE
 -------------------------------------------------------- */
+.graduate-program-overview #MainContent section.prl-grad-puv .prl-grad-icon {
+  padding-right: 15px;
+  padding-left: 15px; }
+
 .graduate-program-overview #MainContent blockquote {
   margin: 36px auto;
   padding: 16px 0;
@@ -7790,6 +7795,13 @@ div.prl-research-highlights .last.hasImage {
     display: none; }
   .graduate-program-overview #MainContent .prl-student-alumni-profiles .mura-collection.mura-grid-two .mura-collection-item .mura-collection-item__holder {
     padding: 0 16px 0 0; }
+
+@media (min-width: 768px) {
+  .graduate-program-overview #MainContent section.prl-grad-puv .prl-grad-icon {
+    -ms-flex: 0 0 50%;
+    -webkit-box-flex: 0;
+            flex: 0 0 50%;
+    max-width: 50%; } }
 
 @media (max-width: 539px) {
   .graduate-program-overview #MainContent .prl-student-alumni-profiles .mura-collection.mura-grid-two .mura-collection-item .mura-collection-item__holder {
