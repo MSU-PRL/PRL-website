@@ -867,6 +867,7 @@ $img-hover-opacity: 0.8;
 }
 
 
+
 /* --------------------------------------------------------
         CNS STYLING OVERRIDES
 -------------------------------------------------------- */
@@ -1938,6 +1939,8 @@ aside {
           // Styling each individual brand essence
           -ms-flex-preferred-size: 33.333333%;
           flex-basis: 33.333333%;
+          padding-left: 15px;
+          padding-right: 15px;
           @extend .prl-internal-logo-content-area;
         }
         div:last-child {
@@ -2084,6 +2087,36 @@ aside {
   }
 }
 
+@media (max-width: 991px) {
+  .about {
+    .mainCol {
+      .zoomtimeline {
+        margin-bottom: 120px;
+      }
+      section {
+        margin: 120px 0; // Adding top and bottom margins between sections
+      }
+      section.prl-about-essence {
+        .prl-row {
+          .prl-essence-item {
+            // Each essence item spans half the page
+            flex-basis: 50%;
+            max-width: 50%;
+          }
+        }
+      }
+      blockquote {
+        margin: -10px auto;
+      }
+      section.prl-about-what {
+        .row {
+          margin: 90px 0;
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 767px) {
   // Phones
   .about {
@@ -2135,9 +2168,10 @@ aside {
       }
       section.prl-about-essence {
         // Each essence item spans entire container
-        div.prl-essence-items {
-          div.prl-essence-item {
+        .prl-row {
+          .prl-essence-item {
             flex-basis: 100%;
+            max-width: 100%;
           }
         }
       }
@@ -2160,36 +2194,6 @@ aside {
   }
 }
 
-@media (max-width: 991px) {
-  .about {
-    .mainCol {
-      .zoomtimeline {
-        margin-bottom: 120px;
-      }
-      section {
-        margin: 120px 0; // Adding top and bottom margins between sections
-      }
-      section.prl-about-essence {
-        padding: 0 15px;
-        .prl-essence-items {
-          .prl-essence-item {
-            // Each essence item spans half the page
-            flex-basis: 48%;
-            margin: 30px 6px;
-          }
-        }
-      }
-      blockquote {
-        margin: -10px auto;
-      }
-      section.prl-about-what {
-        .row {
-          margin: 90px 0;
-        }
-      }
-    }
-  }
-}
 
 /* --------------------------------------------------------
                 BRAND GUIDES PAGES
@@ -2977,7 +2981,10 @@ div.prl-research-highlights {
       svg {
         @extend .prl-internal-logo-svg;
       }
-      .col-md-6 {
+      .prl-grad-icon {
+        // Padding so that icon areas don't hug edges of viewport
+        padding-right: 15px;
+        padding-left: 15px;
         @extend .prl-internal-logo-content-area;
       }
       span.prl-grad-puv-title {
@@ -3008,6 +3015,21 @@ div.prl-research-highlights {
           .mura-collection-item__holder {
             padding: 0 16px 0 0;
           }
+        }
+      }
+    }
+  }
+}
+
+// Each icon under "Why join us" section takes half of the row
+@media (min-width: 768px) {
+  .graduate-program-overview {
+    #MainContent {
+      section.prl-grad-puv {
+        .prl-grad-icon {
+            -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+            max-width: 50%;
         }
       }
     }
