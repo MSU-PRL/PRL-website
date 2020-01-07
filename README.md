@@ -1,7 +1,5 @@
-# MSU-DOE Plant Research Laboratory Website - Custom Code
-*This repository applies to the <a href="https://prl.natsci.msu.edu/">PRL website</a>, as hosted by the MSU College of Natural Sciences on Mura CMS. Although the PRL website has a pre-built design that is visually consistent with all websites within the College, it can contain custom content and styles between the header and footer areas. This repository has instructions for using the PRL custom code files. Each section below refers to its respective folder in the repository.*
-
-*Modifying PRL's code requires: 1) some knowledge of programming languages (HTML, CSS, and Javascript), 2) knowledge of Mura's back-end and front-end interfaces, 3) a code editor, such as <a href="https://code.visualstudio.com/"> Visual Studio Code</a>, and 4) a compiler, such as <a href="http://koala-app.com/">Koala</a>.*
+# MSU-DOE Plant Research Laboratory Website Code
+*The PRL site is hosted by the MSU College of Natural Sciences on Mura CMS. Custom content and styles are allowed between the header and footer areas only. Modifying PRL's code requires: 1) some knowledge of HTML, CSS, and Javascript, 2) familiary with Mura CMS back-end and front-end, and 3) a code editor, such as <a href="https://code.visualstudio.com/"> Visual Studio Code</a>. Below are instructions on how to modify and publish the code.*
 <hr>
 
 ## CSS Folder
