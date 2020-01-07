@@ -5,21 +5,20 @@
 <hr>
 
 ## CSS Folder
-### Instructions to modify code:
+### How to modify CSS:
 *This section applies **only** to the three files, prlCustomCSS-2019.scss, prlCustomCSS-2019.css, and prlCustomCSS-2019.min.css. Ignore all files related to the jQuery timeline.* 
- * **Custom modifications take place in the prlCustomCSS-2019.scss file**. This is the core styles file, written in SCSS. SCSS allows for consistent visual components.
-* **Compile and minimize the SCSS file into prlCustomCSS-2019.min.css**, as Mura only reads .css files. 
+ * **Custom styles are written in the prlCustomCSS-2019.scss file**. This is the core styles file, written in SCSS. SCSS allows for consistent visual components.
+* **Compile and minimize the SCSS file into prlCustomCSS-2019.min.css**.
 * **Copy and paste the code from the minimized file into Mura's dedicated custom CSS file, called  prlCustomCSS.css**. This file is found in Mura's File Manager, under *prl_User_Assets/File/websiteTheme/prlCustomCSS.css*. Right click on it, choose 'Edit', paste the code, and save your changes.
-* **Do not change the name of the prlCustomCSS.css file in Mura.** Any change will cause the CSS to not load.
+* **Do not change the name of the prlCustomCSS.css file in Mura**. Otherwise, CSS will not load.
 * **CSS files in this repository are also found on the PRL server.** 
 ### Note on PRL-about-page-timeline-jQuery-compiled.scss file:
-The History Timeline on the <a href="https://prl.natsci.msu.edu/about/">About page</a> rely on a CSS and jQuery timeline plugin called <a href="http://preview.codecanyon.net/item/zoomtimeline-css-timeline-pack/full_screen_preview/16918891?_ga=2.76863253.1076320330.1529523907-713049933.1525180595">ZoomTimeline</a> (<a href="https://zoomthe.me/knowledge-base/zoomtimeline/">knowledge base</a>/<a href="http://digitalzoomstudio.net/">developer's site</a>), which allows for a wide range of visual presentation styles. The version on the PRL website adopts the 3d slider presentation mode. The **PRL-about-page-timeline-jQuery-compiled.scss** file includes all the package's core CSS files, and the contents of this file are automatically incorporated in the **prlCustomCSS-2019.scss** file, for upload to Mura.
+The History Timeline on the <a href="https://prl.natsci.msu.edu/about/">About page</a> is a jQuery timeline plugin called <a href="http://preview.codecanyon.net/item/zoomtimeline-css-timeline-pack/full_screen_preview/16918891?_ga=2.76863253.1076320330.1529523907-713049933.1525180595">ZoomTimeline</a> (<a href="https://zoomthe.me/knowledge-base/zoomtimeline/">knowledge base</a>/<a href="http://digitalzoomstudio.net/">developer's site</a>), which allows for multiple presentation styles. The PRL version adopts the 3d slider presentation mode. The **PRL-about-page-timeline-jQuery-compiled.scss** file includes all the package's core CSS files, which are automatically incorporated in the **prlCustomCSS-2019.scss** file.
 
-**Any custom CSS should be written into the prlCustomCSS-2019.scss file, under the  'About' section**. **Do not make changes** to the **PRL-about-page-timeline-jQuery-compiled.scss** file. As the timeline is still in development by the author, core files will be overwritten after each update. Any custom changes made to the core files will be lost as a result of the update process.
+**Do not make any changes to the PRL-about-page-timeline-jQuery-compiled.scss** file. For additional timeline styling, instead use the prlCustomCSS-2019.scss file, under the  'About' section. As the timeline is constantly updated by the developer, its core files are overwritten after each update. 
 
 ## HTML Folder
-The HTML folder contains custom content for the PRL website. **These files are also found on the PRL server.**
-**Warning:** due to the way Mura's inline editor works, make sure to edit the .html files in an external code editor. Editing on the front-end might break certain features.
+**Warning:** due to the way Mura's inline editor works, make sure to edit the .html files in an external code editor. Front-end editing might break certain features.
 ### .html file listing and links to web pages:
 * **PRL-about-page.html:** <a href="https://prl.natsci.msu.edu/about/">About page</a>
 * **PRL-CAAPP-overview-page.html:**  <a href="https://prl.natsci.msu.edu/research-tech/center-for-advanced-algal-and-plant-phenotyping/">CAAPP Overview page</a>
@@ -36,8 +35,7 @@ The HTML folder contains custom content for the PRL website. **These files are a
 * **PRL-Code-of-Ethics.html:** <a href="https://prl.natsci.msu.edu/about/internal-resources/employee-documents/code-of-ethics/">Code of Ethics page</a>
  
 ## JS Folder 
-### Instructions to modify code:
-* **Custom modifications take place in the prlCustomJS.js file**. This is the core PRL custom JS file.
-* **Copy and paste the JS code into Mura's dedicated custom JS file, called prlCustomJS.js**. This file is found in Mura's File Manager, under *prl_User_Assets/File/websiteTheme/prlCustomJS.js*. Right click on it, choose 'Edit', paste the code, and save your changes.
-* **Do not change the name of the prlCustomJS.js file in Mura**. Any change will cause the JS to not load.
-* **JS files in this repository are also found on the PRL server.**
+### Instructions to modify JS:
+* **Custom JS is written in the prlCustomJS.js file**. This file is found in this repository and the PRL server.
+* **Copy and paste the code into Mura's dedicated custom JS file, also called prlCustomJS.js**. This file is found in Mura's File Manager, under *prl_User_Assets/File/websiteTheme/prlCustomJS.js*. Right click on it, choose 'Edit', paste the code, and save your changes.
+* **Do not change the name of the prlCustomJS.js file in Mura**. Otherwise, the JS will not load.
