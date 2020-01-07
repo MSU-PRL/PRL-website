@@ -1,0 +1,458 @@
+3.2.1 (Media Mark)
+ca5ecdc7080d8f42fd38dd6d8bef8cff080e80fd
+o:Sass::Tree::RootNode
+:@has_childrenT:
+@linei:@template"è'
+@mixin css_animation($transition-property, $transition-duration, $transition-timing) {
+transition-property: $transition-property;transition-duration: $transition-duration;transition-timing-function: $transition-timing;-moz-transition-property:$transition-property;-moz-transition-duration: $transition-duration;-moz-transition-timing-function:$transition-timing;-webkit-transition-property:$transition-property;-webkit-transition-duration: $transition-duration;-webkit-transition-timing-function:$transition-timing;-o-transition-property:$transition-property;-o-transition-duration: $transition-duration;-o-transition-timing-function:$transition-timing;-ms-transition-property:$transition-property;
+-ms-transition-duration: $transition-duration;-ms-transition-timing-function:$transition-timing;
+}
+@mixin css_boxsizing() {
+-moz-box-sizing:    border-box;   -webkit-box-sizing: border-box;    box-sizing:        border-box;
+}
+
+
+/* --- functional styling */
+
+.dzs-tabs{
+    position:relative;
+    width:100%;
+    }
+.dzs-tabs .dzs-tab-tobe{
+    display:none;
+    }
+.dzs-tabs .tabs-menu > div{ 
+    display:inline-block;
+    }
+.dzs-tabs .tabs-content{
+    display:block;
+    width:100%;
+    min-height:10px;
+    }
+.dzs-tabs.iphone-size .dzs-tab-tobe{
+    display:block;
+    }
+.dzs-tabs.iphone-size .tabs-menu, .dzs-tabs.iphone-size .tabs-content{
+    display:none;
+    }
+
+.dzs-tabs.iphone-size{
+    border:0;
+    }
+/* --- estethic styling */
+
+
+
+
+$menu_bg: #fff;
+$menu_inactive_bg: #f7f7f7;
+$border_color: rgba(0,0,0,0.3);
+$border-width:2px;
+$arrow-size:5px;
+$transition-property: all;
+$transition-duration: 0.3s;
+$transition-timing: ease-out;
+
+$cssselector : ".with-tooltip span:first-child";
+$sel_tooltip : ".dzstooltip";
+$sel_mainclass : ".dzs-tabs";
+
+
+#{$sel_mainclass}.iphone-size .tab-menu{
+    font-size:2em;
+    font-family:arial,serif;
+    }
+#{$sel_mainclass}.iphone-size .dzs-tab-tobe{
+    display:block;
+    margin-bottom:15px;
+    }
+
+
+#{$sel_mainclass}{
+    border-left:1px solid $border_color;
+    border-bottom:1px solid $border_color;
+    
+    @include css_boxsizing();
+    }
+    #{$sel_mainclass} .tabs-menu{
+        
+    position:relative;
+    z-index:6;
+    }
+#{$sel_mainclass} .tabs-menu > div{
+    display:inline-block;
+    padding: 5px 14px;
+    background: $menu_inactive_bg;
+    border-right:1px solid $border_color;
+    border-top:1px solid $border_color;
+    border-bottom:1px dotted $border_color;
+    cursor:pointer;
+    
+        @include css_animation($transition-property, $transition-duration, $transition-timing);
+    
+    }
+   #{$sel_mainclass}.touch  .tabs-menu > div > span:first-child{
+        display:none;
+        }
+#{$sel_mainclass} .tabs-menu > div.active{
+    background: $menu_bg;
+    border-bottom:1px solid $menu_bg;
+    }
+#{$sel_mainclass} .tabs-menu > div:last-child{
+    border-right:1px solid $border_color;
+    }
+#{$sel_mainclass} .tabs-content{
+    background: $menu_bg;
+    position:relative;
+    z-index:5;
+    top:-1px;
+    border-top:1px solid $border_color;
+    border-right:1px solid $border_color;
+    overflow:hidden;
+    width:100%;
+    @include css_boxsizing();
+        @include css_animation($transition-property, $transition-duration, $transition-timing);
+    }
+#{$sel_mainclass} .tabs-content .content-inner{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    @include css_boxsizing();
+    }
+#{$sel_mainclass} .tabs-content .content-inner > *{
+    position:absolute;
+    padding:10px 12px;
+    top:0;
+    left:0;
+    @include css_boxsizing();
+    }
+    
+    
+$menu_bg: #fff;
+$menu_inactive_bg: #f7f7f7;
+$border-width:2px;
+$arrow-size:5px;
+$transition-property: all;
+$transition-duration: 0.3s;
+$transition-timing: ease-out;
+
+$cssselector : ".with-tooltip span:first-child";
+$sel_tooltip : ".dzstooltip";
+$sel_mainclass : ".dzs-tabs.skin-dome";
+
+$menu_padding_hor: 20px;
+$menu_padding_ver: 20px;
+$border_color: #eee;
+$border_outer_color:rgba(255,255,255,0.4);
+$color_gradient_fin:rgba(248,248,248,1);
+
+    #{$sel_mainclass} {
+    border:0;
+        position:relative;
+        left:50%;
+    }
+    #{$sel_mainclass}.iphone-size {
+        left:0%;
+    }
+    #{$sel_mainclass} .tabs-menu{
+    text-align:center;
+    }
+    #{$sel_mainclass} .tabs-menu > *{
+    border:0;
+        background:inherit;
+        padding:0;
+    }
+    #{$sel_mainclass} .tabs-menu > * > .titles{
+    padding:$menu_padding_hor $menu_padding_ver;
+    @include css_boxsizing();
+        }
+        
+    #{$sel_mainclass} .tabs-menu > *.active{
+        border:0;
+        }
+    #{$sel_mainclass} .tabs-menu > *.active > .titles:before{
+        content:'';
+        position:absolute; display:block;
+        width:100%;
+        height:100%;
+        margin-top: -$menu_padding_ver;
+        margin-left: -$menu_padding_hor;
+        border-left:1px solid $border_color;
+        border-right:1px solid $border_outer_color;
+    @include css_boxsizing();
+}
+    #{$sel_mainclass} .tabs-menu > *.active > .titles{
+        border-left:1px solid $border_outer_color;
+        border-right:1px solid $border_color;
+        }
+    #{$sel_mainclass} .tabs-menu > *.active > .titles{
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlNWU1ZTUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, $color_gradient_fin 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(100%,$color_gradient_fin));
+background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,$color_gradient_fin 100%);
+background: -o-linear-gradient(top, rgba(255,255,255,0) 0%,$color_gradient_fin 100%);
+background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%,$color_gradient_fin 100%);
+background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,$color_gradient_fin 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#e5e5e5',GradientType=0 );
+    }
+    
+    
+    #{$sel_mainclass} .tabs-menu > *:last-child{
+    border-right:0;
+    }
+    #{$sel_mainclass} .tabs-menu .title{
+        font-size:1.5em; 
+        line-height:0.4em;
+        text-transform:uppercase;
+        }
+    #{$sel_mainclass} .tabs-content{
+    border:0;
+        top:-2px;
+        text-align:center;
+        border-top:1px solid $border_outer_color;
+        border-bottom:1px solid $border_outer_color;
+        background-color:$color_gradient_fin;
+    }
+    #{$sel_mainclass} .tabs-content:before{
+        content:'';
+        position:absolute; display:block;
+        width:100%;
+        height:100%;
+        border-top:1px solid $border_color;
+        border-bottom:1px solid $border_color;
+    @include css_boxsizing();
+        
+        }
+    #{$sel_mainclass} .tabs-content > .content-inner{
+        width:100%;
+        text-align: center;
+    }
+    #{$sel_mainclass} .tabs-content > .content-inner > *{
+        text-align: left;
+    }
+    
+    
+$menu_bg: #aaa;
+$menu_inactive_bg: #f7f7f7;
+$border-width:2px;
+$arrow-size:5px;
+$transition-property: all;
+$transition-duration: 0.3s;
+$transition-timing: ease-out;
+
+$cssselector : ".with-tooltip span:first-child";
+$sel_tooltip : ".dzstooltip";
+$sel_mainclass : ".dzs-tabs.skin-arrowbox";
+
+$menu_padding_hor: 20px;
+$menu_padding_ver: 20px;
+$border_color: #000;
+$border_outer_color:rgba(255,255,255,0.4);
+$color_gradient_fin:rgba(248,248,248,1);
+
+    #{$sel_mainclass} {
+    border:0;
+        position:relative;
+    }
+    #{$sel_mainclass}.iphone-size {
+        left:0%;
+    }
+    #{$sel_mainclass} .tabs-menu{
+    text-align:center;
+    }
+    #{$sel_mainclass} .tabs-menu > *{
+    border:0;
+        background:inherit;
+        padding:10px;
+        border-radius:5px;
+        background: $menu_inactive_bg;
+        border: 1px solid $border_color;
+        margin:10px 5px;
+    }
+        
+    #{$sel_mainclass} .tabs-menu > *.active{
+        border: 1px solid $border_color;
+        background: $menu_bg;
+        
+    }
+    
+    
+    #{$sel_mainclass} .tabs-content{
+    border:0;
+        
+        text-align:center;
+        background-color: transparent;
+    }
+    #{$sel_mainclass} .tabs-content > .content-inner{
+        width:100%;
+        text-align: center;
+    }
+    #{$sel_mainclass} .tabs-content > .content-inner > *{
+        text-align: left;
+    }
+    
+    
+    
+   
+$arrow-size:5px;
+
+$cssselector : "#{$sel_mainclass} .tabs-menu > *.active";
+$direction : "top";
+   
+
+
+@mixin makearrow($cssselector, $direction, $arrow-size, $border-width, $main-color, $second-color) {
+    
+    $big-arrow-size: ($arrow-size+($border-width * 2) - ceil(0.6 * $border-width));
+/* -- arrows -> functional + estethic*/
+#{$cssselector}:after, #{$cssselector}:before, {
+	border: solid transparent;
+	position: absolute;
+	pointer-events: none;
+	content: " ";
+	height: 0;
+	width: 0;
+}
+
+
+#{$cssselector}:after {
+	border-color: rgba(136, 183, 213, 0);
+	border-width: $arrow-size;
+}
+
+#{$cssselector}:before{
+	border-color: rgba(194, 225, 245, 0);
+	border-width: $big-arrow-size;
+}
+@if $direction=="bottom" {
+#{$cssselector}:after, #{$cssselector}:before {
+	top: 100%;
+}
+#{$cssselector}:after {
+	border-top-color: $main-color;
+	left: 50%;
+	margin-left: -$arrow-size;
+}
+#{$cssselector}:before{
+	border-top-color: $second-color;
+	left: 50%;
+	margin-left: -$big-arrow-size;
+}
+} 
+@if $direction=="top" {
+#{$cssselector}:after, #{$cssselector}:before {
+	bottom: 100%;
+}
+#{$cssselector}:after {
+	border-bottom-color: $main-color;
+	left: 50%;
+	margin-left: -$arrow-size;
+}
+#{$cssselector}:before{
+	border-bottom-color: $second-color;
+	left: 50%;
+	margin-left: -$big-arrow-size;
+}
+}
+    
+}
+@include makearrow($cssselector, $direction, $arrow-size, $border-width, $menu_bg, $border_color);
+    :@children[`o:Sass::Tree::MixinDefNode;T;i:@splat0:
+@name"css_animation;	[o:Sass::Tree::PropNode;i;["transition-property:@prop_syntax:new:
+@tabsi ;	[ :@options{ :@valueo:Sass::Script::Variable	;i;"transition-property;@:@underscored_name"transition_propertyo;;i;["transition-duration;;;i ;	[ ;@;o;	;i;"transition-duration;@;"transition_durationo;;i;["transition-timing-function;;;i ;	[ ;@;o;	;i;"transition-timing;@;"transition_timingo;;i;["-moz-transition-property;;;i ;	[ ;@;o;	;i;"transition-property;@;"transition_propertyo;;i;["-moz-transition-duration;;;i ;	[ ;@;o;	;i;"transition-duration;@;"transition_durationo;;i;["$-moz-transition-timing-function;;;i ;	[ ;@;o;	;i;"transition-timing;@;"transition_timingo;;i;[" -webkit-transition-property;;;i ;	[ ;@;o;	;i;"transition-property;@;"transition_propertyo;;i;[" -webkit-transition-duration;;;i ;	[ ;@;o;	;i;"transition-duration;@;"transition_durationo;;i;["'-webkit-transition-timing-function;;;i ;	[ ;@;o;	;i;"transition-timing;@;"transition_timingo;;i;["-o-transition-property;;;i ;	[ ;@;o;	;i;"transition-property;@;"transition_propertyo;;i;["-o-transition-duration;;;i ;	[ ;@;o;	;i;"transition-duration;@;"transition_durationo;;i;[""-o-transition-timing-function;;;i ;	[ ;@;o;	;i;"transition-timing;@;"transition_timingo;;i;["-ms-transition-property;;;i ;	[ ;@;o;	;i;"transition-property;@;"transition_propertyo;;i	;["-ms-transition-duration;;;i ;	[ ;@;o;	;i	;"transition-duration;@;"transition_durationo;;i	;["#-ms-transition-timing-function;;;i ;	[ ;@;o;	;i	;"transition-timing;@;"transition_timing;@:
+@args[[o;;"transition-property;@;"transition_property0[o;;"transition-duration;@;"transition_duration0[o;;"transition-timing;@;"transition_timing0o;
+;T;i;0;"css_boxsizing;	[o;;i;["-moz-box-sizing;;;i ;	[ ;@;o:Sass::Script::String:
+@type:identifier;@;"border-boxo;;i;["-webkit-box-sizing;;;i ;	[ ;@;o;;;;@;"border-boxo;;i;["box-sizing;;;i ;	[ ;@;o;;;;@;"border-box;@;[ o:Sass::Tree::CommentNode
+;i;:normal;	[ ;@;["!/* --- functional styling */o:Sass::Tree::RuleNode;T;i;i ;	[o;;i;["position;;;i ;	[ ;@;o;;;;@;"relativeo;;i;["
+width;;;i ;	[ ;@;o;;;;@;"	100%;@:
+@rule[".dzs-tabs:@parsed_ruleso:"Sass::Selector::CommaSequence;i:@members[o:Sass::Selector::Sequence;[o:#Sass::Selector::SimpleSequence
+;i;[o:Sass::Selector::Class;i;["dzs-tabs:@filename" :@sourceso:Set:
+@hash{ :@subject0;#@°;#@°o;;T;i;i ;	[o;;i;["display;;;i ;	[ ;@;o;;;;@;"	none;@;[".dzs-tabs .dzs-tab-tobe;o;;i;[o; ;[o;!
+;i;[o;";i;["dzs-tabs;#" ;$o;%;&{ ;'0;#@Æo;!
+;i;[o;";i;["dzs-tab-tobe;#@Æ;$o;%;&{ ;'0;#@Æ;#@Æo;;T;i;i ;	[o;;i;["display;;;i ;	[ ;@;o;;;;@;"inline-block;@;[".dzs-tabs .tabs-menu > div;o;;i;[o; ;[	o;!
+;i;[o;";i;["dzs-tabs;#" ;$o;%;&{ ;'0;#@ão;!
+;i;[o;";i;["tabs-menu;#@ã;$o;%;&{ ;'0;#@ã">o;!
+;i;[o:Sass::Selector::Element	;i:@namespace0;["div;#@ã;$o;%;&{ ;'0;#@ã;#@ão;;T;i;i ;	[o;;i;["display;;;i ;	[ ;@;o;;;;@;"
+blocko;;i;["
+width;;;i ;	[ ;@;o;;;;@;"	100%o;;i;["min-height;;;i ;	[ ;@;o;;;;@;"	10px;@;[".dzs-tabs .tabs-content;o;;i;[o; ;[o;!
+;i;[o;";i;["dzs-tabs;#" ;$o;%;&{ ;'0;#@o;!
+;i;[o;";i;["tabs-content;#@;$o;%;&{ ;'0;#@;#@o;;T;i!;i ;	[o;;i";["display;;;i ;	[ ;@;o;;;;@;"
+block;@;["(.dzs-tabs.iphone-size .dzs-tab-tobe;o;;i!;[o; ;[o;!
+;i!;[o;";i!;["dzs-tabs;#" o;";i!;["iphone-size;#@1;$o;%;&{ ;'0;#@1o;!
+;i!;[o;";i!;["dzs-tab-tobe;#@1;$o;%;&{ ;'0;#@1;#@1o;;T;i$;i ;	[o;;i%;["display;;;i ;	[ ;@;o;;;;@;"	none;@;["J.dzs-tabs.iphone-size .tabs-menu, .dzs-tabs.iphone-size .tabs-content;o;;i$;[o; ;[o;!
+;i$;[o;";i$;["dzs-tabs;#" o;";i$;["iphone-size;#@Q;$o;%;&{ ;'0;#@Qo;!
+;i$;[o;";i$;["tabs-menu;#@Q;$o;%;&{ ;'0;#@Qo; ;[o;!
+;i$;[o;";i$;["dzs-tabs;#@Qo;";i$;["iphone-size;#@Q;$o;%;&{ ;'0;#@Qo;!
+;i$;[o;";i$;["tabs-content;#@Q;$o;%;&{ ;'0;#@Q;#@Qo;;T;i(;i ;	[o;;i);["border;;;i ;	[ ;@;o;;;;@;"0;@;[".dzs-tabs.iphone-size;o;;i(;[o; ;[o;!
+;i(;[o;";i(;["dzs-tabs;#" o;";i(;["iphone-size;#@„;$o;%;&{ ;'0;#@„;#@„o;
+;i+;;;	[ ;@;["/* --- estethic styling */o:Sass::Tree::VariableNode;i0;"menu_bg;	[ :@guarded0;@:
+@expro:Sass::Script::Color	;i0:@attrs{	:rediÿ:
+alphai:
+greeniÿ:	blueiÿ;@;0o;*;i1;"menu_inactive_bg;	[ ;+0;@;,o;-	;i1;.{	;/i÷;0i;1i÷;2i÷;@;0o;*;i2;"border_color;	[ ;+0;@;,o:Sass::Script::Funcall;i2;0;"	rgba;@:@keywords{ ;[	o:Sass::Script::Number:@denominator_units[ ;i2:@numerator_units[ ;@:@original"0;i o;5;6@ ;i2;7[ ;@;8"0;i o;5;6@ ;i2;7[ ;@;8"0;i o;5;6@ ;i2;7[ ;@;8"0.3;f0.29999999999999999 33o;*;i3;"border-width;	[ ;+0;@;,o;5;6[ ;i3;7["px;@;8"2px;io;*;i4;"arrow-size;	[ ;+0;@;,o;5;6[ ;i4;7["px;@;8"5px;i
+o;*;i5;"transition-property;	[ ;+0;@;,o;	;i5;;;@;"allo;*;i6;"transition-duration;	[ ;+0;@;,o;5;6[ ;i6;7["s;@;8"	0.3s;f0.29999999999999999 33o;*;i7;"transition-timing;	[ ;+0;@;,o;	;i7;;;@;"ease-outo;*;i9;"cssselector;	[ ;+0;@;,o;	;i9;:string;@;"#.with-tooltip span:first-childo;*;i:;"sel_tooltip;	[ ;+0;@;,o;	;i:;;9;@;".dzstooltipo;*;i;;"sel_mainclass;	[ ;+0;@;,o;	;i;;;9;@;".dzs-tabso;;T;i>;i ;	[o;;i?;["font-size;;;i ;	[ ;@;o;;;;@;"2emo;;i@;["font-family;;;i ;	[ ;@;o;;;;@;"arial,serif;@;[o;	;i>;"sel_mainclass;@;"sel_mainclass".iphone-size .tab-menuo;;T;iB;i ;	[o;;iC;["display;;;i ;	[ ;@;o;;;;@;"
+blocko;;iD;["margin-bottom;;;i ;	[ ;@;o;;;;@;"	15px;@;[o;	;iB;"sel_mainclass;@;"sel_mainclass".iphone-size .dzs-tab-tobeo;;T;iH;i ;	[o;;iI;["border-left;;;i ;	[ ;@;o:Sass::Script::List	;iI;@:@separator:
+space;[o;5;6[ ;iI;7["px;@;8"1px;io;	;iI;;;@;"
+solido;	;iI;"border_color;@;"border_coloro;;iJ;["border-bottom;;;i ;	[ ;@;o;:	;iJ;@;;;<;[o;5;6[ ;iJ;7["px;@;8"1px;io;	;iJ;;;@;"
+solido;	;iJ;"border_color;@;"border_coloro:Sass::Tree::MixinNode;iL;0;"css_boxsizing;	[ ;@;4{ ;[ ;@;[o;	;iH;"sel_mainclass;@;"sel_mainclasso;;T;iN;i ;	[o;;iP;["position;;;i ;	[ ;@;o;;;;@;"relativeo;;iQ;["z-index;;;i ;	[ ;@;o;;;;@;"6;@;[o;	;iN;"sel_mainclass;@;"sel_mainclass" .tabs-menuo;;T;iS;i ;	[o;;iT;["display;;;i ;	[ ;@;o;;;;@;"inline-blocko;;iU;["padding;;;i ;	[ ;@;o;;;;@;"5px 14pxo;;iV;["background;;;i ;	[ ;@;o;	;iV;"menu_inactive_bg;@;"menu_inactive_bgo;;iW;["border-right;;;i ;	[ ;@;o;:	;iW;@;;;<;[o;5;6[ ;iW;7["px;@;8"1px;io;	;iW;;;@;"
+solido;	;iW;"border_color;@;"border_coloro;;iX;["border-top;;;i ;	[ ;@;o;:	;iX;@;;;<;[o;5;6[ ;iX;7["px;@;8"1px;io;	;iX;;;@;"
+solido;	;iX;"border_color;@;"border_coloro;;iY;["border-bottom;;;i ;	[ ;@;o;:	;iY;@;;;<;[o;5;6[ ;iY;7["px;@;8"1px;io;	;iY;;;@;"dottedo;	;iY;"border_color;@;"border_coloro;;iZ;["cursor;;;i ;	[ ;@;o;;;;@;"pointero;=;i\;0;"css_animation;	[ ;@;4{ ;[o;	;i\;"transition-property;@;"transition_propertyo;	;i\;"transition-duration;@;"transition_durationo;	;i\;"transition-timing;@;"transition_timing;@;[o;	;iS;"sel_mainclass;@;"sel_mainclass" .tabs-menu > divo;;T;i_;i ;	[o;;i`;["display;;;i ;	[ ;@;o;;;;@;"	none;@;[o;	;i_;"sel_mainclass;@;"sel_mainclass"/.touch .tabs-menu > div > span:first-childo;;T;ib;i ;	[o;;ic;["background;;;i ;	[ ;@;o;	;ic;"menu_bg;@;"menu_bgo;;id;["border-bottom;;;i ;	[ ;@;o;:	;id;@;;;<;[o;5;6[ ;id;7["px;@;8"1px;io;	;id;;;@;"
+solido;	;id;"menu_bg;@;"menu_bg;@;[o;	;ib;"sel_mainclass;@;"sel_mainclass" .tabs-menu > div.activeo;;T;if;i ;	[o;;ig;["border-right;;;i ;	[ ;@;o;:	;ig;@;;;<;[o;5;6[ ;ig;7["px;@;8"1px;io;	;ig;;;@;"
+solido;	;ig;"border_color;@;"border_color;@;[o;	;if;"sel_mainclass;@;"sel_mainclass"! .tabs-menu > div:last-childo;;T;ii;i ;	[o;;ij;["background;;;i ;	[ ;@;o;	;ij;"menu_bg;@;"menu_bgo;;ik;["position;;;i ;	[ ;@;o;;;;@;"relativeo;;il;["z-index;;;i ;	[ ;@;o;;;;@;"5o;;im;["top;;;i ;	[ ;@;o;5;6[ ;im;7["px;@;8"	-1px;iúo;;in;["border-top;;;i ;	[ ;@;o;:	;in;@;;;<;[o;5;6[ ;in;7["px;@;8"1px;io;	;in;;;@;"
+solido;	;in;"border_color;@;"border_coloro;;io;["border-right;;;i ;	[ ;@;o;:	;io;@;;;<;[o;5;6[ ;io;7["px;@;8"1px;io;	;io;;;@;"
+solido;	;io;"border_color;@;"border_coloro;;ip;["overflow;;;i ;	[ ;@;o;;;;@;"hiddeno;;iq;["
+width;;;i ;	[ ;@;o;;;;@;"	100%o;=;ir;0;"css_boxsizing;	[ ;@;4{ ;[ o;=;is;0;"css_animation;	[ ;@;4{ ;[o;	;is;"transition-property;@;"transition_propertyo;	;is;"transition-duration;@;"transition_durationo;	;is;"transition-timing;@;"transition_timing;@;[o;	;ii;"sel_mainclass;@;"sel_mainclass" .tabs-contento;;T;iu;i ;	[
+o;;iv;["position;;;i ;	[ ;@;o;;;;@;"absoluteo;;iw;["top;;;i ;	[ ;@;o;;;;@;"0o;;ix;["	left;;;i ;	[ ;@;o;;;;@;"0o;;iy;["
+width;;;i ;	[ ;@;o;;;;@;"	100%o;=;iz;0;"css_boxsizing;	[ ;@;4{ ;[ ;@;[o;	;iu;"sel_mainclass;@;"sel_mainclass"" .tabs-content .content-innero;;T;i|;i ;	[
+o;;i};["position;;;i ;	[ ;@;o;;;;@;"absoluteo;;i~;["padding;;;i ;	[ ;@;o;;;;@;"10px 12pxo;;i;["top;;;i ;	[ ;@;o;;;;@;"0o;;i{;["	left;;;i ;	[ ;@;o;;;;@;"0o;=;i|;0;"css_boxsizing;	[ ;@;4{ ;[ ;@;[o;	;i|;"sel_mainclass;@;"sel_mainclass"& .tabs-content .content-inner > *o;*;i€;"menu_bg;	[ ;+0;@;,o;-	;i€;.{	;/iÿ;0i;1iÿ;2iÿ;@;0o;*;i;"menu_inactive_bg;	[ ;+0;@;,o;-	;i;.{	;/i÷;0i;1i÷;2i÷;@;0o;*;i‚;"border-width;	[ ;+0;@;,o;5;6[ ;i‚;7["px;@;8"2px;io;*;iƒ;"arrow-size;	[ ;+0;@;,o;5;6[ ;iƒ;7["px;@;8"5px;i
+o;*;i„;"transition-property;	[ ;+0;@;,o;	;i„;;;@;"allo;*;i…;"transition-duration;	[ ;+0;@;,o;5;6[ ;i…;7["s;@;8"	0.3s;f0.29999999999999999 33o;*;i†;"transition-timing;	[ ;+0;@;,o;	;i†;;;@;"ease-outo;*;iˆ;"cssselector;	[ ;+0;@;,o;	;iˆ;;9;@;"#.with-tooltip span:first-childo;*;i‰;"sel_tooltip;	[ ;+0;@;,o;	;i‰;;9;@;".dzstooltipo;*;iŠ;"sel_mainclass;	[ ;+0;@;,o;	;iŠ;;9;@;".dzs-tabs.skin-domeo;*;iŒ;"menu_padding_hor;	[ ;+0;@;,o;5;6[ ;iŒ;7["px;@;8"	20px;io;*;i;"menu_padding_ver;	[ ;+0;@;,o;5;6[ ;i;7["px;@;8"	20px;io;*;iŽ;"border_color;	[ ;+0;@;,o;-	;iŽ;.{	;/iî;0i;1iî;2iî;@;0o;*;i;"border_outer_color;	[ ;+0;@;,o;3;i;0;"	rgba;@;4{ ;[	o;5;6@ ;i;7[ ;@;8"255;iÿo;5;6@ ;i;7[ ;@;8"255;iÿo;5;6@ ;i;7[ ;@;8"255;iÿo;5;6@ ;i;7[ ;@;8"0.4;f0.40000000000000002 ™šo;*;i;"color_gradient_fin;	[ ;+0;@;,o;3;i;0;"	rgba;@;4{ ;[	o;5;6@ ;i;7[ ;@;8"248;iøo;5;6@ ;i;7[ ;@;8"248;iøo;5;6@ ;i;7[ ;@;8"248;iøo;5;6@ ;i;7[ ;@;8"1;io;;T;i’;i ;	[o;;i“;["border;;;i ;	[ ;@;o;;;;@;"0o;;i”;["position;;;i ;	[ ;@;o;;;;@;"relativeo;;i•;["	left;;;i ;	[ ;@;o;;;;@;"50%;@;[o;	;i’;"sel_mainclass;@;"sel_mainclasso;;T;i—;i ;	[o;;i˜;["	left;;;i ;	[ ;@;o;;;;@;"0%;@;[o;	;i—;"sel_mainclass;@;"sel_mainclass".iphone-sizeo;;T;iš;i ;	[o;;i›;["text-align;;;i ;	[ ;@;o;;;;@;"center;@;[o;	;iš;"sel_mainclass;@;"sel_mainclass" .tabs-menuo;;T;i;i ;	[o;;iž;["border;;;i ;	[ ;@;o;;;;@;"0o;;iŸ;["background;;;i ;	[ ;@;o;;;;@;"inherito;;i ;["padding;;;i ;	[ ;@;o;;;;@;"0;@;[o;	;i;"sel_mainclass;@;"sel_mainclass" .tabs-menu > *o;;T;i¢;i ;	[o;;i£;["padding;;;i ;	[ ;@;o;:	;i£;@;;;<;[o;	;i£;"menu_padding_hor;@;"menu_padding_horo;	;i£;"menu_padding_ver;@;"menu_padding_vero;=;i¤;0;"css_boxsizing;	[ ;@;4{ ;[ ;@;[o;	;i¢;"sel_mainclass;@;"sel_mainclass" .tabs-menu > * > .titleso;;T;i§;i ;	[o;;i¨;["border;;;i ;	[ ;@;o;;;;@;"0;@;[o;	;i§;"sel_mainclass;@;"sel_mainclass" .tabs-menu > *.activeo;;T;iª;i ;	[o;;i«;["content;;;i ;	[ ;@;o;;;;@;"''o;;i¬;["position;;;i ;	[ ;@;o;;;;@;"absoluteo;;i¬;["display;;;i ;	[ ;@;o;;;;@;"
+blocko;;i­;["
+width;;;i ;	[ ;@;o;;;;@;"	100%o;;i®;["height;;;i ;	[ ;@;o;;;;@;"	100%o;;i¯;["margin-top;;;i ;	[ ;@;o:!Sass::Script::UnaryOperation	:@operando;	;i¯;"menu_padding_ver;@;"menu_padding_ver;i¯:@operator:
+minus;@o;;i°;["margin-left;;;i ;	[ ;@;o;>	;?o;	;i°;"menu_padding_hor;@;"menu_padding_hor;i°;@;A;@o;;i±;["border-left;;;i ;	[ ;@;o;:	;i±;@;;;<;[o;5;6[ ;i±;7["px;@;8"1px;io;	;i±;;;@;"
+solido;	;i±;"border_color;@;"border_coloro;;i²;["border-right;;;i ;	[ ;@;o;:	;i²;@;;;<;[o;5;6[ ;i²;7["px;@;8"1px;io;	;i²;;;@;"
+solido;	;i²;"border_outer_color;@;"border_outer_coloro;=;i³;0;"css_boxsizing;	[ ;@;4{ ;[ ;@;[o;	;iª;"sel_mainclass;@;"sel_mainclass", .tabs-menu > *.active > .titles:beforeo;;T;iµ;i ;	[o;;i¶;["border-left;;;i ;	[ ;@;o;:	;i¶;@;;;<;[o;5;6[ ;i¶;7["px;@;8"1px;io;	;i¶;;;@;"
+solido;	;i¶;"border_outer_color;@;"border_outer_coloro;;i·;["border-right;;;i ;	[ ;@;o;:	;i·;@;;;<;[o;5;6[ ;i·;7["px;@;8"1px;io;	;i·;;;@;"
+solido;	;i·;"border_color;@;"border_color;@;[o;	;iµ;"sel_mainclass;@;"sel_mainclass"% .tabs-menu > *.active > .titleso;;T;i¹;i ;	[o;;iº;["background;;;i ;	[ ;@;o;	;iº;;;@;"—url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlNWU1ZTUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+)o;;i»;["background;;;i ;	[ ;@;o;3;i»;0;"-moz-linear-gradient;@;4{ ;[o;	;i»;;;@;"topo;:	;i»;@;;;<;[o;3;i»;0;"	rgba;@;4{ ;[	o;5;6@ ;i»;7[ ;@;8"255;iÿo;5;6@ ;i»;7[ ;@;8"255;iÿo;5;6@ ;i»;7[ ;@;8"255;iÿo;5;6@ ;i»;7[ ;@;8"0;i o;5;6[ ;i»;7["%;@;8"0%;i o;:	;i»;@;;;<;[o;	;i»;"color_gradient_fin;@;"color_gradient_fino;5;6[ ;i»;7["%;@;8"	100%;iio;;i¼;["background;;;i ;	[ ;@;o;3;i¼;0;"-webkit-gradient;@;4{ ;[
+o;	;i¼;;;@;"linearo;:	;i¼;@;;;<;[o;	;i¼;;;@;"	lefto;	;i¼;;;@;"topo;:	;i¼;@;;;<;[o;	;i¼;;;@;"	lefto;	;i¼;;;@;"bottomo;3;i¼;0;"color-stop;@;4{ ;[o;5;6[ ;i¼;7["%;@;8"0%;i o;3;i¼;0;"	rgba;@;4{ ;[	o;5;6@ ;i¼;7[ ;@;8"255;iÿo;5;6@ ;i¼;7[ ;@;8"255;iÿo;5;6@ ;i¼;7[ ;@;8"255;iÿo;5;6@ ;i¼;7[ ;@;8"0;i o;3;i¼;0;"color-stop;@;4{ ;[o;5;6[ ;i¼;7["%;@;8"	100%;iio;	;i¼;"color_gradient_fin;@;"color_gradient_fino;;i½;["background;;;i ;	[ ;@;o;3;i½;0;"-webkit-linear-gradient;@;4{ ;[o;	;i½;;;@;"topo;:	;i½;@;;;<;[o;3;i½;0;"	rgba;@;4{ ;[	o;5;6@ ;i½;7[ ;@;8"255;iÿo;5;6@ ;i½;7[ ;@;8"255;iÿo;5;6@ ;i½;7[ ;@;8"255;iÿo;5;6@ ;i½;7[ ;@;8"0;i o;5;6[ ;i½;7["%;@;8"0%;i o;:	;i½;@;;;<;[o;	;i½;"color_gradient_fin;@;"color_gradient_fino;5;6[ ;i½;7["%;@;8"	100%;iio;;i¾;["background;;;i ;	[ ;@;o;3;i¾;0;"-o-linear-gradient;@;4{ ;[o;	;i¾;;;@;"topo;:	;i¾;@;;;<;[o;3;i¾;0;"	rgba;@;4{ ;[	o;5;6@ ;i¾;7[ ;@;8"255;iÿo;5;6@ ;i¾;7[ ;@;8"255;iÿo;5;6@ ;i¾;7[ ;@;8"255;iÿo;5;6@ ;i¾;7[ ;@;8"0;i o;5;6[ ;i¾;7["%;@;8"0%;i o;:	;i¾;@;;;<;[o;	;i¾;"color_gradient_fin;@;"color_gradient_fino;5;6[ ;i¾;7["%;@;8"	100%;iio;;i¿;["background;;;i ;	[ ;@;o;3;i¿;0;"-ms-linear-gradient;@;4{ ;[o;	;i¿;;;@;"topo;:	;i¿;@;;;<;[o;3;i¿;0;"	rgba;@;4{ ;[	o;5;6@ ;i¿;7[ ;@;8"255;iÿo;5;6@ ;i¿;7[ ;@;8"255;iÿo;5;6@ ;i¿;7[ ;@;8"255;iÿo;5;6@ ;i¿;7[ ;@;8"0;i o;5;6[ ;i¿;7["%;@;8"0%;i o;:	;i¿;@;;;<;[o;	;i¿;"color_gradient_fin;@;"color_gradient_fino;5;6[ ;i¿;7["%;@;8"	100%;iio;;iÀ;["background;;;i ;	[ ;@;o;3;iÀ;0;"linear-gradient;@;4{ ;[o;:	;iÀ;@;;;<;[o;	;iÀ;;;@;"too;	;iÀ;;;@;"bottomo;:	;iÀ;@;;;<;[o;3;iÀ;0;"	rgba;@;4{ ;[	o;5;6@ ;iÀ;7[ ;@;8"255;iÿo;5;6@ ;iÀ;7[ ;@;8"255;iÿo;5;6@ ;iÀ;7[ ;@;8"255;iÿo;5;6@ ;iÀ;7[ ;@;8"0;i o;5;6[ ;iÀ;7["%;@;8"0%;i o;:	;iÀ;@;;;<;[o;	;iÀ;"color_gradient_fin;@;"color_gradient_fino;5;6[ ;iÀ;7["%;@;8"	100%;iio;;iÁ;["filter;;;i ;	[ ;@;o;	;iÁ;;;@;"qprogid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#e5e5e5',GradientType=0 );@;[o;	;i¹;"sel_mainclass;@;"sel_mainclass"% .tabs-menu > *.active > .titleso;;T;iÅ;i ;	[o;;iÆ;["border-right;;;i ;	[ ;@;o;;;;@;"0;@;[o;	;iÅ;"sel_mainclass;@;"sel_mainclass" .tabs-menu > *:last-childo;;T;iÈ;i ;	[o;;iÉ;["font-size;;;i ;	[ ;@;o;;;;@;"
+1.5emo;;iÊ;["line-height;;;i ;	[ ;@;o;;;;@;"
+0.4emo;;iË;["text-transform;;;i ;	[ ;@;o;;;;@;"uppercase;@;[o;	;iÈ;"sel_mainclass;@;"sel_mainclass" .tabs-menu .titleo;;T;iÍ;i ;	[o;;iÎ;["border;;;i ;	[ ;@;o;;;;@;"0o;;iÏ;["top;;;i ;	[ ;@;o;5;6[ ;iÏ;7["px;@;8"	-2px;iùo;;iÐ;["text-align;;;i ;	[ ;@;o;;;;@;"centero;;iÑ;["border-top;;;i ;	[ ;@;o;:	;iÑ;@;;;<;[o;5;6[ ;iÑ;7["px;@;8"1px;io;	;iÑ;;;@;"
+solido;	;iÑ;"border_outer_color;@;"border_outer_coloro;;iÒ;["border-bottom;;;i ;	[ ;@;o;:	;iÒ;@;;;<;[o;5;6[ ;iÒ;7["px;@;8"1px;io;	;iÒ;;;@;"
+solido;	;iÒ;"border_outer_color;@;"border_outer_coloro;;iÓ;["background-color;;;i ;	[ ;@;o;	;iÓ;"color_gradient_fin;@;"color_gradient_fin;@;[o;	;iÍ;"sel_mainclass;@;"sel_mainclass" .tabs-contento;;T;iÕ;i ;	[o;;iÖ;["content;;;i ;	[ ;@;o;;;;@;"''o;;i×;["position;;;i ;	[ ;@;o;;;;@;"absoluteo;;i×;["display;;;i ;	[ ;@;o;;;;@;"
+blocko;;iØ;["
+width;;;i ;	[ ;@;o;;;;@;"	100%o;;iÙ;["height;;;i ;	[ ;@;o;;;;@;"	100%o;;iÚ;["border-top;;;i ;	[ ;@;o;:	;iÚ;@;;;<;[o;5;6[ ;iÚ;7["px;@;8"1px;io;	;iÚ;;;@;"
+solido;	;iÚ;"border_color;@;"border_coloro;;iÛ;["border-bottom;;;i ;	[ ;@;o;:	;iÛ;@;;;<;[o;5;6[ ;iÛ;7["px;@;8"1px;io;	;iÛ;;;@;"
+solido;	;iÛ;"border_color;@;"border_coloro;=;iÜ;0;"css_boxsizing;	[ ;@;4{ ;[ ;@;[o;	;iÕ;"sel_mainclass;@;"sel_mainclass" .tabs-content:beforeo;;T;iß;i ;	[o;;ià;["
+width;;;i ;	[ ;@;o;;;;@;"	100%o;;iá;["text-align;;;i ;	[ ;@;o;;;;@;"center;@;[o;	;iß;"sel_mainclass;@;"sel_mainclass"$ .tabs-content > .content-innero;;T;iã;i ;	[o;;iä;["text-align;;;i ;	[ ;@;o;;;;@;"	left;@;[o;	;iã;"sel_mainclass;@;"sel_mainclass"( .tabs-content > .content-inner > *o;*;iè;"menu_bg;	[ ;+0;@;,o;-	;iè;.{	;/iª;0i;1iª;2iª;@;0o;*;ié;"menu_inactive_bg;	[ ;+0;@;,o;-	;ié;.{	;/i÷;0i;1i÷;2i÷;@;0o;*;iê;"border-width;	[ ;+0;@;,o;5;6[ ;iê;7["px;@;8"2px;io;*;ië;"arrow-size;	[ ;+0;@;,o;5;6[ ;ië;7["px;@;8"5px;i
+o;*;iì;"transition-property;	[ ;+0;@;,o;	;iì;;;@;"allo;*;ií;"transition-duration;	[ ;+0;@;,o;5;6[ ;ií;7["s;@;8"	0.3s;f0.29999999999999999 33o;*;iî;"transition-timing;	[ ;+0;@;,o;	;iî;;;@;"ease-outo;*;ið;"cssselector;	[ ;+0;@;,o;	;ið;;9;@;"#.with-tooltip span:first-childo;*;iñ;"sel_tooltip;	[ ;+0;@;,o;	;iñ;;9;@;".dzstooltipo;*;iò;"sel_mainclass;	[ ;+0;@;,o;	;iò;;9;@;".dzs-tabs.skin-arrowboxo;*;iô;"menu_padding_hor;	[ ;+0;@;,o;5;6[ ;iô;7["px;@;8"	20px;io;*;iõ;"menu_padding_ver;	[ ;+0;@;,o;5;6[ ;iõ;7["px;@;8"	20px;io;*;iö;"border_color;	[ ;+0;@;,o;-	;iö;.{	;/i ;0i;1i ;2i ;@;0o;*;i÷;"border_outer_color;	[ ;+0;@;,o;3;i÷;0;"	rgba;@;4{ ;[	o;5;6@ ;i÷;7[ ;@;8"255;iÿo;5;6@ ;i÷;7[ ;@;8"255;iÿo;5;6@ ;i÷;7[ ;@;8"255;iÿo;5;6@ ;i÷;7[ ;@;8"0.4;f0.40000000000000002 ™šo;*;iø;"color_gradient_fin;	[ ;+0;@;,o;3;iø;0;"	rgba;@;4{ ;[	o;5;6@ ;iø;7[ ;@;8"248;iøo;5;6@ ;iø;7[ ;@;8"248;iøo;5;6@ ;iø;7[ ;@;8"248;iøo;5;6@ ;iø;7[ ;@;8"1;io;;T;iú;i ;	[o;;iû;["border;;;i ;	[ ;@;o;;;;@;"0o;;iü;["position;;;i ;	[ ;@;o;;;;@;"relative;@;[o;	;iú;"sel_mainclass;@;"sel_mainclasso;;T;iþ;i ;	[o;;iÿ;["	left;;;i ;	[ ;@;o;;;;@;"0%;@;[o;	;iþ;"sel_mainclass;@;"sel_mainclass".iphone-sizeo;;T;i;i ;	[o;;i;["text-align;;;i ;	[ ;@;o;;;;@;"center;@;[o;	;i;"sel_mainclass;@;"sel_mainclass" .tabs-menuo;;T;i;i ;	[o;;i;["border;;;i ;	[ ;@;o;;;;@;"0o;;i;["background;;;i ;	[ ;@;o;;;;@;"inherito;;i;["padding;;;i ;	[ ;@;o;;;;@;"	10pxo;;i;["border-radius;;;i ;	[ ;@;o;;;;@;"5pxo;;i	;["background;;;i ;	[ ;@;o;	;i	;"menu_inactive_bg;@;"menu_inactive_bgo;;i
+;["border;;;i ;	[ ;@;o;:	;i
+;@;;;<;[o;5;6[ ;i
+;7["px;@;8"1px;io;	;i
+;;;@;"
+solido;	;i
+;"border_color;@;"border_coloro;;i;["margin;;;i ;	[ ;@;o;;;;@;"10px 5px;@;[o;	;i;"sel_mainclass;@;"sel_mainclass" .tabs-menu > *o;;T;i;i ;	[o;;i;["border;;;i ;	[ ;@;o;:	;i;@;;;<;[o;5;6[ ;i;7["px;@;8"1px;io;	;i;;;@;"
+solido;	;i;"border_color;@;"border_coloro;;i;["background;;;i ;	[ ;@;o;	;i;"menu_bg;@;"menu_bg;@;[o;	;i;"sel_mainclass;@;"sel_mainclass" .tabs-menu > *.activeo;;T;i;i ;	[o;;i;["border;;;i ;	[ ;@;o;;;;@;"0o;;i;["text-align;;;i ;	[ ;@;o;;;;@;"centero;;i;["background-color;;;i ;	[ ;@;o;;;;@;"transparent;@;[o;	;i;"sel_mainclass;@;"sel_mainclass" .tabs-contento;;T;i;i ;	[o;;i;["
+width;;;i ;	[ ;@;o;;;;@;"	100%o;;i;["text-align;;;i ;	[ ;@;o;;;;@;"center;@;[o;	;i;"sel_mainclass;@;"sel_mainclass"$ .tabs-content > .content-innero;;T;i;i ;	[o;;i ;["text-align;;;i ;	[ ;@;o;;;;@;"	left;@;[o;	;i;"sel_mainclass;@;"sel_mainclass"( .tabs-content > .content-inner > *o;*;i&;"arrow-size;	[ ;+0;@;,o;5;6[ ;i&;7["px;@;8"5px;i
+o;*;i(;"cssselector;	[ ;+0;@;,o:&Sass::Script::StringInterpolation
+;i(:@aftero;	;i(;;9;@;" .tabs-menu > *.active;@:	@mido;	;i(;"sel_mainclass;@;"sel_mainclass:@beforeo;	;i(;;9;@;" o;*;i);"direction;	[ ;+0;@;,o;	;i);;9;@;"topo;
+;T;i-;0;"makearrow;	[o;*;i/;"big-arrow-size;	[ ;+0;@;,o:Sass::Script::Operation
+;i/;@;A;@:@operand2o;3;i/;0;"	ceil;@;4{ ;[o;F
+;i/;@:
+times;@;Go;	;i/;"border-width;@;"border_width:@operand1o;5;6@ ;i/;7[ ;@;8"0.6;f0.59999999999999998 33;Io;F
+;i/;@:	plus;@;Go;F
+;i/;@;H;@;Go;5;6@ ;i/;7[ ;@;8"2;i;Io;	;i/;"border-width;@;"border_width;Io;	;i/;"arrow-size;@;"arrow_sizeo;
+;i0;;;	[ ;@;[",/* -- arrows -> functional + estethic*/o;;T;i1;i ;	[o;;i2;["border;;;i ;	[ ;@;o;;;;@;"solid transparento;;i3;["position;;;i ;	[ ;@;o;;;;@;"absoluteo;;i4;["pointer-events;;;i ;	[ ;@;o;;;;@;"	noneo;;i5;["content;;;i ;	[ ;@;o;;;;@;"" "o;;i6;["height;;;i ;	[ ;@;o;;;;@;"0o;;i7;["
+width;;;i ;	[ ;@;o;;;;@;"0;@;[	o;	;i1;"cssselector;@;"cssselector":after, o;	;i1;"cssselector;@;"cssselector":beforeo;;T;i;;i ;	[o;;i<;["border-color;;;i ;	[ ;@;o;3;i<;0;"	rgba;@;4{ ;[	o;5;6@ ;i<;7[ ;@;8"136;iˆo;5;6@ ;i<;7[ ;@;8"183;i·o;5;6@ ;i<;7[ ;@;8"213;iÕo;5;6@ ;i<;7[ ;@;8"0;i o;;i=;["border-width;;;i ;	[ ;@;o;	;i=;"arrow-size;@;"arrow_size;@;[o;	;i;;"cssselector;@;"cssselector":aftero;;T;i@;i ;	[o;;iA;["border-color;;;i ;	[ ;@;o;3;iA;0;"	rgba;@;4{ ;[	o;5;6@ ;iA;7[ ;@;8"194;iÂo;5;6@ ;iA;7[ ;@;8"225;iáo;5;6@ ;iA;7[ ;@;8"245;iõo;5;6@ ;iA;7[ ;@;8"0;i o;;iB;["border-width;;;i ;	[ ;@;o;	;iB;"big-arrow-size;@;"big_arrow_size;@;[o;	;i@;"cssselector;@;"cssselector":beforeu:Sass::Tree::IfNodeí[o:Sass::Script::Operation
+:
+@lineiD:@operator:eq:@options{ :@operand2o:Sass::Script::String	;iD:
+@type:string;	@:@value"bottom:@operand1o:Sass::Script::Variable	;iD:
+@name"direction;	@:@underscored_name"direction0[o:Sass::Tree::RuleNode:@has_childrenT;iE:
+@tabsi :@children[o:Sass::Tree::PropNode;iF;["top:@prop_syntax:new;i ;[ ;	@;o;;:identifier;	@;"	100%;	@:
+@rule[	o;	;iE;"cssselector;	@;"cssselector":after, o;	;iE;"cssselector;	@;"cssselector":beforeo;;T;iH;i ;[o;;iI;["border-top-color;;;i ;[ ;	@;o;	;iI;"main-color;	@;"main_coloro;;iJ;["	left;;;i ;[ ;	@;o;;;;	@;"50%o;;iK;["margin-left;;;i ;[ ;	@;o:!Sass::Script::UnaryOperation	:@operando;	;iK;"arrow-size;	@;"arrow_size;iK;:
+minus;	@;	@;[o;	;iH;"cssselector;	@;"cssselector":aftero;;T;iM;i ;[o;;iN;["border-top-color;;;i ;[ ;	@;o;	;iN;"second-color;	@;"second_coloro;;iO;["	left;;;i ;[ ;	@;o;;;;	@;"50%o;;iP;["margin-left;;;i ;[ ;	@;o;	;o;	;iP;"big-arrow-size;	@;"big_arrow_size;iP;;;	@;	@;[o;	;iM;"cssselector;	@;"cssselector":beforeu;Kó[o:Sass::Script::Operation
+:
+@lineiS:@operator:eq:@options{ :@operand2o:Sass::Script::String	;iS:
+@type:string;	@:@value"top:@operand1o:Sass::Script::Variable	;iS:
+@name"direction;	@:@underscored_name"direction0[o:Sass::Tree::RuleNode:@has_childrenT;iT:
+@tabsi :@children[o:Sass::Tree::PropNode;iU;["bottom:@prop_syntax:new;i ;[ ;	@;o;;:identifier;	@;"	100%;	@:
+@rule[	o;	;iT;"cssselector;	@;"cssselector":after, o;	;iT;"cssselector;	@;"cssselector":beforeo;;T;iW;i ;[o;;iX;["border-bottom-color;;;i ;[ ;	@;o;	;iX;"main-color;	@;"main_coloro;;iY;["	left;;;i ;[ ;	@;o;;;;	@;"50%o;;iZ;["margin-left;;;i ;[ ;	@;o:!Sass::Script::UnaryOperation	:@operando;	;iZ;"arrow-size;	@;"arrow_size;iZ;:
+minus;	@;	@;[o;	;iW;"cssselector;	@;"cssselector":aftero;;T;i\;i ;[o;;i];["border-bottom-color;;;i ;[ ;	@;o;	;i];"second-color;	@;"second_coloro;;i^;["	left;;;i ;[ ;	@;o;;;;	@;"50%o;;i_;["margin-left;;;i ;[ ;	@;o;	;o;	;i_;"big-arrow-size;	@;"big_arrow_size;i_;;;	@;	@;[o;	;i\;"cssselector;	@;"cssselector":before;@;[[o;;"cssselector;@;"cssselector0[o;;"direction;@;"direction0[o;;"arrow-size;@;"arrow_size0[o;;"border-width;@;"border_width0[o;;"main-color;@;"main_color0[o;;"second-color;@;"second_color0o;=;id;0;"makearrow;	[ ;@;4{ ;[o;	;id;"cssselector;@;"cssselectoro;	;id;"direction;@;"directiono;	;id;"arrow-size;@;"arrow_sizeo;	;id;"border-width;@;"border_widtho;	;id;"menu_bg;@;"menu_bgo;	;id;"border_color;@;"border_color;@
