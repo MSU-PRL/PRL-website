@@ -6,9 +6,9 @@
 ### How to modify CSS:
 *This section applies **only** to the following files: prlCustomCSS-2020.scss/.css/.min.css, prlComponents.scss, and prlCNSOverrides.scss. Ignore all files related to the jQuery timeline.* 
  * **Custom styles are written in the prlCustomCSS-2020.scss file**. This is the core styles file, written in SCSS, which allows for consistent design of components. This file imports two other .scss files, which also can be modified:
-    * **prlComponents.scss**: for custom components(colors, cards, buttons, etc.)
+    * **prlComponents.scss**: for custom components (colors, cards, buttons, etc.)
     * **prlCNSOverrides.scss**
-* **Compile and minimize the SCSS file into prlCustomCSS-2020.min.css**.
+* **Compile and minimize the base prlCustomCSS-2020.scss file into prlCustomCSS-2020.min.css**.
 * **Copy and paste the code from the minimized file into Mura's dedicated custom CSS file, called  prlCustomCSS.css**. This file is found in Mura's File Manager, under *prl_User_Assets/File/websiteTheme/prlCustomCSS.css*. Right click on it, choose 'Edit', paste the code, and save your changes.
 * **Do not change the name of the prlCustomCSS.css file in Mura**. Otherwise, CSS will not load.
 * **CSS files in this repository are also found on the PRL server.** 
