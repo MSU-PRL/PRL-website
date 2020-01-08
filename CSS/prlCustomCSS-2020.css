@@ -7194,7 +7194,7 @@ aside {
   .about .mainCol section.prl-about-what {
     color: #666;
     font-weight: 300; }
-    .about .mainCol section.prl-about-what .row {
+    .about .mainCol section.prl-about-what .prl-row {
       margin: 160px 0; }
     .about .mainCol section.prl-about-what .prl-about-what-first-row {
       margin-top: 100px !important; }
@@ -7268,7 +7268,7 @@ aside {
     max-width: 50%; }
   .about .mainCol blockquote {
     margin: -10px auto; }
-  .about .mainCol section.prl-about-what .row {
+  .about .mainCol section.prl-about-what .prl-row {
     margin: 90px 0; } }
 
 @media (max-width: 767px) {
@@ -7291,7 +7291,7 @@ aside {
       font-size: 1.2rem !important; }
   .about .mainCol section.prl-about-what .prl-about-what-first-row {
     margin-top: 65px; }
-  .about .mainCol section.prl-about-what .row {
+  .about .mainCol section.prl-about-what .prl-row {
     margin: 65px 0 !important; }
   .about .mainCol section.prl-about-what h3 {
     font-size: 1.55rem; }
