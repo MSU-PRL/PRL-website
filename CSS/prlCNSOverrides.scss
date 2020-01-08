@@ -1,0 +1,412 @@
+/* --------------------------------------------------------
+        CNS STYLING OVERRIDES
+-------------------------------------------------------- */
+
+/* TEXT WHITE SPACE
+-------------------------------------------------------- */
+
+blockquote ol:last-child,
+blockquote p:last-child,
+blockquote ul:last-child {
+  // Reverts to default Natsci blockquote, except for removing all-caps
+  margin-bottom: initial !important;
+  font-size: 1.5rem !important;
+  color: #333;
+  font-weight: 400;
+  text-transform: none;
+  line-height: 1.4 !important;
+}
+
+#MainContent,
+aside {
+  // For all text, making for nice white space!
+  line-height: 1.6;
+  letter-spacing: 0.05px;
+  b,
+  strong {
+    // Makes bold text black, for more contrast
+    color: $x-dark-grey-text;
+  }
+  .mainColContent,
+  div.mura-region {
+    // For main content area so it does not affect the side columns
+    p,
+    ul,
+    ol {
+      // Adding white space to text, for legibility
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.depth-2.internal-resources,
+.depth-1.people,
+.depth-1.news-events,
+.depth-1.research-tech,
+.depth-1.graduate-program,
+.depth-4.communications-department-resources {
+  // Font styles for Mura folder display. Currently used on "News & Events," "People," and "Internal Resources"
+  .mura-index {
+    .title {
+      font-size: 23px;
+      font-size: 1.45rem;
+    }
+  }
+}
+
+#about.contact-us .mainColContent p {
+  // The address by the map on the Contact Us page needs smaller font
+  line-height: 1.4;
+}
+
+#MainContent #crumblist {
+  // Nav Crumblist in body reverts to original line height
+  line-height: 1.4;
+}
+
+@media (min-width: 1400px) {
+  // Extra large screens
+  #MainContent,
+  aside {
+    letter-spacing: -0.1px;
+  }
+  #MainContent {
+    .mainColContent,
+    div.mura-region {
+      // For main content area so it does not affect the side columns
+      p,
+      ul,
+      ol {
+        // Adding white space to text, for legibility
+        font-size: 16.5px;
+        line-height: 1.7;
+      }
+    }
+  }
+  .depth-2.internal-resources,
+  .depth-1.people,
+  .depth-1.news-events,
+  .depth-1.research-tech,
+  .depth-1.graduate-program,
+  .depth-4.communications-department-resources {
+    // Font styles for Mura folder display. Currently used on "News & Events," "People," and "Internal Resources"
+    .mura-index {
+      p,
+      ul,
+      ol {
+        font-size: 16.5px;
+      }
+    }
+  }
+}
+
+/* TEXT WHITE SPACE IN NEWS CONTENT AREAS
+-------------------------------------------------------- */
+
+#newsevents.depth-3 {
+  #MainContent {
+    div.mura-region p {
+      // For News stories, more spaces between paragraphs at tablet and desktop sizes
+      margin-bottom: 24px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  #newsevents.depth-3 {
+    #MainContent {
+      div.mura-region p {
+        // For News stories, returns to default 20px margin between paragraphs
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+/* HERO IMAGE POSITIONING AND TEXT STYLE: GENERAL STYLES AND LAPTOPS
+-------------------------------------------------------- */
+
+#homepage {
+  .coverImage {
+    min-height: 450px !important;
+    height: 72.5vh !important;
+    .heroAlternateImageHeadingsContainer {
+      // Font weight for Hero Text
+      .heroAlternateImageHeading {
+        font-weight: 500; // Increasing font weight so text stands out
+        text-shadow: 0 0 3px #000, 0 0 3px #000, 0 0 3px #000, 0 0 3px #000, 0 0 3px #000, 0 0 3px #000, 0 0 3px #000, 0 0 3px #000, 0 0 3px #000, 0 0 3px #000, 0 0 3px #000, 0 0 3px #000, 0 0 3px #000, 0 0 3px #000, 0 0 3px #000, 0 0 3px #000, 0 0 3px #000, 0 0 3px #000, 0 0 3px #000, 0 0 3px #000;
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  // Large screens: hero image and text positioning
+  .coverImage {
+    background-position: center -50px !important;
+  }
+  #homepage {
+    .coverImage {
+      .heroAlternateImageHeadingsContainer {
+        .heroAlternateImageHeading {
+          // Changing size and position of hero text to fit screen elegantly
+          font-size: 3.75rem;
+          width: 40rem;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) and (max-height: 800px) {
+  // For 1280 x 800 laptops and 'short' screen sizes
+  #homepage {
+    .coverImage {
+      .heroAlternateImageHeadingsContainer {
+        // Adjusting placement of hero text
+        top: 20px !important;
+      }
+    }
+  }
+}
+
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (-webkit-min-device-pixel-ratio: 2), screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+  // Retina Laptops
+  .coverImage {
+    background-position: center 0px !important;
+  }
+  #homepage {
+    .coverImage {
+      .heroAlternateImageHeadingsContainer {
+        top: 20px !important;
+        .heroAlternateImageHeading {
+          // Hero text smaller
+          font-size: 3.25rem;
+          width: 35rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+  // Medium Laptop, non-Retina
+  .coverImage {
+    background-position: center 0px !important;
+  }
+  #homepage {
+    .coverImage {
+      .heroAlternateImageHeadingsContainer {
+        top: 20px !important;
+        .heroAlternateImageHeading {
+          // Hero text smaller
+          font-size: 3.25rem;
+          width: 35rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1320px) {
+  // Large screens: to override CNS hero image style
+  .coverImage {
+    background-position: center -10px !important;
+  }
+}
+
+@media (min-width: 1400px) and (max-width: 1999px) {
+  // Large screens: hero text positioning
+  #homepage {
+    .coverImage {
+      .heroAlternateImageHeadingsContainer {
+        left: -50px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  // XL screens: Hero Text positioning
+  #homepage {
+    .coverImage {
+      .heroAlternateImageHeadingsContainer {
+        top: 100px !important; // Redundancy, in case CNS code changes position
+      }
+    }
+  }
+}
+
+@media (min-width: 2000px) {
+  // XL screens: Hero Text centered
+  #homepage {
+    .coverImage {
+      .heroAlternateImageHeadingsContainer {
+        .heroAlternateImageHeading {
+          // Changing size and position of hero text to fit screen elegantly
+          width: 57%;
+          margin: 0 auto;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+/* HERO IMAGE POSITIONING AND TEXT STYLE: TABLETS
+-------------------------------------------------------- */
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  // Tablet
+  #homepage {
+    .coverImage {
+      height: 60vh !important;
+      .heroAlternateImageHeadingsContainer {
+        top: 50px;
+        .heroAlternateImageHeading {
+          font-size: 3.25rem;
+          text-align: center;
+          margin-left: auto;
+          margin-right: auto;
+          padding-bottom: 4rem; // Adding padding to bottom of hero text when space is tight
+        }
+      }
+    }
+  }
+}
+
+/* Targeting iPADs */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  .coverImage {
+    background-size: auto !important;
+    background-position: center -100px !important;
+    background-attachment: local !important; // Solves a mobile Safari issue where the background image zooms in dramatically if background attachment = "fixed"
+  }
+}
+
+/* HERO IMAGE POSITIONING AND TEXT STYLE: MOBILES
+-------------------------------------------------------- */
+
+@media (max-width: 767px) {
+  // Mobile
+  .coverImage {
+    background-position: right 0px !important;
+    background-attachment: local !important; // Solves a mobile Safari issue where the background image zooms in dramatically if background attachment = "fixed"
+    background-size: auto !important;
+  }
+  #homepage {
+    .coverImage {
+      min-height: 65vh !important;
+      height: auto !important;
+      .heroAlternateImageHeadingsContainer {
+        .heroAlternateImageHeading {
+          // Hero text smaller, padding on top and bottom for smaller mobile sizes
+          font-size: 2.5rem;
+          padding: 1rem 0 2rem 0;
+          width: 100%;
+          font-weight: 500; // Increasing font weight so text stands out
+        }
+      }
+    }
+  }
+}
+
+/* PRL LINK STYLES
+-------------------------------------------------------- */
+
+.mura-index a,
+.mura-object-content a {
+  // Link text-decoration styling for asides
+  text-decoration: none;
+  color: $natsci-complementary; // transition: $tran-short;
+  border-bottom: 1px solid $natsci-complementary;
+  &:hover {
+    color: $natsci-complementary-lighter;
+    border-bottom: 0px solid transparent;
+  }
+}
+
+#MainContent a {
+  // All link text-decoration styling, except asides and breadcrumbs
+  text-decoration: none;
+  color: $natsci-complementary; // transition: $tran-short;
+  border-bottom: 1px solid $natsci-complementary;
+  &:hover {
+    color: $natsci-complementary-lighter;
+    border-bottom: 0px solid transparent;
+  }
+}
+
+#MainContent {
+  dd.image a,
+  .image a,
+  #svAsset,
+  .social-share a {
+    // MURA INDEX IMAGES: Override new link display
+    border-bottom: none;
+  }
+  nav a,
+  .view-all {
+    // Keeps nav and "View All" type buttons styling as intended by CNS*/
+    color: $msu-color;
+    text-decoration: underline;
+    border-bottom: none;
+    &:hover {
+      text-decoration: none;
+      border-bottom: none;
+    }
+  }
+}
+
+.pagination a,
+#navSequential a {
+  // PAGINATION: Override new link display
+  color: $msu-color !important;
+  text-decoration: none !important;
+  border: 1px solid #ddd !important;
+}
+
+.breadcrumb a {
+  // Keeps breadcrumb styling as intended by CNS
+  @extend .view-all;
+  font-weight: 400 !important; // Overrides any other font-weight decisions in body
+}
+
+/* <CODE> tag style
+-------------------------------------------------------- */
+
+.prl-code-area {
+  // Optional div area where the :before "markup" tagline stays within the div (see below)
+  position: relative;
+  code {
+    display: block;
+    padding: 16px;
+    max-height: 230px;
+    overflow: auto;
+    margin: 20px 0 50px;
+    position: relative;
+    background-color: #f5f2f0;
+    &:before {
+      content: 'markup';
+      color: black;
+      background-color: #CFCFCF;
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-size: 0.75rem;
+      border-radius: 0 0 0 5px;
+      padding: 0.25rem 0.75rem;
+      text-shadow: none;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .prl-code-area {
+    code {
+      padding-top: 30px;
+    }
+  }
+}

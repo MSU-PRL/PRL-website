@@ -1,3 +1,4 @@
+- create new SCSS components file and remove from prlCustomCSS-2020.scss
 - Update site CSS to remove Bootstrap on the following pages: About, Contact Us, Research Projects, CAAPP, Grad Students (table), Postdocs (table)
 - Add animation to accordion
 - Use Natsci accessibility audit tool
