@@ -662,10 +662,11 @@
     }
     section.prl-about-essence {
       .prl-row {
-        .prl-essence-item {
+        .prl-about-essence-item {
           // Styling each individual brand essence
           -ms-flex-preferred-size: 33.333333%;
           flex-basis: 33.333333%;
+          max-width: 33.333333%;
           padding-left: 15px;
           padding-right: 15px;
           @extend .prl-internal-logo-content-area;
@@ -690,11 +691,11 @@
           // Styling the logo
           @extend .prl-internal-logo-svg;
         }
-        span.prl-essence-title {
+        span.prl-about-essence-title {
           // Styling the title
           @extend .prl-internal-logo-content-title;
         }
-        span.prl-essence-description {
+        span.prl-about-essence-description {
           // Styling the description
           @extend .prl-internal-logo-content-description;
         }
@@ -706,21 +707,28 @@
       font-weight: 300;
       .prl-row {
         // Keeps each of the driver brands separate
-        margin: 160px 0;
+        margin-top: 160px;
+        margin-bottom: 160px;
       }
-      .prl-about-what-first-row {
+      .prl-row[about-what-row="first"] {
         // First driver brand closer to title
-        margin-top: 100px !important;
+        margin-top: 100px;
       }
-      div.col-md-7.col-sm-12 {
-        // Divs with images have no padding
-        padding: 0;
+      .prl-about-what-img {
+        // Images span two thirds of container
+        flex: 0 0 58.333333%;
+        max-width: 0 0 58.333333%;
       }
-      .prl-about-what-text-right {
+      .prl-about-what-text {
+        //Text containers span one third of container
+        flex: 0 0 41.666667%;
+        max-width: 41.666667%;
+      }
+      .prl-row[about-what-row="first"] .prl-about-what-text, .prl-row[about-what-row="third"] .prl-about-what-text {
         // Divs with text have padding to separate from images
         padding: 15px 0px 15px 40px;
       }
-      .prl-about-what-text-left {
+      .prl-row[about-what-row="second"] .prl-about-what-text {
         // Divs with text have padding to separate from images
         padding: 15px 40px 15px 0px;
       }
@@ -778,10 +786,18 @@
         }
       }
     }
-    .prl-about-logos {
+    section.prl-about-funders {
+      // Align all logos in the center of their containers
       text-align: center;
-      .col-xs-12 {
+      .prl-about-funders-logos > div {
+        // Lining up 4 non-DOE BES logos per line
+        width: 25%;
+        height: 125px;
+        float: left;
+      }
+      .prl-about-funders-logos > div:first-child {
         // Main DOE-BES logo separated from the rest of the logos
+        width: 100%;
         margin-bottom: 35px;
         margin-top: 60px;
         small {
@@ -804,12 +820,6 @@
           }
         }
       }
-      .prl-funder-logo {
-        // Lining up 4 non-DOE BES logos per line
-        width: 25%;
-        height: 125px;
-        float: left;
-      }
     }
   }
 }
@@ -825,7 +835,7 @@
       }
       section.prl-about-essence {
         .prl-row {
-          .prl-essence-item {
+          .prl-about-essence-item {
             // Each essence item spans half the page
             flex-basis: 50%;
             max-width: 50%;
@@ -836,8 +846,19 @@
         margin: -10px auto;
       }
       section.prl-about-what {
-        .prl-row {
-          margin: 90px 0;
+        .prl-row, .prl-row[about-what-row="first"] {
+          //Margin for each row of 'what we do' section
+          margin-top: 90px;
+          margin-bottom: 90px;
+        }
+        .prl-row > div {
+          // Adding padding from edge of screen for phone and tablet
+          padding: 0 15px !important;
+        }
+        .prl-about-what-img, .prl-about-what-text {
+          // Images and text containers EACH span half the row container
+          flex: 0 0 50% !important;
+          max-width: 50% !important;
         }
       }
     }
@@ -877,17 +898,21 @@
         }
       }
       section.prl-about-what {
-        .prl-about-what-first-row {
-          margin-top: 65px;
-        }
         .prl-row {
-          margin: 65px 0 !important;
+          margin-top: 65px !important;
+          margin-bottom: 65px !important;
         }
         h3 {
           font-size: 1.55rem;
         }
-        .prl-about-what-text-right, .prl-about-what-text-left {
-          padding: 0 15px;
+        .prl-about-what-img, .prl-about-what-text {
+          // Images and text containers each span the entire row container
+          flex: 0 0 100% !important;
+          max-width: 100% !important;
+        }
+        .prl-row[about-what-row="second"] .prl-about-what-text {
+          // Flexbox - push text below image on mobile
+          order: 1;
         }
         img {
           margin-bottom: 30px;
@@ -896,13 +921,18 @@
       section.prl-about-essence {
         // Each essence item spans entire container
         .prl-row {
-          .prl-essence-item {
+          .prl-about-essence-item {
             flex-basis: 100%;
             max-width: 100%;
           }
         }
       }
-      .prl-about-logos {
+      section.prl-about-funders {
+        .prl-about-funders-logos > div {
+          // 2 non-DOE BES logos per line
+          width: 45%;
+          margin-right: 5%;
+        }
         a {
           height: 115px;
           img {
@@ -910,11 +940,6 @@
             margin-left: 0 !important;
             margin-right: 0 !important;
           }
-        }
-        .prl-funder-logo {
-          // 2 non-DOE BES logos per line
-          width: 45%;
-          margin-right: 5%;
         }
       }
     }
