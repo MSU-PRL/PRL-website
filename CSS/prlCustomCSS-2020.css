@@ -6149,16 +6149,16 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
   height: 45px;
   margin-bottom: 18px; }
 
-.prl-internal-logo-content-area, .about .mainCol section.prl-about-essence .prl-row .prl-essence-item, .graduate-program-overview #MainContent section.prl-grad-puv .prl-grad-icon {
+.prl-internal-logo-content-area, .about .mainCol section.prl-about-essence .prl-row .prl-about-essence-item, .graduate-program-overview #MainContent section.prl-grad-puv .prl-grad-icon {
   margin: 36px 0; }
 
-.prl-internal-logo-content-title, .about .mainCol section.prl-about-essence .prl-row span.prl-essence-title, .graduate-program-overview #MainContent section.prl-grad-puv span.prl-grad-puv-title {
+.prl-internal-logo-content-title, .about .mainCol section.prl-about-essence .prl-row span.prl-about-essence-title, .graduate-program-overview #MainContent section.prl-grad-puv span.prl-grad-puv-title {
   font-weight: 900;
   color: #111;
   display: block;
   margin-bottom: 12px; }
 
-.prl-internal-logo-content-description, .about .mainCol section.prl-about-essence .prl-row span.prl-essence-description, .graduate-program-overview #MainContent section.prl-grad-puv span.prl-grad-puv-description {
+.prl-internal-logo-content-description, .about .mainCol section.prl-about-essence .prl-row span.prl-about-essence-description, .graduate-program-overview #MainContent section.prl-grad-puv span.prl-grad-puv-description {
   font-weight: 300;
   color: #666;
   font-size: 1rem;
@@ -6169,7 +6169,7 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
   .prl-internal-logo-svg, .about .mainCol section.prl-about-essence .prl-row svg, .graduate-program-overview #MainContent section.prl-grad-puv svg {
     height: 40px;
     margin-bottom: 15px; }
-  .prl-internal-logo-content-area, .about .mainCol section.prl-about-essence .prl-row .prl-essence-item, .graduate-program-overview #MainContent section.prl-grad-puv .prl-grad-icon {
+  .prl-internal-logo-content-area, .about .mainCol section.prl-about-essence .prl-row .prl-about-essence-item, .graduate-program-overview #MainContent section.prl-grad-puv .prl-grad-icon {
     margin: 25px 0 !important; } }
 
 /* -------------------------------------------------------------
@@ -7172,9 +7172,10 @@ aside {
     margin: 150px 0; }
   .about .mainCol section:first-child {
     margin-top: 0px; }
-  .about .mainCol section.prl-about-essence .prl-row .prl-essence-item {
+  .about .mainCol section.prl-about-essence .prl-row .prl-about-essence-item {
     -ms-flex-preferred-size: 33.333333%;
     flex-basis: 33.333333%;
+    max-width: 33.333333%;
     padding-left: 15px;
     padding-right: 15px; }
   .about .mainCol section.prl-about-essence .prl-row div:last-child {
@@ -7195,14 +7196,23 @@ aside {
     color: #666;
     font-weight: 300; }
     .about .mainCol section.prl-about-what .prl-row {
-      margin: 160px 0; }
-    .about .mainCol section.prl-about-what .prl-about-what-first-row {
-      margin-top: 100px !important; }
-    .about .mainCol section.prl-about-what div.col-md-7.col-sm-12 {
-      padding: 0; }
-    .about .mainCol section.prl-about-what .prl-about-what-text-right {
+      margin-top: 160px;
+      margin-bottom: 160px; }
+    .about .mainCol section.prl-about-what .prl-row[about-what-row="first"] {
+      margin-top: 100px; }
+    .about .mainCol section.prl-about-what .prl-about-what-img {
+      -webkit-box-flex: 0;
+          -ms-flex: 0 0 58.333333%;
+              flex: 0 0 58.333333%;
+      max-width: 0 0 58.333333%; }
+    .about .mainCol section.prl-about-what .prl-about-what-text {
+      -webkit-box-flex: 0;
+          -ms-flex: 0 0 41.666667%;
+              flex: 0 0 41.666667%;
+      max-width: 41.666667%; }
+    .about .mainCol section.prl-about-what .prl-row[about-what-row="first"] .prl-about-what-text, .about .mainCol section.prl-about-what .prl-row[about-what-row="third"] .prl-about-what-text {
       padding: 15px 0px 15px 40px; }
-    .about .mainCol section.prl-about-what .prl-about-what-text-left {
+    .about .mainCol section.prl-about-what .prl-row[about-what-row="second"] .prl-about-what-text {
       padding: 15px 40px 15px 0px; }
     .about .mainCol section.prl-about-what h3 {
       color: #2E4D4D; }
@@ -7235,41 +7245,50 @@ aside {
       font-weight: 300;
       letter-spacing: 0.3px;
       color: #666; }
-  .about .mainCol .prl-about-logos {
+  .about .mainCol section.prl-about-funders {
     text-align: center; }
-    .about .mainCol .prl-about-logos .col-xs-12 {
-      margin-bottom: 35px;
-      margin-top: 60px; }
-      .about .mainCol .prl-about-logos .col-xs-12 small {
-        display: block;
-        color: #757575;
-        margin-top: 4px; }
-    .about .mainCol .prl-about-logos a {
-      border-bottom: 0px solid transparent !important; }
-      .about .mainCol .prl-about-logos a img {
-        -webkit-transition: 0.4s;
-        transition: 0.4s; }
-        .about .mainCol .prl-about-logos a img:hover {
-          -webkit-filter: grayscale(100%);
-          filter: grayscale(100%); }
-    .about .mainCol .prl-about-logos .prl-funder-logo {
+    .about .mainCol section.prl-about-funders .prl-about-funders-logos > div {
       width: 25%;
       height: 125px;
       float: left; }
+    .about .mainCol section.prl-about-funders .prl-about-funders-logos > div:first-child {
+      width: 100%;
+      margin-bottom: 35px;
+      margin-top: 60px; }
+      .about .mainCol section.prl-about-funders .prl-about-funders-logos > div:first-child small {
+        display: block;
+        color: #757575;
+        margin-top: 4px; }
+    .about .mainCol section.prl-about-funders a {
+      border-bottom: 0px solid transparent !important; }
+      .about .mainCol section.prl-about-funders a img {
+        -webkit-transition: 0.4s;
+        transition: 0.4s; }
+        .about .mainCol section.prl-about-funders a img:hover {
+          -webkit-filter: grayscale(100%);
+          filter: grayscale(100%); }
 
 @media (max-width: 991px) {
   .about .mainCol .zoomtimeline {
     margin-bottom: 120px; }
   .about .mainCol section {
     margin: 120px 0; }
-  .about .mainCol section.prl-about-essence .prl-row .prl-essence-item {
+  .about .mainCol section.prl-about-essence .prl-row .prl-about-essence-item {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
     max-width: 50%; }
   .about .mainCol blockquote {
     margin: -10px auto; }
-  .about .mainCol section.prl-about-what .prl-row {
-    margin: 90px 0; } }
+  .about .mainCol section.prl-about-what .prl-row, .about .mainCol section.prl-about-what .prl-row[about-what-row="first"] {
+    margin-top: 90px;
+    margin-bottom: 90px; }
+  .about .mainCol section.prl-about-what .prl-row > div {
+    padding: 0 15px !important; }
+  .about .mainCol section.prl-about-what .prl-about-what-img, .about .mainCol section.prl-about-what .prl-about-what-text {
+    -webkit-box-flex: 0 !important;
+        -ms-flex: 0 0 50% !important;
+            flex: 0 0 50% !important;
+    max-width: 50% !important; } }
 
 @media (max-width: 767px) {
   .about .mainCol .pageTitle {
@@ -7289,28 +7308,34 @@ aside {
     margin: -10px auto !important; }
     .about .mainCol blockquote p {
       font-size: 1.2rem !important; }
-  .about .mainCol section.prl-about-what .prl-about-what-first-row {
-    margin-top: 65px; }
   .about .mainCol section.prl-about-what .prl-row {
-    margin: 65px 0 !important; }
+    margin-top: 65px !important;
+    margin-bottom: 65px !important; }
   .about .mainCol section.prl-about-what h3 {
     font-size: 1.55rem; }
-  .about .mainCol section.prl-about-what .prl-about-what-text-right, .about .mainCol section.prl-about-what .prl-about-what-text-left {
-    padding: 0 15px; }
+  .about .mainCol section.prl-about-what .prl-about-what-img, .about .mainCol section.prl-about-what .prl-about-what-text {
+    -webkit-box-flex: 0 !important;
+        -ms-flex: 0 0 100% !important;
+            flex: 0 0 100% !important;
+    max-width: 100% !important; }
+  .about .mainCol section.prl-about-what .prl-row[about-what-row="second"] .prl-about-what-text {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1; }
   .about .mainCol section.prl-about-what img {
     margin-bottom: 30px; }
-  .about .mainCol section.prl-about-essence .prl-row .prl-essence-item {
+  .about .mainCol section.prl-about-essence .prl-row .prl-about-essence-item {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     max-width: 100%; }
-  .about .mainCol .prl-about-logos a {
-    height: 115px; }
-    .about .mainCol .prl-about-logos a img {
-      margin-left: 0 !important;
-      margin-right: 0 !important; }
-  .about .mainCol .prl-about-logos .prl-funder-logo {
+  .about .mainCol section.prl-about-funders .prl-about-funders-logos > div {
     width: 45%;
-    margin-right: 5%; } }
+    margin-right: 5%; }
+  .about .mainCol section.prl-about-funders a {
+    height: 115px; }
+    .about .mainCol section.prl-about-funders a img {
+      margin-left: 0 !important;
+      margin-right: 0 !important; } }
 
 /* --------------------------------------------------------
                 BRAND GUIDES PAGES
@@ -7682,7 +7707,9 @@ div.prl-research-highlights .last.hasImage {
   div.prl-research-highlights .hasImage {
     display: -ms-grid;
     display: grid;
-        grid-template-areas: "tt tt im im im" "sm sm im im im" "dt tg tg tg . ";
+        grid-template-areas: "tt tt im im im"
+ "sm sm im im im"
+ "dt tg tg tg . ";
     -ms-grid-columns: [col] auto 1fr (9%)[3];
         grid-template-columns: [col] auto 1fr repeat(3, 9%);
     padding: 16px !important;

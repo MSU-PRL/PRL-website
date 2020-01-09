@@ -1,4 +1,4 @@
-- Update site CSS to remove Bootstrap on the following pages: About, Contact Us, Research Projects, CAAPP, Grad Students (table), Postdocs (table)
+- Update site CSS to remove Bootstrap on the following pages: Contact Us, Research Projects, CAAPP, Grad Students (table), Postdocs (table)
 - Add animation to accordion
 - Use Natsci accessibility audit tool
 - PRL About page additions: add inline navigation, maybe smaller hero image, add DOE BER (or remove BES), add prominent alumni/findings
