@@ -1069,6 +1069,33 @@
   }
 }
 
+/* --------------------------------------------------------
+                CONTACT US PAGE
+-------------------------------------------------------- */
+
+@media (min-width: 768px) {
+  // Large screen side-by-side layout for address and map
+  .prl-contact-address {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+  .prl-contact-map {
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%;
+  }
+}
+
+.prl-contact-area {
+  //Set distance with page title
+  margin-top: 32px;
+}
+
+.prl-contact-address, .prl-contact-map {
+  padding-right: 15px;
+  padding-left: 15px;
+  flex-grow: 1; //fill the container when each of these divs takes on an entire line
+}
+
 /* ---------------------------------------------------------------
                 MAIN NEWS / RESEARCH HIGHLIGHTS PAGES: LAYOUT
 --------------------------------------------------------------- */

@@ -21,6 +21,7 @@ The History Timeline on the <a href="https://prl.natsci.msu.edu/about/">About pa
 **Warning:** due to the way Mura's inline editor works, make sure to edit the .html files in an external code editor. Front-end editing might break certain features.
 ### .html file listing and links to web pages:
 * **PRL-about-page.html:** <a href="https://prl.natsci.msu.edu/about/">About page</a>
+* **PRL-contact-us.html:** <a href="https://prl.natsci.msu.edu/about/contact/">Contact Us page</a>
 * **PRL-CAAPP-overview-page.html:**  <a href="https://prl.natsci.msu.edu/research-tech/center-for-advanced-algal-and-plant-phenotyping/">CAAPP Overview page</a>
 * **PRL-graduate-program-overview-page.html:**  <a href="https://prl.natsci.msu.edu/graduate-program/graduate-program-overview/">Graduate Program Overview page</a>
 * **PRL-card-markup.html:** Markup for all the PRL card styles, also found on the PRL <a href="https://prl.natsci.msu.edu/about/internal-resources/brand-guides/communications-department-resources/web-components-demo/">Web Components Demo page</a> under the *Cards* section.
