@@ -7426,6 +7426,31 @@ aside {
   .prl-community-brand-toolkit .sideCol, .web-components-demo .sideCol {
     display: none; } }
 
+/* --------------------------------------------------------
+                CONTACT US PAGE
+-------------------------------------------------------- */
+@media (min-width: 768px) {
+  .prl-contact-address {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.333333%;
+            flex: 0 0 33.333333%;
+    max-width: 33.333333%; }
+  .prl-contact-map {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 66.666667%;
+            flex: 0 0 66.666667%;
+    max-width: 66.666667%; } }
+
+.prl-contact-area {
+  margin-top: 32px; }
+
+.prl-contact-address, .prl-contact-map {
+  padding-right: 15px;
+  padding-left: 15px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1; }
+
 /* ---------------------------------------------------------------
                 MAIN NEWS / RESEARCH HIGHLIGHTS PAGES: LAYOUT
 --------------------------------------------------------------- */
@@ -7707,9 +7732,7 @@ div.prl-research-highlights .last.hasImage {
   div.prl-research-highlights .hasImage {
     display: -ms-grid;
     display: grid;
-        grid-template-areas: "tt tt im im im"
- "sm sm im im im"
- "dt tg tg tg . ";
+        grid-template-areas: "tt tt im im im" "sm sm im im im" "dt tg tg tg . ";
     -ms-grid-columns: [col] auto 1fr (9%)[3];
         grid-template-columns: [col] auto 1fr repeat(3, 9%);
     padding: 16px !important;
