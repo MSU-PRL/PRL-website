@@ -6116,7 +6116,7 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
   font-size: 2.4rem;
   color: #2E4D4D; }
 
-.prl-h2-secondary-spacing, .research-projects h2, .prl-participating-faculty h2, .graduate-program-overview #MainContent h2, .center-for-advanced-algal-and-plant-phenotyping h2, #newsevents.depth-2.seminars-events h2 {
+.prl-h2-secondary-spacing, .research-projects h2, .center-for-advanced-algal-and-plant-phenotyping h2, .prl-participating-faculty h2, .graduate-program-overview #MainContent h2, #newsevents.depth-2.seminars-events h2 {
   margin-top: 2rem;
   display: inline-block; }
 
@@ -7761,27 +7761,56 @@ div.prl-research-highlights .last.hasImage {
     float: right;
     margin: 8px; } }
 
-/* --------------------------------------------------------
-                RESEARCH PAGES
--------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------
+                RESEARCH PROJECTS PAGE AND CENTER FOR ADVANCED ALGAL AND PLANT PHENOTYPING PAGE
+----------------------------------------------------------------------------------------------- */
 #researchtech #MainContent li.mura-categories {
   display: none; }
 
-.research-projects section.prl-research-projects .row {
+.research-projects section.prl-research-tech-services .prl-row, .center-for-advanced-algal-and-plant-phenotyping section.prl-research-tech-services .prl-row {
   margin: 70px 0; }
+  .research-projects section.prl-research-tech-services .prl-row .prl-research-tech-img, .center-for-advanced-algal-and-plant-phenotyping section.prl-research-tech-services .prl-row .prl-research-tech-img {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 41.666667%;
+            flex: 0 0 41.666667%;
+    max-width: 41.666667%; }
+  .research-projects section.prl-research-tech-services .prl-row .prl-research-tech-text, .center-for-advanced-algal-and-plant-phenotyping section.prl-research-tech-services .prl-row .prl-research-tech-text {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 58.333333%;
+            flex: 0 0 58.333333%;
+    max-width: 58.333333%; }
+  .research-projects section.prl-research-tech-services .prl-row .prl-research-tech-img, .research-projects section.prl-research-tech-services .prl-row .prl-research-tech-text, .center-for-advanced-algal-and-plant-phenotyping section.prl-research-tech-services .prl-row .prl-research-tech-img, .center-for-advanced-algal-and-plant-phenotyping section.prl-research-tech-services .prl-row .prl-research-tech-text {
+    padding-left: 15px;
+    padding-right: 15px; }
 
-.research-projects section.prl-research-projects .row.first {
+.research-projects section.prl-research-tech-services .prl-row.first, .center-for-advanced-algal-and-plant-phenotyping section.prl-research-tech-services .prl-row.first {
   margin-top: 50px; }
 
-.research-projects section.prl-research-projects h3 {
+.research-projects section.prl-research-tech-services .prl-row.prl-research-tech-item-even .prl-research-tech-img, .center-for-advanced-algal-and-plant-phenotyping section.prl-research-tech-services .prl-row.prl-research-tech-item-even .prl-research-tech-img {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1; }
+
+.research-projects section.prl-research-tech-services h3, .center-for-advanced-algal-and-plant-phenotyping section.prl-research-tech-services h3 {
   font-size: 1.65rem; }
 
-.research-projects section.prl-research-projects img {
+.research-projects section.prl-research-tech-services img, .center-for-advanced-algal-and-plant-phenotyping section.prl-research-tech-services img {
   padding: 0;
   border-radius: 12px;
   -webkit-box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0, 0, 0.12);
   box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0, 0, 0.12);
   margin-bottom: 30px; }
+
+@media (max-width: 767px) {
+  .research-projects section.prl-research-tech-services .prl-row .prl-research-tech-img, .research-projects section.prl-research-tech-services .prl-row .prl-research-tech-text, .center-for-advanced-algal-and-plant-phenotyping section.prl-research-tech-services .prl-row .prl-research-tech-img, .center-for-advanced-algal-and-plant-phenotyping section.prl-research-tech-services .prl-row .prl-research-tech-text {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    max-width: 100%; }
+  .research-projects section.prl-research-tech-services .prl-row.prl-research-tech-item-even .prl-research-tech-img, .center-for-advanced-algal-and-plant-phenotyping section.prl-research-tech-services .prl-row.prl-research-tech-item-even .prl-research-tech-img {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0; } }
 
 /* PARTICIPATING FACULTY MEMBERS AT THE BOTTOM OF EACH RESEARCH AREA
 -------------------------------------------------- */
@@ -7856,24 +7885,6 @@ div.prl-research-highlights .last.hasImage {
 @media (max-width: 539px) {
   .graduate-program-overview #MainContent .prl-student-alumni-profiles .mura-collection.mura-grid-two .mura-collection-item .mura-collection-item__holder {
     padding: 0; } }
-
-/* CENTER FOR ADVANCED ALGAL AND PLANT PHENOTYPING
--------------------------------------------------------- */
-.center-for-advanced-algal-and-plant-phenotyping section.prl-caapp-services .row {
-  margin: 70px 0; }
-
-.center-for-advanced-algal-and-plant-phenotyping section.prl-caapp-services .row.first {
-  margin-top: 50px; }
-
-.center-for-advanced-algal-and-plant-phenotyping section.prl-caapp-services h3 {
-  font-size: 1.65rem; }
-
-.center-for-advanced-algal-and-plant-phenotyping section.prl-caapp-services img {
-  padding: 0;
-  border-radius: 12px;
-  -webkit-box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0, 0, 0.12);
-  box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0, 0, 0.12);
-  margin-bottom: 30px; }
 
 /* --------------------------------------------------------
                 SEMINARS & EVENTS PAGE

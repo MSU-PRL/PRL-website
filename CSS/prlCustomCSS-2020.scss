@@ -8,6 +8,7 @@
 @import 'prlComponents'; // Custom PRL components
 @import 'prlCNSOverrides'; // Styles to override default CNS styles
 
+
 /* --------------------------------------------------------
                 HOMEPAGE
 -------------------------------------------------------- */
@@ -631,6 +632,7 @@
   }
 }
 
+
 /* --------------------------------------------------------
                 ABOUT PAGE
 -------------------------------------------------------- */
@@ -1069,6 +1071,7 @@
   }
 }
 
+
 /* --------------------------------------------------------
                 CONTACT US PAGE
 -------------------------------------------------------- */
@@ -1095,6 +1098,7 @@
   padding-left: 15px;
   flex-grow: 1; //fill the container when each of these divs takes on an entire line
 }
+
 
 /* ---------------------------------------------------------------
                 MAIN NEWS / RESEARCH HIGHLIGHTS PAGES: LAYOUT
@@ -1404,6 +1408,7 @@
   }
 }
 
+
 /* --------------------------------------------------------
                 NEWS STORIES
 -------------------------------------------------------- */
@@ -1527,6 +1532,7 @@
   }
 }
 
+
 /* --------------------------------------------------------
                 MAIN RESEARCH HIGHLIGHTS PAGE
 -------------------------------------------------------- */
@@ -1641,9 +1647,10 @@ div.prl-research-highlights {
 }
 
 
-/* --------------------------------------------------------
-                RESEARCH PAGES
--------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------
+                RESEARCH PROJECTS PAGE AND CENTER FOR ADVANCED ALGAL AND PLANT PHENOTYPING PAGE
+----------------------------------------------------------------------------------------------- */
+// Both these pages share the same styles
 
 #researchtech {
   #MainContent {
@@ -1654,29 +1661,67 @@ div.prl-research-highlights {
   }
 }
 
-.research-projects {
+.research-projects, .center-for-advanced-algal-and-plant-phenotyping {
   h2 {
     @extend .prl-h2-secondary-spacing;
   }
-  section.prl-research-projects {
+  section.prl-research-tech-services {
     // The CAAPP services
-    .row {
-      // Spacing between each service
+    .prl-row {
+      // Spacing between each research area
       margin: 70px 0;
+      .prl-research-tech-img {
+        // On larger screens, research images span two thirds container width
+        flex: 0 0 41.666667%;
+        max-width: 41.666667%;
+      }
+      .prl-research-tech-text {
+        // On larger screens, research descriptions span two thirds container width
+        flex: 0 0 58.333333%;
+        max-width: 58.333333%;
+      }
+      .prl-research-tech-img, .prl-research-tech-text {
+        // Research images and description padding
+        padding-left: 15px;
+        padding-right: 15px;
+      }
     }
-    .row.first {
+    .prl-row.first {
+      // First research area top margin
       margin-top: 50px;
+    }
+    .prl-row.prl-research-tech-item-even .prl-research-tech-img {
+      // Flexbox: on even numbered rows, push image to the right. 
+      order: 1;
     }
     h3 {
       font-size: 1.65rem;
     }
     img {
-      // Services images
+      // Research area images
       padding: 0;
       border-radius: $border-radius-material-design-card;
       -webkit-box-shadow: $img-shadow;
       box-shadow: $img-shadow;
       margin-bottom: 30px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .research-projects, .center-for-advanced-algal-and-plant-phenotyping {
+    section.prl-research-tech-services {
+      .prl-row {
+        .prl-research-tech-img, .prl-research-tech-text {
+          // Research image and descriptions EACH span the whole cnotainer width
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+      }
+      .prl-row.prl-research-tech-item-even .prl-research-tech-img {
+        // Flexbox: on even numbered rows, image on top. 
+        order: 0;
+      }
     }
   }
 }
@@ -1746,6 +1791,7 @@ div.prl-research-highlights {
     }
   }
 }
+
 
 /* --------------------------------------------------------
                 GRADUATE PROGRAM OVERVIEW PAGE
@@ -1831,35 +1877,6 @@ div.prl-research-highlights {
   }
 }
 
-
-/* CENTER FOR ADVANCED ALGAL AND PLANT PHENOTYPING
--------------------------------------------------------- */
-.center-for-advanced-algal-and-plant-phenotyping {
-  h2 {
-    @extend .prl-h2-secondary-spacing;
-  }
-  section.prl-caapp-services {
-    // The CAAPP services
-    .row {
-      // Spacing between each service
-      margin: 70px 0;
-    }
-    .row.first {
-      margin-top: 50px;
-    }
-    h3 {
-      font-size: 1.65rem;
-    }
-    img {
-      // Services images
-      padding: 0;
-      border-radius: $border-radius-material-design-card;
-      -webkit-box-shadow: $img-shadow;
-      box-shadow: $img-shadow;
-      margin-bottom: 30px;
-    }
-  }
-}
 
 /* --------------------------------------------------------
                 SEMINARS & EVENTS PAGE
@@ -1985,6 +2002,7 @@ div.prl-research-highlights {
     }
   }
 }
+
 
 /* ------------------------------------------------------------
                 PEOPLE --> FACULTY and STAFF DIRECTORIES
@@ -2815,6 +2833,7 @@ div.prl-research-highlights {
     }
   }
 }
+
 
 /* ----------------------------------------------------------------------------------------------------
                 TEMP - 45th ANNUAL MIDWEST/SOUTHEAST PHOTOSYNTHESIS MEETING
