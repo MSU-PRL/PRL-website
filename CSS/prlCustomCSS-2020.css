@@ -6195,7 +6195,7 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
 /* ---------------------------------------------------------------------------------
         CARD COMPONENTS - ALSO USED FOR ITEMS IN NEWS AND HOMEPAGE EVENTS
 ------------------------------------------------------------------------------------ */
-.prl-card-outline, .prl-relcontent-body, .prl-card, .prl-card-w-border, .prl-card-hover-effect, .prl-home-event-cards .mura-collection-item, #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder, div.prl-research-highlights .hasImage {
+.prl-card-outline, .prl-relcontent-body, .prl-card, .prl-card-w-border, .prl-card-hover-effect, .prl-home-event-cards.mura-object .mura-collection-item, #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder, div.prl-research-highlights .hasImage {
   background: #fff;
   border-bottom: 0px transparent;
   border-radius: 12px;
@@ -6205,7 +6205,7 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
   -webkit-transition: 0.35s;
   transition: 0.35s; }
 
-.prl-card-hover, .prl-relcontent-body:hover, .prl-card-hover-effect:hover, .prl-home-event-cards .mura-collection-item:hover, #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder:hover {
+.prl-card-hover, .prl-relcontent-body:hover, .prl-card-hover-effect:hover, .prl-home-event-cards.mura-object .mura-collection-item:hover, #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder:hover {
   -webkit-box-shadow: 0px 6px 6px -3px rgba(0, 0, 0, 0.2), 0px 10px 14px 1px rgba(0, 0, 0, 0.14), 0px 4px 18px 3px rgba(0, 0, 0, 0.12);
   box-shadow: 0px 6px 6px -3px rgba(0, 0, 0, 0.2), 0px 10px 14px 1px rgba(0, 0, 0, 0.14), 0px 4px 18px 3px rgba(0, 0, 0, 0.12); }
 
@@ -6289,7 +6289,7 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
   .prl-card-image-hover:hover, div.prl-research-highlights .hasImage .image img:hover {
     opacity: 0.8; }
 
-.prl-card-body, .prl-home-event-cards .mura-collection-item .mura-collection-item__holder .mura-item-meta, #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta {
+.prl-card-body, .prl-home-event-cards.mura-object .mura-collection-item .mura-collection-item__holder .mura-item-meta, #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta {
   padding: 16px; }
 
 .prl-card-title, .prl-card h1, .prl-card-w-border h1, .prl-card-hover-effect h1,
@@ -6307,20 +6307,20 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
 .prl-card-hover-effect h5,
 .prl-card h6,
 .prl-card-w-border h6,
-.prl-card-hover-effect h6, .prl-home-event-cards .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__title, #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__title, div.prl-research-highlights .hasImage .title {
+.prl-card-hover-effect h6, .prl-home-event-cards.mura-object .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__title, #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__title, div.prl-research-highlights .hasImage .title {
   padding-bottom: 8px;
   margin-bottom: 0px;
   font-size: 1.125rem !important;
   line-height: 1.42857143;
   letter-spacing: -0.25px;
   font-weight: 600; }
-  .prl-card-title a, .prl-card h1 a, .prl-card-w-border h1 a, .prl-card-hover-effect h1 a, .prl-card h2 a, .prl-card-w-border h2 a, .prl-card-hover-effect h2 a, .prl-card h3 a, .prl-card-w-border h3 a, .prl-card-hover-effect h3 a, .prl-card h4 a, .prl-card-w-border h4 a, .prl-card-hover-effect h4 a, .prl-card h5 a, .prl-card-w-border h5 a, .prl-card-hover-effect h5 a, .prl-card h6 a, .prl-card-w-border h6 a, .prl-card-hover-effect h6 a, .prl-home-event-cards .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__title a, #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__title a, div.prl-research-highlights .hasImage .title a {
+  .prl-card-title a, .prl-card h1 a, .prl-card-w-border h1 a, .prl-card-hover-effect h1 a, .prl-card h2 a, .prl-card-w-border h2 a, .prl-card-hover-effect h2 a, .prl-card h3 a, .prl-card-w-border h3 a, .prl-card-hover-effect h3 a, .prl-card h4 a, .prl-card-w-border h4 a, .prl-card-hover-effect h4 a, .prl-card h5 a, .prl-card-w-border h5 a, .prl-card-hover-effect h5 a, .prl-card h6 a, .prl-card-w-border h6 a, .prl-card-hover-effect h6 a, .prl-home-event-cards.mura-object .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__title a, #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__title a, div.prl-research-highlights .hasImage .title a {
     text-decoration: none;
     border-bottom: none !important;
     color: #444 !important;
     line-height: 1.2; }
 
-.prl-card-date, .prl-home-event-cards .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__date, #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__date, div.prl-research-highlights .hasImage .date.releaseDate {
+.prl-card-date, .prl-home-event-cards.mura-object .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__date, #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__date, div.prl-research-highlights .hasImage .date.releaseDate {
   padding-bottom: 16px;
   margin: 0;
   color: #757575;
@@ -6330,12 +6330,12 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
 .prl-card-summary, .prl-relcontent-body p, .prl-card p, .prl-card-w-border p, .prl-card-hover-effect p, .prl-card ul, .prl-card-w-border ul, .prl-card-hover-effect ul,
 .prl-card ol,
 .prl-card-w-border ol,
-.prl-card-hover-effect ol, .prl-home-event-cards .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__summary, #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__summary, div.prl-research-highlights .hasImage .summary {
+.prl-card-hover-effect ol, .prl-home-event-cards.mura-object .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__summary, #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__summary, div.prl-research-highlights .hasImage .summary {
   font-size: 0.91rem !important;
   line-height: 1.5 !important;
   font-weight: 400;
   color: #757575; }
-  .prl-card-summary p, .prl-relcontent-body p p, .prl-card p p, .prl-card-w-border p p, .prl-card-hover-effect p p, .prl-card ul p, .prl-card-w-border ul p, .prl-card-hover-effect ul p, .prl-card ol p, .prl-card-w-border ol p, .prl-card-hover-effect ol p, .prl-home-event-cards .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__summary p, #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__summary p, div.prl-research-highlights .hasImage .summary p,
+  .prl-card-summary p, .prl-relcontent-body p p, .prl-card p p, .prl-card-w-border p p, .prl-card-hover-effect p p, .prl-card ul p, .prl-card-w-border ul p, .prl-card-hover-effect ul p, .prl-card ol p, .prl-card-w-border ol p, .prl-card-hover-effect ol p, .prl-home-event-cards.mura-object .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__summary p, #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__summary p, div.prl-research-highlights .hasImage .summary p,
   .prl-card-summary ul,
   .prl-relcontent-body p ul,
   .prl-card p ul,
@@ -6347,7 +6347,7 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
   .prl-card ol ul,
   .prl-card-w-border ol ul,
   .prl-card-hover-effect ol ul,
-  .prl-home-event-cards .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__summary ul,
+  .prl-home-event-cards.mura-object .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__summary ul,
   #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__summary ul,
   div.prl-research-highlights .hasImage .summary ul,
   .prl-card-summary ol,
@@ -6361,7 +6361,7 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
   .prl-card ol ol,
   .prl-card-w-border ol ol,
   .prl-card-hover-effect ol ol,
-  .prl-home-event-cards .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__summary ol,
+  .prl-home-event-cards.mura-object .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__summary ol,
   #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__summary ol,
   div.prl-research-highlights .hasImage .summary ol {
     margin: 0; }
@@ -6374,7 +6374,7 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
     margin: 4px;
     display: inline-block !important; }
 
-.prl-readmore-fill-container, .prl-home-event-cards .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__readmore, #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__readmore {
+.prl-readmore-fill-container, .prl-home-event-cards.mura-object .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__readmore, #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__readmore {
   position: absolute;
   top: 0;
   left: 0;
@@ -6382,7 +6382,7 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
   height: 100%;
   font-size: 0;
   z-index: 100; }
-  .prl-readmore-fill-container a, .prl-home-event-cards .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__readmore a, #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__readmore a {
+  .prl-readmore-fill-container a, .prl-home-event-cards.mura-object .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__readmore a, #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__readmore a {
     display: inline-block;
     width: 100%;
     height: 100%;
@@ -6815,6 +6815,11 @@ aside {
     width: 1350px;
     max-width: 1350px; } }
 
+@media (max-width: 991px) {
+  .home .prl-row {
+    padding-right: 9px;
+    padding-left: 9px; } }
+
 @media (max-width: 767px) {
   .home .deptHomeComponentWrapper .deptHomeComponentHeading {
     margin-bottom: 0; }
@@ -6839,35 +6844,41 @@ aside {
     text-align: center;
     margin-bottom: 0;
     max-width: 750px; }
-  .prl-home-brands .prl-home-brands-feature .mura-async-object.mura-object {
-    margin-top: 62px; }
-  .prl-home-brands .prl-home-brands-feature h3 {
-    font-size: 15.5px;
-    font-weight: 900;
-    color: #111;
-    display: block;
-    margin-bottom: 24px;
-    text-transform: uppercase;
-    padding-left: 12px;
-    border-left: 5px solid #2E4D4D; }
-  .prl-home-brands .prl-home-brands-feature div.prl-brand-feature-summary {
-    font-weight: 300;
-    color: #666;
-    font-size: 15.5px;
-    line-height: 1.5;
-    display: block;
-    margin-bottom: 32px; }
-    .prl-home-brands .prl-home-brands-feature div.prl-brand-feature-summary span {
-      display: block; }
-  .prl-home-brands .prl-home-brands-feature img {
-    -webkit-box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0, 0, 0.12);
-    box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0, 0, 0.12);
-    border-radius: 12px; }
-  .prl-home-brands div.prl-home-about {
-    display: inline-block;
-    text-align: center;
-    width: 100%;
-    margin-bottom: 2.25rem; }
+  .prl-home-brands .prl-home-brands-logos {
+    margin-left: 8.333333%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.333333%;
+            flex: 0 0 33.333333%;
+    max-width: 33.333333%; }
+  .prl-home-brands .prl-home-brands-feature {
+    margin-top: 62px;
+    margin-left: 8.333333%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 41.666667%;
+            flex: 0 0 41.666667%;
+    max-width: 41.666667%; }
+    .prl-home-brands .prl-home-brands-feature h3 {
+      font-size: 15.5px;
+      font-weight: 900;
+      color: #111;
+      display: block;
+      margin-bottom: 24px;
+      text-transform: uppercase;
+      padding-left: 12px;
+      border-left: 5px solid #2E4D4D; }
+    .prl-home-brands .prl-home-brands-feature div.prl-brand-feature-summary {
+      font-weight: 300;
+      color: #666;
+      font-size: 15.5px;
+      line-height: 1.5;
+      display: block;
+      margin-bottom: 32px; }
+      .prl-home-brands .prl-home-brands-feature div.prl-brand-feature-summary span {
+        display: block; }
+    .prl-home-brands .prl-home-brands-feature img {
+      -webkit-box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0, 0, 0.12);
+      box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0, 0, 0.12);
+      border-radius: 12px; }
 
 @media (max-width: 767px) {
   .prl-home-brands {
@@ -6876,17 +6887,33 @@ aside {
       padding-right: 0;
       padding-left: 0;
       padding-bottom: 1.5rem; }
+    .prl-home-brands .prl-home-brands-logos, .prl-home-brands .prl-home-brands-feature {
+      -webkit-box-flex: 0;
+          -ms-flex: 0 0 100%;
+              flex: 0 0 100%;
+      max-width: 100%;
+      margin-left: 0%; }
     .prl-home-brands .prl-home-brands-feature h3 {
       font-size: 16px; }
     .prl-home-brands .prl-home-brands-feature span.prl-brand-feature-summary, .prl-home-brands .prl-home-brands-feature span {
-      font-size: 16px; }
-  div.prl-home-about {
-    margin-bottom: 2.75rem; } }
+      font-size: 16px; } }
 
 @media (min-width: 768px) and (max-width: 991px) {
   .prl-home-brands {
     margin-top: 2rem;
-    margin-bottom: 4rem; } }
+    margin-bottom: 4rem; }
+    .prl-home-brands .prl-home-brands-logos {
+      margin-left: 0%;
+      -webkit-box-flex: 0;
+          -ms-flex: 0 0 41.666667%;
+              flex: 0 0 41.666667%;
+      max-width: 41.666667%; }
+    .prl-home-brands .prl-home-brands-feature {
+      margin-left: 0%;
+      -webkit-box-flex: 0;
+          -ms-flex: 0 0 58.333333%;
+              flex: 0 0 58.333333%;
+      max-width: 58.333333%; } }
 
 @media (min-width: 1370px) {
   .prl-home-brands {
@@ -6903,81 +6930,91 @@ aside {
   .prl-home-news h2 {
     margin-bottom: 50px; }
 
-.prl-home-news-feature .mura-async-object.mura-object .mura-object-content > .mura-index {
-  margin: 0; }
-  .prl-home-news-feature .mura-async-object.mura-object .mura-object-content > .mura-index div > .item {
-    margin: 0;
-    padding: 16px 40px 0 16px;
-    border-right: 3px solid #2E4D4D; }
-    .prl-home-news-feature .mura-async-object.mura-object .mura-object-content > .mura-index div > .item .image {
-      position: relative;
-      margin: 0 0 32px 0; }
-      .prl-home-news-feature .mura-async-object.mura-object .mura-object-content > .mura-index div > .item .image a {
-        border-bottom: 0px solid transparent; }
-        .prl-home-news-feature .mura-async-object.mura-object .mura-object-content > .mura-index div > .item .image a img {
-          border-radius: 12px;
-          -webkit-box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0, 0, 0.12);
-          box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0, 0, 0.12);
-          -webkit-transition: 0.5s;
-          transition: 0.5s; }
-          .prl-home-news-feature .mura-async-object.mura-object .mura-object-content > .mura-index div > .item .image a img:hover {
-            opacity: 0.8; }
-    .prl-home-news-feature .mura-async-object.mura-object .mura-object-content > .mura-index div > .item .title {
-      margin: 0 0 4px 32px;
-      text-transform: uppercase; }
-      .prl-home-news-feature .mura-async-object.mura-object .mura-object-content > .mura-index div > .item .title a {
-        text-decoration: none;
-        border-bottom: 0px;
-        color: #111;
-        font-weight: 600; }
-    .prl-home-news-feature .mura-async-object.mura-object .mura-object-content > .mura-index div > .item .summary {
-      font-weight: 300;
-      color: #666;
-      font-size: 15.5px;
-      line-height: 1.5;
-      display: block;
-      margin: 0 0 16px 32px; }
-      .prl-home-news-feature .mura-async-object.mura-object .mura-object-content > .mura-index div > .item .summary p {
-        margin-bottom: 0px !important; }
-
-.prl-home-news-nonfeature .mura-async-object.mura-object > .mura-object-content .mura-index {
-  margin: 4px 8px 0 24px; }
-  .prl-home-news-nonfeature .mura-async-object.mura-object > .mura-object-content .mura-index div .item {
-    margin: 0 0 24px 0;
-    padding: 0 !important;
-    min-height: auto !important; }
-    .prl-home-news-nonfeature .mura-async-object.mura-object > .mura-object-content .mura-index div .item .image {
-      width: 140px;
-      position: relative;
-      float: left;
+.prl-home-news-feature {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  max-width: 50%; }
+  .prl-home-news-feature .mura-async-object.mura-object .mura-object-content > .mura-index {
+    margin: 0; }
+    .prl-home-news-feature .mura-async-object.mura-object .mura-object-content > .mura-index div > .item {
       margin: 0;
-      padding: 12px 16px 16px; }
-      .prl-home-news-nonfeature .mura-async-object.mura-object > .mura-object-content .mura-index div .item .image a {
-        border-bottom: 0px solid transparent; }
-        .prl-home-news-nonfeature .mura-async-object.mura-object > .mura-object-content .mura-index div .item .image a img {
-          border-radius: 12px;
-          -webkit-box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0, 0, 0.12);
-          box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0, 0, 0.12);
-          -webkit-transition: 0.5s;
-          transition: 0.5s; }
-          .prl-home-news-nonfeature .mura-async-object.mura-object > .mura-object-content .mura-index div .item .image a img:hover {
-            opacity: 0.8; }
-    .prl-home-news-nonfeature .mura-async-object.mura-object > .mura-object-content .mura-index div .item .title {
-      margin: 12px 0 0 0; }
-      .prl-home-news-nonfeature .mura-async-object.mura-object > .mura-object-content .mura-index div .item .title a {
-        text-decoration: none;
-        border-bottom: 0px;
-        color: #111;
-        font-weight: 600; }
-    .prl-home-news-nonfeature .mura-async-object.mura-object > .mura-object-content .mura-index div .item .summary {
-      font-weight: 300;
-      color: #666;
-      font-size: 15.5px;
-      line-height: 1.4;
-      display: block;
-      margin: 0 0 0 32px; }
-      .prl-home-news-nonfeature .mura-async-object.mura-object > .mura-object-content .mura-index div .item .summary p {
-        margin-bottom: 0px !important; }
+      padding: 16px 40px 0 16px;
+      border-right: 3px solid #2E4D4D; }
+      .prl-home-news-feature .mura-async-object.mura-object .mura-object-content > .mura-index div > .item .image {
+        position: relative;
+        margin: 0 0 32px 0; }
+        .prl-home-news-feature .mura-async-object.mura-object .mura-object-content > .mura-index div > .item .image a {
+          border-bottom: 0px solid transparent; }
+          .prl-home-news-feature .mura-async-object.mura-object .mura-object-content > .mura-index div > .item .image a img {
+            border-radius: 12px;
+            -webkit-box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0, 0, 0.12);
+            box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0, 0, 0.12);
+            -webkit-transition: 0.5s;
+            transition: 0.5s; }
+            .prl-home-news-feature .mura-async-object.mura-object .mura-object-content > .mura-index div > .item .image a img:hover {
+              opacity: 0.8; }
+      .prl-home-news-feature .mura-async-object.mura-object .mura-object-content > .mura-index div > .item .title {
+        margin: 0 0 4px 32px;
+        text-transform: uppercase; }
+        .prl-home-news-feature .mura-async-object.mura-object .mura-object-content > .mura-index div > .item .title a {
+          text-decoration: none;
+          border-bottom: 0px;
+          color: #111;
+          font-weight: 600; }
+      .prl-home-news-feature .mura-async-object.mura-object .mura-object-content > .mura-index div > .item .summary {
+        font-weight: 300;
+        color: #666;
+        font-size: 15.5px;
+        line-height: 1.5;
+        display: block;
+        margin: 0 0 16px 32px; }
+        .prl-home-news-feature .mura-async-object.mura-object .mura-object-content > .mura-index div > .item .summary p {
+          margin-bottom: 0px !important; }
+
+.prl-home-news-nonfeature {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  max-width: 50%; }
+  .prl-home-news-nonfeature .mura-async-object.mura-object > .mura-object-content .mura-index {
+    margin: 4px 8px 0 24px; }
+    .prl-home-news-nonfeature .mura-async-object.mura-object > .mura-object-content .mura-index div .item {
+      margin: 0 0 24px 0;
+      padding: 0 !important;
+      min-height: auto !important; }
+      .prl-home-news-nonfeature .mura-async-object.mura-object > .mura-object-content .mura-index div .item .image {
+        width: 140px;
+        position: relative;
+        float: left;
+        margin: 0;
+        padding: 12px 16px 16px; }
+        .prl-home-news-nonfeature .mura-async-object.mura-object > .mura-object-content .mura-index div .item .image a {
+          border-bottom: 0px solid transparent; }
+          .prl-home-news-nonfeature .mura-async-object.mura-object > .mura-object-content .mura-index div .item .image a img {
+            border-radius: 12px;
+            -webkit-box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0, 0, 0.12);
+            box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0, 0, 0.12);
+            -webkit-transition: 0.5s;
+            transition: 0.5s; }
+            .prl-home-news-nonfeature .mura-async-object.mura-object > .mura-object-content .mura-index div .item .image a img:hover {
+              opacity: 0.8; }
+      .prl-home-news-nonfeature .mura-async-object.mura-object > .mura-object-content .mura-index div .item .title {
+        margin: 12px 0 0 0; }
+        .prl-home-news-nonfeature .mura-async-object.mura-object > .mura-object-content .mura-index div .item .title a {
+          text-decoration: none;
+          border-bottom: 0px;
+          color: #111;
+          font-weight: 600; }
+      .prl-home-news-nonfeature .mura-async-object.mura-object > .mura-object-content .mura-index div .item .summary {
+        font-weight: 300;
+        color: #666;
+        font-size: 15.5px;
+        line-height: 1.4;
+        display: block;
+        margin: 0 0 0 32px; }
+        .prl-home-news-nonfeature .mura-async-object.mura-object > .mura-object-content .mura-index div .item .summary p {
+          margin-bottom: 0px !important; }
 
 @media (min-width: 1200px) {
   .prl-home-news-nonfeature > .mura-async-object.mura-object > .mura-object-content > .mura-index > div > .item .summary {
@@ -7003,32 +7040,42 @@ aside {
 @media (max-width: 991px) {
   .prl-home-news {
     margin-bottom: 62px; }
-  .prl-home-news-feature .mura-async-object.mura-object .mura-object-content > .mura-index div > .item {
-    margin: 0;
-    padding: 16px 16px 0 16px;
-    border-right: 0px transparent; }
-    .prl-home-news-feature .mura-async-object.mura-object .mura-object-content > .mura-index div > .item .image {
+  .prl-home-news-feature {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    max-width: 100%; }
+    .prl-home-news-feature .mura-async-object.mura-object .mura-object-content > .mura-index div > .item {
+      margin: 0;
+      padding: 16px 16px 0 16px;
+      border-right: 0px transparent; }
+      .prl-home-news-feature .mura-async-object.mura-object .mura-object-content > .mura-index div > .item .image {
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 24px; }
+      .prl-home-news-feature .mura-async-object.mura-object .mura-object-content > .mura-index div > .item .title {
+        margin: 0 auto;
+        padding-left: 16px;
+        max-width: 600px; }
+      .prl-home-news-feature .mura-async-object.mura-object .mura-object-content > .mura-index div > .item .summary {
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 16px;
+        max-width: 600px; }
+  .prl-home-news-nonfeature {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    max-width: 100%; }
+    .prl-home-news-nonfeature .mura-async-object.mura-object > .mura-object-content .mura-index {
       max-width: 600px;
       margin-left: auto;
-      margin-right: auto;
-      margin-bottom: 24px; }
-    .prl-home-news-feature .mura-async-object.mura-object .mura-object-content > .mura-index div > .item .title {
-      margin: 0 auto;
-      padding-left: 16px;
-      max-width: 600px; }
-    .prl-home-news-feature .mura-async-object.mura-object .mura-object-content > .mura-index div > .item .summary {
-      margin-left: auto;
-      margin-right: auto;
-      padding-left: 16px;
-      max-width: 600px; }
-  .prl-home-news-nonfeature .mura-async-object.mura-object > .mura-object-content .mura-index {
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto; }
-    .prl-home-news-nonfeature .mura-async-object.mura-object > .mura-object-content .mura-index div .item {
-      margin-bottom: 16px; }
-    .prl-home-news-nonfeature .mura-async-object.mura-object > .mura-object-content .mura-index div .last.hasImage {
-      display: none; } }
+      margin-right: auto; }
+      .prl-home-news-nonfeature .mura-async-object.mura-object > .mura-object-content .mura-index div .item {
+        margin-bottom: 16px; }
+      .prl-home-news-nonfeature .mura-async-object.mura-object > .mura-object-content .mura-index div .last.hasImage {
+        display: none; } }
 
 @media (max-width: 767px) {
   .prl-home-news-feature .mura-async-object.mura-object .mura-object-content > .mura-index div > .item {
@@ -7059,23 +7106,29 @@ aside {
 .prl-home-events h2 {
   margin-bottom: 50px; }
 
-.prl-home-event-cards {
-  margin-bottom: 2.75rem; }
-  .prl-home-event-cards div.mura-collection.mura-grid-three .mura-collection-item:first-child {
+.prl-home-events .prl-row {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.prl-home-event-cards.mura-object {
+  margin-bottom: 2.75rem;
+  margin-right: 0; }
+  .prl-home-event-cards.mura-object div.mura-collection.mura-grid-three .mura-collection-item:first-child {
     float: left;
     margin-right: 1.75%;
     margin-left: 1%; }
-  .prl-home-event-cards div.mura-collection.mura-grid-three .mura-collection-item:last-child {
+  .prl-home-event-cards.mura-object div.mura-collection.mura-grid-three .mura-collection-item:last-child {
     float: right;
     margin-right: 1%; }
-  .prl-home-event-cards .mura-collection-item {
+  .prl-home-event-cards.mura-object .mura-collection-item {
     width: 31.5%; }
-    .prl-home-event-cards .mura-collection-item .mura-collection-item__holder {
+    .prl-home-event-cards.mura-object .mura-collection-item .mura-collection-item__holder {
       padding: 0;
       border-radius: 12px;
       -webkit-transition: 0.5s;
       transition: 0.5s; }
-      .prl-home-event-cards .mura-collection-item .mura-collection-item__holder .mura-item-content {
+      .prl-home-event-cards.mura-object .mura-collection-item .mura-collection-item__holder .mura-item-content {
         border-radius: 12px 12px 0 0;
         position: relative;
         margin: 0;
@@ -7086,13 +7139,13 @@ aside {
         -webkit-transition: 0.5s;
         transition: 0.5s;
         border-bottom: 1px solid rgba(160, 160, 160, 0.2); }
-        .prl-home-event-cards .mura-collection-item .mura-collection-item__holder .mura-item-content a img {
+        .prl-home-event-cards.mura-object .mura-collection-item .mura-collection-item__holder .mura-item-content a img {
           width: 100%; }
-        .prl-home-event-cards .mura-collection-item .mura-collection-item__holder .mura-item-content:hover {
+        .prl-home-event-cards.mura-object .mura-collection-item .mura-collection-item__holder .mura-item-content:hover {
           opacity: 0.8; }
-      .prl-home-event-cards .mura-collection-item .mura-collection-item__holder .mura-item-meta {
+      .prl-home-event-cards.mura-object .mura-collection-item .mura-collection-item__holder .mura-item-meta {
         position: relative; }
-        .prl-home-event-cards .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__summary .prl-event-type {
+        .prl-home-event-cards.mura-object .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__summary .prl-event-type {
           display: inline-block;
           margin-bottom: 3px;
           border-bottom: 1px solid rgba(160, 160, 160, 0.2);
@@ -7100,15 +7153,15 @@ aside {
           color: #757575; }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  .prl-home-event-cards div.mura-collection.mura-grid-three .mura-collection-item:first-child {
+  .prl-home-event-cards.mura-object div.mura-collection.mura-grid-three .mura-collection-item:first-child {
     float: left;
     margin-left: 0;
     margin-right: 1.25%; }
-  .prl-home-event-cards div.mura-collection.mura-grid-three .mura-collection-item:last-child {
+  .prl-home-event-cards.mura-object div.mura-collection.mura-grid-three .mura-collection-item:last-child {
     margin-right: 0px; }
-  .prl-home-event-cards .mura-collection-item {
+  .prl-home-event-cards.mura-object .mura-collection-item {
     width: 32.5%; }
-    .prl-home-event-cards .mura-collection-item .mura-collection-item__holder .mura-item-meta__title {
+    .prl-home-event-cards.mura-object .mura-collection-item .mura-collection-item__holder .mura-item-meta__title {
       display: block;
       white-space: nowrap;
       text-overflow: ellipsis;
@@ -7117,20 +7170,20 @@ aside {
 @media (max-width: 767px) {
   .prl-home-events .prl-events-summary {
     padding: 0 15px; }
-  .prl-home-event-cards div.mura-collection.mura-grid-three {
+  .prl-home-event-cards.mura-object div.mura-collection.mura-grid-three {
     /* margin-left: -16px;
       margin-right: -16px; Keeps margins aligned with the rest of the page, on mobile */ }
-    .prl-home-event-cards div.mura-collection.mura-grid-three .mura-collection-item:first-child {
+    .prl-home-event-cards.mura-object div.mura-collection.mura-grid-three .mura-collection-item:first-child {
       margin-left: auto;
       margin-right: auto; }
-    .prl-home-event-cards div.mura-collection.mura-grid-three .mura-collection-item:last-child {
+    .prl-home-event-cards.mura-object div.mura-collection.mura-grid-three .mura-collection-item:last-child {
       margin-left: auto;
       margin-right: auto; }
-  .prl-home-event-cards .mura-collection-item {
+  .prl-home-event-cards.mura-object .mura-collection-item {
     float: left;
     width: 100%;
     margin: 0 auto 16px auto; }
-    .prl-home-event-cards .mura-collection-item .mura-item-meta__readmore {
+    .prl-home-event-cards.mura-object .mura-collection-item .mura-item-meta__readmore {
       margin: 16px -16px -16px !important; } }
 
 @media (min-width: 768px) and (max-width: 991px) {

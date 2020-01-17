@@ -35,6 +35,15 @@
     }
   }
 }
+@media (max-width: 991px) {
+  .home {
+    .prl-row {
+      // Adds some white space on all prl-row classes for tablet and phones
+      padding-right: 9px;
+      padding-left: 9px;
+    }
+  }
+}
 
 @media (max-width: 767px) {
   // Adjusting dimensions to mobile breakpoint*/
@@ -76,12 +85,17 @@
     margin-bottom: 0;
     max-width: 750px;
   }
+  .prl-home-brands-logos {
+    margin-left: 8.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
   .prl-home-brands-feature {
-    // Styling the "Featured Research" area on the right of the brand logos
-    .mura-async-object.mura-object {
-      // Adding a margin top to the "Featured Research" component. CSS class from Mura
-      margin-top: 62px;
-    }
+    // Styling the "Featured Research" area on the right of the brand logos.
+    margin-top: 62px;
+    margin-left: 8.333333%;
+    flex: 0 0 41.666667%;
+    max-width: 41.666667%;
     h3 {
       font-size: 15.5px;
       font-weight: 900;
@@ -111,13 +125,6 @@
       border-radius: $border-radius-material-design-card;
     }
   }
-  div.prl-home-about {
-    // Div containing "More About Us" button
-    display: inline-block;
-    text-align: center;
-    width: 100%;
-    margin-bottom: 2.25rem;
-  }
 }
 
 @media (max-width: 767px) {
@@ -128,6 +135,12 @@
       padding-right: 0;
       padding-left: 0;
       padding-bottom: 1.5rem;
+    }
+    .prl-home-brands-logos, .prl-home-brands-feature {
+      // Logo and feature areas each span the entire container
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin-left: 0%;
     }
     // Styling the "Featured Research" area
     .prl-home-brands-feature {
@@ -141,9 +154,6 @@
       }
     }
   }
-  div.prl-home-about {
-    margin-bottom: 2.75rem;
-  }
 }
 
 @media (min-width: 768px)and(max-width: 991px) {
@@ -151,6 +161,16 @@
   .prl-home-brands {
     margin-top: 2rem;
     margin-bottom: 4rem; // Somehow, this next change makes the entire page fit on the screen in portrait
+    .prl-home-brands-logos {
+      margin-left: 0%;
+      flex: 0 0 41.666667%;
+      max-width: 41.666667%;
+    }
+    .prl-home-brands-feature {
+      margin-left: 0%;
+      flex: 0 0 58.333333%;
+      max-width: 58.333333%;
+    }
   }
 }
 
@@ -179,6 +199,9 @@
 
 .prl-home-news-feature {
   // Styling home feature area
+  // Layout
+  flex: 0 0 50%;
+  max-width: 50%;
   .mura-async-object.mura-object {
     .mura-object-content > .mura-index {
       margin: 0;
@@ -232,6 +255,9 @@
 
 .prl-home-news-nonfeature {
   // Styling home nonfeature area
+  // Layout
+  flex: 0 0 50%;
+  max-width: 50%;
   .mura-async-object.mura-object > .mura-object-content {
     .mura-index {
       margin: 4px 8px 0 24px; // index outer margins
@@ -344,8 +370,11 @@
     margin-bottom: 62px;
   }
   .prl-home-news-feature {
-    // Centering home feature area
+    // Layout on tablet to mobile, takes entire viewport
+    flex: 0 0 100%;
+    max-width: 100%;
     .mura-async-object.mura-object {
+      // Centering home feature area
       .mura-object-content > .mura-index {
         div > .item {
           // Centering content
@@ -375,8 +404,11 @@
     }
   }
   .prl-home-news-nonfeature {
-    // Centering home nonfeature area
+    // Layout on tablet, takes entire viewport
+    flex: 0 0 100%;
+    max-width: 100%;
     .mura-async-object.mura-object > .mura-object-content {
+      // Centering home nonfeature area
       .mura-index {
         max-width: 600px;
         margin-left: auto;
@@ -456,10 +488,14 @@
     @extend .prl-h2-alternate;
     margin-bottom: 50px;
   }
+  .prl-row {
+    justify-content: center; // centers 'view all events' button
+  }
 }
 
-.prl-home-event-cards {
+.prl-home-event-cards.mura-object {
   margin-bottom: 2.75rem;
+  margin-right: 0; // overrides Mura default
   div.mura-collection.mura-grid-three {
     .mura-collection-item:first-child {
       float: left;
@@ -530,14 +566,9 @@
   }
 }
 
-.prl-home-events-btn {
-  // Button to all seminars and events at bottom of events section
-  // margin-bottom: 3rem;
-}
-
 @media (min-width: 992px) and (max-width: 1199px) {
   // Adjusting dimensions to the small desktop breakpoint
-  .prl-home-event-cards {
+  .prl-home-event-cards.mura-object {
     div.mura-collection.mura-grid-three {
       .mura-collection-item:first-child {
         float: left;
@@ -569,7 +600,7 @@
       padding: 0 15px;
     }
   }
-  .prl-home-event-cards {
+  .prl-home-event-cards.mura-object {
     div.mura-collection.mura-grid-three {
       // From Google Material Design Specs Padding from edge of screen to card: 8dp
       /* margin-left: -16px;
