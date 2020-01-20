@@ -210,6 +210,16 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
     padding-left: 0.7rem;
     line-height: 1.3rem; } }
 
+.prl-figure-container {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  max-width: 100% !important;
+  display: block !important; }
+
+/* --------------------------------------------------------
+        CREDITS & BULLETPOINTS
+-------------------------------------------------------- */
 .prl-date-credits p {
   color: #757575;
   font-size: 0.875rem !important;

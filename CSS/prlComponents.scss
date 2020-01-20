@@ -367,6 +367,20 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
   }
 }
 
+.prl-figure-container {
+  // Jan 2020 update. New class for image component. Copy Bootstrap CSS classes
+  text-align: center !important; // copies Bootstrap CSS .text-center class
+  margin-left: auto !important; // copies Bootstrap CSS .mx-auto class
+  margin-right: auto !important; // copies Bootstrap CSS .mx-auto class
+  max-width: 100% !important; // copies Bootstrap CSS .mw-100 class
+  display: block !important; // copies Bootstrap CSS .d-block class
+}
+
+
+/* --------------------------------------------------------
+        CREDITS & BULLETPOINTS
+-------------------------------------------------------- */
+
 .prl-date-credits p {
   // Used for the Component called: "News - Publish Date/Credits" used at the top of news stories
   color: $light-grey-text;

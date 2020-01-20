@@ -6089,6 +6089,16 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
     padding-left: 0.7rem;
     line-height: 1.3rem; } }
 
+.prl-figure-container {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  max-width: 100% !important;
+  display: block !important; }
+
+/* --------------------------------------------------------
+        CREDITS & BULLETPOINTS
+-------------------------------------------------------- */
 .prl-date-credits p {
   color: #757575;
   font-size: 0.875rem !important;
@@ -8680,8 +8690,22 @@ div.prl-research-highlights .last.hasImage {
   letter-spacing: 0px; }
   .prl-faculty-contact-info hr {
     border-color: #e0e0e0; }
-  .prl-faculty-contact-info .col-xs-10 {
-    padding-bottom: 4px; }
+  .prl-faculty-contact-info .prl-row .prl-faculty-contact-info-icon, .prl-faculty-contact-info .prl-row .prl-faculty-contact-info-text {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px; }
+  .prl-faculty-contact-info .prl-row .prl-faculty-contact-info-icon {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 8.333333%;
+            flex: 0 0 8.333333%;
+    max-width: 8.333333%; }
+  .prl-faculty-contact-info .prl-row .prl-faculty-contact-info-text {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 83.333333%;
+            flex: 0 0 83.333333%;
+    max-width: 83.333333%; }
   .prl-faculty-contact-info ul,
   .prl-faculty-contact-info ol {
     padding-left: 30px; }
