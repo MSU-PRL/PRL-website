@@ -2741,8 +2741,22 @@ div.prl-research-highlights {
   hr {
     border-color: #e0e0e0;
   }
-  .col-xs-10 {
-    padding-bottom: 4px;
+  .prl-row {
+    .prl-faculty-contact-info-icon, .prl-faculty-contact-info-text {
+      position: relative;
+      width: 100%;
+      min-height: 1px;
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+    .prl-faculty-contact-info-icon {
+      flex: 0 0 8.333333%;
+      max-width: 8.333333%;
+    }
+    .prl-faculty-contact-info-text {
+      flex: 0 0 83.333333%;
+      max-width: 83.333333%;
+    }
   }
   ul,
   ol {

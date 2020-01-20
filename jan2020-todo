@@ -1,7 +1,10 @@
-- Update site CSS to remove Bootstrap on the following pages: Components
+- Remove Bootstrap CSS from the following:
+  - Content - Card: Related Content - Full Image + Title Overlay (see where in news stories)
+  - Content - Card: Related Content - Image + Title Overlay + Text Area (see where in news stories)
+  - Content - Informational Well Section with Cards (see where in news stories)
 - Remove unused CSS
-- Add animation to accordion
 - Use Natsci accessibility audit tool
+- Add animation to accordion
 - PRL About page additions: add inline navigation, maybe smaller hero image, add DOE BER (or remove BES), add prominent alumni/findings
 - Add a new ‘for the public’ page, including BMC videos. Need to figure out a narrative for this
 - Optional:	Update/refine color palette: https://colors.eva.design/ 
