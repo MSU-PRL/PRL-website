@@ -981,6 +981,36 @@
 
 
 /* --------------------------------------------------------
+                DONATE TO PRL PAGE
+-------------------------------------------------------- */
+
+.depth-2.donate-to-prl {
+  // Legacy Mura CSS
+  .image-left {
+    float: left;
+    margin: 0 1em .75em 0;
+  }  
+  .image-right {
+    float: right;
+    margin: 0 0 .75em 1em;
+  }
+  hr {
+    clear: both;
+  }
+}
+
+@media (max-width: 425px) {
+  .depth-2.donate-to-prl {
+    // Images smaller on small screens
+    img{
+      width: 55%;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }    
+  }
+}
+
+/* --------------------------------------------------------
                 BRAND GUIDES PAGES
 -------------------------------------------------------- */
 
@@ -2865,6 +2895,41 @@ div.prl-research-highlights {
   }
 }
 
+
+/* --------------------------------------------------------
+                PHOTOSYNQ / 404 PAGES
+-------------------------------------------------------- */
+
+@media (min-width: 768px) {
+  // Image floats on larger screens
+  #researchtech.depth-3.photosynq {
+    main {
+      img {
+        float: right;
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .page-not-found {
+    main {
+      figure {
+        float: left;
+        margin-right: 16px;
+      }
+      .prl-404-text {
+        display: inline-block;
+        max-width: 50%;
+      }
+    }
+  }
+}
+.page-not-found {
+  .prl-404-img {
+    text-align: center;
+  }
+}
 
 /* ----------------------------------------------------------------------------------------------------
                 TEMP - 45th ANNUAL MIDWEST/SOUTHEAST PHOTOSYNTHESIS MEETING
