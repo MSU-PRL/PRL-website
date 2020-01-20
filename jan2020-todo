@@ -1,4 +1,4 @@
-- Update site CSS to remove Bootstrap on the following pages: PhotosynQ, Grad Students (table), Postdocs (table), Page Not Found, Rearrange Donate to PRL (add call to action for fund pages), Components
+- Update site CSS to remove Bootstrap on the following pages: Components
 - Remove unused CSS
 - Add animation to accordion
 - Use Natsci accessibility audit tool

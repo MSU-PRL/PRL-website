@@ -845,8 +845,9 @@ $img-hover-opacity: 0.8;
 
 
 /* -------------------------------------------------------------------
-        GRID SYSTEM - JANUARY 2020 (CNS REMOVED BOOTSTRAP
+        GRID SYSTEM - JANUARY 2020
 -------------------------------------------------------------------- */
+// CNS removed Bootstrap CSS in January 2020. 'prl-row' emulates the main .row class from Bootstrap CSS
 
 .prl-row {
   // Copied from Bootstrap .row class
@@ -857,4 +858,55 @@ $img-hover-opacity: 0.8;
       flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px;
+}
+
+
+/* -------------------------------------------------------------------
+        TABLE - JANUARY 2020 (CNS REMOVED BOOTSTRAP
+-------------------------------------------------------------------- */
+// CNS removed Bootstrap CSS in January 2020. The styles below are copied from Bootstrap CSS
+
+.table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.secondaryPageWrapper table {
+  border: 0!important;
+  width: 100%!important;
+}
+
+.table {
+  width: 100%;
+  margin-bottom: 1rem;
+  background-color: transparent;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(0,0,0,.05);
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(0,0,0,.075);
+}
+
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+  border: 1px solid #ddd;
+}
+
+.table td, .table th {
+  padding: .75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+
+td {
+  border: 1px solid #ccc;
 }

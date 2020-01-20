@@ -6525,7 +6525,7 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
   color: #444; }
 
 /* -------------------------------------------------------------------
-        GRID SYSTEM - JANUARY 2020 (CNS REMOVED BOOTSTRAP
+        GRID SYSTEM - JANUARY 2020
 -------------------------------------------------------------------- */
 .prl-row {
   display: -webkit-box;
@@ -6535,6 +6535,45 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
   flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px; }
+
+/* -------------------------------------------------------------------
+        TABLE - JANUARY 2020 (CNS REMOVED BOOTSTRAP
+-------------------------------------------------------------------- */
+.table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar; }
+
+.secondaryPageWrapper table {
+  border: 0 !important;
+  width: 100% !important; }
+
+.table {
+  width: 100%;
+  margin-bottom: 1rem;
+  background-color: transparent; }
+
+table {
+  border-collapse: collapse; }
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, 0.05); }
+
+.table-hover tbody tr:hover {
+  background-color: rgba(0, 0, 0, 0.075); }
+
+.table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th {
+  border: 1px solid #ddd; }
+
+.table td, .table th {
+  padding: .75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6; }
+
+td {
+  border: 1px solid #ccc; }
 
 /* --------------------------------------------------------
         CNS STYLING OVERRIDES
@@ -7389,6 +7428,26 @@ aside {
     .about .mainCol section.prl-about-funders a img {
       margin-left: 0 !important;
       margin-right: 0 !important; } }
+
+/* --------------------------------------------------------
+                DONATE TO PRL PAGE
+-------------------------------------------------------- */
+.depth-2.donate-to-prl .image-left {
+  float: left;
+  margin: 0 1em .75em 0; }
+
+.depth-2.donate-to-prl .image-right {
+  float: right;
+  margin: 0 0 .75em 1em; }
+
+.depth-2.donate-to-prl hr {
+  clear: both; }
+
+@media (max-width: 425px) {
+  .depth-2.donate-to-prl img {
+    width: 55%;
+    margin-left: 0 !important;
+    margin-right: 0 !important; } }
 
 /* --------------------------------------------------------
                 BRAND GUIDES PAGES
@@ -8714,6 +8773,24 @@ div.prl-research-highlights .last.hasImage {
       text-align: center; }
     #walkerlabhome.lab-news > div > div > div > #MainContent > div > div > div > div > div > .mura-index > div .item .date.releaseDate {
       margin-top: 0.6rem; } }
+
+/* --------------------------------------------------------
+                PHOTOSYNQ / 404 PAGES
+-------------------------------------------------------- */
+@media (min-width: 768px) {
+  #researchtech.depth-3.photosynq main img {
+    float: right; } }
+
+@media (min-width: 1200px) {
+  .page-not-found main figure {
+    float: left;
+    margin-right: 16px; }
+  .page-not-found main .prl-404-text {
+    display: inline-block;
+    max-width: 50%; } }
+
+.page-not-found .prl-404-img {
+  text-align: center; }
 
 /* ----------------------------------------------------------------------------------------------------
                 TEMP - 45th ANNUAL MIDWEST/SOUTHEAST PHOTOSYNTHESIS MEETING
