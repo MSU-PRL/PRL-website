@@ -1,5 +1,8 @@
 @charset "UTF-8";
 /* --------------------------------------------------------
+                IMPORTS
+-------------------------------------------------------- */
+/* --------------------------------------------------------
                 COMPONENTS
 -------------------------------------------------------- */
 /* --------------------------------------------------------
@@ -692,3 +695,165 @@ table {
 
 td {
   border: 1px solid #ccc; }
+
+/* --------------------------------------------------------
+        CNS STYLING OVERRIDES
+-------------------------------------------------------- */
+/* TEXT WHITE SPACE
+-------------------------------------------------------- */
+blockquote ol:last-child,
+blockquote p:last-child,
+blockquote ul:last-child {
+  margin-bottom: initial !important;
+  font-size: 1.5rem !important;
+  color: #333;
+  font-weight: 400;
+  text-transform: none;
+  line-height: 1.4 !important; }
+
+#MainContent,
+aside {
+  line-height: 1.6;
+  letter-spacing: 0.05px; }
+  #MainContent b,
+  #MainContent strong,
+  aside b,
+  aside strong {
+    color: #111; }
+  #MainContent .mainColContent p,
+  #MainContent .mainColContent ul,
+  #MainContent .mainColContent ol,
+  #MainContent div.mura-region p,
+  #MainContent div.mura-region ul,
+  #MainContent div.mura-region ol,
+  aside .mainColContent p,
+  aside .mainColContent ul,
+  aside .mainColContent ol,
+  aside div.mura-region p,
+  aside div.mura-region ul,
+  aside div.mura-region ol {
+    margin-bottom: 20px; }
+
+.depth-2.internal-resources .mura-index .title,
+.depth-1.people .mura-index .title,
+.depth-1.news-events .mura-index .title,
+.depth-1.research-tech .mura-index .title,
+.depth-1.graduate-program .mura-index .title,
+.depth-4.communications-department-resources .mura-index .title {
+  font-size: 23px;
+  font-size: 1.45rem; }
+
+#about.contact-us .mainColContent p {
+  line-height: 1.4; }
+
+#MainContent #crumblist {
+  line-height: 1.4; }
+
+@media (min-width: 1400px) {
+  #MainContent,
+  aside {
+    letter-spacing: -0.1px; }
+  #MainContent .mainColContent p,
+  #MainContent .mainColContent ul,
+  #MainContent .mainColContent ol,
+  #MainContent div.mura-region p,
+  #MainContent div.mura-region ul,
+  #MainContent div.mura-region ol {
+    font-size: 16.5px;
+    line-height: 1.7; }
+  .depth-2.internal-resources .mura-index p,
+  .depth-2.internal-resources .mura-index ul,
+  .depth-2.internal-resources .mura-index ol,
+  .depth-1.people .mura-index p,
+  .depth-1.people .mura-index ul,
+  .depth-1.people .mura-index ol,
+  .depth-1.news-events .mura-index p,
+  .depth-1.news-events .mura-index ul,
+  .depth-1.news-events .mura-index ol,
+  .depth-1.research-tech .mura-index p,
+  .depth-1.research-tech .mura-index ul,
+  .depth-1.research-tech .mura-index ol,
+  .depth-1.graduate-program .mura-index p,
+  .depth-1.graduate-program .mura-index ul,
+  .depth-1.graduate-program .mura-index ol,
+  .depth-4.communications-department-resources .mura-index p,
+  .depth-4.communications-department-resources .mura-index ul,
+  .depth-4.communications-department-resources .mura-index ol {
+    font-size: 16.5px; } }
+
+/* TEXT WHITE SPACE IN NEWS CONTENT AREAS
+-------------------------------------------------------- */
+#newsevents.depth-3 #MainContent div.mura-region p {
+  margin-bottom: 24px; }
+
+@media (max-width: 767px) {
+  #newsevents.depth-3 #MainContent div.mura-region p {
+    margin-bottom: 20px; } }
+
+/* PRL LINK STYLES
+-------------------------------------------------------- */
+.mura-index a,
+.mura-object-content a {
+  text-decoration: none;
+  color: #466A62;
+  border-bottom: 1px solid #466A62; }
+  .mura-index a:hover,
+  .mura-object-content a:hover {
+    color: #738F89;
+    border-bottom: 0px solid transparent; }
+
+main.mainContent a {
+  text-decoration: none;
+  color: #466A62;
+  border-bottom: 1px solid #466A62; }
+  main.mainContent a:hover {
+    color: #738F89;
+    border-bottom: 0px solid transparent; }
+
+main.mainContent dd.image a,
+main.mainContent .image a,
+main.mainContent #svAsset,
+main.mainContent .social-share a {
+  border-bottom: none; }
+
+main.mainContent nav a,
+main.mainContent .view-all {
+  color: #18453B;
+  text-decoration: underline;
+  border-bottom: none; }
+  main.mainContent nav a:hover,
+  main.mainContent .view-all:hover {
+    text-decoration: none;
+    border-bottom: none; }
+
+.breadcrumb a {
+  font-weight: 400 !important; }
+
+/* <CODE> tag style
+-------------------------------------------------------- */
+.prl-code-area {
+  position: relative; }
+  .prl-code-area code {
+    display: block;
+    padding: 16px;
+    max-height: 230px;
+    overflow: auto;
+    margin: 20px 0 50px;
+    position: relative;
+    background-color: #f5f2f0; }
+    .prl-code-area code:before {
+      content: 'markup';
+      color: black;
+      background-color: #CFCFCF;
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-size: 0.75rem;
+      border-radius: 0 0 0 5px;
+      padding: 0.25rem 0.75rem;
+      text-shadow: none; }
+
+@media (max-width: 767px) {
+  .prl-code-area code {
+    padding-top: 30px; } }
