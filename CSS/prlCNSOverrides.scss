@@ -327,7 +327,7 @@ aside {
   }
 }
 
-#MainContent a {
+main.mainContent a {
   // All link text-decoration styling, except asides and breadcrumbs
   text-decoration: none;
   color: $natsci-complementary; // transition: $tran-short;
@@ -338,7 +338,7 @@ aside {
   }
 }
 
-#MainContent {
+main.mainContent {
   dd.image a,
   .image a,
   #svAsset,
@@ -359,17 +359,7 @@ aside {
   }
 }
 
-.pagination a,
-#navSequential a {
-  // PAGINATION: Override new link display
-  color: $msu-color !important;
-  text-decoration: none !important;
-  border: 1px solid #ddd !important;
-}
-
 .breadcrumb a {
-  // Keeps breadcrumb styling as intended by CNS
-  @extend .view-all;
   font-weight: 400 !important; // Overrides any other font-weight decisions in body
 }
 

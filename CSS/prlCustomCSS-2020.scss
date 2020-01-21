@@ -13,58 +13,15 @@
                 HOMEPAGE
 -------------------------------------------------------- */
 
-/* HOMEPAGE CNS LAYOUT OVERRIDES
+/* GENERAL
 -------------------------------------------------------- */
 
-.home {
-  .card-natsci {
-    // Take away CNS hover effect on home card
-    &:hover {
-      -webkit-box-shadow: none;
-      box-shadow: none;
-    }
-  }
-}
-
-@media (min-width: 1370px) {
-  .deptHomeComponentWrapper {
-    // Make homepage container wider on wide laptops
-    .container {
-      width: 1350px;
-      max-width: 1350px;
-    }
-  }
-}
 @media (max-width: 991px) {
   .home {
     .prl-row {
       // Adds some white space on all prl-row classes for tablet and phones
       padding-right: 9px;
       padding-left: 9px;
-    }
-  }
-}
-
-@media (max-width: 767px) {
-  // Adjusting dimensions to mobile breakpoint*/
-  .home {
-    // Removing the side padding from mobile
-    .deptHomeComponentWrapper .deptHomeComponentHeading {
-      margin-bottom: 0;
-    }
-    .deptHomeComponentWrapper {
-      background: #fff;
-    }
-    .deptHomeComponentWrapper {
-      padding-bottom: 0;
-    }
-    .card-natsci {
-      border: none;
-      overflow: visible;
-      &:hover {
-        -webkit-box-shadow: none;
-        box-shadow: none;
-      }
     }
   }
 }
@@ -205,9 +162,11 @@
   .mura-async-object.mura-object {
     .mura-object-content > .mura-index {
       margin: 0;
-      div > .item {
+      border-top: 0px;
+      padding-top: 0;
+      div > .hasImage {
         margin: 0;
-        padding: 16px 40px 0 16px; // to give image space to have a shadow
+        padding: 16px 40px 0 0; // to give image space to have a shadow
         border-right: 3px solid $primary-color;
         .image {
           position: relative;
@@ -227,13 +186,14 @@
           }
         }
         .title {
-          margin: 0 0 4px 32px;
+          margin: 0 0 4px 16px;
           text-transform: uppercase;
           a {
             text-decoration: none;
             border-bottom: 0px;
             color: $x-dark-grey-text;
             font-weight: 600;
+            line-height: 1.6;
           }
         }
         .summary {
@@ -243,7 +203,7 @@
           font-size: 15.5px;
           line-height: 1.5;
           display: block;
-          margin: 0 0 16px 32px;
+          margin: 0 0 16px 16px;
           p {
             margin-bottom: 0px !important; // Overriding <p> margin-bottom on site
           }
@@ -253,6 +213,7 @@
   }
 }
 
+
 .prl-home-news-nonfeature {
   // Styling home nonfeature area
   // Layout
@@ -260,9 +221,11 @@
   max-width: 50%;
   .mura-async-object.mura-object > .mura-object-content {
     .mura-index {
-      margin: 4px 8px 0 24px; // index outer margins
+      margin-left: 24px; // index outer margins
+      border-top: 0px;
+      padding-top: 0;
       div {
-        .item {
+        .hasImage {
           margin: 0 0 24px 0;
           padding: 0 !important; // overriding Mura settings
           min-height: auto !important; // overriding Mura settings
@@ -271,7 +234,7 @@
             position: relative;
             float: left;
             margin: 0;
-            padding: 12px 16px 16px;
+            padding: 0px 16px 16px;
             a {
               border-bottom: 0px solid transparent;
               img {
@@ -288,6 +251,7 @@
           }
           .title {
             margin: 12px 0 0 0;
+            line-height: 1.6;
             a {
               text-decoration: none;
               border-bottom: 0px;
@@ -315,7 +279,7 @@
 
 @media (min-width: 1200px) {
   // Larger Desktops
-  .prl-home-news-nonfeature > .mura-async-object.mura-object > .mura-object-content > .mura-index > div > .item {
+  .prl-home-news-nonfeature > .mura-async-object.mura-object > .mura-object-content > .mura-index > div > .hasImage {
     // Styling home nonfeature area
     .summary {
       // Adding margin-left to summary so that long content doesn't wrap under the associated image. This only applies to large desktop screens.
@@ -330,7 +294,7 @@
     // Styling home feature area
     .mura-async-object.mura-object {
       .mura-object-content > .mura-index {
-        div > .item {
+        div > .hasImage {
           padding-right: 24px;
           .image {
             margin-bottom: 24px;
@@ -349,7 +313,7 @@
       .mura-index {
         margin-left: 8px;
         div {
-          .item {
+          .hasImage {
             margin-bottom: 8px;
             .image {
               width: 120px;
@@ -376,7 +340,7 @@
     .mura-async-object.mura-object {
       // Centering home feature area
       .mura-object-content > .mura-index {
-        div > .item {
+        div > .hasImage {
           // Centering content
           margin: 0;
           padding: 16px 16px 0 16px;
@@ -414,7 +378,7 @@
         margin-left: auto;
         margin-right: auto;
         div {
-          .item {
+          .hasImage {
             // Shorter distances between news items
             margin-bottom: 16px;
           }
@@ -434,7 +398,7 @@
     // Styling home feature area
     .mura-async-object.mura-object {
       .mura-object-content > .mura-index {
-        div > .item {
+        div > .hasImage {
           padding: 12px 12px 0 12px;
           .image {
             margin-bottom: 16px;
@@ -457,7 +421,7 @@
     .mura-async-object.mura-object > .mura-object-content {
       div.mura-index {
         div {
-          .item {
+          .hasImage {
             margin-bottom: 8px;
             .image {
               width: 110px;
@@ -527,6 +491,8 @@
         transition: $tran-half-sec;
         border-bottom: 1px solid $material-border-bottomORtop-color;
         a {
+          display: flex; // somehow solves weird bug where <a> takes up space in addition to the image
+          border-bottom: none;
           img {
             width: 100%;
           }
@@ -669,13 +635,7 @@
 -------------------------------------------------------- */
 
 .about {
-  .mainCol {
-    // Overrides .col-md-8 default Natsci layout
-    width: 100%;
-    max-width: 100%;
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 100%;
-    flex: 0 0 100%;
+  .mainContent__mainCol {
     margin-bottom: 60px;
     nav {
       // Hide breadcrumbs
@@ -684,7 +644,7 @@
     .pageTitle {
       // Making h1 similar to the h2s.
       @extend .prl-h2-alternate;
-      margin-top: 80px;
+      margin-top: 40px;
     }
     section {
       margin: 150px 0; // Adding top and bottom margins between sections
@@ -795,8 +755,10 @@
     blockquote {
       // Customizing blockquote
       margin: 100px auto;
-      padding: 16px 0;
       max-width: 75%;
+      p {
+        color: #fff !important;
+      }
     }
     .zoomtimeline {
       // Overrides on custom timeline plugin
@@ -847,6 +809,7 @@
           // Subtle hover effect on all logos
           -webkit-transition: 0.4s;
           transition: 0.4s;
+          margin-left: 0;
           &:hover {
             -webkit-filter: grayscale(100%);
             filter: grayscale(100%);
@@ -857,9 +820,19 @@
   }
 }
 
-@media (max-width: 991px) {
+@media (min-width: 992px) {
+  //Large screens
   .about {
-    .mainCol {
+    .mainContent__mainCol {
+      padding: 0 2rem;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  //Tablets
+  .about {
+    .mainContent__mainCol {
       .zoomtimeline {
         margin-bottom: 120px;
       }
@@ -901,7 +874,7 @@
 @media (max-width: 767px) {
   // Phones
   .about {
-    .mainCol {
+    .mainContent__mainCol {
       .pageTitle {
         margin-top: 55px;
       }
@@ -1015,7 +988,7 @@
 -------------------------------------------------------- */
 
 .prl-community-brand-toolkit, .web-components-demo {
-  .sideCol {
+  .mainContent__sideCol {
     position: -webkit-sticky;
     position: sticky;
     top: 4rem;
@@ -1068,7 +1041,7 @@
       }
     }
   }
-  .mainCol {
+  .mainContent__mainCol {
     .pageTOC {
       // Table of content has bootstrap hidden classes added. It shows only on tablets and desktops
       padding: 0 !important;
@@ -1124,9 +1097,21 @@
   }
 }
 
+@media (min-width: 992px) {
+  .prl-community-brand-toolkit, .web-components-demo {
+    .mainContent__mainCol {
+      .pageTOC {
+        // Hide TOC in main body
+        display: none;
+      }
+    }
+  }
+}
+
 @media (max-width: 991px) {
   .prl-community-brand-toolkit, .web-components-demo {
-    .sideCol {
+    .mainContent__sideCol {
+      // Hide TOC in side col
       display: none;
     }
   }
@@ -1165,29 +1150,9 @@
                 MAIN NEWS / RESEARCH HIGHLIGHTS PAGES: LAYOUT
 --------------------------------------------------------------- */
 
-@media (min-width: 992px) {
-  // Changing the layout widths only for desktop computers on the main "News" page only
-  #newsevents.news, #newsevents.research-highlights {
-    #MainContent {
-      width: 73%;
-      -webkit-box-flex: 0;
-      -ms-flex: 0 0 73%;
-      flex: 0 0 73%;
-      max-width: 73%;
-    }
-    aside {
-      width: 27%;
-      -webkit-box-flex: 0;
-      -ms-flex: 0 0 27%;
-      flex: 0 0 27%;
-      max-width: 27%;
-    }
-  }
-}
-
 #newsevents.news, #newsevents.research-highlights {
   // Giving the "Top Stories" more space on the main "News" page only
-  aside {
+  .mainContent__sideCol {
     padding-right: 0;
     padding-left: 0;
   }
@@ -1196,7 +1161,7 @@
 @media (max-width: 991px) {
   #newsevents.news, #newsevents.research-highlights {
     // Bringing back the "Top Stories" padding to default setting from tablet and down
-    aside {
+    .mainContent__sideCol {
       padding-right: 15px;
       padding-left: 15px;
     }
@@ -1204,10 +1169,15 @@
 }
 
 #newsevents {
-  aside {
+  .mainContent__metaData {
+    strong {
+      color: white;
+    }
+  }
+  .mainContent__sideCol {
     // Styling the "Top Stories" collection to be closer to Material Design card dimensions for "News" and all descendants
     .prl-top-stories > .mura-object-content > .mura-index {
-      .item.hasImage {
+      .hasImage {
         padding-left: 0 !important;
         .image {
           @extend .prl-aside-relcontent-img;
@@ -1216,7 +1186,9 @@
           @extend .prl-aside-relcontent-title;
         }
         .summary {
-          @extend .prl-aside-relcontent-summary;
+          p {
+            @extend .prl-aside-relcontent-summary;
+          }
         }
       }
     }
@@ -1537,7 +1509,7 @@
       }
     }
     .mura-object-content > .mura-index > div {
-      .item {
+      .hasImage {
         // Some of these styles are like the #sysTopStories aside ones
         padding-left: 0 !important;
         .image {
@@ -1576,7 +1548,7 @@
     // For all styles, summary is 100% wide from Tablet and down
     .prl-news-relcontent {
       .mura-object-content > .mura-index > div {
-        .item {
+        .hasImage {
           .summary {
             width: 100%;
           }
@@ -1715,7 +1687,7 @@ div.prl-research-highlights {
 
 #researchtech {
   #MainContent {
-    li.mura-categories {
+    .mainContent__metaData {
       //display none of the Mura categories after titles
       display: none;
     }
@@ -1796,22 +1768,16 @@ div.prl-research-highlights {
     text-transform: capitalize;
   }
   .mura-object-content > .mura-index > div {
-    .item {
+    .hasImage {
       border-bottom: transparent;
       padding: 0rem 5px !important;
       width: 20%;
       margin: 0;
       float: left; // Height: 15rem; Not needed since styling gives it minimum 200px height, which is fine.
-      .title {
-        font-size: 0.9rem;
-        font-weight: 400;
-        text-align: center;
-        position: relative;
-        top: 7.5rem;
-      }
       .image {
         width: 100%;
         text-align: center;
+        position: relative;
         img {
           padding: 0;
           border-radius: 50%;
@@ -1826,6 +1792,13 @@ div.prl-research-highlights {
           }
         }
       }
+      .title {
+        font-size: 0.9rem;
+        font-weight: 400;
+        text-align: center;
+        position: relative;
+        margin-top: 8px;
+      }
     }
   }
 }
@@ -1834,7 +1807,7 @@ div.prl-research-highlights {
   .prl-participating-faculty {
     // Changing the number of faculty to four per line on the "Participating Faculty" area.*/
     .mura-object-content > .mura-index > div {
-      .item {
+      .hasImage {
         width: 25%;
       }
     }
@@ -1844,7 +1817,7 @@ div.prl-research-highlights {
 @media (max-width: 767px) {
   .prl-participating-faculty {
     .mura-object-content > .mura-index > div {
-      .item {
+      .hasImage {
         width: 100%;
         margin-bottom: 0rem;
         min-height: 11.5rem !important;
@@ -1882,8 +1855,10 @@ div.prl-research-highlights {
     }
     blockquote {
       margin: 36px auto;
-      padding: 16px 0;
       max-width: 100%;
+      p {
+        color: #fff !important;
+      }
     }
     .prl-student-alumni-profiles {
       margin-top: 16px;
@@ -1952,34 +1927,36 @@ div.prl-research-highlights {
 .prl-seminars-events {
   margin-top: 0.5rem;
   border: 1px solid #eaeaea;
-  .item:nth-child(odd) {
+  .hasImage:nth-child(odd) {
     background: rgba(132, 110, 40, 0.16) // Lighter version of secondary color #846E28
   }
-  .item {
+  .hasImage {
     margin: 0 !important;
     padding-top: 12px !important; // Overrides .last class for last item
     padding-left: 12px !important; // Overrides .last class for last item
+    display: flex;
+    align-items: flex-start;
+    .image {
+      display: none;
+    }
     .date.releaseDate {
-      width: 20%;
-      float: left;
+      flex-basis: 20%;
       margin-right: 0.625rem;
       font-size: 0.85rem;
       line-height: 1.6;
     }
     .title {
-      float: left;
-      width: 25%;
+      flex-basis: 30%;
       margin-right: 0.625rem;
     }
     .summary {
-      margin-left: 0;
-      float: left;
-      width: 50%;
+      flex-basis: 50%;
       p {
         // Overrides the new text style
         line-height: 1.4 !important;
         margin-bottom: 10px !important;
         font-size: 16px !important;
+        margin-top: 0px;
       }
       .prl-event-type {
         display: none; // Removes the Event type title only on the "Seminars & Events" Page - ex: "Monday Seminar Series" OR "Tuesday Noon Seminar Series"
@@ -1989,14 +1966,15 @@ div.prl-research-highlights {
       background: rgba(132, 110, 40, 0.26) // Lighter version of secondary color #846E28
     }
   }
-  .item.last {
+  .hasImage.last {
     border-bottom: 1px solid $x-light-grey;
   }
 }
 
 @media (max-width: 767px) {
   .prl-seminars-events {
-    .item {
+    .hasImage {
+      flex-direction: column;
       .date.releaseDate {
         width: 100%;
       }
@@ -2068,6 +2046,12 @@ div.prl-research-highlights {
 /* ------------------------------------------------------------
                 PEOPLE --> FACULTY and STAFF DIRECTORIES
 ------------------------------------------------------------- */
+#people {
+  // Hide metadata
+  .mainContent__metaData {
+    display: none;
+  }
+}
 
 .faculty,
 .fixed-term-faculty,
@@ -2077,11 +2061,9 @@ div.prl-research-highlights {
     .mura-collection.mura-grid-two {
       // Staff and Faculty Pages, common stylings
       // Adding some spacing
-      margin-right: -20px; // Flexbox display
+      margin-right: -16px; // Flexbox display
       display: flex; /* NEW - Chrome */
       flex-flow: row wrap;
-      -webkit-box-pack: justify;
-      justify-content: space-between;
       .mura-collection-item {
         width: 46%; // For non-flex devices
         display: flex;
@@ -2577,6 +2559,18 @@ div.prl-research-highlights {
   }
 }
 
+@media(min-width: 992px) {
+  // Large screens
+  #people.depth-3 {
+    .mainColContent {
+      a.d-md-none {
+        // Hide email in main body
+        display: none;
+      }
+    }
+  }
+}
+
 @media (min-width: 992px) and (max-width: 1199px) {
   #people.depth-3 {
     .mainColContent {
@@ -2706,7 +2700,7 @@ div.prl-research-highlights {
       text-transform: capitalize;
     }
     .mura-object-content > .mura-index > div {
-      .item {
+      .hasImage {
         // Some of these styles are like the #sysTopStories aside ones
         padding-left: 0 !important;
         .image {
@@ -2816,13 +2810,9 @@ div.prl-research-highlights {
       font-weight: 200;
     }
   }
-  .mainCol {
-    // Overrides .col-md-8 default Natsci layout
-    width: 100%;
-    max-width: 100%;
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 100%;
-    flex: 0 0 100%;
+  .mainContent__mainCol {
+    // Overrides NatSci grid
+    grid-column: 1/-1;
     margin-bottom: 60px;
     nav {
       // Removing breadcrumbs from Walker lab home page
@@ -2838,6 +2828,10 @@ div.prl-research-highlights {
       text-align: center;
       max-width: 800px;
     }
+  }
+  .mainContent__sideCol {
+    // Hide home page side col
+    display: none;
   }
 }
 
@@ -2865,26 +2859,14 @@ div.prl-research-highlights {
   }
 }
 
-#walkerlabhome {
-  nav {
-    li.first {
-      // Removing "Home" fonticon so it doesn't link back to PRL main website
-      display: none;
-    }
-    li:nth-child(2):before {
-      // Removing the slash before "Walker Lab Home" breadcrumb item
-      display: none;
-    }
-  }
-}
 
 /* LAB NEWS AND PEOPLE PAGES
 -------------------------------------------------- */
 
-#walkerlabhome.lab-news > div > div > div > #MainContent > div > div > div > div > div > .mura-index > div,
-#walkerlabhome.people > div > div > div > #MainContent > div > .mura-object-content > .mura-index > div {
+#walkerlabhome.lab-news .mura-index > div,
+#walkerlabhome.people .mura-index > div {
   // Applies to both lab news and people pages
-  .item {
+  .hasImage {
     padding-top: 12px !important; // Important declaration to override the .last styling
     padding-right: 12px;
   }
@@ -2893,9 +2875,9 @@ div.prl-research-highlights {
 
 @media only screen and (max-width: 767px) {
   // Applies only to lab news page on Mobile devices
-  #walkerlabhome.lab-news > div > div > div > #MainContent > div > div > div > div > div > .mura-index > div {
+  #walkerlabhome.lab-news .mura-index > div {
     // Image center aligned and border-bottom after each story.
-    .item {
+    .hasImage {
       padding: 0 0 6px 0 !important;
       border-bottom: 1px solid #f5f5f5;
       .image {

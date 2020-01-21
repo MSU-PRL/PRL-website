@@ -144,7 +144,7 @@ $shadow-depth-24: 0px 11px 15px -7px rgba(0, 0, 0, 0.2),
    display: inline;
  }
  
- button {
+ button#expand, button#collapse {
    // Copies elements from .prl-btn, such as border-radius
    // but has different background and foreground colors
    // and different padding and font size.
@@ -462,6 +462,8 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
 .prl-internal-logo-svg {
   height: 45px;
   margin-bottom: 18px;
+  display: inline; // override CNS svg styles
+  width: auto;
 }
 
 .prl-internal-logo-content-area {

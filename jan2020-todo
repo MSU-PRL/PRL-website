@@ -2,6 +2,9 @@
   - Content - Card: Related Content - Full Image + Title Overlay (see where in news stories)
   - Content - Card: Related Content - Image + Title Overlay + Text Area (see where in news stories)
   - Content - Informational Well Section with Cards (see where in news stories)
+  - Fix layout on mobile and tablet: Hpg, About (of note)
+  - Redo asides (remove background? Link underlines in side navs?)
+  - Hero images in internal pages
 - Remove unused CSS
 - Use Natsci accessibility audit tool
 - Add animation to accordion

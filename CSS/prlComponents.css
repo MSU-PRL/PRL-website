@@ -32,7 +32,7 @@
 .controls li {
   display: inline; }
 
-button {
+button#expand, button#collapse {
   background: #2E4D4D;
   color: #fff;
   border-color: transparent;
@@ -278,7 +278,9 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
 ----------------------------------------------------------------------------------------------------- */
 .prl-internal-logo-svg {
   height: 45px;
-  margin-bottom: 18px; }
+  margin-bottom: 18px;
+  display: inline;
+  width: auto; }
 
 .prl-internal-logo-content-area {
   margin: 36px 0; }
