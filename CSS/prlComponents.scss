@@ -876,6 +876,13 @@ $img-hover-opacity: 0.8;
   margin-left: -15px;
 }
 
+@media (max-width: 820px) {
+  .prl-row {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+
 
 /* -------------------------------------------------------------------
         TABLE - JANUARY 2020 (CNS REMOVED BOOTSTRAP
