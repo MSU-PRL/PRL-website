@@ -13,6 +13,31 @@
                 HOMEPAGE
 -------------------------------------------------------- */
 
+/* HERO IMAGE
+-------------------------------------------------------- */
+
+.home {
+  section.heroNews {
+    min-height: 550px; // Setting min height
+  }
+}
+
+@media (min-width: 768px) {
+  .home {
+    section.heroNews {
+      height: 93vh;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .home {
+    section.heroNews {
+      height: 100vh;
+    }
+  }
+}
+
 /* HOMEPAGE BRANDS SECTION
 -------------------------------------------------------- */
 
@@ -21,6 +46,7 @@
   margin-bottom: 120px;
   h2 {
     @extend .prl-h2-alternate;
+    flex-basis: 100%;
   }
   p {
     @extend .prl-p-subheader;
@@ -28,6 +54,7 @@
     text-align: center;
     margin-bottom: 0;
     max-width: 750px;
+    flex-basis: 100%;
   }
   .prl-home-brands-logos {
     margin-left: 8.333333%;
@@ -114,16 +141,8 @@
       margin-left: 0%;
       flex: 0 0 58.333333%;
       max-width: 58.333333%;
+      padding-left: 15px;
     }
-  }
-}
-
-@media (min-width: 1370px) {
-  // To accomodate wider container of 1350px larger screen sizes
-  .prl-home-brands {
-    max-width: 1225px;
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 
@@ -133,8 +152,6 @@
 // Space between news and events sections
 .prl-home-news {
   margin-bottom: 120px;
-  margin-right: -8px;
-  margin-left: -8px;
   h2 {
     @extend .prl-h2-alternate;
     margin-bottom: 50px;
@@ -192,6 +209,7 @@
           display: block;
           margin: 0 0 16px 16px;
           p {
+            margin-block-start: 4px;
             margin-bottom: 0px !important; // Overriding <p> margin-bottom on site
           }
         }
@@ -255,6 +273,7 @@
             display: block;
             margin: 0 0 0 32px;
             p {
+              margin-block-start: 4px;
               margin-bottom: 0px !important; // Overriding <p> margin-bottom on site
             }
           }
@@ -279,6 +298,7 @@
   // Adjusting dimensions to the small desktop breakpoint
   .prl-home-news-feature {
     // Styling home feature area
+    padding-left: 15px;
     .mura-async-object.mura-object {
       .mura-object-content > .mura-index {
         div > .hasImage {
@@ -296,6 +316,7 @@
   }
   .prl-home-news-nonfeature {
     // Styling home nonfeature area
+    padding-right: 15px;
     .mura-async-object.mura-object > .mura-object-content {
       .mura-index {
         margin-left: 8px;
@@ -368,6 +389,9 @@
           .hasImage {
             // Shorter distances between news items
             margin-bottom: 16px;
+            .image {
+              padding: 0px 16px 16px 0;
+            }
           }
           .last.hasImage {
             // Hide last news item to shorten news section
@@ -386,7 +410,7 @@
     .mura-async-object.mura-object {
       .mura-object-content > .mura-index {
         div > .hasImage {
-          padding: 12px 12px 0 12px;
+          padding: 12px 0 0 0;
           .image {
             margin-bottom: 16px;
           }
@@ -413,10 +437,11 @@
             display: inline-block;
             .image {
               width: 110px;
-              padding: 12px 16px 16px 12px;
+              padding: 12px 16px 16px 0px;
             }
             .title {
               margin-bottom: 4px;
+              font-size: 15px;
             }
             .summary {
               display: none;
@@ -443,10 +468,14 @@
   .prl-row {
     justify-content: center; // centers 'view all events' button
   }
+  a.prl-arrow-btn {
+    // 'View All Events' button margin with footer
+    margin-bottom: 1rem;
+  }
 }
 
 .prl-home-event-cards.mura-object {
-  margin-bottom: 2.75rem;
+  margin-bottom: 2rem;
   margin-right: 0; // overrides Mura default
   div.mura-collection.mura-grid-three {
     .mura-collection-item:first-child {
@@ -479,7 +508,8 @@
         transition: $tran-half-sec;
         border-bottom: 1px solid $material-border-bottomORtop-color;
         a {
-          display: flex; // somehow solves weird bug where <a> takes up space in addition to the image
+          display: block; // somehow solves weird bug where <a> takes up space in addition to the image
+          margin-bottom: -10px;
           border-bottom: none;
           img {
             width: 100%;
@@ -523,6 +553,7 @@
 @media (min-width: 992px) and (max-width: 1199px) {
   // Adjusting dimensions to the small desktop breakpoint
   .prl-home-event-cards.mura-object {
+    padding: 0 15px; // as not to hug the edges
     div.mura-collection.mura-grid-three {
       .mura-collection-item:first-child {
         float: left;
@@ -604,16 +635,6 @@
         }
       }
     }
-  }
-}
-
-@media (min-width: 1370px) {
-  // To accomodate wider container of 1350px larger screen sizes
-  .prl-home-news,
-  .prl-home-event-cards div.mura-collection.mura-grid-three {
-    max-width: 1170px;
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 
