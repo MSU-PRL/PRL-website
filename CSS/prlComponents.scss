@@ -861,8 +861,11 @@ $img-hover-opacity: 0.8;
 
 
 /* -------------------------------------------------------------------
-        GRID SYSTEM - JANUARY 2020
+        LEGACY FIXES - JANUARY 2020
 -------------------------------------------------------------------- */
+
+/* GRID
+-------------------------------------------------------- */
 // CNS removed Bootstrap CSS in January 2020. 'prl-row' emulates the main .row class from Bootstrap CSS
 
 .prl-row {
@@ -872,20 +875,10 @@ $img-hover-opacity: 0.8;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
-}
-
-@media (max-width: 991px) {
-  .prl-row {
-    margin-right: 0;
-    margin-left: 0;
-  }
 }
 
 
-/* -------------------------------------------------------------------
-        TABLE - JANUARY 2020 (CNS REMOVED BOOTSTRAP
+/* TABLE
 -------------------------------------------------------------------- */
 // CNS removed Bootstrap CSS in January 2020. The styles below are copied from Bootstrap CSS
 
