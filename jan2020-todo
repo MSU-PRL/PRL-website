@@ -2,8 +2,7 @@
   - Content - Card: Related Content - Full Image + Title Overlay (see where in news stories)
   - Content - Card: Related Content - Image + Title Overlay + Text Area (see where in news stories)
   - Content - Informational Well Section with Cards (see where in news stories)
-  - Need to figure out .prl-row margins on mobile devices
-  - Fix layout on mobile and tablet: About (of note)
+  - Fix layout on mobile and tablet: Grad Program icons copy About style(hpg and About done)
   - Redo asides (remove background? Link underlines in side navs, under the class: mainContent__sideNav)
   - Hero images in internal pages
   - News page pagination not mobile friendly

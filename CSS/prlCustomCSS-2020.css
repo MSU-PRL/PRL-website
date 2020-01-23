@@ -5289,24 +5289,18 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
   color: #444; }
 
 /* -------------------------------------------------------------------
-        GRID SYSTEM - JANUARY 2020
+        LEGACY FIXES - JANUARY 2020
 -------------------------------------------------------------------- */
+/* GRID
+-------------------------------------------------------- */
 .prl-row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px; }
+  flex-wrap: wrap; }
 
-@media (max-width: 991px) {
-  .prl-row {
-    margin-right: 0;
-    margin-left: 0; } }
-
-/* -------------------------------------------------------------------
-        TABLE - JANUARY 2020 (CNS REMOVED BOOTSTRAP
+/* TABLE
 -------------------------------------------------------------------- */
 .table-responsive {
   display: block;
@@ -5921,120 +5915,140 @@ main.mainContent .view-all {
 /* --------------------------------------------------------
                 ABOUT PAGE
 -------------------------------------------------------- */
-.about .mainContent__mainCol {
-  margin-bottom: 60px; }
-  .about .mainContent__mainCol nav {
-    display: none; }
-  .about .mainContent__mainCol .pageTitle {
-    margin-top: 40px; }
-  .about .mainContent__mainCol section {
-    margin: 150px 0; }
-  .about .mainContent__mainCol section:first-child {
-    margin-top: 0px; }
-  .about .mainContent__mainCol section.prl-about-essence .prl-row .prl-about-essence-item {
-    -ms-flex-preferred-size: 33.333333%;
-    flex-basis: 33.333333%;
-    max-width: 33.333333%; }
-  .about .mainContent__mainCol section.prl-about-essence .prl-row div:last-child {
+.about .mainContent__mainCol nav {
+  display: none; }
+
+.about .mainContent__mainCol .pageTitle {
+  margin-top: 40px; }
+
+.about .mainContent__mainCol section {
+  margin: 150px 0; }
+
+.about .mainContent__mainCol section:first-child {
+  margin-top: 0px; }
+
+.about .mainContent__mainCol section.prl-about-essence .prl-row .prl-about-essence-item {
+  -ms-flex-preferred-size: 33.333333%;
+  flex-basis: 33.333333%;
+  max-width: 33.333333%; }
+
+.about .mainContent__mainCol section.prl-about-essence .prl-row div:last-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start; }
+
+.about .mainContent__mainCol section.prl-about-what {
+  color: #666;
+  font-weight: 300; }
+  .about .mainContent__mainCol section.prl-about-what .prl-row {
+    margin-top: 160px;
+    margin-bottom: 160px; }
+  .about .mainContent__mainCol section.prl-about-what .prl-row[about-what-row="first"] {
+    margin-top: 100px; }
+  .about .mainContent__mainCol section.prl-about-what .prl-about-what-img {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 58.333333%;
+            flex: 0 0 58.333333%;
+    max-width: 0 0 58.333333%;
+    padding: 0 15px; }
+  .about .mainContent__mainCol section.prl-about-what .prl-about-what-text {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 41.666667%;
+            flex: 0 0 41.666667%;
+    max-width: 41.666667%; }
+  .about .mainContent__mainCol section.prl-about-what h3 {
+    color: #2E4D4D; }
+  .about .mainContent__mainCol section.prl-about-what ul {
+    font-size: 1rem !important; }
+  .about .mainContent__mainCol section.prl-about-what img {
+    padding: 0;
+    border-radius: 12px;
+    -webkit-box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0, 0, 0.12); }
+
+.about .mainContent__mainCol .prl-about-header-area {
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto; }
+
+.about .mainContent__mainCol .prl-p-subheader, .about .mainContent__mainCol .prl-p-subheader-smaller, .about .mainContent__mainCol .prl-home-brands p, .prl-home-brands .about .mainContent__mainCol p {
+  text-align: center;
+  font-size: 1.2rem !important; }
+
+.about .mainContent__mainCol blockquote {
+  margin: 100px auto;
+  max-width: 75%; }
+  .about .mainContent__mainCol blockquote p {
+    color: #fff !important; }
+
+.about .mainContent__mainCol .zoomtimeline {
+  margin-top: 70px;
+  margin-bottom: 150px; }
+  .about .mainContent__mainCol .zoomtimeline .details-container .detail .detail-image {
+    border-radius: 12px; }
+  .about .mainContent__mainCol .zoomtimeline .details-container .detail .detail-excerpt p {
+    font-family: Helvetica, arial,sans-serif;
+    font-size: 16.5px;
+    font-weight: 300;
+    letter-spacing: 0.3px;
+    color: #666; }
+
+.about .mainContent__mainCol section.prl-about-funders {
+  text-align: center;
+  margin-bottom: 0px; }
+  .about .mainContent__mainCol section.prl-about-funders .prl-row {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .about .mainContent__mainCol section.prl-about-funders .prl-row > div {
+    -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
+    margin-bottom: 32px; }
+  .about .mainContent__mainCol section.prl-about-funders .prl-row > div:first-child {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start; }
-  .about .mainContent__mainCol section.prl-about-what {
-    color: #666;
-    font-weight: 300; }
-    .about .mainContent__mainCol section.prl-about-what .prl-row {
-      margin-top: 160px;
-      margin-bottom: 160px; }
-    .about .mainContent__mainCol section.prl-about-what .prl-row[about-what-row="first"] {
-      margin-top: 100px; }
-    .about .mainContent__mainCol section.prl-about-what .prl-about-what-img {
-      -webkit-box-flex: 0;
-          -ms-flex: 0 0 58.333333%;
-              flex: 0 0 58.333333%;
-      max-width: 0 0 58.333333%; }
-    .about .mainContent__mainCol section.prl-about-what .prl-about-what-text {
-      -webkit-box-flex: 0;
-          -ms-flex: 0 0 41.666667%;
-              flex: 0 0 41.666667%;
-      max-width: 41.666667%; }
-    .about .mainContent__mainCol section.prl-about-what .prl-row[about-what-row="first"] .prl-about-what-text, .about .mainContent__mainCol section.prl-about-what .prl-row[about-what-row="third"] .prl-about-what-text {
-      padding: 15px 0px 15px 40px; }
-    .about .mainContent__mainCol section.prl-about-what .prl-row[about-what-row="second"] .prl-about-what-text {
-      padding: 15px 40px 15px 0px; }
-    .about .mainContent__mainCol section.prl-about-what h3 {
-      color: #2E4D4D; }
-    .about .mainContent__mainCol section.prl-about-what ul {
-      font-size: 1rem !important; }
-    .about .mainContent__mainCol section.prl-about-what img {
-      padding: 0;
-      border-radius: 12px;
-      -webkit-box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0, 0, 0.12);
-      box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0, 0, 0.12); }
-  .about .mainContent__mainCol .prl-about-header-area {
-    max-width: 850px;
-    margin-left: auto;
-    margin-right: auto; }
-  .about .mainContent__mainCol .prl-p-subheader, .about .mainContent__mainCol .prl-p-subheader-smaller, .about .mainContent__mainCol .prl-home-brands p, .prl-home-brands .about .mainContent__mainCol p {
-    text-align: center;
-    font-size: 1.2rem !important; }
-  .about .mainContent__mainCol blockquote {
-    margin: 100px auto;
-    max-width: 75%; }
-    .about .mainContent__mainCol blockquote p {
-      color: #fff !important; }
-  .about .mainContent__mainCol .zoomtimeline {
-    margin-top: 70px;
-    margin-bottom: 150px; }
-    .about .mainContent__mainCol .zoomtimeline .details-container .detail .detail-image {
-      border-radius: 12px; }
-    .about .mainContent__mainCol .zoomtimeline .details-container .detail .detail-excerpt p {
-      font-family: Helvetica, arial,sans-serif;
-      font-size: 16.5px;
-      font-weight: 300;
-      letter-spacing: 0.3px;
-      color: #666; }
-  .about .mainContent__mainCol section.prl-about-funders {
-    text-align: center; }
-    .about .mainContent__mainCol section.prl-about-funders .prl-about-funders-logos > div {
-      width: 25%;
-      height: 125px;
-      float: left; }
-    .about .mainContent__mainCol section.prl-about-funders .prl-about-funders-logos > div:first-child {
-      width: 100%;
-      margin-bottom: 35px;
-      margin-top: 60px; }
-      .about .mainContent__mainCol section.prl-about-funders .prl-about-funders-logos > div:first-child small {
-        display: block;
-        color: #757575;
-        margin-top: 4px; }
-    .about .mainContent__mainCol section.prl-about-funders a {
-      border-bottom: 0px solid transparent !important; }
-      .about .mainContent__mainCol section.prl-about-funders a img {
-        -webkit-transition: 0.4s;
-        transition: 0.4s;
-        margin-left: 0; }
-        .about .mainContent__mainCol section.prl-about-funders a img:hover {
-          -webkit-filter: grayscale(100%);
-          filter: grayscale(100%); }
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 60px; }
+    .about .mainContent__mainCol section.prl-about-funders .prl-row > div:first-child small {
+      color: #757575;
+      margin-top: 4px; }
+  .about .mainContent__mainCol section.prl-about-funders a {
+    border-bottom: 0px solid transparent !important; }
+    .about .mainContent__mainCol section.prl-about-funders a img {
+      -webkit-transition: 0.4s;
+      transition: 0.4s; }
+      .about .mainContent__mainCol section.prl-about-funders a img:hover {
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%); }
 
 @media (min-width: 992px) {
   .about .mainContent__mainCol {
-    padding: 0 2rem; } }
-
-@media (min-width: 821px) {
-  .about .mainContent__mainCol section.prl-about-essence .prl-row .prl-about-essence-item {
-    padding-right: 15px;
-    padding-left: 15px; } }
+    margin-bottom: 64px; }
+    .about .mainContent__mainCol section.prl-about-essence .prl-row .prl-about-essence-item {
+      padding-right: 15px; }
+    .about .mainContent__mainCol section.prl-about-what .prl-row[about-what-row="first"] .prl-about-what-text, .about .mainContent__mainCol section.prl-about-what .prl-row[about-what-row="third"] .prl-about-what-text {
+      padding: 15px 0px 15px 25px; }
+    .about .mainContent__mainCol section.prl-about-what .prl-row[about-what-row="second"] .prl-about-what-text {
+      padding: 15px 25px 15px 0px; } }
 
 @media (max-width: 991px) {
   .about .mainContent__mainCol .zoomtimeline {
@@ -6045,18 +6059,26 @@ main.mainContent .view-all {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
     max-width: 50%; }
+  .about .mainContent__mainCol section.prl-about-essence .prl-row .prl-about-essence-item:nth-child(even) {
+    padding-left: 7.5px; }
+  .about .mainContent__mainCol section.prl-about-essence .prl-row .prl-about-essence-item:nth-child(odd) {
+    padding-right: 7.5px; }
   .about .mainContent__mainCol blockquote {
     margin: -10px auto; }
   .about .mainContent__mainCol section.prl-about-what .prl-row, .about .mainContent__mainCol section.prl-about-what .prl-row[about-what-row="first"] {
-    margin-top: 90px;
-    margin-bottom: 90px; }
-  .about .mainContent__mainCol section.prl-about-what .prl-row > div {
-    padding: 0 15px !important; }
+    margin-top: 80px;
+    margin-bottom: 80px; }
   .about .mainContent__mainCol section.prl-about-what .prl-about-what-img, .about .mainContent__mainCol section.prl-about-what .prl-about-what-text {
     -webkit-box-flex: 0 !important;
         -ms-flex: 0 0 50% !important;
             flex: 0 0 50% !important;
-    max-width: 50% !important; } }
+    max-width: 50% !important; }
+  .about .mainContent__mainCol section.prl-about-what .prl-about-what-text h3 {
+    margin-top: 0; }
+  .about .mainContent__mainCol section.prl-about-what .prl-row[about-what-row="first"] .prl-about-what-text, .about .mainContent__mainCol section.prl-about-what .prl-row[about-what-row="third"] .prl-about-what-text {
+    padding-left: 8px; }
+  .about .mainContent__mainCol section.prl-about-what .prl-row[about-what-row="second"] .prl-about-what-text {
+    padding-right: 8px; } }
 
 @media (max-width: 767px) {
   .about .mainContent__mainCol .pageTitle {
@@ -6090,20 +6112,21 @@ main.mainContent .view-all {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1; }
-  .about .mainContent__mainCol section.prl-about-what img {
-    margin-bottom: 30px; }
+  .about .mainContent__mainCol section.prl-about-what .prl-row[about-what-row="first"] .prl-about-what-text, .about .mainContent__mainCol section.prl-about-what .prl-row[about-what-row="third"] .prl-about-what-text, .about .mainContent__mainCol section.prl-about-what .prl-row[about-what-row="second"] .prl-about-what-text {
+    padding: 16px 15px 0 15px; }
   .about .mainContent__mainCol section.prl-about-essence .prl-row .prl-about-essence-item {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     max-width: 100%; }
-  .about .mainContent__mainCol section.prl-about-funders .prl-about-funders-logos > div {
-    width: 45%;
-    margin-right: 5%; }
-  .about .mainContent__mainCol section.prl-about-funders a {
-    height: 115px; }
-    .about .mainContent__mainCol section.prl-about-funders a img {
-      margin-left: 0 !important;
-      margin-right: 0 !important; } }
+  .about .mainContent__mainCol section.prl-about-essence .prl-row .prl-about-essence-item:nth-child(even) {
+    padding-left: 0; }
+  .about .mainContent__mainCol section.prl-about-essence .prl-row .prl-about-essence-item:nth-child(odd) {
+    padding-right: 0; }
+  .about .mainContent__mainCol section.prl-about-funders .prl-row > div {
+    -ms-flex-preferred-size: 45%;
+        flex-basis: 45%;
+    margin-right: 2.5%;
+    margin-left: 2.5%; } }
 
 /* --------------------------------------------------------
                 DONATE TO PRL PAGE

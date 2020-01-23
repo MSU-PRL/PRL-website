@@ -645,7 +645,6 @@
 
 .about {
   .mainContent__mainCol {
-    margin-bottom: 60px;
     nav {
       // Hide breadcrumbs
       display: none;
@@ -718,19 +717,12 @@
         // Images span two thirds of container
         flex: 0 0 58.333333%;
         max-width: 0 0 58.333333%;
+        padding: 0 15px;
       }
       .prl-about-what-text {
         //Text containers span one third of container
         flex: 0 0 41.666667%;
         max-width: 41.666667%;
-      }
-      .prl-row[about-what-row="first"] .prl-about-what-text, .prl-row[about-what-row="third"] .prl-about-what-text {
-        // Divs with text have padding to separate from images
-        padding: 15px 0px 15px 40px;
-      }
-      .prl-row[about-what-row="second"] .prl-about-what-text {
-        // Divs with text have padding to separate from images
-        padding: 15px 40px 15px 0px;
       }
       h3 {
         // Primary color for driver brand text
@@ -791,20 +783,24 @@
     section.prl-about-funders {
       // Align all logos in the center of their containers
       text-align: center;
-      .prl-about-funders-logos > div {
-        // Lining up 4 non-DOE BES logos per line
-        width: 25%;
-        height: 125px;
-        float: left;
+      margin-bottom: 0px;
+      .prl-row {
+        align-items: center;
       }
-      .prl-about-funders-logos > div:first-child {
+      .prl-row > div {
+        // Lining up 4 non-DOE BES logos per line
+        flex-basis: 25%;
+        margin-bottom: 32px;
+      }
+      .prl-row > div:first-child {
         // Main DOE-BES logo separated from the rest of the logos
-        width: 100%;
-        margin-bottom: 35px;
+        flex-basis: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         margin-top: 60px;
         small {
-          // BES Grant #
-          display: block;
+          // text for BES Grant #
           color: $light-grey-text;
           margin-top: 4px;
         }
@@ -816,7 +812,6 @@
           // Subtle hover effect on all logos
           -webkit-transition: 0.4s;
           transition: 0.4s;
-          margin-left: 0;
           &:hover {
             -webkit-filter: grayscale(100%);
             filter: grayscale(100%);
@@ -831,21 +826,23 @@
   //Large screens, making sure the main col doesn't hug edges
   .about {
     .mainContent__mainCol {
-      padding: 0 2rem;
-    }
-  }
-}
-
-@media (min-width: 821px) {
-  .about {
-    .mainContent__mainCol {
+      margin-bottom: 64px; // Add some white space between the footer, only for large screens
       section.prl-about-essence {
         .prl-row {
           .prl-about-essence-item {
-            // padding for larger screens, in order to separate containers
-            padding-right: 15px;
-            padding-left: 15px;
+          // padding for larger screens, in order to separate containers
+          padding-right: 15px;
           }
+        }
+      }
+      section.prl-about-what {
+        .prl-row[about-what-row="first"] .prl-about-what-text, .prl-row[about-what-row="third"] .prl-about-what-text {
+          // Divs with text have padding to separate from images
+          padding: 15px 0px 15px 25px;
+        }
+        .prl-row[about-what-row="second"] .prl-about-what-text {
+          // Divs with text have padding to separate from images
+          padding: 15px 25px 15px 0px;
         }
       }
     }
@@ -869,6 +866,12 @@
             flex-basis: 50%;
             max-width: 50%;
           }
+          .prl-about-essence-item:nth-child(even) {
+            padding-left: 7.5px;
+          }
+          .prl-about-essence-item:nth-child(odd) {
+            padding-right: 7.5px;
+          }
         }
       }
       blockquote {
@@ -877,17 +880,26 @@
       section.prl-about-what {
         .prl-row, .prl-row[about-what-row="first"] {
           //Margin for each row of 'what we do' section
-          margin-top: 90px;
-          margin-bottom: 90px;
-        }
-        .prl-row > div {
-          // Adding padding from edge of screen for phone and tablet
-          padding: 0 15px !important;
+          margin-top: 80px;
+          margin-bottom: 80px;
         }
         .prl-about-what-img, .prl-about-what-text {
           // Images and text containers EACH span half the row container
           flex: 0 0 50% !important;
           max-width: 50% !important;
+        }
+        .prl-about-what-text {
+          h3 {
+            margin-top: 0;
+          }
+        }
+        .prl-row[about-what-row="first"] .prl-about-what-text, .prl-row[about-what-row="third"] .prl-about-what-text {
+          // Divs with text have padding to separate from images
+          padding-left: 8px;
+        }
+        .prl-row[about-what-row="second"] .prl-about-what-text {
+          // Divs with text have padding to separate from images
+          padding-right: 8px;
         }
       }
     }
@@ -943,8 +955,9 @@
           // Flexbox - push text below image on mobile
           order: 1;
         }
-        img {
-          margin-bottom: 30px;
+        .prl-row[about-what-row="first"] .prl-about-what-text, .prl-row[about-what-row="third"] .prl-about-what-text, .prl-row[about-what-row="second"] .prl-about-what-text {
+          // Divs with text have padding to separate from images
+          padding: 16px 15px 0 15px;
         }
       }
       section.prl-about-essence {
@@ -954,21 +967,20 @@
             flex-basis: 100%;
             max-width: 100%;
           }
+          .prl-about-essence-item:nth-child(even) {
+            padding-left: 0;
+          }
+          .prl-about-essence-item:nth-child(odd) {
+            padding-right: 0;
+          }
         }
       }
       section.prl-about-funders {
-        .prl-about-funders-logos > div {
+        .prl-row > div {
           // 2 non-DOE BES logos per line
-          width: 45%;
-          margin-right: 5%;
-        }
-        a {
-          height: 115px;
-          img {
-            // Negates individual inline styles for non-DOE BES logos for better alignment
-            margin-left: 0 !important;
-            margin-right: 0 !important;
-          }
+          flex-basis: 45%;
+          margin-right: 2.5%;
+          margin-left: 2.5%;
         }
       }
     }

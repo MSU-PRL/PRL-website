@@ -638,24 +638,18 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
   color: #444; }
 
 /* -------------------------------------------------------------------
-        GRID SYSTEM - JANUARY 2020
+        LEGACY FIXES - JANUARY 2020
 -------------------------------------------------------------------- */
+/* GRID
+-------------------------------------------------------- */
 .prl-row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px; }
+  flex-wrap: wrap; }
 
-@media (max-width: 991px) {
-  .prl-row {
-    margin-right: 0;
-    margin-left: 0; } }
-
-/* -------------------------------------------------------------------
-        TABLE - JANUARY 2020 (CNS REMOVED BOOTSTRAP
+/* TABLE
 -------------------------------------------------------------------- */
 .table-responsive {
   display: block;
