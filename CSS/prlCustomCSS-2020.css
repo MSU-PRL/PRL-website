@@ -4685,7 +4685,7 @@ prl-accordion-section[role="region"] + prl-accordion-section {
 /* --------------------------------------------------------
         BUTTONS
 -------------------------------------------------------- */
-.prl-btn, .prl-flat-btn, .graduate-program-overview #MainContent .prl-student-alumni-profiles a.view-all {
+.prl-btn, .prl-flat-btn, .graduate-program-overview #MainContent .prl-student-alumni-profiles a.view-all, .student-and-alumni-profiles #MainContent .prl-student-alumni-profiles a.view-all {
   border: 2px solid #2E4D4D !important;
   border-radius: 12px;
   text-decoration: none !important;
@@ -4715,11 +4715,11 @@ prl-accordion-section[role="region"] + prl-accordion-section {
   white-space: nowrap;
   vertical-align: middle;
   cursor: pointer; }
-  .prl-btn:hover, .prl-flat-btn:hover, .graduate-program-overview #MainContent .prl-student-alumni-profiles a.view-all:hover {
+  .prl-btn:hover, .prl-flat-btn:hover, .graduate-program-overview #MainContent .prl-student-alumni-profiles a.view-all:hover, .student-and-alumni-profiles #MainContent .prl-student-alumni-profiles a.view-all:hover {
     background-color: rgba(46, 77, 77, 0.09); }
-  .prl-btn:focus, .prl-flat-btn:focus, .graduate-program-overview #MainContent .prl-student-alumni-profiles a.view-all:focus {
+  .prl-btn:focus, .prl-flat-btn:focus, .graduate-program-overview #MainContent .prl-student-alumni-profiles a.view-all:focus, .student-and-alumni-profiles #MainContent .prl-student-alumni-profiles a.view-all:focus {
     background-color: rgba(46, 77, 77, 0.09); }
-  .prl-btn:active, .prl-flat-btn:active, .graduate-program-overview #MainContent .prl-student-alumni-profiles a.view-all:active {
+  .prl-btn:active, .prl-flat-btn:active, .graduate-program-overview #MainContent .prl-student-alumni-profiles a.view-all:active, .student-and-alumni-profiles #MainContent .prl-student-alumni-profiles a.view-all:active {
     background-color: rgba(46, 77, 77, 0.18); }
 
 .prl-arrow-btn, #newsevents.depth-4 .secondaryPageContainer #MainContent .prl-event-detail-btns a {
@@ -4878,7 +4878,7 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
   font-size: 2.4rem;
   color: #2E4D4D; }
 
-.prl-h2-secondary-spacing, .research-projects h2, .center-for-advanced-algal-and-plant-phenotyping h2, .prl-participating-faculty h2, .graduate-program-overview #MainContent h2, #newsevents.depth-2.seminars-events h2 {
+.prl-h2-secondary-spacing, .research-projects h2, .center-for-advanced-algal-and-plant-phenotyping h2, .prl-participating-faculty h2, .graduate-program-overview #MainContent h2, .student-and-alumni-profiles #MainContent h2, #newsevents.depth-2.seminars-events h2 {
   margin-top: 2rem;
   display: inline-block; }
 
@@ -4907,22 +4907,22 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
 /* -----------------------------------------------------------------------------------------------------
         LOGOS USED ON INTERNAL SECONDARY PAGES: ABOUT, GRADUATE PROGRAM, RESEARCH, etc.
 ----------------------------------------------------------------------------------------------------- */
-.prl-internal-logo-svg, .about .mainContent__mainCol section.prl-about-essence .prl-row svg, .graduate-program-overview #MainContent section.prl-grad-puv svg {
+.prl-internal-logo-svg, .about .mainContent__mainCol section.prl-about-essence .prl-row svg, .graduate-program-overview #MainContent section.prl-grad-puv svg, .student-and-alumni-profiles #MainContent section.prl-grad-puv svg {
   height: 45px;
   margin-bottom: 18px;
   display: inline;
   width: auto; }
 
-.prl-internal-logo-content-area, .about .mainContent__mainCol section.prl-about-essence .prl-row .prl-about-essence-item, .graduate-program-overview #MainContent section.prl-grad-puv .prl-grad-icon {
+.prl-internal-logo-content-area, .about .mainContent__mainCol section.prl-about-essence .prl-row .prl-about-essence-item, .graduate-program-overview #MainContent section.prl-grad-puv .prl-grad-icon, .student-and-alumni-profiles #MainContent section.prl-grad-puv .prl-grad-icon {
   margin: 36px 0; }
 
-.prl-internal-logo-content-title, .about .mainContent__mainCol section.prl-about-essence .prl-row span.prl-about-essence-title, .graduate-program-overview #MainContent section.prl-grad-puv span.prl-grad-puv-title {
+.prl-internal-logo-content-title, .about .mainContent__mainCol section.prl-about-essence .prl-row span.prl-about-essence-title, .graduate-program-overview #MainContent section.prl-grad-puv span.prl-grad-puv-title, .student-and-alumni-profiles #MainContent section.prl-grad-puv span.prl-grad-puv-title {
   font-weight: 900;
   color: #111;
   display: block;
   margin-bottom: 12px; }
 
-.prl-internal-logo-content-description, .about .mainContent__mainCol section.prl-about-essence .prl-row span.prl-about-essence-description, .graduate-program-overview #MainContent section.prl-grad-puv span.prl-grad-puv-description {
+.prl-internal-logo-content-description, .about .mainContent__mainCol section.prl-about-essence .prl-row span.prl-about-essence-description, .graduate-program-overview #MainContent section.prl-grad-puv span.prl-grad-puv-description, .student-and-alumni-profiles #MainContent section.prl-grad-puv span.prl-grad-puv-description {
   font-weight: 300;
   color: #666;
   font-size: 1rem;
@@ -4930,10 +4930,10 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
   display: block; }
 
 @media (max-width: 767px) {
-  .prl-internal-logo-svg, .about .mainContent__mainCol section.prl-about-essence .prl-row svg, .graduate-program-overview #MainContent section.prl-grad-puv svg {
+  .prl-internal-logo-svg, .about .mainContent__mainCol section.prl-about-essence .prl-row svg, .graduate-program-overview #MainContent section.prl-grad-puv svg, .student-and-alumni-profiles #MainContent section.prl-grad-puv svg {
     height: 40px;
     margin-bottom: 15px; }
-  .prl-internal-logo-content-area, .about .mainContent__mainCol section.prl-about-essence .prl-row .prl-about-essence-item, .graduate-program-overview #MainContent section.prl-grad-puv .prl-grad-icon {
+  .prl-internal-logo-content-area, .about .mainContent__mainCol section.prl-about-essence .prl-row .prl-about-essence-item, .graduate-program-overview #MainContent section.prl-grad-puv .prl-grad-icon, .student-and-alumni-profiles #MainContent section.prl-grad-puv .prl-grad-icon {
     margin: 25px 0 !important; } }
 
 /* -------------------------------------------------------------
@@ -5019,7 +5019,8 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
       font-weight: 400 !important;
       font-size: 1rem !important;
       margin: 0;
-      padding-bottom: 0 !important; }
+      padding-bottom: 0 !important;
+      text-transform: initial; }
     .prl-card-image .prl-card-image-overlay p, div.prl-research-highlights .hasImage .image .prl-card-image-overlay p,
     .prl-card-image .prl-card-image-overlay ul,
     div.prl-research-highlights .hasImage .image .prl-card-image-overlay ul,
@@ -5055,6 +5056,23 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
 
 .prl-card-body, .prl-home-event-cards.mura-object .mura-collection-item .mura-collection-item__holder .mura-item-meta, #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta {
   padding: 16px; }
+  .prl-card-body h1, .prl-home-event-cards.mura-object .mura-collection-item .mura-collection-item__holder .mura-item-meta h1, #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta h1,
+  .prl-card-body h2,
+  .prl-home-event-cards.mura-object .mura-collection-item .mura-collection-item__holder .mura-item-meta h2,
+  #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta h2,
+  .prl-card-body h3,
+  .prl-home-event-cards.mura-object .mura-collection-item .mura-collection-item__holder .mura-item-meta h3,
+  #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta h3,
+  .prl-card-body h4,
+  .prl-home-event-cards.mura-object .mura-collection-item .mura-collection-item__holder .mura-item-meta h4,
+  #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta h4,
+  .prl-card-body h5,
+  .prl-home-event-cards.mura-object .mura-collection-item .mura-collection-item__holder .mura-item-meta h5,
+  #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta h5,
+  .prl-card-body h6,
+  .prl-home-event-cards.mura-object .mura-collection-item .mura-collection-item__holder .mura-item-meta h6,
+  #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta h6 {
+    text-transform: initial; }
 
 .prl-card-title, .prl-card h1, .prl-card-w-border h1, .prl-card-hover-effect h1,
 .prl-card h2,
@@ -5431,11 +5449,6 @@ aside {
 @media (max-width: 767px) {
   #newsevents.depth-3 #MainContent div.mura-region p {
     margin-bottom: 20px; } }
-
-/* Image tag STYLES
--------------------------------------------------------- */
-.mainContent img {
-  display: inline; }
 
 /* PRL LINK STYLES
 -------------------------------------------------------- */
@@ -6140,13 +6153,16 @@ main.mainContent .view-all {
   margin: 0 0 .75em 1em; }
 
 .depth-2.donate-to-prl hr {
-  clear: both; }
+  clear: both;
+  margin: 2em 0; }
 
 @media (max-width: 425px) {
   .depth-2.donate-to-prl img {
-    width: 55%;
-    margin-left: 0 !important;
-    margin-right: 0 !important; } }
+    width: 55%; }
+  .depth-2.donate-to-prl .image-left {
+    margin-right: 8px; }
+  .depth-2.donate-to-prl .image-right {
+    margin-left: 8px; } }
 
 /* --------------------------------------------------------
                 BRAND GUIDES PAGES
@@ -6662,25 +6678,31 @@ div.prl-research-highlights .last.hasImage {
 /* --------------------------------------------------------
                 GRADUATE PROGRAM OVERVIEW PAGE
 -------------------------------------------------------- */
-.graduate-program-overview #MainContent blockquote {
+.graduate-program-overview #MainContent blockquote, .student-and-alumni-profiles #MainContent blockquote {
   margin: 36px auto;
   max-width: 100%; }
-  .graduate-program-overview #MainContent blockquote p {
+  .graduate-program-overview #MainContent blockquote p, .student-and-alumni-profiles #MainContent blockquote p {
     color: #fff !important; }
 
-.graduate-program-overview #MainContent .prl-student-alumni-profiles {
-  margin-top: 16px; }
-  .graduate-program-overview #MainContent .prl-student-alumni-profiles a.view-all {
+.graduate-program-overview #MainContent .prl-student-alumni-profiles, .student-and-alumni-profiles #MainContent .prl-student-alumni-profiles {
+  margin-top: 16px;
+  padding: 0 17px; }
+  .graduate-program-overview #MainContent .prl-student-alumni-profiles a.view-all, .student-and-alumni-profiles #MainContent .prl-student-alumni-profiles a.view-all {
     margin: 16px 0 32px 0; }
-  .graduate-program-overview #MainContent .prl-student-alumni-profiles div.mura-next-n {
+  .graduate-program-overview #MainContent .prl-student-alumni-profiles div.mura-next-n, .student-and-alumni-profiles #MainContent .prl-student-alumni-profiles div.mura-next-n {
     display: none; }
-  .graduate-program-overview #MainContent .prl-student-alumni-profiles .mura-collection.mura-grid-two .mura-collection-item .mura-collection-item__holder {
+  .graduate-program-overview #MainContent .prl-student-alumni-profiles .mura-collection.mura-grid-two .mura-collection-item .mura-collection-item__holder, .student-and-alumni-profiles #MainContent .prl-student-alumni-profiles .mura-collection.mura-grid-two .mura-collection-item .mura-collection-item__holder {
     padding: 0 16px 0 0; }
 
-@media (min-width: 821px) {
+@media (min-width: 992px) {
   .graduate-program-overview #MainContent section.prl-grad-puv .prl-grad-icon {
-    padding-right: 15px;
-    padding-left: 15px; } }
+    padding-right: 15px; } }
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .graduate-program-overview #MainContent section.prl-grad-puv .prl-grad-icon:nth-child(even) {
+    padding-left: 7.5px; }
+  .graduate-program-overview #MainContent section.prl-grad-puv .prl-grad-icon:nth-child(odd) {
+    padding-right: 7.5px; } }
 
 @media (min-width: 768px) {
   .graduate-program-overview #MainContent section.prl-grad-puv .prl-grad-icon {

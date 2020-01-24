@@ -583,6 +583,7 @@ $img-hover-opacity: 0.8;
       font-size: 1rem !important;
       margin: 0;
       padding-bottom: 0 !important;
+      text-transform: initial;
     }
     p,
     ul,
@@ -621,6 +622,15 @@ $img-hover-opacity: 0.8;
 .prl-card-body {
   // To include below image and above call to action buttons
   padding: 16px;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    // Card title text
+    text-transform: initial;
+  }
 }
 
 // These following styles fall within the .prl-card-body

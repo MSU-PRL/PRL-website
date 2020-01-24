@@ -1004,6 +1004,7 @@
   }
   hr {
     clear: both;
+    margin: 2em 0;
   }
 }
 
@@ -1012,9 +1013,13 @@
     // Images smaller on small screens
     img{
       width: 55%;
-      margin-left: 0 !important;
-      margin-right: 0 !important;
-    }    
+    }
+    .image-left {
+      margin-right: 8px;
+    }  
+    .image-right {
+      margin-left: 8px;
+    }
   }
 }
 
@@ -1866,7 +1871,7 @@ div.prl-research-highlights {
                 GRADUATE PROGRAM OVERVIEW PAGE
 -------------------------------------------------------- */
 
-.graduate-program-overview {
+.graduate-program-overview, .student-and-alumni-profiles {
   #MainContent {
     h2 {
       @extend .prl-h2-secondary-spacing;
@@ -1895,6 +1900,7 @@ div.prl-research-highlights {
     }
     .prl-student-alumni-profiles {
       margin-top: 16px;
+      padding: 0 17px;
       a.view-all {
         // Styling Mura's "See all" link
         @extend .prl-btn;
@@ -1915,14 +1921,31 @@ div.prl-research-highlights {
   }
 }
 
-@media (min-width: 821px) {
+@media (min-width: 992px) {
+  // Larger screens
   .graduate-program-overview {
     #MainContent {
       section.prl-grad-puv {
         .prl-grad-icon {
           // Padding for larger screens to separate containers
           padding-right: 15px;
-          padding-left: 15px;
+        }
+      }
+    }
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+  // Tablet
+  .graduate-program-overview {
+    #MainContent {
+      section.prl-grad-puv {
+        .prl-grad-icon:nth-child(even) {
+          padding-left: 7.5px;
+        }
+        .prl-grad-icon:nth-child(odd) {
+          padding-right: 7.5px;
         }
       }
     }

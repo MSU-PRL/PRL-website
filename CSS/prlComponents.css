@@ -378,7 +378,8 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
       font-weight: 400 !important;
       font-size: 1rem !important;
       margin: 0;
-      padding-bottom: 0 !important; }
+      padding-bottom: 0 !important;
+      text-transform: initial; }
     .prl-card-image .prl-card-image-overlay p,
     .prl-card-image .prl-card-image-overlay ul,
     .prl-card-image .prl-card-image-overlay ol, .prl-card-image .prl-card-image-no-summary-overlay p,
@@ -410,6 +411,13 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
 
 .prl-card-body {
   padding: 16px; }
+  .prl-card-body h1,
+  .prl-card-body h2,
+  .prl-card-body h3,
+  .prl-card-body h4,
+  .prl-card-body h5,
+  .prl-card-body h6 {
+    text-transform: initial; }
 
 .prl-card-title, .prl-card h1, .prl-card-w-border h1, .prl-card-hover-effect h1,
 .prl-card h2,
