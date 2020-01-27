@@ -1167,10 +1167,12 @@
   .prl-contact-address {
     flex: 0 0 33.333333%;
     max-width: 33.333333%;
+    padding-right: 7.5px;
   }
   .prl-contact-map {
     flex: 0 0 66.666667%;
     max-width: 66.666667%;
+    padding-left: 7.5px;
   }
 }
 
@@ -1180,8 +1182,6 @@
 }
 
 .prl-contact-address, .prl-contact-map {
-  padding-right: 15px;
-  padding-left: 15px;
   flex-grow: 1; //fill the container when each of these divs takes on an entire line
 }
 
