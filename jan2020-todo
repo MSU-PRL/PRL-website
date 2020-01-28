@@ -2,7 +2,13 @@
   - Content - Card: Related Content - Full Image + Title Overlay (see where in news stories)
   - Content - Card: Related Content - Image + Title Overlay + Text Area (see where in news stories)
   - Content - Informational Well Section with Cards (see where in news stories)
-  - Fix layout on mobile and tablet: Grad Program icons copy About style(DONE: hpg, About, Donate to PRL, Contact Us, Graduate Program section)
+  - Fix layout on mobile and tablet: Grad Program icons copy About style
+  - DONE: 
+      ABOUT section: hpg, About, Donate to PRL, Contact Us, Internal Resources (PRL Community Brand Toolkit)
+      RESEARCH & TECH section: 
+      PEOPLE section: 
+      GRADUATE PROGRAM section: DONE
+      NEWS & EVENTS section: Research Highlights
   - Redo asides (remove background? Link underlines in side navs, under the class: mainContent__sideNav)
   - Hero images in internal pages
   - News page pagination not mobile friendly

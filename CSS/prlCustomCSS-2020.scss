@@ -1027,6 +1027,9 @@
                 BRAND GUIDES PAGES
 -------------------------------------------------------- */
 
+/* GENERAL LAYOUT, TOC, SIDE COLUMNS
+-------------------------------------------------------------------- */
+
 .prl-community-brand-toolkit, .web-components-demo {
   .mainContent__sideCol {
     position: -webkit-sticky;
@@ -1138,10 +1141,10 @@
 }
 
 @media (min-width: 992px) {
+  // Hide TOC in main body
   .prl-community-brand-toolkit, .web-components-demo {
     .mainContent__mainCol {
       .pageTOC {
-        // Hide TOC in main body
         display: none;
       }
     }
@@ -1149,14 +1152,43 @@
 }
 
 @media (max-width: 991px) {
+  // Hide TOC in side col
   .prl-community-brand-toolkit, .web-components-demo {
     .mainContent__sideCol {
-      // Hide TOC in side col
       display: none;
     }
   }
 }
 
+
+/* INTERNAL CONTENT
+-------------------------------------------------------------------- */
+
+.prl-community-brand-toolkit, .web-components-demo {
+  .mainContent__mainCol {
+    .prl-row {
+      .prl-brand-guides-flex-50 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .prl-community-brand-toolkit, .web-components-demo {
+    .mainContent__mainCol {
+      .prl-row {
+        .prl-brand-guides-flex-50 {
+          flex: 0 0 50%;
+          max-width: 50%;
+          padding: 0 15px;
+        }
+      }
+    }
+  }
+}
 
 /* --------------------------------------------------------
                 CONTACT US PAGE
@@ -1615,6 +1647,7 @@ div.prl-research-highlights {
   .hasImage {
     // Container around each item
     @extend .prl-card-outline; // For outline, but number of overrides, below.
+    display: inline-block;
     min-height: 0px !important;
     padding: 0 0 16px !important;
     border-bottom: 1px solid $x-light-grey;
@@ -1625,8 +1658,8 @@ div.prl-research-highlights {
       //position: relative;
       @extend .prl-card-image;
       grid-area: im;
-      margin: 0 0 8px 8px;
-      width: 35%;
+      margin: 0 0 6px 6px;
+      width: 33%;
       float: right;
       img {
         padding: 0px;
