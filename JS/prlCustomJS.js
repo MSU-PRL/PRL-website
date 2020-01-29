@@ -59,6 +59,11 @@ $(function() {
         [aria-expanded] rect {
           fill: currentColor;
         }
+        @media (max-width: 767px) {
+          h2 button {
+            width: 99%;
+          }
+        }
       </style>
     `
     // Check for latest Shadow DOM syntax support

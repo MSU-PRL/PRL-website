@@ -1108,8 +1108,7 @@
     }
     section {
       padding: 50px 0;
-      display: inline-block;
-      >h2:first-child {
+      > h2:first-child {
         // Inspired by "page-header" Bootstrap class
         font-size: calc(30px + 10%); // Font slightly bigger than default
         font-weight: 400;

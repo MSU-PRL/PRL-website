@@ -6229,8 +6229,7 @@ main.mainContent .view-all {
       font-size: 1rem; }
 
 .prl-community-brand-toolkit .mainContent__mainCol section, .web-components-demo .mainContent__mainCol section {
-  padding: 50px 0;
-  display: inline-block; }
+  padding: 50px 0; }
   .prl-community-brand-toolkit .mainContent__mainCol section > h2:first-child, .web-components-demo .mainContent__mainCol section > h2:first-child {
     font-size: calc(30px + 10%);
     font-weight: 400;
