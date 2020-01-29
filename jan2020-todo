@@ -2,9 +2,11 @@
   - Content - Card: Related Content - Full Image + Title Overlay (see where in news stories)
   - Content - Card: Related Content - Image + Title Overlay + Text Area (see where in news stories)
   - Content - Informational Well Section with Cards (see where in news stories)
+  - Accordion - Fix borders on 
   - Fix layout on mobile and tablet: Grad Program icons copy About style
   - DONE: 
-      ABOUT section: hpg, About, Donate to PRL, Contact Us, Internal Resources (PRL Community Brand Toolkit)
+      HPG: DONE
+      ABOUT section: DONE
       RESEARCH & TECH section: 
       PEOPLE section: 
       GRADUATE PROGRAM section: DONE
