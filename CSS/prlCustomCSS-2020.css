@@ -4818,13 +4818,17 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
   border: 0px solid #fff;
   border: none;
   text-align: center; }
+  figure a, figure.prl-figure a, figure.cke_widget_element a, .secondaryPageWrapper figure a {
+    color: #466A62 !important; }
+    figure a:hover, figure.prl-figure a:hover, figure.cke_widget_element a:hover, .secondaryPageWrapper figure a:hover {
+      color: #738F89 !important; }
   figure figcaption, figure.prl-figure figcaption, figure.cke_widget_element figcaption, .secondaryPageWrapper figure figcaption {
     margin: 0.5rem 0.625rem 0 1.75rem;
     font-size: 13.5px;
     text-align: left;
     letter-spacing: 0.025rem;
     max-width: 40rem;
-    padding-left: 0.93rem;
+    padding: 0 0 0 0.93rem;
     line-height: 1.7;
     border-left: 1px solid #757575;
     color: #757575; }
@@ -7539,7 +7543,8 @@ div.prl-research-highlights .last.hasImage {
 -------------------------------------------------------- */
 @media (min-width: 768px) {
   #researchtech.depth-3.photosynq main img {
-    float: right; } }
+    float: right;
+    padding: 0 0 8px 8px; } }
 
 @media (min-width: 1200px) {
   .page-not-found main figure {
