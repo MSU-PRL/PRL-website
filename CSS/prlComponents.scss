@@ -333,6 +333,13 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
   border: 0px solid #fff;
   border: none;
   text-align: center; // Center aligns the image
+  a {
+    // overriding NatSci figure styles and reverting to PRL Link styles
+    color: $natsci-complementary !important; // transition: $tran-short;
+    &:hover {
+      color: $natsci-complementary-lighter !important;
+    }
+  }
   figcaption {
     // Stylized Image/Figure Captions
     margin: 0.5rem 0.625rem 0 1.75rem;
@@ -340,7 +347,7 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
     text-align: left; // Left aligns the caption
     letter-spacing: 0.025rem;
     max-width: 40rem;
-    padding-left: 0.93rem;
+    padding: 0 0 0 0.93rem;
     line-height: 1.7;
     // Override PRL custom line-height and go back to default
     border-left: 1px solid $light-grey-text;
