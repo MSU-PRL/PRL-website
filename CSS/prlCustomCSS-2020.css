@@ -4813,11 +4813,12 @@ prl-accordion-section[role="region"] + prl-accordion-section {
 figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figure {
   display: inline-block;
   max-width: 100%;
-  margin: 0 0 40px 0;
+  margin: 8px 0 40px 0;
   background: #fff;
   border: 0px solid #fff;
   border: none;
-  text-align: center; }
+  text-align: center;
+  padding: 0; }
   figure a, figure.prl-figure a, figure.cke_widget_element a, .secondaryPageWrapper figure a {
     color: #466A62 !important; }
     figure a:hover, figure.prl-figure a:hover, figure.cke_widget_element a:hover, .secondaryPageWrapper figure a:hover {
@@ -5363,7 +5364,18 @@ td {
 /* --------------------------------------------------------
         CNS STYLING OVERRIDES
 -------------------------------------------------------- */
-/* TEXT WHITE SPACE
+/* OVERFLOW issues
+-------------------------------------------------------- */
+.mainContent__mainCol {
+  overflow-x: inherit; }
+  .mainContent__mainCol ul.pagination {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+
+/* TEXT STYLES
 -------------------------------------------------------- */
 blockquote ol:last-child,
 blockquote p:last-child,
@@ -5374,29 +5386,6 @@ blockquote ul:last-child {
   font-weight: 400;
   text-transform: none;
   line-height: 1.4 !important; }
-
-#MainContent,
-aside {
-  line-height: 1.6;
-  letter-spacing: 0.05px; }
-  #MainContent b,
-  #MainContent strong,
-  aside b,
-  aside strong {
-    color: #111; }
-  #MainContent .mainColContent p,
-  #MainContent .mainColContent ul,
-  #MainContent .mainColContent ol,
-  #MainContent div.mura-region p,
-  #MainContent div.mura-region ul,
-  #MainContent div.mura-region ol,
-  aside .mainColContent p,
-  aside .mainColContent ul,
-  aside .mainColContent ol,
-  aside div.mura-region p,
-  aside div.mura-region ul,
-  aside div.mura-region ol {
-    margin-bottom: 20px; }
 
 .depth-2.internal-resources .mura-index .title,
 .depth-1.people .mura-index .title,
@@ -5410,13 +5399,7 @@ aside {
 #about.contact-us .mainColContent p {
   line-height: 1.4; }
 
-#MainContent #crumblist {
-  line-height: 1.4; }
-
 @media (min-width: 1400px) {
-  #MainContent,
-  aside {
-    letter-spacing: -0.1px; }
   #MainContent .mainColContent p,
   #MainContent .mainColContent ul,
   #MainContent .mainColContent ol,
@@ -5976,8 +5959,11 @@ main.mainContent .view-all {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 58.333333%;
             flex: 0 0 58.333333%;
-    max-width: 0 0 58.333333%;
-    padding: 0 15px; }
+    max-width: 0 0 58.333333%; }
+  .about .mainContent__mainCol section.prl-about-what .prl-row[about-what-row="first"] .prl-about-what-img, .about .mainContent__mainCol section.prl-about-what .prl-row[about-what-row="third"] .prl-about-what-img {
+    padding-right: 15px; }
+  .about .mainContent__mainCol section.prl-about-what .prl-row[about-what-row="second"] .prl-about-what-img {
+    padding-left: 15px; }
   .about .mainContent__mainCol section.prl-about-what .prl-about-what-text {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 41.666667%;
@@ -6091,11 +6077,7 @@ main.mainContent .view-all {
             flex: 0 0 50% !important;
     max-width: 50% !important; }
   .about .mainContent__mainCol section.prl-about-what .prl-about-what-text h3 {
-    margin-top: 0; }
-  .about .mainContent__mainCol section.prl-about-what .prl-row[about-what-row="first"] .prl-about-what-text, .about .mainContent__mainCol section.prl-about-what .prl-row[about-what-row="third"] .prl-about-what-text {
-    padding-left: 8px; }
-  .about .mainContent__mainCol section.prl-about-what .prl-row[about-what-row="second"] .prl-about-what-text {
-    padding-right: 8px; } }
+    margin-top: 0; } }
 
 @media (max-width: 767px) {
   .about .mainContent__mainCol .pageTitle {
@@ -6129,7 +6111,9 @@ main.mainContent .view-all {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1; }
-  .about .mainContent__mainCol section.prl-about-what .prl-row[about-what-row="first"] .prl-about-what-text, .about .mainContent__mainCol section.prl-about-what .prl-row[about-what-row="third"] .prl-about-what-text, .about .mainContent__mainCol section.prl-about-what .prl-row[about-what-row="second"] .prl-about-what-text {
+  .about .mainContent__mainCol section.prl-about-what .prl-row[about-what-row="first"] .prl-about-what-img, .about .mainContent__mainCol section.prl-about-what .prl-row[about-what-row="second"] .prl-about-what-img, .about .mainContent__mainCol section.prl-about-what .prl-row[about-what-row="third"] .prl-about-what-img {
+    padding: 0; }
+  .about .mainContent__mainCol section.prl-about-what .prl-row .prl-about-what-text {
     padding: 16px 15px 0 15px; }
   .about .mainContent__mainCol section.prl-about-essence .prl-row .prl-about-essence-item {
     -ms-flex-preferred-size: 100%;
@@ -6622,9 +6606,11 @@ div.prl-research-highlights .last.hasImage {
         -ms-flex: 0 0 58.333333%;
             flex: 0 0 58.333333%;
     max-width: 58.333333%; }
-  .research-projects section.prl-research-tech-services .prl-row .prl-research-tech-img, .research-projects section.prl-research-tech-services .prl-row .prl-research-tech-text, .center-for-advanced-algal-and-plant-phenotyping section.prl-research-tech-services .prl-row .prl-research-tech-img, .center-for-advanced-algal-and-plant-phenotyping section.prl-research-tech-services .prl-row .prl-research-tech-text {
-    padding-left: 15px;
-    padding-right: 15px; }
+  .research-projects section.prl-research-tech-services .prl-row .prl-research-tech-img, .center-for-advanced-algal-and-plant-phenotyping section.prl-research-tech-services .prl-row .prl-research-tech-img {
+    padding: 0 15px 0 0; }
+
+.research-projects section.prl-research-tech-services .prl-row.prl-research-tech-item-even .prl-research-tech-img, .center-for-advanced-algal-and-plant-phenotyping section.prl-research-tech-services .prl-row.prl-research-tech-item-even .prl-research-tech-img {
+  padding: 0 0 0 15px; }
 
 .research-projects section.prl-research-tech-services .prl-row.first, .center-for-advanced-algal-and-plant-phenotyping section.prl-research-tech-services .prl-row.first {
   margin-top: 50px; }
@@ -6645,15 +6631,19 @@ div.prl-research-highlights .last.hasImage {
   margin-bottom: 30px; }
 
 @media (max-width: 767px) {
-  .research-projects section.prl-research-tech-services .prl-row .prl-research-tech-img, .research-projects section.prl-research-tech-services .prl-row .prl-research-tech-text, .center-for-advanced-algal-and-plant-phenotyping section.prl-research-tech-services .prl-row .prl-research-tech-img, .center-for-advanced-algal-and-plant-phenotyping section.prl-research-tech-services .prl-row .prl-research-tech-text {
+  .research-projects section.prl-research-tech-services .prl-row .prl-research-tech-img, .research-projects section.prl-research-tech-services .prl-row .prl-research-tech-text, .research-projects section.prl-research-tech-services .prl-row .prl-research-tech-item-even .prl-research-tech-img, .center-for-advanced-algal-and-plant-phenotyping section.prl-research-tech-services .prl-row .prl-research-tech-img, .center-for-advanced-algal-and-plant-phenotyping section.prl-research-tech-services .prl-row .prl-research-tech-text, .center-for-advanced-algal-and-plant-phenotyping section.prl-research-tech-services .prl-row .prl-research-tech-item-even .prl-research-tech-img {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
-    max-width: 100%; }
+    max-width: 100%;
+    padding: 0px; }
+  .research-projects section.prl-research-tech-services .prl-row .prl-research-tech-img img, .center-for-advanced-algal-and-plant-phenotyping section.prl-research-tech-services .prl-row .prl-research-tech-img img {
+    margin-bottom: 0; }
   .research-projects section.prl-research-tech-services .prl-row.prl-research-tech-item-even .prl-research-tech-img, .center-for-advanced-algal-and-plant-phenotyping section.prl-research-tech-services .prl-row.prl-research-tech-item-even .prl-research-tech-img {
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
-            order: 0; } }
+            order: 0;
+    padding: 0; } }
 
 /* PARTICIPATING FACULTY MEMBERS AT THE BOTTOM OF EACH RESEARCH AREA
 -------------------------------------------------- */
@@ -6708,8 +6698,7 @@ div.prl-research-highlights .last.hasImage {
     color: #fff !important; }
 
 .graduate-program-overview #MainContent .prl-student-alumni-profiles, .student-and-alumni-profiles #MainContent .prl-student-alumni-profiles {
-  margin-top: 16px;
-  padding: 0 17px; }
+  margin-top: 16px; }
   .graduate-program-overview #MainContent .prl-student-alumni-profiles a.view-all, .student-and-alumni-profiles #MainContent .prl-student-alumni-profiles a.view-all {
     margin: 16px 0 32px 0; }
   .graduate-program-overview #MainContent .prl-student-alumni-profiles div.mura-next-n, .student-and-alumni-profiles #MainContent .prl-student-alumni-profiles div.mura-next-n {
@@ -6735,7 +6724,7 @@ div.prl-research-highlights .last.hasImage {
     max-width: 50%; } }
 
 @media (max-width: 539px) {
-  .graduate-program-overview #MainContent .prl-student-alumni-profiles .mura-collection.mura-grid-two .mura-collection-item .mura-collection-item__holder {
+  .graduate-program-overview #MainContent .prl-student-alumni-profiles .mura-collection.mura-grid-two .mura-collection-item .mura-collection-item__holder, .student-and-alumni-profiles #MainContent .prl-student-alumni-profiles .mura-collection.mura-grid-two .mura-collection-item .mura-collection-item__holder {
     padding: 0; } }
 
 /* --------------------------------------------------------

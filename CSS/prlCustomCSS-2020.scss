@@ -717,7 +717,14 @@
         // Images span two thirds of container
         flex: 0 0 58.333333%;
         max-width: 0 0 58.333333%;
-        padding: 0 15px;
+      }
+      .prl-row[about-what-row="first"] .prl-about-what-img, .prl-row[about-what-row="third"] .prl-about-what-img {
+        // Divs with text have padding to separate from images
+        padding-right: 15px;
+      }
+      .prl-row[about-what-row="second"] .prl-about-what-img {
+        // Divs with text have padding to separate from images
+        padding-left: 15px;
       }
       .prl-about-what-text {
         //Text containers span one third of container
@@ -893,14 +900,6 @@
             margin-top: 0;
           }
         }
-        .prl-row[about-what-row="first"] .prl-about-what-text, .prl-row[about-what-row="third"] .prl-about-what-text {
-          // Divs with text have padding to separate from images
-          padding-left: 8px;
-        }
-        .prl-row[about-what-row="second"] .prl-about-what-text {
-          // Divs with text have padding to separate from images
-          padding-right: 8px;
-        }
       }
     }
   }
@@ -955,7 +954,10 @@
           // Flexbox - push text below image on mobile
           order: 1;
         }
-        .prl-row[about-what-row="first"] .prl-about-what-text, .prl-row[about-what-row="third"] .prl-about-what-text, .prl-row[about-what-row="second"] .prl-about-what-text {
+        .prl-row[about-what-row="first"] .prl-about-what-img, .prl-row[about-what-row="second"] .prl-about-what-img, .prl-row[about-what-row="third"] .prl-about-what-img {
+          padding: 0;
+        }
+        .prl-row .prl-about-what-text {
           // Divs with text have padding to separate from images
           padding: 16px 15px 0 15px;
         }
@@ -1771,7 +1773,7 @@ div.prl-research-highlights {
     @extend .prl-h2-secondary-spacing;
   }
   section.prl-research-tech-services {
-    // The CAAPP services
+    // Services intro area
     .prl-row {
       // Spacing between each research area
       margin: 70px 0;
@@ -1785,11 +1787,14 @@ div.prl-research-highlights {
         flex: 0 0 58.333333%;
         max-width: 58.333333%;
       }
-      .prl-research-tech-img, .prl-research-tech-text {
-        // Research images and description padding
-        padding-left: 15px;
-        padding-right: 15px;
+      .prl-research-tech-img {
+        // Divs with text have padding to separate from images
+        padding: 0 15px 0 0;
       }
+    }
+    .prl-row.prl-research-tech-item-even .prl-research-tech-img  {
+      // Divs with text have padding to separate from images
+      padding: 0 0 0 15px;
     }
     .prl-row.first {
       // First research area top margin
@@ -1817,15 +1822,22 @@ div.prl-research-highlights {
   .research-projects, .center-for-advanced-algal-and-plant-phenotyping {
     section.prl-research-tech-services {
       .prl-row {
-        .prl-research-tech-img, .prl-research-tech-text {
+        .prl-research-tech-img, .prl-research-tech-text, .prl-research-tech-item-even .prl-research-tech-img {
           // Research image and descriptions EACH span the whole cnotainer width
           flex: 0 0 100%;
           max-width: 100%;
+          padding: 0px;
+        }
+        .prl-research-tech-img {
+          img {
+            margin-bottom: 0;
+          }
         }
       }
       .prl-row.prl-research-tech-item-even .prl-research-tech-img {
         // Flexbox: on even numbered rows, image on top. 
         order: 0;
+        padding: 0;
       }
     }
   }
@@ -1932,7 +1944,6 @@ div.prl-research-highlights {
     }
     .prl-student-alumni-profiles {
       margin-top: 16px;
-      padding: 0 17px;
       a.view-all {
         // Styling Mura's "See all" link
         @extend .prl-btn;
@@ -2000,7 +2011,7 @@ div.prl-research-highlights {
 }
 
 @media (max-width: 539px) {
-  .graduate-program-overview {
+  .graduate-program-overview, .student-and-alumni-profiles {
     #MainContent {
       .prl-student-alumni-profiles {
         .mura-collection.mura-grid-two {

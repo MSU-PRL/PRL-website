@@ -2,7 +2,20 @@
         CNS STYLING OVERRIDES
 -------------------------------------------------------- */
 
-/* TEXT WHITE SPACE
+/* OVERFLOW issues
+-------------------------------------------------------- */
+
+.mainContent__mainCol {
+  // Allows styles (shadows, borders) to overflow in the padded area around the mainCol container 
+  overflow-x: inherit;
+  ul.pagination {
+    // Allows pagination nav to wrap
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+/* TEXT STYLES
 -------------------------------------------------------- */
 
 blockquote ol:last-child,
@@ -15,28 +28,6 @@ blockquote ul:last-child {
   font-weight: 400;
   text-transform: none;
   line-height: 1.4 !important;
-}
-
-#MainContent,
-aside {
-  // For all text, making for nice white space!
-  line-height: 1.6;
-  letter-spacing: 0.05px;
-  b,
-  strong {
-    // Makes bold text black, for more contrast
-    color: $x-dark-grey-text;
-  }
-  .mainColContent,
-  div.mura-region {
-    // For main content area so it does not affect the side columns
-    p,
-    ul,
-    ol {
-      // Adding white space to text, for legibility
-      margin-bottom: 20px;
-    }
-  }
 }
 
 .depth-2.internal-resources,
@@ -59,17 +50,8 @@ aside {
   line-height: 1.4;
 }
 
-#MainContent #crumblist {
-  // Nav Crumblist in body reverts to original line height
-  line-height: 1.4;
-}
-
 @media (min-width: 1400px) {
-  // Extra large screens
-  #MainContent,
-  aside {
-    letter-spacing: -0.1px;
-  }
+  // Extra large screens - Increasing font size and adding white space to text, for legibility
   #MainContent {
     .mainColContent,
     div.mura-region {
@@ -77,7 +59,6 @@ aside {
       p,
       ul,
       ol {
-        // Adding white space to text, for legibility
         font-size: 16.5px;
         line-height: 1.7;
       }
