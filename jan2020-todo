@@ -1,23 +1,32 @@
-- Remove Bootstrap CSS from the following:
-  - Content - Card: Related Content - Full Image + Title Overlay (see where in news stories)
-  - Content - Card: Related Content - Image + Title Overlay + Text Area (see where in news stories)
-  - Content - Informational Well Section with Cards (see where in news stories)
-  - Accordion - Fix borders on 
-  - Fix layout on mobile and tablet: Grad Program icons copy About style
+- Fix layout on mobile and tablet:
   - DONE: 
       HPG: DONE
       ABOUT section: DONE
       RESEARCH & TECH section: DONE
       PEOPLE section: 
+        - faculty and staff at mobile breakpoint, mura-collection-item__holder {     padding: 16px 0;}
+        - faculty page: remove .mura-collection.mura-grid-two {display: inline-block on small laptop screens}
       GRADUATE PROGRAM section: DONE
       NEWS & EVENTS section: Research Highlights
-  - Redo asides (remove background? Link underlines in side navs, under the class: mainContent__sideNav)
-  - Hero images in internal pages
-  - News page pagination not mobile friendly
-  - Perhaps use CSS grid for some of the harder stuff, like related content under news, where the summary spills under image
+- Remove Bootstrap CSS from the following:
+  - Content - Card: Related Content - Full Image + Title Overlay (see where in news stories)
+  - Content - Card: Related Content - Image + Title Overlay + Text Area (see where in news stories)
+  - Content - Informational Well Section with Cards (see where in news stories)
+- Redo asides (remove background? Link underlines in side navs, under the class: mainContent__sideNav)
+- Hero images in internal pages
+- Perhaps use CSS grid for some of the harder stuff, like related content under news, where the summary spills under image
 - Remove unused CSS
 - Use Natsci accessibility audit tool
 - Add animation to accordion
 - PRL About page additions: add inline navigation, maybe smaller hero image, add DOE BER (or remove BES), add prominent alumni/findings
 - Add a new ‘for the public’ page, including BMC videos. Need to figure out a narrative for this
 - Optional:	Update/refine color palette: https://colors.eva.design/ 
+
+DONE     
+- Accordion - Fix borders on DONE
+- CNS overrides
+  - .mainContent__mainCol { overflow-x: *inherit*} DONE
+    allows stuff (shadows, borders) to overflow in the padded area around the container
+    - revise ABOUT DONE, RESEARCH & TECH, Accordion button on small screens, etc.
+  - figures: padding: 0;
+- News page pagination not mobile friendly

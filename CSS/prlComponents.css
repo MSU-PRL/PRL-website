@@ -182,11 +182,12 @@ prl-accordion-section[role="region"] + prl-accordion-section {
 figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figure {
   display: inline-block;
   max-width: 100%;
-  margin: 0 0 40px 0;
+  margin: 8px 0 40px 0;
   background: #fff;
   border: 0px solid #fff;
   border: none;
-  text-align: center; }
+  text-align: center;
+  padding: 0; }
   figure a, figure.prl-figure a, figure.cke_widget_element a, .secondaryPageWrapper figure a {
     color: #466A62 !important; }
     figure a:hover, figure.prl-figure a:hover, figure.cke_widget_element a:hover, .secondaryPageWrapper figure a:hover {

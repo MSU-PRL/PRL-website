@@ -327,12 +327,14 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
   // Note: .prl-figure class is used December 2017 and on. "figure" is styled for anything before December 2017
   display: inline-block;
   max-width: 100%; // Legacy styling for Mura 6. This class is now superseded by 'figure.prl-figure' class. The extra stylings are below.
-  margin: 0 0 40px 0;
+  margin: 8px 0 40px 0;
   // Overriding Mura 7 CNS styles, as of December 2017
   background: #fff;
   border: 0px solid #fff;
   border: none;
   text-align: center; // Center aligns the image
+  // Overriding Mura CNS styles, as of January 2020
+  padding: 0;
   a {
     // overriding NatSci figure styles and reverting to PRL Link styles
     color: $natsci-complementary !important; // transition: $tran-short;
