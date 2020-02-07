@@ -1,11 +1,9 @@
-- Fix layout on mobile and tablet:
+- Fix layout on mobile and tablet: @media (max-width: 768px) .mainContent__mainCol {overflow-x: auto;} on pages: Graduate Students; Postdocs; Code of Ethics
   - DONE: 
       HPG: DONE
       ABOUT section: DONE
       RESEARCH & TECH section: DONE
-      PEOPLE section: 
-        - faculty and staff at mobile breakpoint, mura-collection-item__holder {     padding: 16px 0;}
-        - faculty page: remove .mura-collection.mura-grid-two {display: inline-block on small laptop screens}
+      PEOPLE section: splash pages DONE (fix tooltips) - NEXT: internal pages
       GRADUATE PROGRAM section: DONE
       NEWS & EVENTS section: Research Highlights
 - Remove Bootstrap CSS from the following:

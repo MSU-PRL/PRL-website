@@ -2174,26 +2174,28 @@ div.prl-research-highlights {
     .mura-collection.mura-grid-two {
       // Staff and Faculty Pages, common stylings
       // Adding some spacing
-      margin-right: -16px; // Flexbox display
       display: flex; /* NEW - Chrome */
       flex-flow: row wrap;
+      justify-content: space-between;
+      &:after {
+        // Aligns last element of flex container 
+        content: "";
+        width: calc(50% - 8px);
+      }
       .mura-collection-item {
-        width: 46%; // For non-flex devices
+        // width: 46%; // For non-flex devices
         display: flex;
-        -ms-flex-preferred-size: calc(50% - 16px);
-        flex-basis: calc(50% - 16px);
-        float: left;
-        position: relative;
-        margin-right: 16px;
+        flex-basis: calc(50% - 8px);
         margin-bottom: 16px;
       }
       .mura-collection-item__holder {
         // Basic faculty/staff card layout
         width: 100%; // display: inline-block;
-        padding: 16px !important;
+        padding: 16px;
         border: 1px solid $x-light-grey;
         border-radius: 12px;
         height: auto;
+        line-height: 1.6;
         .mura-item-content {
           position: relative;
           float: left;
@@ -2270,6 +2272,9 @@ div.prl-research-highlights {
         color: $light-grey-text;
         font-size: 0.93rem;
         width: 100%;
+        strong {
+          color: $dark-grey-text;
+        }
       }
       .fa {
         // Fonticon styling
@@ -2414,13 +2419,6 @@ div.prl-research-highlights {
     #MainContent {
       .mura-collection.mura-grid-two {
         .mura-collection-item__holder {
-          .mura-item-content {
-            a {
-              img {
-                width: 85%;
-              }
-            }
-          }
           .mura-item-meta {
             .mura-item-meta__title {
               font-size: 1rem !important;
@@ -2442,11 +2440,6 @@ div.prl-research-highlights {
   .emeritus-faculty,
   .staff {
     #MainContent {
-      .mura-collection.mura-grid-two {
-        // Staff and Faculty Pages, common stylings
-        // Adding some spacing
-        margin-right: -15px;
-      }
       span.prl-phone-tooltip {
         left: -15px !important;
       }
@@ -2454,13 +2447,6 @@ div.prl-research-highlights {
   }
   .staff #MainContent .mura-collection.mura-grid-two .mura-collection-item {
     // Tablets and larger phones, Staff page
-    .mura-item-content {
-      a {
-        img {
-          width: 90%;
-        }
-      }
-    }
     .mura-item-meta {
       .mura-item-meta__title {
         font-size: 1rem;
@@ -2475,22 +2461,6 @@ div.prl-research-highlights {
   }
 }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  .faculty,
-  .fixed-term-faculty,
-  .emeritus-faculty {
-    // Adjusting to iPads specifically
-    #MainContent {
-      .mura-collection.mura-grid-two {
-        display: inline-block;
-        .mura-collection-item {
-          float: left;
-        }
-      }
-    }
-  }
-}
-
 @media (max-width: 767px) {
   // Phones general
   .faculty,
@@ -2499,8 +2469,6 @@ div.prl-research-highlights {
   .staff {
     #MainContent {
       .mura-collection.mura-grid-two {
-        // Removing general margins so all content stays within body
-        margin-right: 0;
         .mura-collection-item {
           .mura-collection-item__holder {
             width: 100%;
@@ -2597,40 +2565,9 @@ div.prl-research-highlights {
             border: none;
             border-top: 1px solid $x-light-grey;
             border-radius: 0px;
+            padding: 16px 0;
           }
         }
-      }
-    }
-  }
-}
-
-@media (max-width: 360px) {
-  // XS phone sizes, adjusting dimensions for Faculty page
-  .faculty,
-  .fixed-term-faculty,
-  .emeritus-faculty,
-  .staff {
-    #MainContent {
-      .mura-collection.mura-grid-two {
-        .mura-collection-item__holder {
-          .mura-item-content {
-            height: auto !important;
-            a {
-              img {
-                width: 85% !important;
-              }
-            }
-          }
-          .mura-item-meta {
-            margin-left: 0rem;
-            .mura-item-meta__title {
-              font-size: 0.97rem;
-            }
-          }
-        }
-      }
-      .prl-faculty-info {
-        font-size: 0.97rem;
       }
     }
   }

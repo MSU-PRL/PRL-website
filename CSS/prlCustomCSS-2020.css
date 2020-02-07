@@ -6825,7 +6825,6 @@ div.prl-research-highlights .last.hasImage {
 .fixed-term-faculty #MainContent .mura-collection.mura-grid-two,
 .emeritus-faculty #MainContent .mura-collection.mura-grid-two,
 .staff #MainContent .mura-collection.mura-grid-two {
-  margin-right: -16px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6833,30 +6832,36 @@ div.prl-research-highlights .last.hasImage {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
-          flex-flow: row wrap; }
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .faculty #MainContent .mura-collection.mura-grid-two:after,
+  .fixed-term-faculty #MainContent .mura-collection.mura-grid-two:after,
+  .emeritus-faculty #MainContent .mura-collection.mura-grid-two:after,
+  .staff #MainContent .mura-collection.mura-grid-two:after {
+    content: "";
+    width: calc(50% - 8px); }
   .faculty #MainContent .mura-collection.mura-grid-two .mura-collection-item,
   .fixed-term-faculty #MainContent .mura-collection.mura-grid-two .mura-collection-item,
   .emeritus-faculty #MainContent .mura-collection.mura-grid-two .mura-collection-item,
   .staff #MainContent .mura-collection.mura-grid-two .mura-collection-item {
-    width: 46%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-preferred-size: calc(50% - 16px);
-    flex-basis: calc(50% - 16px);
-    float: left;
-    position: relative;
-    margin-right: 16px;
+    -ms-flex-preferred-size: calc(50% - 8px);
+        flex-basis: calc(50% - 8px);
     margin-bottom: 16px; }
   .faculty #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder,
   .fixed-term-faculty #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder,
   .emeritus-faculty #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder,
   .staff #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder {
     width: 100%;
-    padding: 16px !important;
+    padding: 16px;
     border: 1px solid #e6e6e6;
     border-radius: 12px;
-    height: auto; }
+    height: auto;
+    line-height: 1.6; }
     .faculty #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-content,
     .fixed-term-faculty #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-content,
     .emeritus-faculty #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-content,
@@ -6984,6 +6989,11 @@ div.prl-research-highlights .last.hasImage {
     color: #757575;
     font-size: 0.93rem;
     width: 100%; }
+    .faculty #MainContent .mura-collection.mura-grid-two .prl-faculty-info strong,
+    .fixed-term-faculty #MainContent .mura-collection.mura-grid-two .prl-faculty-info strong,
+    .emeritus-faculty #MainContent .mura-collection.mura-grid-two .prl-faculty-info strong,
+    .staff #MainContent .mura-collection.mura-grid-two .prl-faculty-info strong {
+      color: #444; }
   .faculty #MainContent .mura-collection.mura-grid-two .fa,
   .fixed-term-faculty #MainContent .mura-collection.mura-grid-two .fa,
   .emeritus-faculty #MainContent .mura-collection.mura-grid-two .fa,
@@ -7153,26 +7163,17 @@ div.prl-research-highlights .last.hasImage {
   .emeritus-faculty #MainContent .mura-collection.mura-grid-two span.prl-phone-tooltip,
   .staff #MainContent .mura-collection.mura-grid-two span.prl-phone-tooltip {
     left: -22px !important; }
-  .staff #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-content a img {
-    width: 85%; }
   .staff #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__title {
     font-size: 1rem !important; }
   .staff #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder span.prl-staff-address-tooltip {
     left: -83px; } }
 
 @media (min-width: 710px) and (max-width: 991px) {
-  .faculty #MainContent .mura-collection.mura-grid-two,
-  .fixed-term-faculty #MainContent .mura-collection.mura-grid-two,
-  .emeritus-faculty #MainContent .mura-collection.mura-grid-two,
-  .staff #MainContent .mura-collection.mura-grid-two {
-    margin-right: -15px; }
   .faculty #MainContent span.prl-phone-tooltip,
   .fixed-term-faculty #MainContent span.prl-phone-tooltip,
   .emeritus-faculty #MainContent span.prl-phone-tooltip,
   .staff #MainContent span.prl-phone-tooltip {
     left: -15px !important; }
-  .staff #MainContent .mura-collection.mura-grid-two .mura-collection-item .mura-item-content a img {
-    width: 90%; }
   .staff #MainContent .mura-collection.mura-grid-two .mura-collection-item .mura-item-meta .mura-item-meta__title {
     font-size: 1rem; }
   .staff #MainContent .mura-collection.mura-grid-two .mura-collection-item .prl-staff-position {
@@ -7180,37 +7181,22 @@ div.prl-research-highlights .last.hasImage {
   .staff #MainContent .mura-collection.mura-grid-two .mura-collection-item span.prl-staff-address-tooltip {
     left: -75px; } }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  .faculty #MainContent .mura-collection.mura-grid-two,
-  .fixed-term-faculty #MainContent .mura-collection.mura-grid-two,
-  .emeritus-faculty #MainContent .mura-collection.mura-grid-two {
-    display: inline-block; }
-    .faculty #MainContent .mura-collection.mura-grid-two .mura-collection-item,
-    .fixed-term-faculty #MainContent .mura-collection.mura-grid-two .mura-collection-item,
-    .emeritus-faculty #MainContent .mura-collection.mura-grid-two .mura-collection-item {
-      float: left; } }
-
 @media (max-width: 767px) {
-  .faculty #MainContent .mura-collection.mura-grid-two,
-  .fixed-term-faculty #MainContent .mura-collection.mura-grid-two,
-  .emeritus-faculty #MainContent .mura-collection.mura-grid-two,
-  .staff #MainContent .mura-collection.mura-grid-two {
-    margin-right: 0; }
-    .faculty #MainContent .mura-collection.mura-grid-two .mura-collection-item .mura-collection-item__holder,
-    .fixed-term-faculty #MainContent .mura-collection.mura-grid-two .mura-collection-item .mura-collection-item__holder,
-    .emeritus-faculty #MainContent .mura-collection.mura-grid-two .mura-collection-item .mura-collection-item__holder,
-    .staff #MainContent .mura-collection.mura-grid-two .mura-collection-item .mura-collection-item__holder {
-      width: 100%; }
-      .faculty #MainContent .mura-collection.mura-grid-two .mura-collection-item .mura-collection-item__holder .mura-item-content a img,
-      .fixed-term-faculty #MainContent .mura-collection.mura-grid-two .mura-collection-item .mura-collection-item__holder .mura-item-content a img,
-      .emeritus-faculty #MainContent .mura-collection.mura-grid-two .mura-collection-item .mura-collection-item__holder .mura-item-content a img,
-      .staff #MainContent .mura-collection.mura-grid-two .mura-collection-item .mura-collection-item__holder .mura-item-content a img {
-        width: 93%; }
-      .faculty #MainContent .mura-collection.mura-grid-two .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__title,
-      .fixed-term-faculty #MainContent .mura-collection.mura-grid-two .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__title,
-      .emeritus-faculty #MainContent .mura-collection.mura-grid-two .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__title,
-      .staff #MainContent .mura-collection.mura-grid-two .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__title {
-        font-size: 1rem !important; }
+  .faculty #MainContent .mura-collection.mura-grid-two .mura-collection-item .mura-collection-item__holder,
+  .fixed-term-faculty #MainContent .mura-collection.mura-grid-two .mura-collection-item .mura-collection-item__holder,
+  .emeritus-faculty #MainContent .mura-collection.mura-grid-two .mura-collection-item .mura-collection-item__holder,
+  .staff #MainContent .mura-collection.mura-grid-two .mura-collection-item .mura-collection-item__holder {
+    width: 100%; }
+    .faculty #MainContent .mura-collection.mura-grid-two .mura-collection-item .mura-collection-item__holder .mura-item-content a img,
+    .fixed-term-faculty #MainContent .mura-collection.mura-grid-two .mura-collection-item .mura-collection-item__holder .mura-item-content a img,
+    .emeritus-faculty #MainContent .mura-collection.mura-grid-two .mura-collection-item .mura-collection-item__holder .mura-item-content a img,
+    .staff #MainContent .mura-collection.mura-grid-two .mura-collection-item .mura-collection-item__holder .mura-item-content a img {
+      width: 93%; }
+    .faculty #MainContent .mura-collection.mura-grid-two .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__title,
+    .fixed-term-faculty #MainContent .mura-collection.mura-grid-two .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__title,
+    .emeritus-faculty #MainContent .mura-collection.mura-grid-two .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__title,
+    .staff #MainContent .mura-collection.mura-grid-two .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__title {
+      font-size: 1rem !important; }
   .faculty #MainContent .prl-faculty-contact,
   .fixed-term-faculty #MainContent .prl-faculty-contact,
   .emeritus-faculty #MainContent .prl-faculty-contact,
@@ -7286,34 +7272,8 @@ div.prl-research-highlights .last.hasImage {
     .staff #MainContent .mura-collection.mura-grid-two .mura-collection-item .mura-collection-item__holder {
       border: none;
       border-top: 1px solid #e6e6e6;
-      border-radius: 0px; } }
-
-@media (max-width: 360px) {
-  .faculty #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-content,
-  .fixed-term-faculty #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-content,
-  .emeritus-faculty #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-content,
-  .staff #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-content {
-    height: auto !important; }
-    .faculty #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-content a img,
-    .fixed-term-faculty #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-content a img,
-    .emeritus-faculty #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-content a img,
-    .staff #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-content a img {
-      width: 85% !important; }
-  .faculty #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta,
-  .fixed-term-faculty #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta,
-  .emeritus-faculty #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta,
-  .staff #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta {
-    margin-left: 0rem; }
-    .faculty #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__title,
-    .fixed-term-faculty #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__title,
-    .emeritus-faculty #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__title,
-    .staff #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__title {
-      font-size: 0.97rem; }
-  .faculty #MainContent .prl-faculty-info,
-  .fixed-term-faculty #MainContent .prl-faculty-info,
-  .emeritus-faculty #MainContent .prl-faculty-info,
-  .staff #MainContent .prl-faculty-info {
-    font-size: 0.97rem; } }
+      border-radius: 0px;
+      padding: 16px 0; } }
 
 /* FACULTY BIOS: TEXT
 -------------------------------------------------- */
