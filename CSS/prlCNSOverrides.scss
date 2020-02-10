@@ -6,12 +6,16 @@
 -------------------------------------------------------- */
 
 .mainContent__mainCol {
-  // Allows styles (shadows, borders) to overflow in the padded area around the mainCol container 
-  overflow-x: inherit;
   ul.pagination {
     // Allows pagination nav to wrap
     display: flex;
     flex-wrap: wrap;
+  }
+}
+@media (max-width: 768px) {
+  // Fixes CSS grid  so content does not overflow
+  div.wrapper-1170MaxWidth {
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 

@@ -5366,14 +5366,17 @@ td {
 -------------------------------------------------------- */
 /* OVERFLOW issues
 -------------------------------------------------------- */
-.mainContent__mainCol {
-  overflow-x: inherit; }
-  .mainContent__mainCol ul.pagination {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap; }
+.mainContent__mainCol ul.pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+@media (max-width: 768px) {
+  div.wrapper-1170MaxWidth {
+    -ms-grid-columns: minmax(0, 1fr);
+        grid-template-columns: minmax(0, 1fr); } }
 
 /* TEXT STYLES
 -------------------------------------------------------- */
