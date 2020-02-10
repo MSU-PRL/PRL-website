@@ -1,15 +1,15 @@
-- Fix layout on mobile and tablet: @media (max-width: 768px) .mainContent__mainCol {overflow-x: auto;} on pages: Graduate Students; Postdocs; Code of Ethics
   - DONE: 
       HPG: DONE
       ABOUT section: DONE
       RESEARCH & TECH section: DONE
-      PEOPLE section: splash pages DONE (fix tooltips) - NEXT: internal pages
+      PEOPLE section: splash pages DONE - NEXT: internal pages
       GRADUATE PROGRAM section: DONE
       NEWS & EVENTS section: Research Highlights
 - Remove Bootstrap CSS from the following:
   - Content - Card: Related Content - Full Image + Title Overlay (see where in news stories)
   - Content - Card: Related Content - Image + Title Overlay + Text Area (see where in news stories)
   - Content - Informational Well Section with Cards (see where in news stories)
+- Fix tooltips on Faculty and staff pages
 - Redo asides (remove background? Link underlines in side navs, under the class: mainContent__sideNav)
 - Hero images in internal pages
 - Perhaps use CSS grid for some of the harder stuff, like related content under news, where the summary spills under image
