@@ -1599,8 +1599,7 @@
           margin-bottom: 0.25rem;
         }
         .date {
-          font-size: 14px;
-          margin-bottom: 0.25rem;
+          @extend .prl-aside-relcontent-date;
         }
         .summary {
           width: 90%;
@@ -2586,7 +2585,7 @@ div.prl-research-highlights {
       text-align: left;
       text-transform: capitalize;
       margin-bottom: 10px;
-      margin-top: 54px;
+      margin-top: 38px;
       max-width: 465px;
       font-weight: 300;
       color: $primary-color;
@@ -2597,6 +2596,7 @@ div.prl-research-highlights {
       line-height: 1.4;
       font-size: 1.1rem;
       font-weight: 300;
+      margin-top: 8px;
     }
     h2:nth-of-type(2) {
       // Faculty Research title
@@ -2740,8 +2740,6 @@ div.prl-research-highlights {
 
 #people {
   .prl-faculty-member-news {
-    // This is the .well class from Bootstrap. For some reason, I need to apply the class this way.
-    @extend .prl-well;
     h2 {
       margin-bottom: 15px;
       font-size: 27px;
@@ -2753,6 +2751,7 @@ div.prl-research-highlights {
       .hasImage {
         // Some of these styles are like the #sysTopStories aside ones
         padding-left: 0 !important;
+        margin-bottom: 24px;
         .image {
           @extend .prl-aside-relcontent-img;
         }
@@ -2763,12 +2762,12 @@ div.prl-research-highlights {
           margin-bottom: 0.25rem;
         }
         .date {
-          font-size: 14px;
-          margin-bottom: 0.25rem;
+          @extend .prl-aside-relcontent-date;
         }
-        .summary {
+        .summary > p {
           // Summary
           @extend .prl-aside-relcontent-summary;
+          margin-top: 0;
         }
       }
     }
@@ -2778,13 +2777,9 @@ div.prl-research-highlights {
 /* FACULTY CONTACT INFORMATION ASIDE
 -------------------------------------------------- */
 
-.prl-faculty-contact-info {
-  font-size: 95%;
+.prl-faculty-contact-info p, .prl-faculty-contact-info li, .prl-faculty-contact-info div {
+  font-size: 15px;
   color: $dark-grey-text;
-  letter-spacing: 0px;
-  hr {
-    border-color: #e0e0e0;
-  }
   .prl-row {
     .prl-faculty-contact-info-icon, .prl-faculty-contact-info-text {
       position: relative;

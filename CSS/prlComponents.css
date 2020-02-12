@@ -634,7 +634,7 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
   position: relative;
   float: left;
   display: block;
-  margin-right: 0.625rem;
+  margin: 0 0.625rem 0.625rem 0;
   -webkit-transition: 0.5s;
   transition: 0.5s; }
   .prl-aside-relcontent-img:hover {
@@ -643,6 +643,11 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
 .prl-aside-relcontent-title {
   font-size: 0.97rem;
   line-height: 1.4; }
+
+.prl-aside-relcontent-date {
+  color: #444;
+  font-size: 14px;
+  margin-bottom: 0.25rem; }
 
 .prl-aside-relcontent-summary {
   font-size: 0.92rem;

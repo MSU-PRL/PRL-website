@@ -4951,7 +4951,7 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
 /* -------------------------------------------------------------
        ALTERNATE WELL
 ------------------------------------------------------------- */
-.prl-well, #newsevents .mainContent__sideCol .prl-categories-aside, #people .prl-faculty-member-news {
+.prl-well, #newsevents .mainContent__sideCol .prl-categories-aside {
   min-height: 20px;
   padding: 19px !important;
   margin-bottom: 20px;
@@ -5295,7 +5295,7 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
   position: relative;
   float: left;
   display: block;
-  margin-right: 0.625rem;
+  margin: 0 0.625rem 0.625rem 0;
   -webkit-transition: 0.5s;
   transition: 0.5s; }
   .prl-aside-relcontent-img:hover, #newsevents .mainContent__sideCol .prl-top-stories > .mura-object-content > .mura-index .hasImage .image:hover, #MainContent .prl-news-relcontent .mura-object-content > .mura-index > div .hasImage .image:hover, #people .prl-faculty-member-news .mura-object-content > .mura-index > div .hasImage .image:hover {
@@ -5305,7 +5305,12 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
   font-size: 0.97rem;
   line-height: 1.4; }
 
-.prl-aside-relcontent-summary, #newsevents .mainContent__sideCol .prl-top-stories > .mura-object-content > .mura-index .hasImage .summary p, #MainContent .prl-news-relcontent .mura-object-content > .mura-index > div .hasImage .summary p, #people .prl-faculty-member-news .mura-object-content > .mura-index > div .hasImage .summary {
+.prl-aside-relcontent-date, #MainContent .prl-news-relcontent .mura-object-content > .mura-index > div .hasImage .date, #people .prl-faculty-member-news .mura-object-content > .mura-index > div .hasImage .date {
+  color: #444;
+  font-size: 14px;
+  margin-bottom: 0.25rem; }
+
+.prl-aside-relcontent-summary, #newsevents .mainContent__sideCol .prl-top-stories > .mura-object-content > .mura-index .hasImage .summary p, #MainContent .prl-news-relcontent .mura-object-content > .mura-index > div .hasImage .summary p, #people .prl-faculty-member-news .mura-object-content > .mura-index > div .hasImage .summary > p {
   font-size: 0.92rem;
   line-height: 1.4;
   font-weight: 400;
@@ -6502,9 +6507,6 @@ main.mainContent .view-all {
     padding: 0 0 10px 0 !important; }
   #MainContent .prl-news-relcontent .mura-object-content > .mura-index > div .hasImage .title {
     margin-bottom: 0.25rem; }
-  #MainContent .prl-news-relcontent .mura-object-content > .mura-index > div .hasImage .date {
-    font-size: 14px;
-    margin-bottom: 0.25rem; }
   #MainContent .prl-news-relcontent .mura-object-content > .mura-index > div .hasImage .summary {
     width: 90%; }
     #MainContent .prl-news-relcontent .mura-object-content > .mura-index > div .hasImage .summary p {
@@ -7286,7 +7288,7 @@ div.prl-research-highlights .last.hasImage {
   text-align: left;
   text-transform: capitalize;
   margin-bottom: 10px;
-  margin-top: 54px;
+  margin-top: 38px;
   max-width: 465px;
   font-weight: 300;
   color: #2E4D4D; }
@@ -7295,7 +7297,8 @@ div.prl-research-highlights .last.hasImage {
   color: #666;
   line-height: 1.4;
   font-size: 1.1rem;
-  font-weight: 300; }
+  font-weight: 300;
+  margin-top: 8px; }
 
 #people.depth-3 .mainColContent h2:nth-of-type(2) {
   clear: both;
@@ -7373,40 +7376,39 @@ div.prl-research-highlights .last.hasImage {
   text-transform: capitalize; }
 
 #people .prl-faculty-member-news .mura-object-content > .mura-index > div .hasImage {
-  padding-left: 0 !important; }
+  padding-left: 0 !important;
+  margin-bottom: 24px; }
   #people .prl-faculty-member-news .mura-object-content > .mura-index > div .hasImage .title {
     font-size: 1rem;
     margin-bottom: 0.25rem; }
-  #people .prl-faculty-member-news .mura-object-content > .mura-index > div .hasImage .date {
-    font-size: 14px;
-    margin-bottom: 0.25rem; }
+  #people .prl-faculty-member-news .mura-object-content > .mura-index > div .hasImage .summary > p {
+    margin-top: 0; }
 
 /* FACULTY CONTACT INFORMATION ASIDE
 -------------------------------------------------- */
-.prl-faculty-contact-info {
-  font-size: 95%;
-  color: #444;
-  letter-spacing: 0px; }
-  .prl-faculty-contact-info hr {
-    border-color: #e0e0e0; }
-  .prl-faculty-contact-info .prl-row .prl-faculty-contact-info-icon, .prl-faculty-contact-info .prl-row .prl-faculty-contact-info-text {
+.prl-faculty-contact-info p, .prl-faculty-contact-info li, .prl-faculty-contact-info div {
+  font-size: 15px;
+  color: #444; }
+  .prl-faculty-contact-info p .prl-row .prl-faculty-contact-info-icon, .prl-faculty-contact-info p .prl-row .prl-faculty-contact-info-text, .prl-faculty-contact-info li .prl-row .prl-faculty-contact-info-icon, .prl-faculty-contact-info li .prl-row .prl-faculty-contact-info-text, .prl-faculty-contact-info div .prl-row .prl-faculty-contact-info-icon, .prl-faculty-contact-info div .prl-row .prl-faculty-contact-info-text {
     position: relative;
     width: 100%;
     min-height: 1px;
     padding-right: 15px;
     padding-left: 15px; }
-  .prl-faculty-contact-info .prl-row .prl-faculty-contact-info-icon {
+  .prl-faculty-contact-info p .prl-row .prl-faculty-contact-info-icon, .prl-faculty-contact-info li .prl-row .prl-faculty-contact-info-icon, .prl-faculty-contact-info div .prl-row .prl-faculty-contact-info-icon {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 8.333333%;
             flex: 0 0 8.333333%;
     max-width: 8.333333%; }
-  .prl-faculty-contact-info .prl-row .prl-faculty-contact-info-text {
+  .prl-faculty-contact-info p .prl-row .prl-faculty-contact-info-text, .prl-faculty-contact-info li .prl-row .prl-faculty-contact-info-text, .prl-faculty-contact-info div .prl-row .prl-faculty-contact-info-text {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 83.333333%;
             flex: 0 0 83.333333%;
     max-width: 83.333333%; }
-  .prl-faculty-contact-info ul,
-  .prl-faculty-contact-info ol {
+  .prl-faculty-contact-info p ul,
+  .prl-faculty-contact-info p ol, .prl-faculty-contact-info li ul,
+  .prl-faculty-contact-info li ol, .prl-faculty-contact-info div ul,
+  .prl-faculty-contact-info div ol {
     padding-left: 30px; }
 
 /* STAFF PAGES: TEXT

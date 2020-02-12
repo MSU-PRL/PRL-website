@@ -2,7 +2,7 @@
       HPG: DONE
       ABOUT section: DONE
       RESEARCH & TECH section: DONE
-      PEOPLE section: splash pages DONE - NEXT: internal pages
+      PEOPLE section: splash pages DONE - NEXT: internal pages (Faculty: walker/Ducat - Contact becomes <h2>, where to include <hr> tags as separators??)
       GRADUATE PROGRAM section: DONE
       NEWS & EVENTS section: Research Highlights
 - Remove Bootstrap CSS from the following:
