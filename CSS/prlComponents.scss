@@ -859,7 +859,7 @@ $img-hover-opacity: 0.8;
   position: relative;
   float: left;
   display: block;
-  margin-right: 0.625rem;
+  margin: 0 0.625rem 0.625rem 0;
   -webkit-transition: $tran-half-sec;
   transition: $tran-half-sec;
   &:hover {
@@ -870,6 +870,12 @@ $img-hover-opacity: 0.8;
 .prl-aside-relcontent-title {
   font-size: 0.97rem;
   line-height: 1.4;
+}
+
+.prl-aside-relcontent-date {
+  color: $dark-grey-text;
+  font-size: 14px;
+  margin-bottom: 0.25rem;
 }
 
 .prl-aside-relcontent-summary {
