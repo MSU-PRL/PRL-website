@@ -2579,11 +2579,10 @@ div.prl-research-highlights {
   // Giving Faculty title different h2 and intro, for contrast.
   .mainColContent {
     h2:nth-of-type(1) {
-      // Faculty main title
-      font-size: 30px;
+      // Faculty main positions
       display: inline-block;
-      text-align: left;
       text-transform: capitalize;
+      line-height: 1.4;
       margin-bottom: 10px;
       margin-top: 38px;
       max-width: 465px;
@@ -2599,12 +2598,10 @@ div.prl-research-highlights {
       margin-top: 8px;
     }
     h2:nth-of-type(2) {
-      // Faculty Research title
+      // Faculty Research topic
       clear: both;
-      display: block;
       padding-top: 18px;
       margin-top: 4px;
-      font-size: 1.85rem;
     }
   }
 }
@@ -2621,28 +2618,18 @@ div.prl-research-highlights {
   }
 }
 
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 821px) and (max-width: 1199px){
   #people.depth-3 {
     .mainColContent {
       h2:nth-of-type(1) {
         // Faculty main title
-        max-width: 325px;
-        font-size: 1.5rem;
+        max-width: 300px;
+        font-size: 1.3rem;
+        margin-top: 28px;
       }
       p:nth-of-type(1) {
         // Faculty department associations
         font-size: 1rem;
-      }
-    }
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  #people.depth-3 {
-    .mainColContent {
-      h2:nth-of-type(1) {
-        // Faculty main title
-        max-width: 425px;
       }
     }
   }
@@ -2654,7 +2641,6 @@ div.prl-research-highlights {
       h2:nth-of-type(1) {
         // Faculty main title
         margin-top: 12px;
-        font-size: 2.2rem;
       }
       p:nth-of-type(1) {
         // Faculty department associations
@@ -2742,10 +2728,6 @@ div.prl-research-highlights {
   .prl-faculty-member-news {
     h2 {
       margin-bottom: 15px;
-      font-size: 27px;
-      font-size: 1.7rem;
-      color: $dark-grey-text;
-      text-transform: capitalize;
     }
     .mura-object-content > .mura-index > div {
       .hasImage {
@@ -2777,24 +2759,22 @@ div.prl-research-highlights {
 /* FACULTY CONTACT INFORMATION ASIDE
 -------------------------------------------------- */
 
-.prl-faculty-contact-info p, .prl-faculty-contact-info li, .prl-faculty-contact-info div {
-  font-size: 15px;
-  color: $dark-grey-text;
+.prl-faculty-contact-info {
+  p, li, div {
+    font-size: 15px;
+    color: $dark-grey-text;
+  }
   .prl-row {
-    .prl-faculty-contact-info-icon, .prl-faculty-contact-info-text {
-      position: relative;
-      width: 100%;
-      min-height: 1px;
-      padding-right: 15px;
-      padding-left: 15px;
-    }
     .prl-faculty-contact-info-icon {
       flex: 0 0 8.333333%;
       max-width: 8.333333%;
+      padding-right: 15px;
+      padding-left: 15px;
     }
     .prl-faculty-contact-info-text {
       flex: 0 0 83.333333%;
       max-width: 83.333333%;
+      padding-left: 15px;
     }
   }
   ul,
