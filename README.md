@@ -34,7 +34,7 @@ The History Timeline on the <a href="https://prl.natsci.msu.edu/about/">About pa
 * **PRL-homepage-news-events-2018.html:** <a href="https://prl.natsci.msu.edu/">PRL homepage</a> below the Brands section.
   * To update, paste the code in the **Homepage - News & Events** component in Mura's File Manager.
 * **PRL-Code-of-Ethics.html:** <a href="https://prl.natsci.msu.edu/about/internal-resources/employee-documents/code-of-ethics/">Code of Ethics page</a>
-* **404 Page:** <a href="https://https://prl.natsci.msu.edu/404/">404 page</a>
+* **404 Page:** <a href="https://prl.natsci.msu.edu/404/">404 page</a>
  
 ## JS Folder 
 ### Instructions to modify JS:
