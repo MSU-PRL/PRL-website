@@ -6874,7 +6874,7 @@ div.prl-research-highlights .last.hasImage {
       position: relative;
       float: left;
       z-index: 2;
-      margin-right: 4%; }
+      margin-right: 3%; }
       .faculty #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-content a,
       .fixed-term-faculty #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-content a,
       .emeritus-faculty #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-content a,
@@ -7020,7 +7020,7 @@ div.prl-research-highlights .last.hasImage {
   .emeritus-faculty #MainContent .mura-collection.mura-grid-two span.prl-phone-tooltip,
   .staff #MainContent .mura-collection.mura-grid-two span.prl-phone-tooltip {
     visibility: hidden;
-    width: 10.5rem;
+    width: 12.5rem;
     background-color: #2E4D4D;
     color: #fff !important;
     border-radius: 2px;
@@ -7029,7 +7029,7 @@ div.prl-research-highlights .last.hasImage {
     -webkit-transition: visibility 0s linear 0.35s, opacity 0.35s;
     transition: visibility 0s linear 0.35s, opacity 0.35s;
     font-family: 'Gotham SSm A', 'Gotham SSm B', arial, sans-serif;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     text-align: left;
     position: absolute;
     z-index: 10;
@@ -7129,12 +7129,13 @@ div.prl-research-highlights .last.hasImage {
   top: -37px;
   min-height: 0px !important;
   min-height: auto !important;
-  width: 7.5rem !important; }
+  width: 8.5rem !important;
+  font-size: 0.85rem; }
 
 .staff #MainContent .mura-collection.mura-grid-two .mura-collection-item span.prl-staff-address-tooltip {
   visibility: hidden;
   min-height: auto !important;
-  width: 8.75rem !important;
+  width: 9.75rem !important;
   background-color: #2E4D4D;
   color: #fff !important;
   border-radius: 2px;
@@ -7143,7 +7144,7 @@ div.prl-research-highlights .last.hasImage {
   -webkit-transition: visibility 0s linear 0.35s, opacity 0.35s;
   transition: visibility 0s linear 0.35s, opacity 0.35s;
   font-family: 'Gotham SSm A', 'Gotham SSm B', arial, sans-serif;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   text-align: left;
   position: absolute;
   z-index: 1;
@@ -7380,6 +7381,9 @@ div.prl-research-highlights .last.hasImage {
   color: #444; }
 
 .prl-faculty-contact-info .prl-row .prl-faculty-contact-info-icon {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  padding-top: 7px;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 8.333333%;
           flex: 0 0 8.333333%;

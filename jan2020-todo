@@ -2,15 +2,16 @@
       HPG: DONE
       ABOUT section: DONE
       RESEARCH & TECH section: DONE
-      PEOPLE section: splash pages DONE 
-      
-        Faculty internal pages: DONE --> Benning/Ducat/Walker/Thomashow
+      PEOPLE section: DONE
+        Faculty internal pages: DONE 
           - <h3> --> <h2>
           - remove <hr> tags
-          - phone # links, 
-
+          - phone # links
+          - on front end, remove prl-well class
       GRADUATE PROGRAM section: DONE
-      NEWS & EVENTS section: Research Highlights
+
+      NEWS & EVENTS section: Research Highlights; splash page
+
 - Remove Bootstrap CSS from the following:
   - Content - Card: Related Content - Full Image + Title Overlay (see where in news stories)
   - Content - Card: Related Content - Image + Title Overlay + Text Area (see where in news stories)
@@ -18,7 +19,6 @@
 - Fix tooltips on Faculty and staff pages
 - Redo asides (remove background? Link underlines in side navs, under the class: mainContent__sideNav)
 - Hero images in internal pages
-- Perhaps use CSS grid for some of the harder stuff, like related content under news, where the summary spills under image
 - Remove unused CSS
 - Use Natsci accessibility audit tool
 - Add animation to accordion

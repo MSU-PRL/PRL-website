@@ -2196,10 +2196,11 @@ div.prl-research-highlights {
         height: auto;
         line-height: 1.6;
         .mura-item-content {
+          // Image styles
           position: relative;
           float: left;
           z-index: 2;
-          margin-right: 4%;
+          margin-right: 3%;
           a {
             border-bottom: none;
             img {
@@ -2289,7 +2290,7 @@ div.prl-research-highlights {
       span.prl-phone-tooltip {
         // Tooltip styling (hidden on hover)
         visibility: hidden;
-        width: 10.5rem;
+        width: 12.5rem;
         background-color: $primary-color;
         color: #fff !important;
         border-radius: 2px;
@@ -2298,7 +2299,7 @@ div.prl-research-highlights {
         -webkit-transition: visibility 0s linear 0.35s, opacity 0.35s;
         transition: visibility 0s linear 0.35s, opacity 0.35s; // Overriding fontawesome styles
         font-family: 'Gotham SSm A', 'Gotham SSm B', arial, sans-serif;
-        font-size: 0.9rem;
+        font-size: 0.85rem;
         text-align: left; // Position the tooltip
         position: absolute;
         z-index: 10;
@@ -2361,13 +2362,14 @@ div.prl-research-highlights {
     top: -37px;
     min-height: 0px !important;
     min-height: auto !important;
-    width: 7.5rem !important;
+    width: 8.5rem !important;
+    font-size: 0.85rem;
   }
   span.prl-staff-address-tooltip {
     // Tooltip styling (hidden on hover)
     visibility: hidden;
     min-height: auto !important;
-    width: 8.75rem !important;
+    width: 9.75rem !important;
     background-color: $primary-color;
     color: #fff !important;
     border-radius: 2px;
@@ -2376,7 +2378,7 @@ div.prl-research-highlights {
     -webkit-transition: visibility 0s linear 0.35s, opacity 0.35s;
     transition: visibility 0s linear 0.35s, opacity 0.35s; // Overriding fontawesome styles
     font-family: 'Gotham SSm A', 'Gotham SSm B', arial, sans-serif;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     text-align: left; // Position the tooltip
     position: absolute;
     z-index: 1;
@@ -2766,6 +2768,8 @@ div.prl-research-highlights {
   }
   .prl-row {
     .prl-faculty-contact-info-icon {
+      align-self: flex-start;
+      padding-top: 7px;
       flex: 0 0 8.333333%;
       max-width: 8.333333%;
       padding-right: 15px;
