@@ -10,7 +10,9 @@
           - on front end, remove prl-well class
       GRADUATE PROGRAM section: DONE
 
-      NEWS & EVENTS section: Research Highlights; splash page
+      NEWS & EVENTS section: 
+        - splash pagesL DONE
+        - fix internal pages for News & Research Highlights
 
 - Remove Bootstrap CSS from the following:
   - Content - Card: Related Content - Full Image + Title Overlay (see where in news stories)
