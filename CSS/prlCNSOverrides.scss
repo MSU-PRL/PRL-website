@@ -5,13 +5,6 @@
 /* OVERFLOW issues
 -------------------------------------------------------- */
 
-.mainContent__mainCol {
-  ul.pagination {
-    // Allows pagination nav to wrap
-    display: flex;
-    flex-wrap: wrap;
-  }
-}
 @media (max-width: 768px) {
   // Fixes CSS grid  so content does not overflow
   div.wrapper-1170MaxWidth {

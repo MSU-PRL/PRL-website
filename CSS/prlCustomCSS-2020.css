@@ -5371,13 +5371,6 @@ td {
 -------------------------------------------------------- */
 /* OVERFLOW issues
 -------------------------------------------------------- */
-.mainContent__mainCol ul.pagination {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
-
 @media (max-width: 768px) {
   div.wrapper-1170MaxWidth {
     -ms-grid-columns: minmax(0, 1fr);
@@ -6392,10 +6385,6 @@ main.mainContent .view-all {
         border-bottom: none; }
       #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__tags span:after {
         color: #2E4D4D; }
-
-#newsevents.news #MainContent .pagination {
-  float: left;
-  clear: both; }
 
 @media (min-width: 992px) and (max-width: 1199px) {
   #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item {
