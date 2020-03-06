@@ -5311,7 +5311,7 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
   margin-bottom: 0.25rem; }
 
 .prl-aside-relcontent-summary, #newsevents .mainContent__sideCol .prl-top-stories > .mura-object-content > .mura-index .hasImage .summary p, #MainContent .prl-news-relcontent .mura-object-content > .mura-index > div .hasImage .summary p, #people .prl-faculty-member-news .mura-object-content > .mura-index > div .hasImage .summary > p {
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   line-height: 1.4;
   font-weight: 400;
   color: #444; }
@@ -6480,7 +6480,8 @@ main.mainContent .view-all {
   #MainContent .prl-news-relcontent .mura-object-content > .mura-index > div .hasImage .summary {
     width: 90%; }
     #MainContent .prl-news-relcontent .mura-object-content > .mura-index > div .hasImage .summary p {
-      margin-bottom: 10px !important; }
+      margin-bottom: 10px !important;
+      margin-top: 0; }
 
 @media (max-width: 991px) {
   #MainContent .prl-news-relcontent .mura-object-content > .mura-index > div .hasImage .summary {
