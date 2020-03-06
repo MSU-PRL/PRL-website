@@ -13,9 +13,10 @@
       NEWS & EVENTS section: 
         - splash pages: DONE
         - Research Highlights internal pages: DONE
-        - News internal pages: Next is UNDERGRADUATE RESEARCH FORUM - PART 3/3: MICHAEL DAS
-          - Check structure
+        - News internal pages: Next is PhotosynQ helping Malawian farmers increase yields (pg 9)
           - Change to News article type (Basic tab) and layout template (Layout tab)
+          - Recrop hero image
+          - Check structure
           - Remove Bootstrap popup content 
           - Remove all bootstrap styles (especially note the figures)
           - Examine media asset copyrights
