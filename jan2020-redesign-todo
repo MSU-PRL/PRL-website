@@ -13,7 +13,7 @@
       NEWS & EVENTS section: 
         - splash pages: DONE
         - Research Highlights internal pages: DONE
-        - News internal pages: Next is PhotosynQ helping Malawian farmers increase yields (pg 9)
+        - News internal pages: Next is "Undergrads make strong showing at Mid-SURE" (pg 9)
           - Change to News article type (Basic tab) and layout template (Layout tab)
           - Recrop hero image
           - Check structure
@@ -21,14 +21,19 @@
           - Remove all bootstrap styles (especially note the figures)
           - Examine media asset copyrights
 
+        Image markup:
+        <div class="prl-figure-container">
+          <figure class="prl-figure">
+
+
 - Remove Bootstrap CSS from the following:
   - Content - Card: Related Content - Full Image + Title Overlay (see where in news stories)
   - Content - Card: Related Content - Image + Title Overlay + Text Area (see where in news stories)
   - Content - Informational Well Section with Cards (see where in news stories)
 - Fix tooltips on Faculty and staff pages
-- Redo asides (remove background? Link underlines in side navs, under the class: mainContent__sideNav)
-- Hero images in internal pages
+- Remove link underlines in side navs, under the class: mainContent__sideNav)
 - Remove unused CSS
+- Run link checker to see outside pages that are no longer up
 - Use Natsci accessibility audit tool
 - Add animation to accordion
 - PRL About page additions: add inline navigation, maybe smaller hero image, add DOE BER (or remove BES), add prominent alumni/findings
