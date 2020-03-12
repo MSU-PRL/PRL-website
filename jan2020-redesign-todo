@@ -13,10 +13,10 @@
       NEWS & EVENTS section: 
         - splash pages: DONE
         - Research Highlights internal pages: DONE
-        - News internal pages: Next is "Undergrads make strong showing at Mid-SURE" (pg 9)
+        - News internal pages: Next is "Undergrad researchers get a taste of graduate student life" (pg 8)
           - Change to News article type (Basic tab) and layout template (Layout tab)
           - Recrop hero image
-          - Check structure
+          - Check structure: Related Stories component and space above subheaders
           - Remove Bootstrap popup content 
           - Remove all bootstrap styles (especially note the figures)
           - Examine media asset copyrights
