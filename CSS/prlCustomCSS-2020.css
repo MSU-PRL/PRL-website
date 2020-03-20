@@ -5383,7 +5383,7 @@ blockquote p:last-child,
 blockquote ul:last-child {
   margin-bottom: initial !important;
   font-size: 1.5rem !important;
-  color: #333;
+  color: #ffffff;
   font-weight: 400;
   text-transform: none;
   line-height: 1.4 !important; }
@@ -5992,8 +5992,6 @@ main.mainContent .view-all {
 .about .mainContent__mainCol blockquote {
   margin: 100px auto;
   max-width: 75%; }
-  .about .mainContent__mainCol blockquote p {
-    color: #fff !important; }
 
 .about .mainContent__mainCol .zoomtimeline {
   margin-top: 70px;
@@ -6670,8 +6668,6 @@ div.prl-research-highlights .last.hasImage {
 .graduate-program-overview #MainContent blockquote, .student-and-alumni-profiles #MainContent blockquote {
   margin: 36px auto;
   max-width: 100%; }
-  .graduate-program-overview #MainContent blockquote p, .student-and-alumni-profiles #MainContent blockquote p {
-    color: #fff !important; }
 
 .graduate-program-overview #MainContent .prl-student-alumni-profiles, .student-and-alumni-profiles #MainContent .prl-student-alumni-profiles {
   margin-top: 16px; }
