@@ -13,10 +13,11 @@
       NEWS & EVENTS section: 
         - splash pages: DONE
         - Research Highlights internal pages: DONE
-        - News internal pages: Next is "Undergrad researchers get a taste of graduate student life" (pg 8)
+        - News internal pages: 
+        Next article: "A new chloroplast 'app' for making biofuels" (pg 7)
           - Change to News article type (Basic tab) and layout template (Layout tab)
           - Recrop hero image
-          - Check structure: Related Stories component and space above subheaders
+          - Check structure: External banner images credited; Related Stories component location AND image sizes = 120x120; remove spaces above subheaders
           - Remove Bootstrap popup content 
           - Remove all bootstrap styles (especially note the figures)
           - Examine media asset copyrights
