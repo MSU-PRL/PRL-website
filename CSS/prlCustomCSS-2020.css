@@ -5025,7 +5025,8 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
       font-size: 1rem !important;
       margin: 0;
       padding-bottom: 0 !important;
-      text-transform: initial; }
+      text-transform: initial;
+      line-height: 1.4; }
     .prl-card-image .prl-card-image-overlay p, div.prl-research-highlights .hasImage .image .prl-card-image-overlay p,
     .prl-card-image .prl-card-image-overlay ul,
     div.prl-research-highlights .hasImage .image .prl-card-image-overlay ul,
