@@ -5224,10 +5224,11 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
       margin: 0;
       padding-bottom: 4px;
       color: #757575;
-      font-weight: 600; }
+      font-weight: 600;
+      line-height: 1.4; }
     .prl-relcontent-body-small div.prl-relcontent-body-small-link p, .prl-relcontent-body-small div.prl-relcontent-body-small-link a {
       font-size: 14px !important;
-      margin-bottom: 0 !important; }
+      margin: 0 !important; }
 
 @media (max-width: 767px) {
   .prl-relcontent-body-small {
