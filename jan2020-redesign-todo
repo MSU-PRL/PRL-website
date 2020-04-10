@@ -1,32 +1,3 @@
-  - DONE: 
-      HPG: DONE
-      ABOUT section: DONE
-      RESEARCH & TECH section: DONE
-      PEOPLE section: DONE
-        Faculty internal pages: DONE 
-          - <h3> --> <h2>
-          - remove <hr> tags
-          - phone # links
-          - on front end, remove prl-well class
-      GRADUATE PROGRAM section: DONE
-
-      NEWS & EVENTS section: 
-        - splash pages: DONE
-        - Research Highlights internal pages: DONE
-        - News internal pages: 
-        Next article: "Grad student, Alyssa Preiser, receives Barnett Rosenberg Assistantship" (pg 4)
-          - Change to News article type (Basic tab) and layout template (Layout tab)
-          - Recrop hero image
-          - Check structure: External banner images credited; Related Stories component location AND image sizes = 120x120; remove spaces above subheaders
-          - Remove Bootstrap popup content 
-          - Remove all bootstrap styles (especially note the figures)
-          - Examine media asset copyrights
-
-        Image markup:
-        <div class="prl-figure-container">
-          <figure class="prl-figure">
-
-
 - Remove Bootstrap CSS from the following:
   - Content - Card: Related Content - Full Image + Title Overlay (see where in news stories)
   - Content - Card: Related Content - Image + Title Overlay + Text Area (see where in news stories)
@@ -36,10 +7,8 @@
 - Remove unused CSS
 - Run link checker to see outside pages that are no longer up
 - Use Natsci accessibility audit tool
-- Add animation to accordion
 - PRL About page additions: add inline navigation, maybe smaller hero image, add DOE BER (or remove BES), add prominent alumni/findings
 - Add a new ‘for the public’ page, including BMC videos. Need to figure out a narrative for this
-- Optional:	Update/refine color palette: https://colors.eva.design/ 
 
 DONE     
 - Accordion - Fix borders on DONE
@@ -49,3 +18,26 @@ DONE
     - revise ABOUT DONE, RESEARCH & TECH, Accordion button on small screens, etc.
   - figures: padding: 0;
 - News page pagination not mobile friendly
+- Crawled through website
+  HPG: DONE
+  ABOUT section: DONE
+  RESEARCH & TECH section: DONE
+  PEOPLE section: DONE
+    Faculty internal pages: DONE 
+      - <h3> --> <h2>
+      - remove <hr> tags
+      - phone # links
+      - on front end, remove prl-well class
+  GRADUATE PROGRAM section: DONE
+
+  NEWS & EVENTS section: DONE
+    - splash pages: DONE
+    - Research Highlights internal pages: DONE
+    - News internal pages: DONE
+        Next article: DONE.
+          - Change to News article type (Basic tab) and layout template (Layout tab)
+          - Recrop hero image
+          - Check structure: External banner images credited; Related Stories component location AND image sizes = 120x120; remove spaces above subheaders
+          - Remove Bootstrap popup content 
+          - Remove all bootstrap styles (especially note the figures)
+          - Examine media asset copyrights
