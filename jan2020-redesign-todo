@@ -1,12 +1,8 @@
-- Remove Bootstrap CSS from the following:
-  - Content - Card: Related Content - Full Image + Title Overlay (see where in news stories)
-  - Content - Card: Related Content - Image + Title Overlay + Text Area (see where in news stories)
-  - Content - Informational Well Section with Cards (see where in news stories)
-- Fix tooltips on Faculty and staff pages
 - Remove link underlines in side navs, under the class: mainContent__sideNav)
 - Remove unused CSS
 - Run link checker to see outside pages that are no longer up
-- Use Natsci accessibility audit tool
+- Use Natsci accessibility audit tool:
+  - Fix tooltips on Faculty and staff pages
 - PRL About page additions: add inline navigation, maybe smaller hero image, add DOE BER (or remove BES), add prominent alumni/findings
 - Add a new ‘for the public’ page, including BMC videos. Need to figure out a narrative for this
 
@@ -41,3 +37,7 @@ DONE
           - Remove Bootstrap popup content 
           - Remove all bootstrap styles (especially note the figures)
           - Examine media asset copyrights
+  - Remove Bootstrap CSS from the following:
+    - Content - Card: Related Content - Full Image + Title Overlay (see where in news stories)
+    - Content - Card: Related Content - Image + Title Overlay + Text Area (see where in news stories)
+    - Content - Informational Well Section with Cards (see where in news stories)
