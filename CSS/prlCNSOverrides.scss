@@ -137,7 +137,7 @@ main.mainContent {
   }
   nav a,
   .view-all {
-    // Keeps nav and "View All" type buttons styling as intended by CNS*/
+    // Keeps nav and "View All" type buttons styling as intended by CNS
     color: $msu-color;
     text-decoration: underline;
     border-bottom: none;
@@ -145,6 +145,10 @@ main.mainContent {
       text-decoration: none;
       border-bottom: none;
     }
+  }
+  // Keeps nav links in CNS navigation component as intended by CNS
+  .mainContent__sideNav ul li a {
+    text-decoration: none;
   }
 }
 
