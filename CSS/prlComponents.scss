@@ -428,9 +428,13 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
 }
 
 .prl-h2-secondary-spacing {
-  // Used to space out Heading 2 in internal pages, such as Seminar & Events, Graduate Program, and Research pages
-  margin-top: 2rem; // Adds some distance above section titles
-  display: inline-block;
+    // Used to space out Heading 2 in internal pages, such as Seminar & Events, Graduate Program, and Research pages
+    margin-top: 2rem; // Adds some distance above section titles
+    display: inline-block;
+}
+nav#sideNavMultilevel.mainContent__sideNav > h2.mainContent__sideNavTitle {
+  // Recovers Heading spacing in internal page side nav to nullify .prl-h2-secondary-spacing
+  margin-top: 0; 
 }
 
 .prl-p-subheader {

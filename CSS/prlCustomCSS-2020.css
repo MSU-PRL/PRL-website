@@ -4887,6 +4887,9 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
   margin-top: 2rem;
   display: inline-block; }
 
+nav#sideNavMultilevel.mainContent__sideNav > h2.mainContent__sideNavTitle {
+  margin-top: 0; }
+
 .prl-p-subheader, .prl-p-subheader-smaller, .prl-home-brands p {
   color: #666;
   line-height: 1.7 !important;
@@ -5475,6 +5478,9 @@ main.mainContent .view-all {
   main.mainContent .view-all:hover {
     text-decoration: none;
     border-bottom: none; }
+
+main.mainContent .mainContent__sideNav ul li a {
+  text-decoration: none; }
 
 .breadcrumb a {
   font-weight: 400 !important; }
