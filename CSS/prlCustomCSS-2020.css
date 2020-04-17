@@ -5889,8 +5889,6 @@ main.mainContent .mainContent__sideNav ul li a {
         overflow: hidden; } }
 
 @media (max-width: 767px) {
-  .prl-home-events .prl-events-summary {
-    padding: 0 15px; }
   .prl-home-event-cards.mura-object div.mura-collection.mura-grid-three {
     /* margin-left: -16px;
       margin-right: -16px; Keeps margins aligned with the rest of the page, on mobile */ }
@@ -6241,10 +6239,6 @@ main.mainContent .mainContent__sideNav ul li a {
 .prl-community-brand-toolkit .mainContent__mainCol section:first-of-type, .web-components-demo .mainContent__mainCol section:first-of-type {
   padding: 16px 0 50px 0; }
 
-.prl-community-brand-toolkit .mainContent__mainCol section.images h4, .web-components-demo .mainContent__mainCol section.images h4 {
-  font-size: calc(18px + 20%);
-  font-weight: 400; }
-
 @media (min-width: 992px) {
   .prl-community-brand-toolkit .mainContent__mainCol .pageTOC, .web-components-demo .mainContent__mainCol .pageTOC {
     display: none; } }
@@ -6320,10 +6314,6 @@ main.mainContent .mainContent__sideNav ul li a {
 /* --------------------------------------------------------
                 MAIN NEWS PAGE CARD DISPLAY
 -------------------------------------------------------- */
-#newsevents.news form#search {
-  margin-bottom: 20px;
-  display: inline-block; }
-
 #newsevents.news #MainContent .mura-collection.mura-grid-two {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -6444,17 +6434,6 @@ main.mainContent .mainContent__sideNav ul li a {
 -------------------------------------------------------- */
 /* NEWS STORIES HEADER AREAS
 -------------------------------------------------------- */
-#newsevents.depth-3 .secondaryPageContainer #MainContent ul.list-inline {
-  margin-bottom: 20px; }
-
-#newsevents.depth-3 .secondaryPageContainer-articlePage #MainContent ul.list-inline {
-  margin-bottom: 40px; }
-
-#newsevents.depth-3 #MainContent ul.list-inline {
-  font-size: 15px;
-  font-size: 0.925rem;
-  color: #757575; }
-
 #newsevents.depth-3 #MainContent li.mura-tags,
 #newsevents.depth-3 #MainContent li.mura-categories {
   display: none; }
@@ -6769,21 +6748,6 @@ div.prl-research-highlights .last.hasImage {
 
 /* SEMINAR DETAILS: HEADER AREA AND ABOUT
 -------------------------------------------------------- */
-#newsevents.depth-4 .secondaryPageContainer #MainContent ul.list-inline {
-  display: none; }
-
-#newsevents.depth-4 .secondaryPageContainer #MainContent h1.pageTitle {
-  margin-bottom: 22px; }
-
-#newsevents.depth-4 .secondaryPageContainer #MainContent .mura-asset {
-  margin-top: 0; }
-
-#newsevents.depth-4 .secondaryPageContainer #MainContent .prl-event-detail-btns {
-  display: inline-block;
-  margin-bottom: 20px; }
-  #newsevents.depth-4 .secondaryPageContainer #MainContent .prl-event-detail-btns a {
-    margin-bottom: 10px; }
-
 @media (min-width: 767px) {
   #newsevents.depth-4 #MainContent .mura-asset {
     max-width: 33%; } }
@@ -7303,13 +7267,6 @@ div.prl-research-highlights .last.hasImage {
 
 /* STAFF AND FACULTY BIO: IMAGES
 -------------------------------------------------------- */
-#people.depth-3 .secondaryPageContainer #MainContent ul.list-inline {
-  display: none; }
-
-@media (min-width: 768px) {
-  #people.depth-3 .secondaryPageContainer #MainContent h1.pageTitle {
-    margin-bottom: 32px; } }
-
 @media (max-width: 767px) {
   #people.depth-3 #MainContent .mura-asset {
     float: left;
