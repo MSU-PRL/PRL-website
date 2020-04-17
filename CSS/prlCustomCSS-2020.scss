@@ -580,11 +580,6 @@
 
 @media (max-width: 767px) {
   // Adjusting dimensions to mobile breakpoint*/
-  .prl-home-events {
-    .prl-events-summary {
-      padding: 0 15px;
-    }
-  }
   .prl-home-event-cards.mura-object {
     div.mura-collection.mura-grid-three {
       // From Google Material Design Specs Padding from edge of screen to card: 8dp
@@ -1127,14 +1122,6 @@
     section:first-of-type {
       padding: 16px 0 50px 0; // First section, smaller padding-top
     }
-    section.images {
-      // Images section
-      h4 {
-        // Headers for image examples
-        font-size: calc(18px + 20%);
-        font-weight: 400;
-      }
-    }
   }
 }
 
@@ -1277,11 +1264,6 @@
 -------------------------------------------------------- */
 
 #newsevents.news {
-  form#search {
-    // Giving the Search form some space from the news content
-    margin-bottom: 20px;
-    display: inline-block;
-  }
   #MainContent {
     .mura-collection.mura-grid-two {
       -webkit-box-orient: vertical;
@@ -1491,21 +1473,7 @@
 
 #newsevents.depth-3 {
   // CRUCIAL IMPORTANCE NOT TO CHANGE FOLDER DEPTH SO THE STYLINGS DON'T CONFLICT WITH SEMINARS & EVENTS FOLDER (SEE NEXT SECTION)
-  .secondaryPageContainer #MainContent ul.list-inline {
-    // Credits and dates margin bottom when news main image in body
-    margin-bottom: 20px;
-  }
-  .secondaryPageContainer-articlePage #MainContent ul.list-inline {
-    // Credits and dates margin bottom when news main image on very top as banner
-    margin-bottom: 40px;
-  }
   #MainContent {
-    ul.list-inline {
-      // Credits and dates style
-      font-size: 15px;
-      font-size: 0.925rem;
-      color: $light-grey-text;
-    }
     li.mura-tags,
     li.mura-categories {
       // Does not display the Tags and Categories list items in news articles (targeted with '.depth-3')
@@ -2073,23 +2041,10 @@ div.prl-research-highlights {
 #newsevents.depth-4 {
   // CRUCIAL IMPORTANCE NOT TO CHANGE FOLDER DEPTH SO THE STYLINGS DON'T CONFLICT WITH NEWS FOLDER (SEE PREVIOUS SECTION)
   .secondaryPageContainer #MainContent {
-    ul.list-inline {
-      // Credits and dates margin bottom when news main image in body
-      display: none;
-    }
-    h1.pageTitle {
-      margin-bottom: 22px;
-    }
-    .mura-asset {
-      margin-top: 0;
-    }
     .prl-event-detail-btns {
-      display: inline-block;
-      margin-bottom: 20px;
       a {
         // Have the "seminar speakers" buttons be centered and taking all the space.
         @extend .prl-arrow-btn;
-        margin-bottom: 10px;
       }
     }
   }
@@ -2624,27 +2579,6 @@ div.prl-research-highlights {
 
 /* STAFF AND FACULTY BIO: IMAGES
 -------------------------------------------------------- */
-
-#people.depth-3 {
-  // CRUCIAL IMPORTANCE NOT TO CHANGE FOLDER DEPTH SO THE STYLINGS DON'T CONFLICT WITH NEWS FOLDER (SEE PREVIOUS SECTION)
-  .secondaryPageContainer #MainContent {
-    ul.list-inline {
-      // Credits and dates margin bottom when news main image in body
-      display: none;
-    }
-  }
-}
-
-@media (min-width: 768px) {
-  // CRUCIAL IMPORTANCE NOT TO CHANGE FOLDER DEPTH SO THE STYLINGS DON'T CONFLICT WITH NEWS FOLDER (SEE PREVIOUS SECTION)
-  #people.depth-3 {
-    .secondaryPageContainer #MainContent {
-      h1.pageTitle {
-        margin-bottom: 32px;
-      }
-    }
-  }
-}
 
 @media (max-width: 767px) {
   #people.depth-3 {
