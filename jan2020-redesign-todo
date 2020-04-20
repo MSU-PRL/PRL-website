@@ -1,4 +1,3 @@
-- Run link checker to see outside pages that are no longer up
 - Use Natsci accessibility audit tool:
   - Fix tooltips on Faculty and staff pages
 - PRL About page additions: add inline navigation, maybe smaller hero image, add DOE BER (or remove BES), add prominent alumni/findings
@@ -41,3 +40,4 @@ DONE
     - Content - Informational Well Section with Cards (see where in news stories)
   - Remove link underlines in side navs, under the class: mainContent__sideNav
   - Remove unused CSS
+  - Run link checker to fix broken external links
