@@ -4820,9 +4820,9 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
   text-align: center;
   padding: 0; }
   figure a, figure.prl-figure a, figure.cke_widget_element a, .secondaryPageWrapper figure a {
-    color: #466A62 !important; }
+    color: #113D34 !important; }
     figure a:hover, figure.prl-figure a:hover, figure.cke_widget_element a:hover, .secondaryPageWrapper figure a:hover {
-      color: #738F89 !important; }
+      color: #5e7671 !important; }
   figure figcaption, figure.prl-figure figcaption, figure.cke_widget_element figcaption, .secondaryPageWrapper figure figcaption {
     margin: 0.5rem 0.625rem 0 1.75rem;
     font-size: 13.5px;
@@ -5448,19 +5448,19 @@ blockquote ul:last-child {
 .mura-index a,
 .mura-object-content a {
   text-decoration: none;
-  color: #466A62;
-  border-bottom: 1px solid #466A62; }
+  color: #113D34;
+  border-bottom: 1px solid #113D34; }
   .mura-index a:hover,
   .mura-object-content a:hover {
-    color: #738F89;
+    color: #5e7671;
     border-bottom: 0px solid transparent; }
 
 main.mainContent a {
   text-decoration: none;
-  color: #466A62;
-  border-bottom: 1px solid #466A62; }
+  color: #113D34;
+  border-bottom: 1px solid #113D34; }
   main.mainContent a:hover {
-    color: #738F89;
+    color: #5e7671;
     border-bottom: 0px solid transparent; }
 
 main.mainContent dd.image a,
