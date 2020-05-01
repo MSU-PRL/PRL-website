@@ -49,7 +49,7 @@ toolTipInfo.forEach((item, i) => {
   if(!item.getAttribute('aria-hidden')) {
     // Add the attribute to this element
     item.setAttributeNode(ariaHiddenAttr.cloneNode(true)) 
-    console.warn('Tooltips need to have an aria-hidden property', item)
+    console.warn('Tooltips need to have an aria-hidden attribute. One has been generated for this element', item)
   }
   toolTipNode = toolTipInfo[i].parentNode
   // Event listeners for mouse hover and focus events to set aria-hidden to false
