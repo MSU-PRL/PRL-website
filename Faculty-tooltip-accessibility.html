@@ -1,0 +1,29 @@
+<!-- OLD WAY -->
+<div class="prl-faculty-contact">
+  <!-- PROBLEM AREA STARTS HERE -->
+	<div>
+    <!-- ACCESSIBILITY VIOLATION: cannot have tabindex="0" with aria-hidden="true" -->
+    <span aria-hidden="true" class="fa fa-phone" tabindex="0">
+      <span class="prl-phone-tooltip">
+        <strong>Office</strong>: (517) 353-7872<br />
+        <strong>Lab</strong>: (517) 353-3383
+      </span>
+    </span>
+    <span class="sr-only">phone icon</span>
+  </div>
+</div>
+
+<!-- NEW WAY -->
+<div class="prl-faculty-contact">
+  <div>
+    <span role="tooltip" aria-describedby="ttp-1" class="prl-tooltip" tabindex="0">
+      <!-- The icon is hidden from screenreaders -->
+      <span aria-hidden="true" class="fa fa-phone"> </span>
+      <!-- The phone-numbers id links to the parent element's aria-describedby attribute -->
+      <span id="ttp-1" class="prl-tooltip-info">
+        <strong>Office</strong>: (517) 355-1609<br />
+        <strong>Lab</strong>: (517) 353-7876
+      </span>
+    </span>
+  </div>
+</div>
