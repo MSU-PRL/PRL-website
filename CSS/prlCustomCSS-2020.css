@@ -7455,3 +7455,170 @@ div.prl-research-highlights .last.hasImage {
 
 .midwest-photosynthesis.depth-1 .mainCol h1.pageTitle {
   display: none; }
+
+.depth-2.component-tests #MainContent .mura-collection.mura-grid-two {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* NEW - Chrome */
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .depth-2.component-tests #MainContent .mura-collection.mura-grid-two:after {
+    content: "";
+    width: calc(50% - 8px); }
+  .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .mura-collection-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-preferred-size: calc(50% - 8px);
+        flex-basis: calc(50% - 8px);
+    margin-bottom: 16px; }
+  .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid #e6e6e6;
+    border-radius: 12px;
+    height: auto;
+    line-height: 1.6; }
+    .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-content {
+      position: relative;
+      float: left;
+      z-index: 2;
+      margin-right: 3%; }
+      .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-content a {
+        border-bottom: none; }
+        .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-content a img {
+          border-radius: 100%;
+          padding: 0;
+          -webkit-transition: 0.5s;
+          transition: 0.5s; }
+      .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-content:hover img,
+      .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-content:focus img {
+        opacity: 0.8; }
+    .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__title {
+      font-size: 1.1rem;
+      position: relative;
+      text-align: center;
+      margin: 8px 0 12px 0;
+      z-index: 0; }
+      .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__title a {
+        color: #444 !important;
+        border-bottom: none !important;
+        line-height: 1.4 !important;
+        text-decoration: underline !important; }
+        .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__title a:hover, .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__title a:focus {
+          text-decoration: none !important; }
+  .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .prl-faculty-contact,
+  .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .prl-staff-contact {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .prl-faculty-contact a,
+    .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .prl-staff-contact a {
+      border-bottom: 0px transparent !important;
+      line-height: 1.4 !important; }
+    .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .prl-faculty-contact div,
+    .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .prl-staff-contact div {
+      position: relative;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-flow: row wrap;
+              flex-flow: row wrap;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -ms-flex-preferred-size: 33.3%;
+      flex-basis: 33.3%;
+      width: 27%;
+      float: left;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+    .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .prl-faculty-contact div:first-child,
+    .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .prl-staff-contact div:first-child {
+      padding-top: 0.5px; }
+    .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .prl-faculty-contact div:nth-child(3),
+    .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .prl-staff-contact div:nth-child(3) {
+      padding-top: 0.5px; }
+  .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .prl-faculty-info {
+    display: inline-block;
+    margin-top: 12px;
+    color: #757575;
+    font-size: 0.93rem;
+    width: 100%; }
+    .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .prl-faculty-info strong {
+      color: #444; }
+  .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .fa {
+    color: #d0d0d0;
+    -webkit-transition: 0.35s;
+    transition: 0.35s;
+    font-size: 1.1rem; }
+    .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .fa:hover, .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .fa:focus {
+      color: #2E4D4D !important; }
+  .depth-2.component-tests #MainContent .mura-collection.mura-grid-two span.prl-phone-tooltip,
+  .depth-2.component-tests #MainContent .mura-collection.mura-grid-two span.prl-tooltip-info {
+    visibility: hidden;
+    width: 12.5rem;
+    background-color: #2E4D4D;
+    color: #fff !important;
+    border-radius: 2px;
+    padding: 7px;
+    opacity: 0;
+    -webkit-transition: visibility 0s linear 0.35s, opacity 0.35s;
+    transition: visibility 0s linear 0.35s, opacity 0.35s;
+    font-family: 'Gotham SSm A', 'Gotham SSm B', arial, sans-serif;
+    font-size: 0.85rem;
+    text-align: left;
+    position: absolute;
+    z-index: 10;
+    top: -59px;
+    left: -11px;
+    min-height: 56px;
+    line-height: 1.4; }
+    .depth-2.component-tests #MainContent .mura-collection.mura-grid-two span.prl-phone-tooltip strong,
+    .depth-2.component-tests #MainContent .mura-collection.mura-grid-two span.prl-tooltip-info strong {
+      color: #fff !important; }
+  .depth-2.component-tests #MainContent .mura-collection.mura-grid-two span.prl-phone-tooltip:after, .depth-2.component-tests .staff #MainContent .mura-collection.mura-grid-two .mura-collection-item span.prl-staff-address-tooltip:after, .staff .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .mura-collection-item span.prl-staff-address-tooltip:after,
+  .depth-2.component-tests #MainContent .mura-collection.mura-grid-two span.prl-tooltip-info:after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 42px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #2E4D4D transparent transparent transparent; }
+  .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .fa-phone:hover,
+  .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .fa-phone:focus,
+  .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .fa-map-marker:hover,
+  .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .fa-map-marker:focus,
+  .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .prl-tooltip:hover,
+  .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .prl-tooltip:focus {
+    cursor: pointer; }
+    .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .fa-phone:hover span.prl-phone-tooltip,
+    .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .fa-phone:hover span.prl-staff-address-tooltip,
+    .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .fa-phone:hover span.prl-tooltip-info,
+    .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .fa-phone:focus span.prl-phone-tooltip,
+    .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .fa-phone:focus span.prl-staff-address-tooltip,
+    .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .fa-phone:focus span.prl-tooltip-info,
+    .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .fa-map-marker:hover span.prl-phone-tooltip,
+    .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .fa-map-marker:hover span.prl-staff-address-tooltip,
+    .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .fa-map-marker:hover span.prl-tooltip-info,
+    .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .fa-map-marker:focus span.prl-phone-tooltip,
+    .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .fa-map-marker:focus span.prl-staff-address-tooltip,
+    .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .fa-map-marker:focus span.prl-tooltip-info,
+    .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .prl-tooltip:hover span.prl-phone-tooltip,
+    .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .prl-tooltip:hover span.prl-staff-address-tooltip,
+    .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .prl-tooltip:hover span.prl-tooltip-info,
+    .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .prl-tooltip:focus span.prl-phone-tooltip,
+    .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .prl-tooltip:focus span.prl-staff-address-tooltip,
+    .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .prl-tooltip:focus span.prl-tooltip-info {
+      visibility: visible;
+      -webkit-transition: visibility 0s linear 0s, opacity 0.35s;
+      transition: visibility 0s linear 0s, opacity 0.35s;
+      opacity: 1; }
