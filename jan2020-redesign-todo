@@ -1,6 +1,7 @@
 - Use Natsci accessibility audit tool:
   - Fix tooltips on Faculty and staff pages
 - PRL About page additions: add inline navigation, maybe smaller hero image, add DOE BER (or remove BES), add prominent alumni/findings
+- Harvest components from Mura into HTML folder for upload to github
 - Add a new ‘for the public’ page, including BMC videos. Need to figure out a narrative for this
 
 DONE     

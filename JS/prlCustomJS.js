@@ -26,7 +26,7 @@ toolTipContainer.forEach(item => {
   // Look through the toolTipContainer children
   for (i=0; i < item.children.length; i++){
     // Identify the child with the tooltip info, denoted by class name 'prl-tooltip-info'
-    if(item.children[i].className === "prl-tooltip-info"){
+    if(item.children[i].className === "prl-tooltip-info" || item.children[i].className === "prl-tooltip-info prl-tooltip-info-right"){
       // Assign the same generated number to the child's id attribute
       item.children[i].setAttribute('id', randomNumber)
     }

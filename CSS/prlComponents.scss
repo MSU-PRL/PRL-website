@@ -713,7 +713,7 @@ $img-hover-opacity: 0.8;
 }
 
 /* -----------------------------------------------------------------------
-        INLINE CARDS - CURRENTLY USED IN NEWS ARTICLES
+        COMPILED CARDS - CURRENTLY USED IN NEWS ARTICLES
 -------------------------------------------------------------------------- */
 
 .prl-relcontent-body {
@@ -889,6 +889,218 @@ $img-hover-opacity: 0.8;
   line-height: 1.4;
   font-weight: 400;
   color: $dark-grey-text;
+}
+
+/* --------------------------------------------------------
+        TOOLTIP
+-------------------------------------------------------- */
+
+.prl-tooltip {
+  // Relative position limits the contraints of the tooltip to this container
+  position: relative;
+  // Inline block keeps the tooltip contained
+  display: inline;
+  margin: 0 4px;
+  .fa {
+    // Fonticon styling
+    color: #d0d0d0;
+    -webkit-transition: 0.35s;
+    transition: 0.35s;
+    font-size: 1.1rem;
+  }
+  .prl-tooltip-info {
+    // Tooltip styling (hidden on hover)
+    visibility: hidden;
+    width: 15rem;
+    background-color: $primary-color;
+    color: #fff !important;
+    border-radius: 2px;
+    padding: 8px;
+    opacity: 0;
+    -webkit-transition: visibility 0s linear 0.35s, opacity 0.35s;
+    transition: visibility 0s linear 0.35s, opacity 0.35s; // Overriding fontawesome styles
+    font-family: 'Gotham SSm A', 'Gotham SSm B', arial, sans-serif;
+    font-size: 0.85rem;
+    text-align: left; 
+    // Position the tooltip
+    position: absolute;
+    z-index: 10;
+    bottom: 30px;
+    left: -10px;
+    min-height: 56px;
+    line-height: 1.4;
+    strong {
+      color: #fff !important;
+    }
+    &:after {
+      // The arrow pointing to the bottom
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 8px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: $primary-color transparent transparent transparent;
+    }
+  }
+  // Extra class to add alongside prl-tooltip-info class 
+  // to adjust for tooltips going from right to left
+  .prl-tooltip-info-right {
+    left: -222px;
+    &:after {
+      left: 220px;
+    }
+  }
+  &:hover, &:focus {
+    // Hover effects on fonticons
+    cursor: pointer;
+    .fa {
+      color: $primary-color !important;
+    }
+    .prl-tooltip-info {
+      visibility: visible;
+      -webkit-transition: visibility 0s linear 0s, opacity 0.35s;
+      transition: visibility 0s linear 0s, opacity 0.35s;
+      opacity: 1;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  // Makes the tooltip container narrower
+  // to avoid bleeding beyond screen edges
+  .prl-tooltip {
+    .prl-tooltip-info {
+      max-width: 10rem;
+    }
+    .prl-tooltip-info-right {
+      left: -142px;
+      &:after {
+        left: 140px;
+      }
+    }
+  }
+}
+
+.depth-2.component-tests {
+  #MainContent {
+    .mura-collection.mura-grid-two {
+      // Staff and Faculty Pages, common stylings
+      // Adding some spacing
+      display: flex; /* NEW - Chrome */
+      flex-flow: row wrap;
+      justify-content: space-between;
+      &:after {
+        // Aligns last element of flex container 
+        content: "";
+        width: calc(50% - 8px);
+      }
+      .mura-collection-item {
+        // width: 46%; // For non-flex devices
+        display: flex;
+        flex-basis: calc(50% - 8px);
+        margin-bottom: 16px;
+      }
+      .mura-collection-item__holder {
+        // Basic faculty/staff card layout
+        width: 100%; // display: inline-block;
+        padding: 16px;
+        border: 1px solid $x-light-grey;
+        border-radius: 12px;
+        height: auto;
+        line-height: 1.6;
+        .mura-item-content {
+          // Image styles
+          position: relative;
+          float: left;
+          z-index: 2;
+          margin-right: 3%;
+          a {
+            border-bottom: none;
+            img {
+              border-radius: 100%;
+              padding: 0; // Hover effect for cards with images.
+              -webkit-transition: $tran-half-sec;
+              transition: $tran-half-sec;
+            }
+          }
+          &:hover img,
+          &:focus img {
+            opacity: $img-hover-opacity;
+          }
+        }
+        .mura-item-meta {
+          .mura-item-meta__title {
+            font-size: 1.1rem;
+            position: relative;
+            text-align: center;
+            margin: 8px 0 12px 0;
+            z-index: 0;
+            a {
+              color: $dark-grey-text !important;
+              border-bottom: none !important;
+              line-height: 1.4 !important;
+              text-decoration: underline !important;
+              &:hover,
+              &:focus {
+                text-decoration: none !important;
+              }
+            }
+          }
+        }
+      }
+      .prl-faculty-contact,
+      .prl-staff-contact {
+        // Contact specific sections
+        position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        a {
+          border-bottom: 0px transparent !important;
+          line-height: 1.4 !important;
+        } // These next children are only for the Faculty page. See below for analagous staff page styling.
+        div {
+          position: relative;
+          flex-flow: row wrap;
+          justify-content: center;
+          -ms-flex-preferred-size: 33.3%;
+          flex-basis: 33.3%;
+          width: 27%;
+          float: left;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+        }
+        div:first-child {
+          padding-top: 0.5px;
+        }
+        div:nth-child(3) {
+          padding-top: 0.5px;
+        }
+      }
+
+
+      // Only change needed to be made for faculty tooltip
+      .prl-tooltip-info {
+        width: 12.5rem;
+      }
+
+
+      .prl-faculty-info {
+        // This includes faculty titles and research specialty
+        display: inline-block;
+        margin-top: 12px;
+        color: $light-grey-text;
+        font-size: 0.93rem;
+        width: 100%;
+        strong {
+          color: $dark-grey-text;
+        }
+      }
+     
+    }
+  }
 }
 
 
