@@ -5350,7 +5350,6 @@ nav#sideNavMultilevel.mainContent__sideNav > h2.mainContent__sideNavTitle {
     z-index: 10;
     bottom: 30px;
     left: -10px;
-    min-height: 56px;
     line-height: 1.4; }
     .prl-tooltip .prl-tooltip-info strong {
       color: #fff !important; }
@@ -5362,6 +5361,9 @@ nav#sideNavMultilevel.mainContent__sideNav > h2.mainContent__sideNavTitle {
       border-width: 5px;
       border-style: solid;
       border-color: #2E4D4D transparent transparent transparent; }
+  .prl-tooltip a.prl-tooltip-info {
+    font-weight: 400;
+    text-decoration: underline; }
   .prl-tooltip .prl-tooltip-info-right {
     left: -222px; }
     .prl-tooltip .prl-tooltip-info-right:after {
@@ -5383,107 +5385,6 @@ nav#sideNavMultilevel.mainContent__sideNav > h2.mainContent__sideNavTitle {
     left: -142px; }
     .prl-tooltip .prl-tooltip-info-right:after {
       left: 140px; } }
-
-.depth-2.component-tests #MainContent .mura-collection.mura-grid-two {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  /* NEW - Chrome */
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between; }
-  .depth-2.component-tests #MainContent .mura-collection.mura-grid-two:after {
-    content: "";
-    width: calc(50% - 8px); }
-  .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .mura-collection-item {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-preferred-size: calc(50% - 8px);
-        flex-basis: calc(50% - 8px);
-    margin-bottom: 16px; }
-  .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder {
-    width: 100%;
-    padding: 16px;
-    border: 1px solid #e6e6e6;
-    border-radius: 12px;
-    height: auto;
-    line-height: 1.6; }
-    .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-content {
-      position: relative;
-      float: left;
-      z-index: 2;
-      margin-right: 3%; }
-      .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-content a {
-        border-bottom: none; }
-        .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-content a img {
-          border-radius: 100%;
-          padding: 0;
-          -webkit-transition: 0.5s;
-          transition: 0.5s; }
-      .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-content:hover img,
-      .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-content:focus img {
-        opacity: 0.8; }
-    .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__title {
-      font-size: 1.1rem;
-      position: relative;
-      text-align: center;
-      margin: 8px 0 12px 0;
-      z-index: 0; }
-      .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__title a {
-        color: #444 !important;
-        border-bottom: none !important;
-        line-height: 1.4 !important;
-        text-decoration: underline !important; }
-        .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__title a:hover, .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__title a:focus {
-          text-decoration: none !important; }
-  .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .prl-faculty-contact,
-  .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .prl-staff-contact {
-    position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; }
-    .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .prl-faculty-contact a,
-    .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .prl-staff-contact a {
-      border-bottom: 0px transparent !important;
-      line-height: 1.4 !important; }
-    .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .prl-faculty-contact div,
-    .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .prl-staff-contact div {
-      position: relative;
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-          -ms-flex-flow: row wrap;
-              flex-flow: row wrap;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center;
-      -ms-flex-preferred-size: 33.3%;
-      flex-basis: 33.3%;
-      width: 27%;
-      float: left;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex; }
-    .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .prl-faculty-contact div:first-child,
-    .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .prl-staff-contact div:first-child {
-      padding-top: 0.5px; }
-    .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .prl-faculty-contact div:nth-child(3),
-    .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .prl-staff-contact div:nth-child(3) {
-      padding-top: 0.5px; }
-  .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .prl-tooltip-info {
-    width: 12.5rem; }
-  .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .prl-faculty-info {
-    display: inline-block;
-    margin-top: 12px;
-    color: #757575;
-    font-size: 0.93rem;
-    width: 100%; }
-    .depth-2.component-tests #MainContent .mura-collection.mura-grid-two .prl-faculty-info strong {
-      color: #444; }
 
 /* -------------------------------------------------------------------
         LEGACY FIXES - JANUARY 2020
@@ -7228,6 +7129,17 @@ div.prl-research-highlights .last.hasImage {
   font-size: 0.93rem;
   color: #757575;
   margin-bottom: 8px; }
+
+.staff #MainContent .mura-collection.mura-grid-two .mura-collection-item .prl-tooltip-info {
+  width: 10rem;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content; }
+
+.staff #MainContent .mura-collection.mura-grid-two .mura-collection-item .prl-tooltip-info-right {
+  left: -117px; }
+  .staff #MainContent .mura-collection.mura-grid-two .mura-collection-item .prl-tooltip-info-right:after {
+    left: 117px; }
 
 .staff #MainContent .mura-collection.mura-grid-two .mura-collection-item span.prl-phone-tooltip {
   top: -37px;

@@ -2279,7 +2279,19 @@ div.prl-research-highlights {
     color: $light-grey-text;
     margin-bottom: 8px;
   }
-  span.prl-phone-tooltip {
+  // New tooltip class
+  .prl-tooltip-info {
+    width: 10rem; // Fallback for older browsers
+    width: max-content;
+  }
+  .prl-tooltip-info-right {
+    left: -117px;
+    &:after {
+      left: 117px;
+    }
+  }
+  span.prl-phone-tooltip
+   {
     top: -37px;
     min-height: 0px !important;
     min-height: auto !important;
