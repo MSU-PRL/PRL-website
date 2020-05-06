@@ -700,9 +700,12 @@ nav#sideNavMultilevel.mainContent__sideNav > h2.mainContent__sideNavTitle {
       border-width: 5px;
       border-style: solid;
       border-color: #2E4D4D transparent transparent transparent; }
-  .prl-tooltip a.prl-tooltip-info {
+  .prl-tooltip .prl-tooltip-info > a, .prl-tooltip a.prl-tooltip-info {
     font-weight: 400;
-    text-decoration: underline; }
+    text-decoration: underline;
+    color: #fff; }
+    .prl-tooltip .prl-tooltip-info > a:hover, .prl-tooltip a.prl-tooltip-info:hover {
+      color: #fff; }
   .prl-tooltip .prl-tooltip-info-right {
     left: -222px; }
     .prl-tooltip .prl-tooltip-info-right:after {

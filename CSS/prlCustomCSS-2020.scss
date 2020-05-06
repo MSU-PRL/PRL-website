@@ -2208,6 +2208,26 @@ div.prl-research-highlights {
           color: $primary-color !important;
         }
       }
+      // New tooltip classes
+      .prl-staff-position {
+        text-align: center;
+        width: 100%;
+        font-size: 0.93rem;
+        color: $light-grey-text;
+        margin-bottom: 8px;
+      }
+      .prl-tooltip-info {
+        width: 10rem; // Fallback for older browsers
+        width: max-content;
+      }
+      .prl-tooltip-info-right {
+        left: -117px;
+        &:after {
+          left: 117px;
+        }
+      }
+      // New tooltip classes end
+      // Delete this when tooltips updated
       span.prl-phone-tooltip {
         // Tooltip styling (hidden on hover)
         visibility: hidden;
@@ -2272,61 +2292,6 @@ div.prl-research-highlights {
       }
     }
   }
-  .prl-staff-position {
-    text-align: center;
-    width: 100%;
-    font-size: 0.93rem;
-    color: $light-grey-text;
-    margin-bottom: 8px;
-  }
-  // New tooltip class
-  .prl-tooltip-info {
-    width: 10rem; // Fallback for older browsers
-    width: max-content;
-  }
-  .prl-tooltip-info-right {
-    left: -117px;
-    &:after {
-      left: 117px;
-    }
-  }
-  span.prl-phone-tooltip
-   {
-    top: -37px;
-    min-height: 0px !important;
-    min-height: auto !important;
-    width: 8.5rem !important;
-    font-size: 0.85rem;
-  }
-  span.prl-staff-address-tooltip {
-    // Tooltip styling (hidden on hover)
-    visibility: hidden;
-    min-height: auto !important;
-    width: 9.75rem !important;
-    background-color: $primary-color;
-    color: #fff !important;
-    border-radius: 2px;
-    padding: 7px;
-    opacity: 0;
-    -webkit-transition: visibility 0s linear 0.35s, opacity 0.35s;
-    transition: visibility 0s linear 0.35s, opacity 0.35s; // Overriding fontawesome styles
-    font-family: 'Gotham SSm A', 'Gotham SSm B', arial, sans-serif;
-    font-size: 0.85rem;
-    text-align: left; // Position the tooltip
-    position: absolute;
-    z-index: 1;
-    top: -57px;
-    left: -73px;
-    line-height: 1.4;
-    strong {
-      color: #fff !important;
-    }
-  }
-  span.prl-staff-address-tooltip:after {
-    @extend span.prl-phone-tooltip:after;
-    left: 137px;
-    margin-left: -38px;
-  }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -2358,9 +2323,6 @@ div.prl-research-highlights {
               font-size: 1rem !important;
             }
           }
-          span.prl-staff-address-tooltip {
-            left: -83px;
-          }
         }
       }
     }
@@ -2388,9 +2350,6 @@ div.prl-research-highlights {
     }
     .prl-staff-position {
       font-size: 14px;
-    }
-    span.prl-staff-address-tooltip {
-      left: -75px;
     }
   }
 }
@@ -2455,14 +2414,6 @@ div.prl-research-highlights {
       float: none;
       width: 60%;
       margin-left: 1rem;
-    }
-    span.prl-phone-tooltip {
-      left: -30px !important;
-      top: -35px !important;
-    }
-    span.prl-staff-address-tooltip {
-      left: -84px;
-      top: -55px;
     }
   }
 }

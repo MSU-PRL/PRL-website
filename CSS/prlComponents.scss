@@ -943,10 +943,14 @@ $img-hover-opacity: 0.8;
       border-color: $primary-color transparent transparent transparent;
     }
   }
-  // Styles if the tooltip is a link
-  a.prl-tooltip-info {
+  // Styles if the tooltip is a link or there is a link in a tooltip
+  .prl-tooltip-info > a, a.prl-tooltip-info {
     font-weight: 400;
     text-decoration: underline;
+    color: #fff;
+    &:hover {
+      color: #fff;
+    }
   }
   // Extra class to add alongside prl-tooltip-info class 
   // to adjust for tooltips going from right to left

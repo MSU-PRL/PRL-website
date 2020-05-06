@@ -5361,9 +5361,12 @@ nav#sideNavMultilevel.mainContent__sideNav > h2.mainContent__sideNavTitle {
       border-width: 5px;
       border-style: solid;
       border-color: #2E4D4D transparent transparent transparent; }
-  .prl-tooltip a.prl-tooltip-info {
+  .prl-tooltip .prl-tooltip-info > a, .prl-tooltip a.prl-tooltip-info {
     font-weight: 400;
-    text-decoration: underline; }
+    text-decoration: underline;
+    color: #fff; }
+    .prl-tooltip .prl-tooltip-info > a:hover, .prl-tooltip a.prl-tooltip-info:hover {
+      color: #fff; }
   .prl-tooltip .prl-tooltip-info-right {
     left: -222px; }
     .prl-tooltip .prl-tooltip-info-right:after {
@@ -7020,6 +7023,33 @@ div.prl-research-highlights .last.hasImage {
     .staff #MainContent .mura-collection.mura-grid-two .fa:hover,
     .staff #MainContent .mura-collection.mura-grid-two .fa:focus {
       color: #2E4D4D !important; }
+  .faculty #MainContent .mura-collection.mura-grid-two .prl-staff-position,
+  .fixed-term-faculty #MainContent .mura-collection.mura-grid-two .prl-staff-position,
+  .emeritus-faculty #MainContent .mura-collection.mura-grid-two .prl-staff-position,
+  .staff #MainContent .mura-collection.mura-grid-two .prl-staff-position {
+    text-align: center;
+    width: 100%;
+    font-size: 0.93rem;
+    color: #757575;
+    margin-bottom: 8px; }
+  .faculty #MainContent .mura-collection.mura-grid-two .prl-tooltip-info,
+  .fixed-term-faculty #MainContent .mura-collection.mura-grid-two .prl-tooltip-info,
+  .emeritus-faculty #MainContent .mura-collection.mura-grid-two .prl-tooltip-info,
+  .staff #MainContent .mura-collection.mura-grid-two .prl-tooltip-info {
+    width: 10rem;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content; }
+  .faculty #MainContent .mura-collection.mura-grid-two .prl-tooltip-info-right,
+  .fixed-term-faculty #MainContent .mura-collection.mura-grid-two .prl-tooltip-info-right,
+  .emeritus-faculty #MainContent .mura-collection.mura-grid-two .prl-tooltip-info-right,
+  .staff #MainContent .mura-collection.mura-grid-two .prl-tooltip-info-right {
+    left: -117px; }
+    .faculty #MainContent .mura-collection.mura-grid-two .prl-tooltip-info-right:after,
+    .fixed-term-faculty #MainContent .mura-collection.mura-grid-two .prl-tooltip-info-right:after,
+    .emeritus-faculty #MainContent .mura-collection.mura-grid-two .prl-tooltip-info-right:after,
+    .staff #MainContent .mura-collection.mura-grid-two .prl-tooltip-info-right:after {
+      left: 117px; }
   .faculty #MainContent .mura-collection.mura-grid-two span.prl-phone-tooltip,
   .fixed-term-faculty #MainContent .mura-collection.mura-grid-two span.prl-phone-tooltip,
   .emeritus-faculty #MainContent .mura-collection.mura-grid-two span.prl-phone-tooltip,
@@ -7047,15 +7077,10 @@ div.prl-research-highlights .last.hasImage {
     .emeritus-faculty #MainContent .mura-collection.mura-grid-two span.prl-phone-tooltip strong,
     .staff #MainContent .mura-collection.mura-grid-two span.prl-phone-tooltip strong {
       color: #fff !important; }
-  .faculty #MainContent .mura-collection.mura-grid-two span.prl-phone-tooltip:after, .faculty .staff #MainContent .mura-collection.mura-grid-two .mura-collection-item span.prl-staff-address-tooltip:after, .staff .faculty #MainContent .mura-collection.mura-grid-two .mura-collection-item span.prl-staff-address-tooltip:after,
+  .faculty #MainContent .mura-collection.mura-grid-two span.prl-phone-tooltip:after,
   .fixed-term-faculty #MainContent .mura-collection.mura-grid-two span.prl-phone-tooltip:after,
-  .fixed-term-faculty .staff #MainContent .mura-collection.mura-grid-two .mura-collection-item span.prl-staff-address-tooltip:after,
-  .staff .fixed-term-faculty #MainContent .mura-collection.mura-grid-two .mura-collection-item span.prl-staff-address-tooltip:after,
   .emeritus-faculty #MainContent .mura-collection.mura-grid-two span.prl-phone-tooltip:after,
-  .emeritus-faculty .staff #MainContent .mura-collection.mura-grid-two .mura-collection-item span.prl-staff-address-tooltip:after,
-  .staff .emeritus-faculty #MainContent .mura-collection.mura-grid-two .mura-collection-item span.prl-staff-address-tooltip:after,
-  .staff #MainContent .mura-collection.mura-grid-two span.prl-phone-tooltip:after,
-  .staff #MainContent .mura-collection.mura-grid-two .mura-collection-item span.prl-staff-address-tooltip:after {
+  .staff #MainContent .mura-collection.mura-grid-two span.prl-phone-tooltip:after {
     content: "";
     position: absolute;
     top: 100%;
@@ -7123,57 +7148,6 @@ div.prl-research-highlights .last.hasImage {
 .staff #MainContent .mura-collection.mura-grid-two .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__title {
   margin-bottom: 2px; }
 
-.staff #MainContent .mura-collection.mura-grid-two .mura-collection-item .prl-staff-position {
-  text-align: center;
-  width: 100%;
-  font-size: 0.93rem;
-  color: #757575;
-  margin-bottom: 8px; }
-
-.staff #MainContent .mura-collection.mura-grid-two .mura-collection-item .prl-tooltip-info {
-  width: 10rem;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content; }
-
-.staff #MainContent .mura-collection.mura-grid-two .mura-collection-item .prl-tooltip-info-right {
-  left: -117px; }
-  .staff #MainContent .mura-collection.mura-grid-two .mura-collection-item .prl-tooltip-info-right:after {
-    left: 117px; }
-
-.staff #MainContent .mura-collection.mura-grid-two .mura-collection-item span.prl-phone-tooltip {
-  top: -37px;
-  min-height: 0px !important;
-  min-height: auto !important;
-  width: 8.5rem !important;
-  font-size: 0.85rem; }
-
-.staff #MainContent .mura-collection.mura-grid-two .mura-collection-item span.prl-staff-address-tooltip {
-  visibility: hidden;
-  min-height: auto !important;
-  width: 9.75rem !important;
-  background-color: #2E4D4D;
-  color: #fff !important;
-  border-radius: 2px;
-  padding: 7px;
-  opacity: 0;
-  -webkit-transition: visibility 0s linear 0.35s, opacity 0.35s;
-  transition: visibility 0s linear 0.35s, opacity 0.35s;
-  font-family: 'Gotham SSm A', 'Gotham SSm B', arial, sans-serif;
-  font-size: 0.85rem;
-  text-align: left;
-  position: absolute;
-  z-index: 1;
-  top: -57px;
-  left: -73px;
-  line-height: 1.4; }
-  .staff #MainContent .mura-collection.mura-grid-two .mura-collection-item span.prl-staff-address-tooltip strong {
-    color: #fff !important; }
-
-.staff #MainContent .mura-collection.mura-grid-two .mura-collection-item span.prl-staff-address-tooltip:after {
-  left: 137px;
-  margin-left: -38px; }
-
 @media (min-width: 992px) and (max-width: 1199px) {
   .faculty #MainContent .mura-collection.mura-grid-two .mura-item-meta .mura-item-meta__title,
   .fixed-term-faculty #MainContent .mura-collection.mura-grid-two .mura-item-meta .mura-item-meta__title,
@@ -7186,9 +7160,7 @@ div.prl-research-highlights .last.hasImage {
   .staff #MainContent .mura-collection.mura-grid-two span.prl-phone-tooltip {
     left: -22px !important; }
   .staff #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__title {
-    font-size: 1rem !important; }
-  .staff #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder span.prl-staff-address-tooltip {
-    left: -83px; } }
+    font-size: 1rem !important; } }
 
 @media (min-width: 710px) and (max-width: 991px) {
   .faculty #MainContent span.prl-phone-tooltip,
@@ -7199,9 +7171,7 @@ div.prl-research-highlights .last.hasImage {
   .staff #MainContent .mura-collection.mura-grid-two .mura-collection-item .mura-item-meta .mura-item-meta__title {
     font-size: 1rem; }
   .staff #MainContent .mura-collection.mura-grid-two .mura-collection-item .prl-staff-position {
-    font-size: 14px; }
-  .staff #MainContent .mura-collection.mura-grid-two .mura-collection-item span.prl-staff-address-tooltip {
-    left: -75px; } }
+    font-size: 14px; } }
 
 @media (max-width: 767px) {
   .faculty #MainContent .mura-collection.mura-grid-two .mura-collection-item .mura-collection-item__holder,
@@ -7260,13 +7230,7 @@ div.prl-research-highlights .last.hasImage {
     display: inline-block;
     float: none;
     width: 60%;
-    margin-left: 1rem; }
-  .staff #MainContent .mura-collection.mura-grid-two .mura-collection-item span.prl-phone-tooltip {
-    left: -30px !important;
-    top: -35px !important; }
-  .staff #MainContent .mura-collection.mura-grid-two .mura-collection-item span.prl-staff-address-tooltip {
-    left: -84px;
-    top: -55px; } }
+    margin-left: 1rem; } }
 
 @media (min-width: 650px) and (max-width: 767px) {
   .staff #MainContent .mura-collection.mura-grid-two .mura-collection-item .mura-item-meta {
