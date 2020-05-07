@@ -665,7 +665,7 @@ nav#sideNavMultilevel.mainContent__sideNav > h2.mainContent__sideNavTitle {
 -------------------------------------------------------- */
 .prl-tooltip {
   position: relative;
-  display: inline;
+  display: inline-block;
   margin: 0 4px; }
   .prl-tooltip .fa {
     color: #d0d0d0;

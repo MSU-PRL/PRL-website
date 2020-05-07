@@ -899,7 +899,7 @@ $img-hover-opacity: 0.8;
   // Relative position limits the contraints of the tooltip to this container
   position: relative;
   // Inline block keeps the tooltip contained
-  display: inline;
+  display: inline-block;
   margin: 0 4px;
   .fa {
     // Fonticon styling

@@ -2208,7 +2208,6 @@ div.prl-research-highlights {
           color: $primary-color !important;
         }
       }
-      // New tooltip classes
       .prl-staff-position {
         text-align: center;
         width: 100%;
@@ -2216,6 +2215,7 @@ div.prl-research-highlights {
         color: $light-grey-text;
         margin-bottom: 8px;
       }
+      // Tooltip classes
       .prl-tooltip-info {
         width: 10rem; // Fallback for older browsers
         width: max-content;
@@ -2224,56 +2224,6 @@ div.prl-research-highlights {
         left: -117px;
         &:after {
           left: 117px;
-        }
-      }
-      // New tooltip classes end
-      // Delete this when tooltips updated
-      span.prl-phone-tooltip {
-        // Tooltip styling (hidden on hover)
-        visibility: hidden;
-        width: 12.5rem;
-        background-color: $primary-color;
-        color: #fff !important;
-        border-radius: 2px;
-        padding: 7px;
-        opacity: 0;
-        -webkit-transition: visibility 0s linear 0.35s, opacity 0.35s;
-        transition: visibility 0s linear 0.35s, opacity 0.35s; // Overriding fontawesome styles
-        font-family: 'Gotham SSm A', 'Gotham SSm B', arial, sans-serif;
-        font-size: 0.85rem;
-        text-align: left; // Position the tooltip
-        position: absolute;
-        z-index: 10;
-        top: -59px;
-        left: -11px;
-        min-height: 56px;
-        line-height: 1.4;
-        strong {
-          color: #fff !important;
-        }
-      }
-      span.prl-phone-tooltip:after {
-        // The arrow pointing to the bottom
-        content: "";
-        position: absolute;
-        top: 100%;
-        left: 42px;
-        border-width: 5px;
-        border-style: solid;
-        border-color: $primary-color transparent transparent transparent;
-      }
-      .fa-phone:hover,
-      .fa-phone:focus,
-      .fa-map-marker:hover,
-      .fa-map-marker:focus {
-        // Hover effects on fonticons
-        cursor: pointer;
-        span.prl-phone-tooltip,
-        span.prl-staff-address-tooltip {
-          visibility: visible;
-          -webkit-transition: visibility 0s linear 0s, opacity 0.35s;
-          transition: visibility 0s linear 0s, opacity 0.35s;
-          opacity: 1;
         }
       }
     }
@@ -2307,9 +2257,6 @@ div.prl-research-highlights {
             font-size: 1.05rem !important;
           }
         }
-        span.prl-phone-tooltip {
-          left: -22px !important;
-        }
       }
     }
   }
@@ -2331,16 +2278,6 @@ div.prl-research-highlights {
 
 @media (min-width: 710px) and (max-width: 991px) {
   // Tablets and larger phones
-  .faculty,
-  .fixed-term-faculty,
-  .emeritus-faculty,
-  .staff {
-    #MainContent {
-      span.prl-phone-tooltip {
-        left: -15px !important;
-      }
-    }
-  }
   .staff #MainContent .mura-collection.mura-grid-two .mura-collection-item {
     // Tablets and larger phones, Staff page
     .mura-item-meta {
@@ -2388,10 +2325,6 @@ div.prl-research-highlights {
           display: inline-block !important;
           width: 33.3% !important;
         }
-      }
-      span.prl-phone-tooltip {
-        left: -45px !important;
-        top: -57px !important;
       }
       .prl-staff-contact {
         width: 100% !important;
