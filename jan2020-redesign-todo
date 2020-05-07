@@ -1,6 +1,5 @@
-- Use Natsci accessibility audit tool:
-  - Fix tooltips on Faculty and staff pages then reexamine and delete obsolete CSS
 - Add tooltip to web components demo
+- Create HTML components and upload to Github repo
 - Update readme to include HTML Components in Mura markup
 - PRL About page additions: add inline navigation, maybe smaller hero image, add DOE BER (or remove BES), add prominent alumni/findings
 - Harvest components from Mura into HTML folder for upload to github
@@ -44,3 +43,4 @@ DONE
   - Remove link underlines in side navs, under the class: mainContent__sideNav
   - Remove unused CSS
   - Run link checker to fix broken external links
+  - Use Natsci accessibility audit tool and fix accessibility issues
