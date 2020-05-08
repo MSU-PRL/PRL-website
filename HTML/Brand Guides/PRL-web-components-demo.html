@@ -496,18 +496,6 @@
 	<ul></ul>
 </section>
 
-<section class="popover-component">
-		<h2>Popover</h2>
-	
-		<p>This component is used mostly for hover definitions in news stories. Insert the following code at the top of relevant pages. See the <a href="/about/internal-resources/brand-guides/communications-department-resources/brand-manual/">brand manual</a> for how to add hover definitions in stories. Popovers will display as a link with an 'expand' fonticon preceding it to indicate it is a popover.</p>
-	
-		<div class="prl-code-area">
-			<div><code tabindex="0">&lt;!--&nbsp;Content - Popover --&gt;<br />
-				[m]$.dspThemeInclude('display_objects/custom/dsp_contentPopover.cfm')[/m]</code></div>
-		</div>
-	</section>
-	
-
 <section class="images">
 		<h2>Images</h2>
 	
@@ -558,6 +546,54 @@
 		&lt;div class=&quot;prl-narrow-container&quot;&gt;<br />
 		&nbsp; &lt;p&gt;Content goes in here&lt;/p&gt;<br />
 		&lt;/div&gt;</code></div>
+</section>
+
+<section class="tooltips">
+	<h2>Tooltips</h2>
+
+	<p>The following is an icon with a tooltip
+		that expands on mouse hover or keyboard focus.</p>
+		<div style="display:block; text-align: center">
+			<span aria-describedby="070a3hh4o" class="prl-tooltip" role="tooltip" tabindex="0">
+				<!-- The icon is hidden from screenreaders --> 
+				<span aria-hidden="true" class="fa fa-info"> </span> 
+				<!-- The phone-numbers id links to the parent element's aria-describedby attribute --> 
+				<span aria-hidden="true" class="prl-tooltip-info" id="070a3hh4o"> 
+					<strong>Word</strong> This space is reserved for the word definition. 
+					The definition can be quite long and the tooltip adjusts its size accordingly. 
+				</span> 
+			</span> 
+		</div>
+	<p>
+		A tooltip can also start from the right, like so: 
+	</p>
+	<div style="display:block; text-align: center">
+	 	<span aria-describedby="krizcuvjm" class="prl-tooltip" role="tooltip" tabindex="0">
+			<!-- The icon is hidden from screenreaders --> 
+			<span aria-hidden="true" class="fa fa-smile-o"> </span> 
+			<!-- The phone-numbers id links to the parent element's aria-describedby attribute --> 
+			<span aria-hidden="true" class="prl-tooltip-info prl-tooltip-info-right" id="krizcuvjm"> 
+			This tooltip goes the other way, starting from right to left. 
+			</span>
+		</span>
+	</div>
+	<h3>Usage considerations</h3>
+	<p>
+		Tooltips are useful to display additional content that is optional to the
+		user to see and which might otherwise clutter that user's web experience if 
+		included in the main body. Examples of appropriate usage include: 
+		address information or word definitions in news stories. 
+	</p>
+	<p>The tooltip icons derive from the College of Natural Sciences custom icon font 
+		(see Fonticon section on this page). It is recommended to wrap the icons in
+		a HTML <strong>&lt;i&gt;</strong> tag. Although not the best semantic use of the 
+		tag, it is preferrable to the <strong>&lt;span&gt;</strong> tag, which is prone 
+		to be deleted by Mura's WYSIWYG.
+	</p>
+	<p>Tooltip content displays as white text against a background of primary PRL color.
+		The tooltips are accessible to screen readers and keyboard navigation. 
+		See the markup below for how to add tooltips.
+	</p>
 </section>
 
 <section class="typography">
