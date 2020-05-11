@@ -1,6 +1,4 @@
-- Add tooltip to web components demo (add code markup)
 - Create HTML components and upload to Github repo
-- Update readme to include HTML Components in Mura markup
 - PRL About page additions: add inline navigation, maybe smaller hero image, add DOE BER (or remove BES), add prominent alumni/findings
 - Harvest components from Mura into HTML folder for upload to github
 - Add a new ‘for the public’ page, including BMC videos. Need to figure out a narrative for this
@@ -44,3 +42,4 @@ DONE
   - Remove unused CSS
   - Run link checker to fix broken external links
   - Use Natsci accessibility audit tool and fix accessibility issues
+  - Add tooltip to web components demo

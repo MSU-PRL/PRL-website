@@ -12,7 +12,7 @@
 		The collapsible functionality is useful for displaying long chunks of content without overwhelming the user.
 	</p>
 
-	<p>The accordion stylings include: expandable buttons with primary color background and white text; 
+	<p>The accordion features include: expandable buttons with primary color background and white text; 
 		collapsible section titles with primary color font-color; 
 		dividers between accordion sections. 
 		See the example below:</p>
@@ -145,7 +145,11 @@
 
 	<h3>Back to top button</h3>
 
-	<p>Shrink the browser window to see an example on this page. The button consists of a &quot;chevron circle up&quot; fonticon, uses the secondary PRL red color, and is set on the bottom right corner of mobile and tablet screens only.  On press, the user is redirected to the top of the page, with an added jQuery scroll effect.</p>
+	<p>See the example on the bottom right of this page. The button consists of 
+		a &quot;chevron circle up&quot; fonticon, uses the secondary PRL red color, 
+		and is set on the bottom right corner of mobile and tablet screens only.  
+		On press, the user is redirected to the top of the page, 
+		thanks to a jQuery scroll effect.</p>
 
 	<div class="prl-code-area"><code tabindex="0">&lt;!-- Back To Top Button --&gt;<br />
 		&lt;div&gt;&lt;a class=&quot;prl-back-to-top-btn&quot; href=&quot;#&quot;&gt;&lt;span class=&quot;fa fa-chevron-circle-up&quot;&nbsp;role=&quot;button&quot;&gt;&lt;/span&gt;&lt;span class=&quot;sr-only&quot;&gt;Chevron circle up&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;</code></div>
@@ -177,10 +181,8 @@
 		<li><a href="/about/internal-resources/brand-style-guide/card-examples-and-markup/">Card examples and markup</a></li>
 		<li><a href="/sites/_prl/assets/File/Employee%20Documents/PRL-card-markup.html">Download HTML file</a></li>
 	</ul>
-
-	<hr />
 	<div class="prl-well">
-		<p style="line-height:1.4"><small><em>Image sources for examples: </em></small><small><em>Cyanobacteria bloom by brewbooks from near Seattle, USA (Grand Prismatic Spring) <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a>, <a href="https://commons.wikimedia.org/wiki/File%3AGrand_Prismatic_Spring_-_Flickr_-_brewbooks_(5).jpg">via Wikimedia Commons</a>; </em></small><small><em>Solar panel: <a href="https://pixabay.com/en/grass-sky-solar-panels-sunrise-1842296/">Pexels</a>, <a href="https://pixabay.com/en/service/terms/#usage">CC0 Creative Commons</a></em></small></p>
+		<p style="line-height:1.4"><small><em>Image sources for examples below: </em></small><small><em>Cyanobacteria bloom by brewbooks from near Seattle, USA (Grand Prismatic Spring) <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a>, <a href="https://commons.wikimedia.org/wiki/File%3AGrand_Prismatic_Spring_-_Flickr_-_brewbooks_(5).jpg">via Wikimedia Commons</a>; </em></small><small><em>Solar panel: <a href="https://pixabay.com/en/grass-sky-solar-panels-sunrise-1842296/">Pexels</a>, <a href="https://pixabay.com/en/service/terms/#usage">CC0 Creative Commons</a></em></small></p>
 	</div>
 
 	<h3>Basic card</h3>
@@ -449,9 +451,11 @@
 </section>
 
 <section class="doe-acknowledgment">
-	<h2>DOE-BES Funding Support Tag</h2>
+	<h2>DOE Funding Support / Acknowledgments Tag</h2>
 
-	<p>Use this at the end of news stories that are funded by the DOE grant. See News section for usage examples</p>
+	<p>Use this at the end of news stories that are funded by the DOE-BES grant. 
+		Alternatively, the content could be modified to acknowledge other grant sources 
+		or scientific collaborators. See News section for usage examples.</p>
 
 	<hr />
 	<p class="prl-news-support-tag"><small>This work was primarily funded by the <a href="https://science.energy.gov/bes/csgb/research-areas/photochemistry-and-biochemistry/">US Department of Energy, Office of Basic Energy Sciences</a>.</small></p>
@@ -528,7 +532,10 @@
 
 	<h3>Custom web layouts</h3>
 
-	<p>The research, news, faculty, staff, and events pages have custom layouts. Those are created through Mura components and styled with CSS automatically when added. Contact the PRL communications office for Instructions on how to add these components.</p>
+	<p>The research, news, faculty, staff, and events pages are designed with custom layouts. 
+		The pages are styled with CSS (included in the prlCustomCSS file that loads on the website)
+		and some internal content is displayed through custom components in Mura. 
+	</p>
 
 	<h3>Narrow container</h3>
 
@@ -553,46 +560,79 @@
 
 	<p>The following is an icon with a tooltip
 		that expands on mouse hover or keyboard focus.</p>
-		<div style="display:block; text-align: center">
-			<span aria-describedby="070a3hh4o" class="prl-tooltip" role="tooltip" tabindex="0">
-				<!-- The icon is hidden from screenreaders --> 
-				<span aria-hidden="true" class="fa fa-info"> </span> 
-				<!-- The phone-numbers id links to the parent element's aria-describedby attribute --> 
-				<span aria-hidden="true" class="prl-tooltip-info" id="070a3hh4o"> 
-					<strong>Word</strong> This space is reserved for the word definition. 
-					The definition can be quite long and the tooltip adjusts its size accordingly. 
-				</span> 
+	<div style="display:block; text-align: center">
+		<!-- aria-describedby attribute value will be automatically assigned -->
+		<span aria-describedby class="prl-tooltip" role="tooltip" tabindex="0">
+			<!-- The icon is hidden from screenreaders --> 
+			<i aria-hidden="true" class="fa fa-info"> </i> 
+			<!-- The tooltip id, automatically assigned, links to the parent element's aria-describedby attribute --> 
+			<span aria-hidden="true" class="prl-tooltip-info" id> 
+				<strong>Word</strong> This space is reserved for the word definition. 
+				The definition can be quite long and the tooltip adjusts its size accordingly. 
 			</span> 
-		</div>
+		</span> 
+	</div>
+
+	<div class="prl-code-area">
+		<code tabindex="0">
+			&lt;!-- Tooltip &nbsp;--&gt;<br />
+			&lt;span aria-describedby class=&quot;prl-tooltip&quot; role=&quot;tooltip&quot; tabindex=&quot;0&quot;&gt;<br />
+			&nbsp; &nbsp; &lt;!-- The icon --&gt; <br />
+			&nbsp; &nbsp; &lt;i aria-hidden=&quot;true&quot; class=&quot;fa fa-info&quot;&gt; &lt;/i&gt; <br />
+			&nbsp; &nbsp; &lt;!-- The id value below links to the parent's aria-describedby attribute<br />
+			&nbsp; &nbsp; value. Both values are generated automatically through a JS script --&gt; <br />
+			&nbsp; &nbsp; &lt;span aria-hidden="true" class="prl-tooltip-info" id&gt; <br />
+			&nbsp; &nbsp; &nbsp; 	&lt;strong>Word&lt;/strong> This space is reserved for the word definition. <br />
+			&nbsp; &nbsp; &nbsp; 	The definition can be quite long and the tooltip adjusts its<br />
+			&nbsp; &nbsp; &nbsp; 	size accordingly. <br />
+			&nbsp; &nbsp;	&lt;/span&gt; <br />
+			&lt;/span&gt; <br />
+		</code>
+	</div>
+
 	<p>
-		A tooltip can also start from the right, like so: 
+		A tooltip can alternatively extend from right to left, like so: 
 	</p>
 	<div style="display:block; text-align: center">
-	 	<span aria-describedby="krizcuvjm" class="prl-tooltip" role="tooltip" tabindex="0">
+	 	<span aria-describedby class="prl-tooltip" role="tooltip" tabindex="0">
 			<!-- The icon is hidden from screenreaders --> 
-			<span aria-hidden="true" class="fa fa-smile-o"> </span> 
-			<!-- The phone-numbers id links to the parent element's aria-describedby attribute --> 
-			<span aria-hidden="true" class="prl-tooltip-info prl-tooltip-info-right" id="krizcuvjm"> 
+			<i aria-hidden="true" class="fa fa-smile-o"> </i> 
+			<!-- The tooltip id links to the parent element's aria-describedby attribute --> 
+			<span aria-hidden="true" class="prl-tooltip-info prl-tooltip-info-right" id> 
 			This tooltip goes the other way, starting from right to left. 
 			</span>
 		</span>
 	</div>
+
+	<div class="prl-code-area">
+		<code tabindex="0">
+			&lt;!-- Tooltip From Right Side &nbsp;--&gt;<br />
+			&lt;span aria-describedby class=&quot;prl-tooltip&quot; role=&quot;tooltip&quot; tabindex=&quot;0&quot;&gt;<br />
+			&nbsp; &nbsp; &lt;i aria-hidden=&quot;true&quot; class=&quot;fa fa-smile-o&quot;&gt; &lt;/i&gt; <br />
+			&nbsp; &nbsp; &lt;!-- Add extra prl-tooltip-info-right class --&gt; <br />
+			&nbsp; &nbsp; &lt;span aria-hidden="true" class="prl-tooltip-info prl-tooltip-info-right" id&gt; <br />
+			&nbsp; &nbsp; &nbsp; 	This tooltip goes the other way, starting from right to left.  <br />
+			&nbsp; &nbsp;	&lt;/span&gt; <br />
+			&lt;/span&gt; <br />
+		</code>
+	</div>
+
 	<h3>Usage considerations</h3>
 	<p>
-		Tooltips are useful to display additional content that is optional to the
+		Tooltips are useful to display additional content that is optional for the
 		user to see and which might otherwise clutter that user's web experience if 
-		included in the main body. Examples of appropriate usage include: 
-		address information or word definitions in news stories. 
+		included in the main body. Examples of appropriate tooltip usage include: 
+		secondary address information or word definitions in news stories. 
 	</p>
 	<p>The tooltip icons derive from the College of Natural Sciences custom icon font 
 		(see Fonticon section on this page). It is recommended to wrap the icons in
 		a HTML <strong>&lt;i&gt;</strong> tag. Although not the best semantic use of the 
-		tag, it is preferrable to the <strong>&lt;span&gt;</strong> tag, which is prone 
-		to be deleted by Mura's WYSIWYG.
+		<strong>&lt;i&gt;</strong> tag, it is preferrable to the 
+		<strong>&lt;span&gt;</strong> tag which is prone to be deleted by Mura's 
+		WYSIWYG if the wrapped content is left empty.
 	</p>
 	<p>Tooltip content displays as white text against a background of primary PRL color.
-		The tooltips are accessible to screen readers and keyboard navigation. 
-		See the markup below for how to add tooltips.
+		Tooltips are accessible to screen readers and keyboard navigation. 
 	</p>
 </section>
 

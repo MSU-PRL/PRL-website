@@ -19,13 +19,13 @@ The History Timeline on the <a href="https://prl.natsci.msu.edu/about/">About pa
 
 ## HTML Folder
 **Warning:** due to the way Mura's inline editor works, make sure to edit the .html files in an external code editor. Front-end editing might break certain features.
-### .html file listing and links to web pages:
+### Files and folder information:
 * **PRL-about-page.html:** <a href="https://prl.natsci.msu.edu/about/">About page</a>
 * **PRL-contact-us.html:** <a href="https://prl.natsci.msu.edu/about/contact/">Contact Us page</a>
 * **PRL-CAAPP-overview-page.html:**  <a href="https://prl.natsci.msu.edu/research-tech/center-for-advanced-algal-and-plant-phenotyping/">CAAPP Overview page</a>
 * **PRL-graduate-program-overview-page.html:**  <a href="https://prl.natsci.msu.edu/graduate-program/graduate-program-overview/">Graduate Program Overview page</a>
 * **PRL-card-markup.html:** Markup for all the PRL card styles, also found on the PRL <a href="https://prl.natsci.msu.edu/about/internal-resources/brand-guides/communications-department-resources/web-components-demo/">Web Components Demo page</a> under the *Cards* section.
-* **PRL-research-projects-page.html:** <a href="https://prl.natsci.msu.edu/research-tech/research-projects/">Research Projects Page</a>
+* **PRL-research-projects-page.html:** <a href="https://prl.natsci.msu.edu/research-tech/research-projects/">Research Projects page</a>
 * **PRL-community-brand-toolkit.html:**  <a href="https://prl.natsci.msu.edu/about/internal-resources/brand-guides/prl-community-brand-toolkit/">PRL Community Brand Toolkit page</a>
 * **PRL-web-components-demo.html:**  <a href="https://prl.natsci.msu.edu/about/internal-resources/brand-guides/communications-department-resources/web-components-demo/">Web Components Demo page</a>. Note that the accordion component will break if the markup is edited on the front-end.
 * **PRL-homepage-brands-2018.html:**  <a href="https://prl.natsci.msu.edu/">PRL homepage</a> right below the hero section.
@@ -35,6 +35,7 @@ The History Timeline on the <a href="https://prl.natsci.msu.edu/about/">About pa
   * To update, paste the code in the **Homepage - News & Events** component in Mura's File Manager.
 * **PRL-Code-of-Ethics.html:** <a href="https://prl.natsci.msu.edu/about/internal-resources/employee-documents/code-of-ethics/">Code of Ethics page</a>
 * **404 Page:** <a href="https://prl.natsci.msu.edu/404/">404 page</a>
+* **Components in Mura:** this folder includes markup files for custom components stored in Mura. 
  
 ## JS Folder 
 ### Instructions to modify JS:
