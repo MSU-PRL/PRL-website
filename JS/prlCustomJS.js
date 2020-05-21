@@ -1,5 +1,6 @@
+// SCROLL ANIMATION FOR BACK TO TOP BUTTON
+
 $(function() {
-  // SCROLL ANIMATION FOR BACK TO TOP BUTTON
   var btn = $('.prl-back-to-top-btn');
   // Click button
   btn.on('click', function(e) {
@@ -12,53 +13,55 @@ $(function() {
 
 // ACCESSIBLE TOOLTIP
 
-// ACCESSIBLE TOOLTIP
-
-// Look for all tooltips in document
-const toolTipInfo = document.querySelectorAll('.prl-tooltip-info');
-// Look for all tooltip containers in document
-const toolTipContainer = document.querySelectorAll('.prl-tooltip')
-toolTipContainer.forEach(item => {
-  // Generate a random number that will be assigned to both aria-describedby and the child's id attributes
-  let randomNumber = Math.random().toString(36).substr(2, 9)
-  // Set the aria-describedby value to be the random number
-  item.setAttribute("aria-describedby", randomNumber)
-  // Look through the toolTipContainer children
-  for (i=0; i < item.children.length; i++){
-    // Identify the child with the tooltip info, denoted by class name 'prl-tooltip-info'
-    if(item.children[i].className === "prl-tooltip-info" || item.children[i].className === "prl-tooltip-info prl-tooltip-info-right"){
-      // Assign the same generated number to the child's id attribute
-      item.children[i].setAttribute('id', randomNumber)
+document.addEventListener("DOMContentLoaded", function() {
+  // Look for all tooltip elements in document
+  const toolTipsList = document.querySelectorAll('.prl-tooltip')
+  if(toolTipsList.length > 0) {
+    // Look for all tooltip containers in document
+    const toolTipInfo = document.querySelectorAll('.prl-tooltip-info');
+    toolTipsList.forEach(item => {
+      // Generate a random number that will be assigned to both aria-describedby and the child's id attributes
+      let randomNumber = Math.random().toString(36).substr(2, 9)
+      // Set the aria-describedby value to be the random number
+      item.setAttribute("aria-describedby", randomNumber)
+      // Look through the toolTipContainer children
+      for (i=0; i < item.children.length; i++){
+        // Identify the child with the tooltip info, denoted by class name 'prl-tooltip-info'
+        if(item.children[i].className === "prl-tooltip-info" || item.children[i].className === "prl-tooltip-info prl-tooltip-info-right"){
+          // Assign the same generated number to the child's id attribute
+          item.children[i].setAttribute('id', randomNumber)
+        }
+      }
+    })
+    // Create a template aria-hidden attribute with value = "true"
+    var ariaHiddenAttr = document.createAttribute("aria-hidden")
+    ariaHiddenAttr.value = "true"
+    // Method, which will be passed in an addEventListener function, sets aria-hidden to be true
+    const setAriaHiddenFalse = (item) => {
+      item.setAttribute('aria-hidden', 'false')
     }
+    // Method, which will be passed in an addEventListener function, sets aria-hidden to be false
+    const setAriaHiddenTrue = (item) => {
+      item.setAttribute('aria-hidden', 'true')
+    }
+    // For each tooltip in document
+    toolTipInfo.forEach((item, i) => {
+      // If the element does not have an aria-hidden attribute
+      if(!item.getAttribute('aria-hidden')) {
+        // Add the attribute to this element
+        item.setAttributeNode(ariaHiddenAttr.cloneNode(true)) 
+        console.warn('Tooltips need to have an aria-hidden attribute. One has been generated for this element', item)
+      }
+      toolTipNode = toolTipInfo[i].parentNode
+      // Event listeners for mouse hover and focus events to set aria-hidden to false
+      toolTipNode.addEventListener('mouseenter', function(e) {setAriaHiddenFalse(item)}, false);
+      toolTipNode.addEventListener('focus', function(e) {setAriaHiddenFalse(item)}, false);
+        // Event listeners for mouse leave and blut events to set aria-hidden to true
+      toolTipNode.addEventListener('mouseleave', function(e) {setAriaHiddenTrue(item)}, false);
+      toolTipNode.addEventListener('blur', function(e) {setAriaHiddenTrue(item)}, false);
+    })
   }
-})
-// Create a template aria-hidden attribute with value = "true"
-var ariaHiddenAttr = document.createAttribute("aria-hidden")
-ariaHiddenAttr.value = "true"
-// Method, which will be passed in an addEventListener function, sets aria-hidden to be true
-const setAriaHiddenFalse = (item) => {
-  item.setAttribute('aria-hidden', 'false')
-}
-// Method, which will be passed in an addEventListener function, sets aria-hidden to be false
-const setAriaHiddenTrue = (item) => {
-  item.setAttribute('aria-hidden', 'true')
-}
-// For each tooltip in document
-toolTipInfo.forEach((item, i) => {
-  // If the element does not have an aria-hidden attribute
-  if(!item.getAttribute('aria-hidden')) {
-    // Add the attribute to this element
-    item.setAttributeNode(ariaHiddenAttr.cloneNode(true)) 
-    console.warn('Tooltips need to have an aria-hidden attribute. One has been generated for this element', item)
-  }
-  toolTipNode = toolTipInfo[i].parentNode
-  // Event listeners for mouse hover and focus events to set aria-hidden to false
-  toolTipNode.addEventListener('mouseenter', function(e) {setAriaHiddenFalse(item)}, false);
-  toolTipNode.addEventListener('focus', function(e) {setAriaHiddenFalse(item)}, false);
-    // Event listeners for mouse leave and blut events to set aria-hidden to true
-  toolTipNode.addEventListener('mouseleave', function(e) {setAriaHiddenTrue(item)}, false);
-  toolTipNode.addEventListener('blur', function(e) {setAriaHiddenTrue(item)}, false);
-})
+});
 
 
 // ACCESSIBLE ACCORDION
