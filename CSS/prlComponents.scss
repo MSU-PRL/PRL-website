@@ -646,6 +646,9 @@ $img-hover-opacity: 0.8;
     // Card title text
     text-transform: initial;
   }
+  p {
+    margin: 0;
+  }
 }
 
 // These following styles fall within the .prl-card-body

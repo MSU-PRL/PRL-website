@@ -174,7 +174,7 @@
         border-right: 3px solid $primary-color;
         .image {
           position: relative;
-          margin: 0 0 32px 0;
+          margin: 0 0 16px 0;
           a {
             border-bottom: 0px solid transparent;
             img {
@@ -303,9 +303,6 @@
       .mura-object-content > .mura-index {
         div > .hasImage {
           padding-right: 24px;
-          .image {
-            margin-bottom: 24px;
-          }
           .summary {
             font-size: 14.5px;
             margin-bottom: 32px;
@@ -357,7 +354,6 @@
             max-width: 600px;
             margin-left: auto;
             margin-right: auto;
-            margin-bottom: 24px;
           }
           .title {
             margin: 0 auto;
@@ -411,9 +407,6 @@
       .mura-object-content > .mura-index {
         div > .hasImage {
           padding: 12px 0 0 0;
-          .image {
-            margin-bottom: 16px;
-          }
           .title {
             text-transform: initial;
             padding: 0;
