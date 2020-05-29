@@ -5082,6 +5082,8 @@ nav#sideNavMultilevel.mainContent__sideNav > h2.mainContent__sideNavTitle {
   .prl-home-event-cards.mura-object .mura-collection-item .mura-collection-item__holder .mura-item-meta h6,
   #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta h6 {
     text-transform: initial; }
+  .prl-card-body p, .prl-home-event-cards.mura-object .mura-collection-item .mura-collection-item__holder .mura-item-meta p, #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta p {
+    margin: 0; }
 
 .prl-card-title, .prl-card h1, .prl-card-w-border h1, .prl-card-hover-effect h1,
 .prl-card h2,
@@ -5707,7 +5709,7 @@ main.mainContent .mainContent__sideNav ul li a {
       border-right: 3px solid #2E4D4D; }
       .prl-home-news-feature .mura-async-object.mura-object .mura-object-content > .mura-index div > .hasImage .image {
         position: relative;
-        margin: 0 0 32px 0; }
+        margin: 0 0 16px 0; }
         .prl-home-news-feature .mura-async-object.mura-object .mura-object-content > .mura-index div > .hasImage .image a {
           border-bottom: 0px solid transparent; }
           .prl-home-news-feature .mura-async-object.mura-object .mura-object-content > .mura-index div > .hasImage .image a img {
@@ -5797,8 +5799,6 @@ main.mainContent .mainContent__sideNav ul li a {
     padding-left: 15px; }
     .prl-home-news-feature .mura-async-object.mura-object .mura-object-content > .mura-index div > .hasImage {
       padding-right: 24px; }
-      .prl-home-news-feature .mura-async-object.mura-object .mura-object-content > .mura-index div > .hasImage .image {
-        margin-bottom: 24px; }
       .prl-home-news-feature .mura-async-object.mura-object .mura-object-content > .mura-index div > .hasImage .summary {
         font-size: 14.5px;
         margin-bottom: 32px; }
@@ -5828,8 +5828,7 @@ main.mainContent .mainContent__sideNav ul li a {
       .prl-home-news-feature .mura-async-object.mura-object .mura-object-content > .mura-index div > .hasImage .image {
         max-width: 600px;
         margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 24px; }
+        margin-right: auto; }
       .prl-home-news-feature .mura-async-object.mura-object .mura-object-content > .mura-index div > .hasImage .title {
         margin: 0 auto;
         padding-left: 16px;
@@ -5858,8 +5857,6 @@ main.mainContent .mainContent__sideNav ul li a {
 @media (max-width: 767px) {
   .prl-home-news-feature .mura-async-object.mura-object .mura-object-content > .mura-index div > .hasImage {
     padding: 12px 0 0 0; }
-    .prl-home-news-feature .mura-async-object.mura-object .mura-object-content > .mura-index div > .hasImage .image {
-      margin-bottom: 16px; }
     .prl-home-news-feature .mura-async-object.mura-object .mura-object-content > .mura-index div > .hasImage .title {
       text-transform: initial;
       padding: 0;

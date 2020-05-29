@@ -427,6 +427,8 @@ nav#sideNavMultilevel.mainContent__sideNav > h2.mainContent__sideNavTitle {
   .prl-card-body h5,
   .prl-card-body h6 {
     text-transform: initial; }
+  .prl-card-body p {
+    margin: 0; }
 
 .prl-card-title, .prl-card h1, .prl-card-w-border h1, .prl-card-hover-effect h1,
 .prl-card h2,
