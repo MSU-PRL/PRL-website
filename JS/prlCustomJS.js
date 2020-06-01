@@ -13,7 +13,7 @@ $(function() {
 
 // ACCESSIBLE TOOLTIP
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function makeTooltipAccessible() {
   // Look for all tooltip elements in document
   const toolTipsList = document.querySelectorAll('.prl-tooltip')
   if(toolTipsList.length > 0) {
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function() {
         item.setAttributeNode(ariaHiddenAttr.cloneNode(true)) 
         console.warn('Tooltips need to have an aria-hidden attribute. One has been generated for this element', item)
       }
-      toolTipNode = toolTipInfo[i].parentNode
+      const toolTipNode = toolTipInfo[i].parentNode
       // Event listeners for mouse hover and focus events to set aria-hidden to false
       toolTipNode.addEventListener('mouseenter', function(e) {setAriaHiddenFalse(item)}, false);
       toolTipNode.addEventListener('focus', function(e) {setAriaHiddenFalse(item)}, false);
@@ -227,7 +227,9 @@ if ('content' in document.createElement('template')) {
     const all = document.querySelectorAll('prl-accordion-section')
 
     // Insert the button controls before the first <prl-accordion-section>
-    first.parentNode.insertBefore(buttons, first)
+    if(first) {
+      first.parentNode.insertBefore(buttons, first)
+    }
 
     // Place the click on the parent <ul>...
     buttons.addEventListener('click', (e) => {
@@ -242,3 +244,18 @@ if ('content' in document.createElement('template')) {
     })
   }
 }
+
+
+// TEMP SCRIPT FOR 'RETURN TO WORK' PAGES
+
+(function updateSideNavTitle() {
+  signInOutSection = document.getElementsByTagName('body')
+  // Check if body id element is 'prlsigninout'
+  if (signInOutSection[0].id === 'prlsigninout'){
+    // This function changes the sideNav <h2> title
+    sideNav = document.getElementsByClassName('mainContent__sideNav');
+    sideNav[0].children[0].textContent = "Resources";
+    delete sideNav
+  };
+  delete signInOutSection
+}());
