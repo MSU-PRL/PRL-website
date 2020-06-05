@@ -5848,7 +5848,8 @@ main.mainContent .mainContent__sideNav ul li a {
       margin-left: auto;
       margin-right: auto; }
       .prl-home-news-nonfeature .mura-async-object.mura-object > .mura-object-content .mura-index div .hasImage {
-        margin-bottom: 16px; }
+        margin-bottom: 16px;
+        clear: both; }
         .prl-home-news-nonfeature .mura-async-object.mura-object > .mura-object-content .mura-index div .hasImage .image {
           padding: 0px 16px 16px 0; }
       .prl-home-news-nonfeature .mura-async-object.mura-object > .mura-object-content .mura-index div .last.hasImage {
