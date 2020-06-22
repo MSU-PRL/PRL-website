@@ -1,0 +1,41 @@
+DONE     
+- Accordion - Fix borders on DONE
+- CNS overrides
+  - .mainContent__mainCol { overflow-x: *inherit*} DONE
+    allows stuff (shadows, borders) to overflow in the padded area around the container
+    - revise ABOUT DONE, RESEARCH & TECH, Accordion button on small screens, etc.
+  - figures: padding: 0;
+- News page pagination not mobile friendly
+- Crawled through website
+  HPG: DONE
+  ABOUT section: DONE
+  RESEARCH & TECH section: DONE
+  PEOPLE section: DONE
+    Faculty internal pages: DONE 
+      - <h3> --> <h2>
+      - remove <hr> tags
+      - phone # links
+      - on front end, remove prl-well class
+  GRADUATE PROGRAM section: DONE
+
+  NEWS & EVENTS section: DONE
+    - splash pages: DONE
+    - Research Highlights internal pages: DONE
+    - News internal pages: DONE
+        Next article: DONE.
+          - Change to News article type (Basic tab) and layout template (Layout tab)
+          - Recrop hero image
+          - Check structure: External banner images credited; Related Stories component location AND image sizes = 120x120; remove spaces above subheaders
+          - Remove Bootstrap popup content 
+          - Remove all bootstrap styles (especially note the figures)
+          - Examine media asset copyrights
+  - Remove Bootstrap CSS from the following:
+    - Content - Card: Related Content - Full Image + Title Overlay (see where in news stories)
+    - Content - Card: Related Content - Image + Title Overlay + Text Area (see where in news stories)
+    - Content - Informational Well Section with Cards (see where in news stories)
+  - Remove link underlines in side navs, under the class: mainContent__sideNav
+  - Remove unused CSS
+  - Run link checker to fix broken external links
+  - Use Natsci accessibility audit tool and fix accessibility issues
+  - Add tooltip to web components demo
+  - Upload Mura HTML components to Github
