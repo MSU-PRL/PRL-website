@@ -2748,27 +2748,27 @@ div.prl-research-highlights {
 }
 
 /* ----------------------------------------------------------------------------------------------------
-                TEMP - 45th ANNUAL MIDWEST/SOUTHEAST PHOTOSYNTHESIS MEETING
+                TEMP - 46th ANNUAL MIDWEST/SOUTHEAST PHOTOSYNTHESIS MEETING
 ---------------------------------------------------------------------------------------------------- */
 
-#fortyfivemidwestphotosynthesis {
+#fortysixmidwestphotosynthesis {
   main nav {
     // Hide nav
     display: none;
   }
-  header .msuMasthead {
+  .header__msuMasthead {
     //  Hide MSU logo in header
     display: none;
   }
-  .departmentNameWrapper {
+  .header__collegeMasthead {
     // Hide Department and College names in header area
     display: none;
   }
-  .departmentFooterPromo {
-    // Remove Natsci logo from footer
+  .departmentFooter__address, .departmentFooter__promoLink {
+    // Remove PRL and Natsci info from footer
     display: none;
   }
-  .msuFooterWrapper {
+  .msufooter {
     // Remove MSU footer
     display: none;
   }

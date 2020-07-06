@@ -7367,21 +7367,21 @@ div.prl-research-highlights .last.hasImage {
   text-align: center; }
 
 /* ----------------------------------------------------------------------------------------------------
-                TEMP - 45th ANNUAL MIDWEST/SOUTHEAST PHOTOSYNTHESIS MEETING
+                TEMP - 46th ANNUAL MIDWEST/SOUTHEAST PHOTOSYNTHESIS MEETING
 ---------------------------------------------------------------------------------------------------- */
-#fortyfivemidwestphotosynthesis main nav {
+#fortysixmidwestphotosynthesis main nav {
   display: none; }
 
-#fortyfivemidwestphotosynthesis header .msuMasthead {
+#fortysixmidwestphotosynthesis .header__msuMasthead {
   display: none; }
 
-#fortyfivemidwestphotosynthesis .departmentNameWrapper {
+#fortysixmidwestphotosynthesis .header__collegeMasthead {
   display: none; }
 
-#fortyfivemidwestphotosynthesis .departmentFooterPromo {
+#fortysixmidwestphotosynthesis .departmentFooter__address, #fortysixmidwestphotosynthesis .departmentFooter__promoLink {
   display: none; }
 
-#fortyfivemidwestphotosynthesis .msuFooterWrapper {
+#fortysixmidwestphotosynthesis .msufooter {
   display: none; }
 
 .midwest-photosynthesis.depth-1 .mainCol h1.pageTitle {
