@@ -257,5 +257,5 @@ if ('content' in document.createElement('template')) {
     sideNav[0].children[0].textContent = "Resources";
     delete sideNav
   };
-  delete signInOutSection
+  delete signInOutSectio  n
 }());

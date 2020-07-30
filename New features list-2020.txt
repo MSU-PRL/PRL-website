@@ -18,6 +18,11 @@
         http://demo.vellumwp.com/home-pages/wedding/
         https://css-tricks.com/sticky-smooth-active-nav/
 
+      Scrolling demos:
+        https://codepen.io/Coding_Journey/pen/xyjwpr?editors=0010 TUT: https://www.youtube.com/watch?v=hPT1SSHptWA
+        https://codepen.io/maxxheth/pen/oVYRdm?editors=0010
+        https://codepen.io/SitePoint/pen/YqewzZ TUT: https://www.sitepoint.com/smooth-scrolling-vanilla-javascript/
+
     Thoughts: use the button style, because there is no need to take much space with a TOC-style nav.
       However, it is important that the button purpose and visibility be clear to visitors.
   - consider smaller hero image

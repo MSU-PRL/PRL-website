@@ -1,0 +1,145 @@
+body {
+  height: 150vh;
+  font-family: Arial, sans-serif;
+}
+
+article.body-content p {
+  margin-bottom: 40vh;
+}
+
+aside {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0px;
+}
+
+.prl-sticky-nav-inner {
+  position: relative;
+  background: rgba(46,77,77, 0.975); // PRL green
+  overflow: hidden;
+  transition: width .3s;
+  width: 42.5px;
+  z-index: 99;
+  will-change: width;
+  
+  &:hover {
+    width: 225px;
+    
+    li .text {
+      opacity:1;
+    }
+  }
+}
+
+ul {
+  float: right;
+  width: 225px;
+  height: auto;
+  margin: 0;
+  padding: 10px 16.5px 10px 10px;
+  list-style: none;
+}
+
+li {
+  text-align: right;
+  line-height: 30px;
+  
+  &:hover {
+    a {
+      color: #c4a43b; //Lighter version of secondary PRL color      
+    }
+    
+    span {
+      background: #c4a43b; // Lighter version of secondary PRL color
+    }
+  }
+}
+
+aside a, aside .prl-sticky-nav-title {
+  color: white;
+  transition: color .2s;
+}
+
+.prl-sticky-nav-title {
+  font-size: 10px;
+  padding-top: 10px;
+  padding-right: 9.5px;
+  text-align: right;
+}
+
+.text {
+  display: inline-block;
+  transition: opacity .2s;
+  margin-right: 20px;
+  opacity: 0;
+
+}
+
+// Bullet points
+span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 100%;
+  transition: background .2s;
+}
+
+.aside-helper {
+  position: absolute;
+  font-size: 12px;
+  bottom: 14px;
+  width: 150px;
+  padding: 6px;
+  color: white;
+  right: 56px;
+  background: rgba(46,77,77, 1); // PRL green
+  animation-name: aside-helper-disappear;
+  animation-duration: 4s;
+  animation-timing-function: ease-in-out ;
+  animation-fill-mode: forwards;
+
+  &:after {
+    content: "\25BA";
+    color: rgba(46,77,77, 1); // PRL green
+    position: absolute;
+    right: -13px;
+    font-size: 16px;
+  }
+}
+
+
+@keyframes aside-helper-disappear {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+// Not nessesary
+// .look-here {
+//   font-size: 150px;
+//   color: grey;
+//   position: fixed;
+//   top: 40%;
+//   width: 100%;
+//   text-align: center;
+//   span {
+//     display: inline;
+//     font-size: 30px;
+//     background: none;
+//     border-radius: 0;
+//     margin-right: 30px;
+//     position: relative;
+//     top: -30px;
+//   }
+// }

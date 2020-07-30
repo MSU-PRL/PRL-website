@@ -1,0 +1,7 @@
+# CSS sticky side-nav
+
+A Pen created on CodePen.io. Original URL: [https://codepen.io/houwat/pen/jOWoEoz](https://codepen.io/houwat/pen/jOWoEoz).
+
+for MSU-DOE Plant Research Laboratory about page: https://prl.natsci.msu.edu/about/
+
+Sticky side nav. Menu automatically populates by scrubbing body content for headers with links.
