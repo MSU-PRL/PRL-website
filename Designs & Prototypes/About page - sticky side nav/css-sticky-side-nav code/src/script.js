@@ -33,10 +33,11 @@
 };
   
 var menuLinkClick = (event) => {
-  smoothScroll(event) // Use smooth scroll function
+  smoothScroll(event) // Use smooth scroll function when clicking on link
 } 
 
 var smoothScroll = (event) => {
+  // Smooth scroll function
   event.preventDefault();
   var targetId = event.currentTarget.getAttribute("href");
   var targetPosition = document.querySelector(targetId).offsetTop;
@@ -56,6 +57,7 @@ var smoothScroll = (event) => {
 
 
   var easeInOutCubic = (t, b, c, d) => {
+    // Timing of scroll function
     t /= d/2;
     if (t < 1) return c/2*t*t*t + b;
     t -= 2;
@@ -65,19 +67,21 @@ var smoothScroll = (event) => {
   return window.requestAnimationFrame(scrollAnimation);
 
 } 
-  
-  window.onscroll = function(){appearUnderHeroImage()}
-  var appearUnderHeroImage = () => {
+  // From here on 
+  window.onscroll = function(){toggleSideMenuVisibility()}
+  var toggleSideMenuVisibility = () => {
     var textStartPosition = document.querySelector('article').firstElementChild.offsetTop;
     var windowCoords = document.body.getBoundingClientRect().top;
     var aside = document.getElementById('#prl-sticky-nav')
     var asideHelper = document.body.querySelector('.aside-helper');
 
     if (Math.abs(windowCoords) > textStartPosition - 200){
+      // Detect if window is close to where text starts, side menu becomes visible
       aside.classList.add('aside-visible'); 
       if(window.sessionStorage.getItem('first view') === null) {
+        // hover helper text appears only once per browser session
         window.sessionStorage.setItem('first view', true) 
-        asideHelper.style.animationName = 'aside-helper-disappear' // hover helper text appears once per session
+        asideHelper.style.animationName = 'aside-helper-disappear'
       }
       else if (window.sessionStorage.getItem('first view') === true) {
         asideHelper.removeAttribute("style");
@@ -89,7 +93,7 @@ var smoothScroll = (event) => {
     }
   }
 
-  return createMenuAnchors(), appearUnderHeroImage()
+  return createMenuAnchors(), toggleSideMenuVisibility()
 
 }());
 
