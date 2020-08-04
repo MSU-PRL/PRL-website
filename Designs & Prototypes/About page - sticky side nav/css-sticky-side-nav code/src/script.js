@@ -1,18 +1,18 @@
 (function populateStickySideMenu() {
-  var headerTags = document.getElementsByTagName('h2');
-  var prlStickyMenuInner = document.querySelector('.prl-sticky-nav-inner');
-  var ul = document.createElement('ul')
+  const headerTags = document.getElementsByTagName('h2');
+  const prlStickyMenuInner = document.querySelector('.prl-sticky-nav-inner');
+  const ul = document.createElement('ul')
   prlStickyMenuInner.appendChild(ul)
-  var prlStickyMenu = document.querySelector('.prl-sticky-nav-inner ul');
+  const prlStickyMenu = document.querySelector('.prl-sticky-nav-inner ul');
     
-  var createMenuAnchors = () => {
+  const createMenuAnchors = () => {
     for (i of headerTags) {
     // Create menu links based on h2 tags in document
-    var listItem = document.createElement('li');
-    var div = document.createElement('div');
-    var span = document.createElement('span');
-    var anchor = document.createElement('a');
-    var anchorAttributeName = i.textContent.toLowerCase().replace(/\s+/g, '-')
+    const listItem = document.createElement('li');
+    const div = document.createElement('div');
+    const span = document.createElement('span');
+    const anchor = document.createElement('a');
+    const anchorAttributeName = i.textContent.toLowerCase().replace(/\s+/g, '-')
     div.textContent = i.textContent
     div.className = 'text'
     anchor.appendChild(div)
@@ -23,7 +23,7 @@
     prlStickyMenu.append(listItem)
 
     // Create corresponding h2 anchor targets in document body
-    var anchorTarget = document.createElement('a')
+    const anchorTarget = document.createElement('a')
     anchorTarget.id = anchorAttributeName;
     anchorTarget.name = anchorAttributeName;
     anchorTarget.textContent = i.textContent
@@ -32,31 +32,31 @@
   }
 };
   
-var menuLinkClick = (event) => {
+const menuLinkClick = (event) => {
   smoothScroll(event) // Use smooth scroll function when clicking on link
 } 
 
-var smoothScroll = (event) => {
+const smoothScroll = (event) => {
   // Smooth scroll function
   event.preventDefault();
-  var targetId = event.currentTarget.getAttribute("href");
-  var targetPosition = document.querySelector(targetId).offsetTop;
-  var startPosition = window.pageYOffset;
-  var distance = targetPosition - startPosition;
-  var duration = 1000;
+  const targetId = event.currentTarget.getAttribute("href");
+  const targetPosition = document.querySelector(targetId).offsetTop;
+  const startPosition = window.pageYOffset;
+  const distance = targetPosition - startPosition;
+  const duration = 1000;
   let start = null;
 
-  var scrollAnimation = (timestamp) => {
+  const scrollAnimation = (timestamp) => {
     if (!start) {
       start = timestamp
     };
-    var progress = timestamp - start;
+    const progress = timestamp - start;
     window.scrollTo(0, easeInOutCubic(progress, startPosition, distance, duration));
     if (progress < duration) window.requestAnimationFrame(scrollAnimation);
   }
 
 
-  var easeInOutCubic = (t, b, c, d) => {
+  const easeInOutCubic = (t, b, c, d) => {
     // Timing of scroll function
     t /= d/2;
     if (t < 1) return c/2*t*t*t + b;
@@ -69,11 +69,11 @@ var smoothScroll = (event) => {
 } 
   // From here on 
   window.onscroll = function(){toggleSideMenuVisibility()}
-  var toggleSideMenuVisibility = () => {
-    var textStartPosition = document.querySelector('article').firstElementChild.offsetTop;
-    var windowCoords = document.body.getBoundingClientRect().top;
-    var aside = document.getElementById('#prl-sticky-nav')
-    var asideHelper = document.body.querySelector('.aside-helper');
+  const toggleSideMenuVisibility = () => {
+    const textStartPosition = document.querySelector('article').firstElementChild.offsetTop;
+    const windowCoords = document.body.getBoundingClientRect().top;
+    const aside = document.getElementById('#prl-sticky-nav')
+    const asideHelper = document.body.querySelector('.aside-helper');
 
     if (Math.abs(windowCoords) > textStartPosition - 200){
       // Detect if window is close to where text starts, side menu becomes visible
