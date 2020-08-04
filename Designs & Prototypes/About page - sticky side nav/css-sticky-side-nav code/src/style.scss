@@ -37,7 +37,7 @@ aside {
   z-index: 99;
   will-change: width;
   
-  &:hover {
+  &:hover, {
     width: 225px;
     
     li .text {
@@ -59,7 +59,7 @@ li {
   text-align: right;
   line-height: 30px;
   
-  &:hover {
+  &:hover, &:focus {
     a {
       color: #c4a43b; //Lighter version of secondary PRL color      
     }
@@ -68,6 +68,21 @@ li {
       background: #c4a43b; // Lighter version of secondary PRL color
     }
   }
+}
+
+.li-focused {
+  a {
+    color: #c4a43b; //Lighter version of secondary PRL color      
+  }
+  
+  span {
+    background: #c4a43b; // Lighter version of secondary PRL color
+  }
+  
+  .text {
+    opacity: 1;
+  }
+
 }
 
 aside a, aside .prl-sticky-nav-title {
@@ -86,8 +101,7 @@ aside a, aside .prl-sticky-nav-title {
   display: inline-block;
   transition: opacity .2s;
   margin-right: 20px;
-  opacity: 0;
-
+  // opacity: 0;
 }
 
 // Bullet points
@@ -110,7 +124,6 @@ span {
   right: 56px;
   opacity: 0;
   background: rgba(46,77,77, 1); // PRL green
-  // animation-name: aside-helper-disappear; // Done through JS
   animation-duration: 4s;
   animation-timing-function: ease-in-out ;
   animation-fill-mode: forwards;
@@ -122,6 +135,10 @@ span {
     right: -13px;
     font-size: 16px;
   }
+}
+
+.aside-appear {
+  animation-name: aside-helper-disappear; // Done through JS
 }
 
 

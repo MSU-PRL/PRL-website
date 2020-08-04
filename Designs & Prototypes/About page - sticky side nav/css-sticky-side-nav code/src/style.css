@@ -51,10 +51,19 @@ ul {
 li {
   text-align: right;
   line-height: 30px; }
-  li:hover a {
+  li:hover a, li:focus a {
     color: #c4a43b; }
-  li:hover span {
+  li:hover span, li:focus span {
     background: #c4a43b; }
+
+.li-focused a {
+  color: #c4a43b; }
+
+.li-focused span {
+  background: #c4a43b; }
+
+.li-focused .text {
+  opacity: 1; }
 
 aside a, aside .prl-sticky-nav-title {
   color: white;
@@ -71,8 +80,7 @@ aside a, aside .prl-sticky-nav-title {
   display: inline-block;
   -webkit-transition: opacity .2s;
   transition: opacity .2s;
-  margin-right: 20px;
-  opacity: 0; }
+  margin-right: 20px; }
 
 span {
   display: inline-block;
@@ -105,6 +113,10 @@ span {
     position: absolute;
     right: -13px;
     font-size: 16px; }
+
+.aside-appear {
+  -webkit-animation-name: aside-helper-disappear;
+          animation-name: aside-helper-disappear; }
 
 @-webkit-keyframes aside-helper-disappear {
   0% {
