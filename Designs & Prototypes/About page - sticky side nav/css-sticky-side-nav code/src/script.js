@@ -109,7 +109,7 @@
   // WINDOW LISTENER TOGGLES MENU VISBILITY ON SCROLL
 
   window.onscroll = () => { toggleMenuVisibility(largeScreenSize) }
-  const largeScreenSize = window.matchMedia("(min-width: 768px")
+  const largeScreenSize = window.matchMedia("(min-width: 768px)")
 
   const toggleMenuVisibility = (largeScreenSize) => {
     const textStartPosition = document.querySelector('article').firstElementChild.offsetTop;
