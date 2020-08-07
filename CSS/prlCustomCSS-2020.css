@@ -5437,7 +5437,8 @@ aside#prl-sticky-nav a, aside#prl-sticky-nav .prl-sticky-nav-title {
   transition: color .2s;
   text-decoration: none;
   border-bottom: none;
-  font-size: 13px; }
+  font-size: 13px;
+  font-weight: 500; }
 
 aside#prl-sticky-nav .prl-sticky-nav-title {
   font-size: 10px;
