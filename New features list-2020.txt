@@ -1,5 +1,5 @@
 - PRL About page: 
-  - add inline navigation
+  - DONE add inline navigation
     Reading material: 
       (have read) https://www.smashingmagazine.com/2017/05/long-scrolling/ 
       (have read) https://www.nngroup.com/articles/in-page-links/

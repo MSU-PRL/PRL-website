@@ -646,7 +646,7 @@
     section {
       margin: 150px 0; // Adding top and bottom margins between sections
     }
-    section:first-child {
+    section:first-of-type {
       // Getting first text block up to h1
       margin-top: 0px;
     }

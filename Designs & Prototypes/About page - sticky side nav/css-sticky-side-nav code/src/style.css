@@ -50,7 +50,8 @@ aside#prl-sticky-nav .prl-sticky-nav-inner-focused {
 aside#prl-sticky-nav a, aside#prl-sticky-nav .prl-sticky-nav-title {
   color: white;
   -webkit-transition: color .2s;
-  transition: color .2s; }
+  transition: color .2s;
+  text-decoration: none; }
 
 aside#prl-sticky-nav .prl-sticky-nav-title {
   font-size: 10px;
