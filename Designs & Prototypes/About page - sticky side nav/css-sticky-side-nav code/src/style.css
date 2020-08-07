@@ -145,6 +145,6 @@ aside#prl-sticky-nav .aside-appear {
   100% {
     opacity: 0; } }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   aside#prl-sticky-nav.aside-visible, aside#prl-sticky-nav {
     visibility: hidden; } }

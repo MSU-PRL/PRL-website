@@ -1,5 +1,6 @@
 (function populateStickySideMenu() {
   const headerTags = document.getElementsByTagName('h2');
+  const aside = document.getElementById('prl-sticky-nav')
   const prlStickyMenuInner = document.querySelector('.prl-sticky-nav-inner');
   const ul = document.createElement('ul')
   prlStickyMenuInner.appendChild(ul)
@@ -88,8 +89,8 @@
   const menuLinkOnBlur = (event) => {
     // On blur, close menu
     event.currentTarget.removeAttribute('class');
-    event.path[2].lastElementChild === event.currentTarget// If current link is last link in menu
-    || event.path[2].firstElementChild === event.currentTarget // Or if current link is first link in menu
+    event.composedPath[2].lastElementChild === event.currentTarget// If current link is last link in menu
+    || event.composedPath[2].firstElementChild === event.currentTarget // Or if current link is first link in menu
     ? prlStickyMenuInner.classList.remove('prl-sticky-nav-inner-focused') // Remove focus class 
     : null;
   }
@@ -105,31 +106,42 @@
   };
   prlStickyMenuInner.addEventListener('mouseleave', menuOnMouseLeave);
 
-  // WINDOW LISTENER TOGGLES MENU VISBILITY
+  // WINDOW LISTENER TOGGLES MENU VISBILITY ON SCROLL
 
-  window.onscroll = () => { toggleMenuVisibility() }
+  window.onscroll = () => { toggleMenuVisibility(largeScreenSize) }
+  const largeScreenSize = window.matchMedia("(min-width: 768px")
 
-  const toggleMenuVisibility = () => {
+  const toggleMenuVisibility = (largeScreenSize) => {
     const textStartPosition = document.querySelector('article').firstElementChild.offsetTop;
-    const windowCoords = document.body.getBoundingClientRect().top;
-    const aside = document.getElementById('prl-sticky-nav')
+    const windowCoords = Math.abs(document.body.getBoundingClientRect().top);
+    const distanceFromTop = textStartPosition - 200;
+
     // Detect if window is close to where text starts, side menu becomes visible
-    if (Math.abs(windowCoords) > textStartPosition - 200){
+    if (windowCoords > distanceFromTop && largeScreenSize.matches){
       aside.classList.add('aside-visible');
       aside.classList.remove('aside-hidden');
-      aside.setAttribute('aria-hidden', false)
+      aside.setAttribute('aria-hidden', 'false');
       detectBrowserSession(); // ensures aside helper text appears once during browser session
     }
+
     // Detect if window object close to page top, menu disappears
-    else if (Math.abs(windowCoords) < textStartPosition - 200) {
+    else if (windowCoords < distanceFromTop && largeScreenSize.matches) {
       aside.classList.add('aside-hidden');
       aside.classList.remove('aside-visible');
-      aside.setAttribute('aria-hidden', true);
+      aside.setAttribute('aria-hidden', 'true');
       // If menu is focused, remove focus and close menu
       prlStickyMenuInner.classList.remove('prl-sticky-nav-inner-focused'); // If a menu is expanded on focus interaction, close it when it disappears
       const focusedLink = document.querySelector('.li-focused');
       focusedLink ? focusedLink.classList = '' : null
     }
+
+    // Hide menu on smaller screen sizes and remove aria-hidden attribu
+    else if (!largeScreenSize.matches) {
+      aside.className = 'aside-hidden';
+      aside.removeAttribute('aria-hidden');
+    }
+
+
   }
 
   const detectBrowserSession = () => {
@@ -143,8 +155,9 @@
       asideHelper.classList.remove('aside-appear');
     }
   }
+  
+  return createMenu()
 
-  return createMenu(), toggleMenuVisibility()
 
 }());
 
@@ -158,5 +171,5 @@
 // DONE Inject aside when reaching top of body content
 // DONE accessibility: added aria-hidden property 
 // DONE accesibility: added menu expan on focus interaction
-/* Remove visibility on disappear and on mobile screens,
+/* DONE Remove visibility on disappear and on mobile screens,
   otherwise component remains interactive on touchscreens */
