@@ -135,7 +135,7 @@
       focusedLink ? focusedLink.classList = '' : null
     }
 
-    // Hide menu on smaller screen sizes and remove aria-hidden attribu
+    // Hide menu on smaller screen sizes and remove aria-hidden attribute
     else if (!largeScreenSize.matches) {
       aside.className = 'aside-hidden';
       aside.removeAttribute('aria-hidden');
