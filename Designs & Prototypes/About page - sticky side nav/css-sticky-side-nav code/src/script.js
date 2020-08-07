@@ -89,8 +89,8 @@
   const menuLinkOnBlur = (event) => {
     // On blur, close menu
     event.currentTarget.removeAttribute('class');
-    event.composedPath[2].lastElementChild === event.currentTarget// If current link is last link in menu
-    || event.composedPath[2].firstElementChild === event.currentTarget // Or if current link is first link in menu
+    event.composedPath()[2].lastElementChild === event.currentTarget// If current link is last link in menu
+    || event.composedPath()[2].firstElementChild === event.currentTarget // Or if current link is first link in menu
     ? prlStickyMenuInner.classList.remove('prl-sticky-nav-inner-focused') // Remove focus class 
     : null;
   }
@@ -135,9 +135,8 @@
       focusedLink ? focusedLink.classList = '' : null
     }
 
-    // Hide menu on smaller screen sizes and remove aria-hidden attribute
+    // Remove aria-hidden attribute on small screen sizes
     else if (!largeScreenSize.matches) {
-      aside.className = 'aside-hidden';
       aside.removeAttribute('aria-hidden');
     }
 
