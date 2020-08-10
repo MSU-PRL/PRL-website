@@ -5498,7 +5498,7 @@ aside#prl-sticky-nav .aside-helper {
   color: white;
   right: 56px;
   opacity: 0;
-  background: #2e4d4d;
+  background: #2E4D4D;
   -webkit-animation-duration: 4s;
           animation-duration: 4s;
   -webkit-animation-timing-function: ease-in-out;
@@ -5507,7 +5507,7 @@ aside#prl-sticky-nav .aside-helper {
           animation-fill-mode: forwards; }
   aside#prl-sticky-nav .aside-helper:after {
     content: "\25BA";
-    color: #2e4d4d;
+    color: #2E4D4D;
     position: absolute;
     right: -13px;
     font-size: 16px; }

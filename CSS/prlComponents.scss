@@ -1027,7 +1027,7 @@ aside#prl-sticky-nav {
   .prl-sticky-nav-inner {
     // Inner container
     position: relative;
-    background: rgba(46,77,77, 0.975); // PRL green
+    background: rgba(46,77,77, 0.975); // PRL primary color green
     overflow: hidden;
     transition: width .3s;
     width: 42.5px;
@@ -1130,14 +1130,14 @@ aside#prl-sticky-nav {
     color: white;
     right: 56px;
     opacity: 0;
-    background: rgba(46,77,77, 1); // PRL green
+    background: $primary-color; // PRL primary color
     animation-duration: 4s;
     animation-timing-function: ease-in-out ;
     animation-fill-mode: forwards;
   
     &:after {
       content: "\25BA";
-      color: rgba(46,77,77, 1); // PRL green
+      color: $primary-color; // PRL primary color
       position: absolute;
       right: -13px;
       font-size: 16px;
@@ -1145,7 +1145,7 @@ aside#prl-sticky-nav {
   }
   
   .aside-appear {
-    animation-name: aside-helper-disappear; // Done through JS
+    animation-name: aside-helper-disappear; // Added through JS
   }
   
   @keyframes aside-helper-disappear {
