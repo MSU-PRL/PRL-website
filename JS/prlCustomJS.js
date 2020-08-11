@@ -245,170 +245,220 @@ if ('content' in document.createElement('template')) {
   }
 }
 
-// STICKY, OR FLOATING, MENU COMPONENT
+// STICKY/FLOATING, MENU COMPONENT
 
 (function populateStickySideMenu() {
-  const headerTags = document.querySelectorAll('.mainContent__mainCol h2');
-  const aside = document.getElementById('prl-sticky-nav')
+  // This script looks for an HTML div element with class name 'prl-sticky-nav'
+  // in order to build the menu
   const prlStickyMenuInner = document.querySelector('.prl-sticky-nav-inner');
-  const ul = document.createElement('ul')
-  prlStickyMenuInner.appendChild(ul)
-  const prlStickyMenuList = document.querySelector('.prl-sticky-nav-inner ul');
+
+  if(prlStickyMenuInner) {
+    const headerTags = document.querySelectorAll('.mainContent__mainCol h2');
+    const aside = document.getElementById('prl-sticky-nav')
+    const ul = document.createElement('ul')
+    prlStickyMenuInner.appendChild(ul)
+    const prlStickyMenuList = document.querySelector('.prl-sticky-nav-inner ul');
+    // CREATE MENU
   
-  // CREATE MENU
-
-  const createMenu = () => {
-    for (i of headerTags) {
-      // Create menu links based on h2 tags in document
-      const listItem = document.createElement('li');
-      const div = document.createElement('div');
-      const span = document.createElement('span');
-      const anchor = document.createElement('a');
-      const anchorAttributeName = i.textContent.toLowerCase().replace(/\s+/g, '-')
-
-      listItem.addEventListener('focusin', menuLinkOnFocus);
-      listItem.addEventListener('focusout', menuLinkOnBlur);
-      div.textContent = i.textContent
-      div.className = 'text'
-      anchor.appendChild(div)
-      anchor.appendChild(span)
-      anchor.addEventListener('click', menuLinkClick);
-      anchor.href = '#' + anchorAttributeName
-      listItem.appendChild(anchor)
-      prlStickyMenuList.append(listItem)
-
-      // Create corresponding h2 anchor targets in document body
-      const anchorTarget = document.createElement('a')
-      anchorTarget.id = anchorAttributeName;
-      anchorTarget.name = anchorAttributeName;
-      // Inline styles to override default anchor styles
-      anchorTarget.style.cssText = "border-bottom: none;text-decoration: none;color: inherit;font-weight: inherit;" 
-      anchorTarget.textContent = i.textContent
-      oldNode = i.childNodes[0]
-      i.replaceChild(anchorTarget, oldNode)
-    }
-  };
+    const createMenu = () => {
+      for (i of headerTags) {
+        // Create menu links based on h2 tags in document
+        const listItem = document.createElement('li');
+        const div = document.createElement('div');
+        const span = document.createElement('span');
+        const anchor = document.createElement('a');
+        const anchorAttributeName = i.textContent.toLowerCase().replace(/\s+/g, '-')
   
-  // ANIMATE SCROLL
-
-  const menuLinkClick = (event) => {
-    // Use smooth scroll function when clicking on link
-    smoothScroll(event) 
-  } 
-
-  const smoothScroll = (event) => {
-    // Smooth scroll function
-    event.preventDefault();
-    const targetId = event.currentTarget.getAttribute("href");
-    const targetPosition = document.querySelector(targetId).offsetTop;
-    const startPosition = window.pageYOffset;
-    const distance = targetPosition - startPosition;
-    const duration = 1000;
-    let start = null;
-
-    const scrollAnimation = (timestamp) => {
-      if (!start) {
-        start = timestamp
-      };
-      const progress = timestamp - start;
-      window.scrollTo(0, easeInOutCubic(progress, startPosition, distance, duration));
-      if (progress < duration) window.requestAnimationFrame(scrollAnimation);
-    }
-
-    const easeInOutCubic = (t, b, c, d) => {
-      // Timing of scroll function
-      t /= d/2;
-      if (t < 1) return c/2*t*t*t + b;
-      t -= 2;
-      return c/2*(t*t*t + 2) + b;
+        listItem.addEventListener('focusin', menuLinkOnFocus);
+        listItem.addEventListener('focusout', menuLinkOnBlur);
+        div.textContent = i.textContent
+        div.className = 'text'
+        anchor.appendChild(div)
+        anchor.appendChild(span)
+        anchor.addEventListener('click', menuLinkClick);
+        anchor.href = '#' + anchorAttributeName
+        listItem.appendChild(anchor)
+        prlStickyMenuList.append(listItem)
+  
+        // Create corresponding h2 anchor targets in document body
+        const anchorTarget = document.createElement('a')
+        anchorTarget.id = anchorAttributeName;
+        anchorTarget.name = anchorAttributeName;
+        // Inline styles to override default anchor styles
+        anchorTarget.style.cssText = "border-bottom: none;text-decoration: none;color: inherit;font-weight: inherit;" 
+        anchorTarget.textContent = i.textContent
+        oldNode = i.childNodes[0]
+        i.replaceChild(anchorTarget, oldNode)
+      }
     };
-    
-    return window.requestAnimationFrame(scrollAnimation);
-
-  } 
-
-  // MENU LISTENERS
-
-  const menuLinkOnFocus = (event) => {
-    // On focus, open menu and change link color
-    event.currentTarget.classList.add('li-focused')
-    !prlStickyMenuInner.classList.contains('prl-sticky-nav-inner-focused') 
-    ? prlStickyMenuInner.classList.add('prl-sticky-nav-inner-focused')
-    : undefined;
-  }
-
-  const menuLinkOnBlur = (event) => {
-    // On blur, close menu
-    event.currentTarget.removeAttribute('class');
-    event.composedPath()[2].lastElementChild === event.currentTarget// If current link is last link in menu
-    || event.composedPath()[2].firstElementChild === event.currentTarget // Or if current link is first link in menu
-    ? prlStickyMenuInner.classList.remove('prl-sticky-nav-inner-focused') // Remove focus class 
-    : null;
-  }
-
-  const menuOnMouseLeave = (event) => {
-    // Close menu and remove focused stylings when mouse leaves menu
-    focused = document.querySelector('.li-focused')
-    focused
-    ? focused.removeAttribute('class')
-    : null
-
-    prlStickyMenuInner.classList.remove('prl-sticky-nav-inner-focused') // Remove focus class 
-  };
-  prlStickyMenuInner.addEventListener('mouseleave', menuOnMouseLeave);
-
-  // WINDOW LISTENER TOGGLES MENU VISBILITY ON SCROLL
-
-  window.onscroll = () => { toggleMenuVisibility(largeScreenSize) }
-  const largeScreenSize = window.matchMedia("(min-width: 768px)")
-
-  const toggleMenuVisibility = (largeScreenSize) => {
-    const textStartPosition = document.querySelector('.mainContent__mainCol').offsetTop;
-    const windowCoords = Math.abs(document.body.getBoundingClientRect().top);
-    const distanceFromTop = textStartPosition - 200;
-
-    // Detect if window is close to where text starts, side menu becomes visible
-    if (windowCoords > distanceFromTop && largeScreenSize.matches){
-      aside.classList.add('aside-visible');
-      aside.classList.remove('aside-hidden');
-      aside.setAttribute('aria-hidden', 'false');
-      detectBrowserSession(); // ensures aside helper text appears once during browser session
-    }
-
-    // Detect if window object close to page top, menu disappears
-    else if (windowCoords < distanceFromTop && largeScreenSize.matches) {
-      aside.classList.add('aside-hidden');
-      aside.classList.remove('aside-visible');
-      aside.setAttribute('aria-hidden', 'true');
-      // If menu is focused, remove focus and close menu
-      prlStickyMenuInner.classList.remove('prl-sticky-nav-inner-focused'); // If a menu is expanded on focus interaction, close it when it disappears
-      const focusedLink = document.querySelector('.li-focused');
-      focusedLink ? focusedLink.classList = '' : null
-    }
-
-    // Remove aria-hidden attribute on small screen sizes
-    else if (!largeScreenSize.matches) {
-      aside.removeAttribute('aria-hidden');
-    }
-
-
-  }
-
-  const detectBrowserSession = () => {
-    const asideHelper = document.body.querySelector('.aside-helper');
-    // hover helper text appears only once per browser session
-    if(window.sessionStorage.getItem('first view') === null) {
-      window.sessionStorage.setItem('first view', true) 
-      asideHelper.classList.add('aside-appear');
-    }
-    else if (window.sessionStorage.getItem('first view') === true) {
-      asideHelper.classList.remove('aside-appear');
-    }
-  }
+    // animate the scroll effect
   
-  return createMenu()
+    const menuLinkClick = (event) => {
+      // Use smooth scroll function when clicking on link
+      smoothScroll(event) 
+    } 
+  
+    const smoothScroll = (event) => {
+      // Smooth scroll function
+      event.preventDefault();
+      const targetId = event.currentTarget.getAttribute("href");
+      const targetPosition = document.querySelector(targetId).offsetTop;
+      const startPosition = window.pageYOffset;
+      const distance = targetPosition - startPosition;
+      const duration = 1000;
+      let start = null;
+  
+      const scrollAnimation = (timestamp) => {
+        if (!start) {
+          start = timestamp
+        };
+        const progress = timestamp - start;
+        window.scrollTo(0, easeInOutCubic(progress, startPosition, distance, duration));
+        if (progress < duration) window.requestAnimationFrame(scrollAnimation);
+      }
+  
+      const easeInOutCubic = (t, b, c, d) => {
+        // Timing of scroll function
+        t /= d/2;
+        if (t < 1) return c/2*t*t*t + b;
+        t -= 2;
+        return c/2*(t*t*t + 2) + b;
+      };
+      
+      return window.requestAnimationFrame(scrollAnimation);
+  
+    } 
+  
+    // sticky menu listeners
+  
+    const menuLinkOnFocus = (event) => {
+      // On focus, open menu and change link color
+      event.currentTarget.classList.add('li-focused')
+      !prlStickyMenuInner.classList.contains('prl-sticky-nav-inner-focused') 
+      ? prlStickyMenuInner.classList.add('prl-sticky-nav-inner-focused')
+      : undefined;
+    }
+  
+    const menuLinkOnBlur = (event) => {
+      // On blur, close menu
+      event.currentTarget.removeAttribute('class');
+      event.composedPath()[2].lastElementChild === event.currentTarget// If current link is last link in menu
+      || event.composedPath()[2].firstElementChild === event.currentTarget // Or if current link is first link in menu
+      ? prlStickyMenuInner.classList.remove('prl-sticky-nav-inner-focused') // Remove focus class 
+      : null;
+    }
+  
+    const menuOnMouseLeave = (event) => {
+      // Close menu and remove focused stylings when mouse leaves menu
+      focused = document.querySelector('.li-focused')
+      focused
+      ? focused.removeAttribute('class')
+      : null
+  
+      prlStickyMenuInner.classList.remove('prl-sticky-nav-inner-focused') // Remove focus class 
+    };
+    prlStickyMenuInner.addEventListener('mouseleave', menuOnMouseLeave);
+  
+    // window listener toggles menu visibility on scroll
+  
+    window.onscroll = () => { toggleMenuVisibility(largeScreenSize) }
+    const largeScreenSize = window.matchMedia("(min-width: 768px)")
+  
+    const toggleMenuVisibility = (largeScreenSize) => {
+      const textStartPosition = document.querySelector('.mainContent__mainCol').offsetTop;
+      const windowCoords = Math.abs(document.body.getBoundingClientRect().top);
+      const distanceFromTop = textStartPosition - 200;
+  
+      // Detect if window is close to where text starts, side menu becomes visible
+      if (windowCoords > distanceFromTop && largeScreenSize.matches){
+        aside.classList.add('aside-visible');
+        aside.classList.remove('aside-hidden');
+        aside.setAttribute('aria-hidden', 'false');
+        detectBrowserSession(); // ensures aside helper text appears once during browser session
+      }
+  
+      // Detect if window object close to page top, menu disappears
+      else if (windowCoords < distanceFromTop && largeScreenSize.matches) {
+        aside.classList.add('aside-hidden');
+        aside.classList.remove('aside-visible');
+        aside.setAttribute('aria-hidden', 'true');
+        // If menu is focused, remove focus and close menu
+        prlStickyMenuInner.classList.remove('prl-sticky-nav-inner-focused'); // If a menu is expanded on focus interaction, close it when it disappears
+        const focusedLink = document.querySelector('.li-focused');
+        focusedLink ? focusedLink.classList = '' : null
+      }
+  
+      // Remove aria-hidden attribute on small screen sizes
+      else if (!largeScreenSize.matches) {
+        aside.removeAttribute('aria-hidden');
+      }
+  
+  
+    }
+  
+    const detectBrowserSession = () => {
+      const asideHelper = document.body.querySelector('.aside-helper');
+      // hover helper text appears only once per browser session
+      if(window.sessionStorage.getItem('first view') === null) {
+        window.sessionStorage.setItem('first view', true) 
+        asideHelper.classList.add('aside-appear');
+      }
+      else if (window.sessionStorage.getItem('first view') === true) {
+        asideHelper.classList.remove('aside-appear');
+      }
+    }
+    
+    return createMenu()
+  }
+
+}());
 
 
+// PROGRESS BAR FOR NEWS ARTICLES AND OTHER SELECTED PAGES
+
+
+(function addProgressBar() {
+  // Target pages to add progress bar
+  // Currently the pages are "Web Components Demo" or any news article
+  const page = document.querySelector('.web-components-demo') || document.querySelector('.newsArticle.depth-3');
+  if(page) {
+    const addProgressBarElement = () => {
+      progressBar = document.createElement('div');
+      progressBar.className = ('prl-progress-bar');
+      progressBar.setAttribute('aria-hidden', 'true');
+      progressBar.style.width = '0%';
+      document.body.prepend(progressBar)
+    }
+  
+    const calculateProgressBarProgression = () => {
+      const progressBar = document.body.querySelector('.prl-progress-bar');
+      
+      if(document.querySelector('.newsArticle .prl-narrow-container')) {
+        // This class is added in a custom component for news stories
+        var pageParts = Array.from(document.querySelectorAll('.mainContent__mainCol h1, .prl-narrow-container h2, .prl-narrow-container h3, .prl-narrow-container p, .prl-narrow-container img'))
+      } else {
+        var pageParts = Array.from(document.querySelectorAll('.mainContent__mainCol h1, .mainContent__mainCol h2, .mainContent__mainCol h3, .mainContent__mainCol p, .mainContent__mainCol code, .mainContent__mainCol img'))
+      }
+
+      console.log('page progress bar sections', pageParts)
+  
+      let observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if(entry.intersectionRatio === 1){
+            pagePartsIndex = pageParts.indexOf(entry.target) + 1
+            percentageScrolled = (pagePartsIndex / pageParts.length)*100
+            progressBar.style.width = percentageScrolled + "%"
+          }
+        })
+      }, {threshold: 1});
+      
+      pageParts.forEach(part => observer.observe(part))
+    }
+    
+    window.onload = () => { addProgressBarElement(), calculateProgressBarProgression() }
+    window.onresize = () => { calculateProgressBarProgression() }
+
+  }
 }());
 
 

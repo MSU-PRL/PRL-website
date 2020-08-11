@@ -28,7 +28,7 @@
   - consider smaller hero image
   - remove BES grant number
   - add prominent alumni/findings (the Zoom timeline has a feature that could work for this)
-- News story progress bar and stating number of minutes:
+- DONE News story progress bar and stating number of minutes:
     https://ghost.org/tutorials/show-reading-time-progress/
     https://codepen.io/rgg/details/QbRyOq
 - New ‘for the public’ page, including BMC videos. Need to figure out a narrative for this

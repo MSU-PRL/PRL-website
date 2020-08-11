@@ -12,7 +12,8 @@ img {
 
 article p {
   margin: 20px auto;
-  width: 600px;
+  max-width: 600px;
+  padding: 0 8px;
 }
 
 .extra-bottom-part {

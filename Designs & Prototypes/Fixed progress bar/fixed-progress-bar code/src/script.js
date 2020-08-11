@@ -2,6 +2,7 @@ addProgressBarElement = () => {
   progressBar = document.createElement('div');
   progressBar.className = ('prl-progress-bar');
   progressBar.setAttribute('aria-hidden', 'true');
+  progressBar.style.width = '0%';
   document.body.prepend(progressBar)
 }
 
@@ -22,20 +23,20 @@ addProgressBarElement = () => {
 // Approach 2. Intersection observer method
 calculateProgressBarProgression = () => {
   const progressBar = document.body.querySelector('.prl-progress-bar');
-  const articleParts = Array.from(document.querySelectorAll('article > .prl-narrow-container > *'))
-  console.log(articleParts)
+  const pageParts = Array.from(document.querySelectorAll('article > .prl-narrow-container > *'))
+  console.log('sections to calculate progress bar', pageParts)
 
   let observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if(entry.intersectionRatio === 1){
-        articlePartsIndex = articleParts.indexOf(entry.target) + 1
-        percentageScrolled = (articlePartsIndex / articleParts.length)*100
+        pagePartsIndex = pageParts.indexOf(entry.target) + 1
+        percentageScrolled = (pagePartsIndex / pageParts.length)*100
         progressBar.style.width = percentageScrolled + "%"
       }
     })
   }, {threshold: 1});
   
-  articleParts.forEach(part => observer.observe(part))
+  pageParts.forEach(part => observer.observe(part))
 }
 
 window.onload = () => { addProgressBarElement(), calculateProgressBarProgression() }
