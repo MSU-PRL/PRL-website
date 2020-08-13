@@ -253,7 +253,7 @@ if ('content' in document.createElement('template')) {
   const prlStickyMenuInner = document.querySelector('.prl-sticky-nav-inner');
 
   if(prlStickyMenuInner) {
-    const headerTags = document.querySelectorAll('.mainContent__mainCol h2');
+    const headerTags = document.querySelectorAll('.mainContent__mainCol h1, .mainContent__mainCol h2');
     const aside = document.getElementById('prl-sticky-nav')
     const ul = document.createElement('ul')
     prlStickyMenuInner.appendChild(ul)
