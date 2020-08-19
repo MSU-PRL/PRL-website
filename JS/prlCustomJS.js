@@ -1,14 +1,74 @@
-// SCROLL ANIMATION FOR BACK TO TOP BUTTON
+// SCROLLABLE BACK TO TOP BUTTON
 
-$(function() {
-  var btn = $('.prl-back-to-top-btn');
-  // Click button
-  btn.on('click', function(e) {
-  e.preventDefault();
-  // Scroll to top of page
-  $('html, body').animate({scrollTop: 0}, 2000);
-  });
-});
+(function returnToTopButton() {
+  const button = document.querySelector('.prl-back-to-top-btn');
+
+  if(button) {
+
+    // ANIMATE SCROLL
+  
+    const buttonClick = (event) => {
+      // Use smooth scroll function when clicking on link
+      smoothScroll(event) 
+    } 
+  
+    const smoothScroll = (event) => {
+      // Smooth scroll function
+      event.preventDefault();
+      const targetPosition = document.documentElement.clientTop;
+      const startPosition = window.pageYOffset;
+      const distance = targetPosition - startPosition;
+      const duration = 1000;
+      let start = null;
+  
+      const scrollAnimation = (timestamp) => {
+        if (!start) {
+          start = timestamp
+        };
+        const progress = timestamp - start;
+        window.scrollTo(0, easeInOutCubic(progress, startPosition, distance, duration));
+        if (progress < duration) window.requestAnimationFrame(scrollAnimation);
+      }
+  
+      const easeInOutCubic = (t, b, c, d) => {
+        // Timing of scroll function
+        t /= d/2;
+        if (t < 1) return c/2*t*t*t + b;
+        t -= 2;
+        return c/2*(t*t*t + 2) + b;
+      };
+      
+      return window.requestAnimationFrame(scrollAnimation);
+  
+    } 
+  
+    button.addEventListener('click', buttonClick);
+  
+    // WINDOW LISTENER TOGGLES BUTTON VISBILITY ON SCROLL
+  
+    const toggleButtonVisibility = () => {
+      const windowCoords = Math.abs(document.body.getBoundingClientRect().top);
+      const distanceFromTop = 600;
+      
+      // If window is far enough from top, button becomes visible
+      if (windowCoords > distanceFromTop){
+        button.classList.remove('prl-back-to-top-btn-hide');
+        button.classList.add('prl-back-to-top-btn-show');
+      }
+      // If window close to page top, button disappears
+      else {
+        button.classList.add('prl-back-to-top-btn-hide');
+        button.classList.remove('prl-back-to-top-btn-show');
+  
+      }
+  
+    } 
+  
+    window.addEventListener('scroll', toggleButtonVisibility)
+    window.addEventListener('load', toggleButtonVisibility)
+  }
+
+}());
 
 
 // ACCESSIBLE TOOLTIP
@@ -365,14 +425,13 @@ if ('content' in document.createElement('template')) {
   
       prlStickyMenuInner.classList.remove('prl-sticky-nav-inner-focused') // Remove focus class 
     };
+
     prlStickyMenuInner.addEventListener('mouseleave', menuOnMouseLeave);
   
     // window listener toggles menu visibility on scroll
   
-    window.onscroll = () => { toggleMenuVisibility(largeScreenSize) }
-    const largeScreenSize = window.matchMedia("(min-width: 768px)")
-  
-    const toggleMenuVisibility = (largeScreenSize) => {
+    const toggleMenuVisibility = () => {
+      const largeScreenSize = window.matchMedia("(min-width: 768px)")
       const textStartPosition = document.querySelector('.mainContent__mainCol').offsetTop;
       const windowCoords = Math.abs(document.body.getBoundingClientRect().top);
       const distanceFromTop = textStartPosition - 200;
@@ -415,6 +474,8 @@ if ('content' in document.createElement('template')) {
         asideHelper.classList.remove('aside-appear');
       }
     }
+
+    window.addEventListener('scroll',  toggleMenuVisibility)
     
     return createMenu()
   }
@@ -462,9 +523,10 @@ if ('content' in document.createElement('template')) {
       
       pageParts.forEach(part => observer.observe(part))
     }
-    
-    window.onload = () => { addProgressBarElement(), calculateProgressBarProgression() }
-    window.onresize = () => { calculateProgressBarProgression() }
+
+    window.addEventListener('load', addProgressBarElement())
+    window.addEventListener('load', calculateProgressBarProgression())
+    window.addEventListener('resize', calculateProgressBarProgression)
 
   }
 }());

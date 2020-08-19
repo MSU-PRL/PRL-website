@@ -1,5 +1,4 @@
 body {
-  height: 150vh;
   font-family: Arial, sans-serif; }
 
 img {
@@ -11,6 +10,23 @@ img {
 article.body-content p {
   margin-bottom: 40vh; }
 
-@media screen and (max-width: 767px) {
-  aside#prl-sticky-nav.aside-visible, aside#prl-sticky-nav {
-    visibility: hidden; } }
+.prl-back-to-top-btn {
+  display: inline-block;
+  position: fixed;
+  bottom: 30px;
+  right: 50px;
+  background: #804540;
+  font-size: 2rem;
+  border-radius: 100%;
+  z-index: 10000;
+  text-decoration: none;
+  color: white;
+  padding: 8px 13px 0px 13px;
+  -webkit-transition-duration: 0.35s;
+          transition-duration: 0.35s; }
+
+.prl-back-to-top-btn-hide {
+  opacity: 0; }
+
+.prl-back-to-top-btn-show {
+  opacity: 1; }

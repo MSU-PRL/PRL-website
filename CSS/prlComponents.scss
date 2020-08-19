@@ -310,6 +310,15 @@ $shadow-depth-24: 0px 11px 15px -7px rgba(0, 0, 0, 0.2),
   font-size: 3rem;
   border-bottom: 0px !important;
   z-index: 10000;
+  transition-duration: $tran-med;
+}
+
+.prl-back-to-top-btn-hide {
+  opacity: 0;
+}
+
+.prl-back-to-top-btn-show {
+  opacity: 1;
 }
 
 @media (max-width: 767px) {

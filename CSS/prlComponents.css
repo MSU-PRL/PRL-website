@@ -172,6 +172,12 @@ prl-accordion-section[role="region"] + prl-accordion-section {
   border-bottom: 0px !important;
   z-index: 10000; }
 
+.prl-back-to-top-btn-hide {
+  opacity: 0; }
+
+.prl-back-to-top-btn-show {
+  opacity: 1; }
+
 @media (max-width: 767px) {
   .prl-back-to-top-btn {
     right: 5px; } }
