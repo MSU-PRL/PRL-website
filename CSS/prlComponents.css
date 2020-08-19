@@ -170,7 +170,9 @@ prl-accordion-section[role="region"] + prl-accordion-section {
   color: #804540 !important;
   font-size: 3rem;
   border-bottom: 0px !important;
-  z-index: 10000; }
+  z-index: 10000;
+  -webkit-transition-duration: 0.35s;
+          transition-duration: 0.35s; }
 
 .prl-back-to-top-btn-hide {
   opacity: 0; }
@@ -180,7 +182,8 @@ prl-accordion-section[role="region"] + prl-accordion-section {
 
 @media (max-width: 767px) {
   .prl-back-to-top-btn {
-    right: 5px; } }
+    right: 20px;
+    bottom: 20px; } }
 
 /* --------------------------------------------------------
         FIGURE CAPTIONS & BULLETPOINTS

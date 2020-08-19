@@ -4813,7 +4813,8 @@ prl-accordion-section[role="region"] + prl-accordion-section {
 
 @media (max-width: 767px) {
   .prl-back-to-top-btn {
-    right: 5px; } }
+    right: 20px;
+    bottom: 20px; } }
 
 /* --------------------------------------------------------
         FIGURE CAPTIONS & BULLETPOINTS
