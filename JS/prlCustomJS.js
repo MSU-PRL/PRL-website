@@ -267,11 +267,19 @@ if ('content' in document.createElement('template')) {
         const div = document.createElement('div');
         const span = document.createElement('span');
         const anchor = document.createElement('a');
-        const anchorAttributeName = i.textContent.toLowerCase().replace(/\s+/g, '-')
+        const anchorAttributeName = i.textContent.toLowerCase().replace(/[^èéòàùì\w]/gi, '') + 'link'
   
         listItem.addEventListener('focusin', menuLinkOnFocus);
         listItem.addEventListener('focusout', menuLinkOnBlur);
-        div.textContent = i.textContent
+
+        // Truncate menu item name if longer than 19 characters
+        i.textContent.length > 19 
+          ? div.textContent = i.textContent.slice(0,19) + '...'
+          : div.textContent = i.textContent
+          
+        // If menu item is linked to the page title, text says 'Top'
+        i.className.includes('pageTitle') ? div.textContent = 'Top' : null
+        
         div.className = 'text'
         anchor.appendChild(div)
         anchor.appendChild(span)

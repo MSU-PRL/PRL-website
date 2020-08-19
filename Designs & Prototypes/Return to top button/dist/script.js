@@ -5,7 +5,7 @@
   const ul = document.createElement('ul')
   prlStickyMenuInner.appendChild(ul)
   const prlStickyMenuList = document.querySelector('.prl-sticky-nav-inner ul');
-
+  
   // CREATE MENU
 
   const createMenu = () => {
@@ -15,19 +15,11 @@
       const div = document.createElement('div');
       const span = document.createElement('span');
       const anchor = document.createElement('a');
-      const anchorAttributeName = i.textContent.toLowerCase().replace(/[^èéòàùì\w]/gi, '') + 'link'
+      const anchorAttributeName = i.textContent.toLowerCase().replace(/\s+/g, '-')
 
       listItem.addEventListener('focusin', menuLinkOnFocus);
       listItem.addEventListener('focusout', menuLinkOnBlur);
-      
-      // Truncate menu item title if length is over 19 characters
-      i.textContent.length > 19 
-          ? div.textContent = i.textContent.slice(0,19) + '...'
-          : div.textContent = i.textContent
-
-      // If menu item is linked to the page title, text says 'Top'
-      i.nodeName === 'H1' ? div.textContent = 'Top' : null
-
+      div.textContent = i.textContent
       div.className = 'text'
       anchor.appendChild(div)
       anchor.appendChild(span)
@@ -57,7 +49,6 @@
     // Smooth scroll function
     event.preventDefault();
     const targetId = event.currentTarget.getAttribute("href");
-    console.log(targetId)
     const targetPosition = document.querySelector(targetId).offsetTop;
     const startPosition = window.pageYOffset;
     const distance = targetPosition - startPosition;
