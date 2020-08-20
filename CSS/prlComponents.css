@@ -175,7 +175,8 @@ prl-accordion-section[role="region"] + prl-accordion-section {
           transition-duration: 0.35s; }
 
 .prl-back-to-top-btn-hide {
-  opacity: 0; }
+  opacity: 0;
+  pointer-events: none; }
 
 .prl-back-to-top-btn-show {
   opacity: 1; }

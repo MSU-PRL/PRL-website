@@ -21,12 +21,13 @@ article.body-content p {
   z-index: 10000;
   text-decoration: none;
   color: white;
-  padding: 8px 13px 0px 13px;
+  padding: 8px 14px 0px 14px;
   -webkit-transition-duration: 0.35s;
           transition-duration: 0.35s; }
 
 .prl-back-to-top-btn-hide {
-  opacity: 0; }
+  opacity: 0;
+  pointer-events: none; }
 
 .prl-back-to-top-btn-show {
   opacity: 1; }
