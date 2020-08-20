@@ -31,4 +31,6 @@
 - DONE News story progress bar and stating number of minutes:
     https://ghost.org/tutorials/show-reading-time-progress/
     https://codepen.io/rgg/details/QbRyOq
+- DONE Refactored 'back to top' button to use vanilla JS and not jQuery
+- DONE Performance enhancement: Zoom Timeline scripts and style sheets dynamically added on About page only
 - New ‘for the public’ page, including BMC videos. Need to figure out a narrative for this

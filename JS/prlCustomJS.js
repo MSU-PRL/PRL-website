@@ -305,6 +305,7 @@ if ('content' in document.createElement('template')) {
   }
 }
 
+
 // STICKY/FLOATING, MENU COMPONENT
 
 (function populateStickySideMenu() {
@@ -485,7 +486,6 @@ if ('content' in document.createElement('template')) {
 
 // PROGRESS BAR FOR NEWS ARTICLES AND OTHER SELECTED PAGES
 
-
 (function addProgressBar() {
   // Target pages to add progress bar
   // Currently the pages are "Web Components Demo" or any news article
@@ -527,6 +527,35 @@ if ('content' in document.createElement('template')) {
     window.addEventListener('load', addProgressBarElement())
     window.addEventListener('load', calculateProgressBarProgression())
     window.addEventListener('resize', calculateProgressBarProgression)
+
+  }
+}());
+
+
+// DYNAMICALLY ADD HISTORY TIMELINE STYLESHEETS AND SCRIPTS TO ABOUT PAGE
+(function addZoomTimelineFilesToAboutPage(){
+  if(document.body.className.includes('about') && document.body.className.includes('depth-1')){
+    
+    // Create Zoom Timeline Stylesheet element
+    const stylesheetLink = document.createElement('link');
+    stylesheetLink.type = 'text/css';
+    stylesheetLink.setAttribute('rel', 'stylesheet');
+    stylesheetLink.href = "/sites/_prl/assets/File/websiteTheme/Zoom_Timeline/PRL-about-page-timeline-jQuery-compiled_min.css"
+        
+    // Create Zoom Timeline Script element
+    const zoomtimelineScript = document.createElement('script');
+    zoomtimelineScript.src = "/sites/_prl/assets/File/websiteTheme/Zoom_Timeline/zoomtimeline.js";
+    zoomtimelineScript.defer = true;
+    
+    // Create Isotope JS Script element
+    const isotopeJSScript = document.createElement('script');
+    isotopeJSScript.src = "/sites/_prl/assets/File/websiteTheme/Zoom_Timeline/isotope_pkgd_min.js";
+    isotopeJSScript.defer = true; 
+
+    // Add elements to document head
+    document.head.prepend(isotopeJSScript)
+    document.head.prepend(zoomtimelineScript)
+    document.head.prepend(stylesheetLink)
 
   }
 }());
