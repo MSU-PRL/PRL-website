@@ -1300,7 +1300,8 @@ main.mainContent .mainContent__sideNav ul li a {
     .prl-home-news-nonfeature .mura-async-object.mura-object > .mura-object-content .mura-index div .hasImage {
       margin: 0 0 24px 0;
       padding: 0 !important;
-      min-height: auto !important; }
+      min-height: auto !important;
+      display: inline-block; }
       .prl-home-news-nonfeature .mura-async-object.mura-object > .mura-object-content .mura-index div .hasImage .image {
         width: 140px;
         position: relative;
@@ -1318,7 +1319,6 @@ main.mainContent .mainContent__sideNav ul li a {
             .prl-home-news-nonfeature .mura-async-object.mura-object > .mura-object-content .mura-index div .hasImage .image a img:hover {
               opacity: 0.8; }
       .prl-home-news-nonfeature .mura-async-object.mura-object > .mura-object-content .mura-index div .hasImage .title {
-        margin: 12px 0 0 0;
         line-height: 1.6; }
         .prl-home-news-nonfeature .mura-async-object.mura-object > .mura-object-content .mura-index div .hasImage .title a {
           text-decoration: none;
@@ -1336,6 +1336,8 @@ main.mainContent .mainContent__sideNav ul li a {
           -webkit-margin-before: 4px;
                   margin-block-start: 4px;
           margin-bottom: 0px !important; }
+    .prl-home-news-nonfeature .mura-async-object.mura-object > .mura-object-content .mura-index div .first.hasImage {
+      margin-top: 16px; }
 
 @media (min-width: 1200px) {
   .prl-home-news-nonfeature > .mura-async-object.mura-object > .mura-object-content > .mura-index > div > .hasImage .summary {
@@ -1417,7 +1419,7 @@ main.mainContent .mainContent__sideNav ul li a {
     display: inline-block; }
     .prl-home-news-nonfeature .mura-async-object.mura-object > .mura-object-content div.mura-index div .hasImage .image {
       width: 110px;
-      padding: 12px 16px 16px 0px; }
+      padding: 0px 16px 16px 0px; }
     .prl-home-news-nonfeature .mura-async-object.mura-object > .mura-object-content div.mura-index div .hasImage .title {
       margin-bottom: 4px;
       font-size: 15px; }

@@ -234,6 +234,7 @@
           margin: 0 0 24px 0;
           padding: 0 !important; // overriding Mura settings
           min-height: auto !important; // overriding Mura settings
+          display: inline-block;
           .image {
             width: 140px;
             position: relative;
@@ -255,7 +256,7 @@
             }
           }
           .title {
-            margin: 12px 0 0 0;
+            // margin: 12px 0 0 0;
             line-height: 1.6;
             a {
               text-decoration: none;
@@ -277,6 +278,9 @@
               margin-bottom: 0px !important; // Overriding <p> margin-bottom on site
             }
           }
+        }
+        .first.hasImage {
+          margin-top: 16px;
         }
       }
     }
@@ -431,7 +435,7 @@
             display: inline-block;
             .image {
               width: 110px;
-              padding: 12px 16px 16px 0px;
+              padding: 0px 16px 16px 0px;
             }
             .title {
               margin-bottom: 4px;
