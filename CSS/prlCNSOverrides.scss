@@ -2,6 +2,15 @@
         CNS STYLING OVERRIDES
 -------------------------------------------------------- */
 
+/* HERO images on smaller screens
+-------------------------------------------------------- */
+
+@media only screen and (max-width: 992px) {
+  .heroBanner {
+    background-size: cover !important;
+  }
+}
+
 /* OVERFLOW issues
 -------------------------------------------------------- */
 

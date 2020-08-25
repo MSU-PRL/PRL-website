@@ -827,6 +827,9 @@
 @media (min-width: 992px) {
   //Large screens, making sure the main col doesn't hug edges
   .about {
+    .heroBanner-sectionFront {
+      height: 66vh; // Shortens the hero image when page in 'Section Front' format
+    }
     .mainContent__mainCol {
       margin-bottom: 64px; // Add some white space between the footer, only for large screens
       section.prl-about-essence {

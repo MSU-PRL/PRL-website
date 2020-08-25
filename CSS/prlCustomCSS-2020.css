@@ -991,6 +991,12 @@ td {
 /* --------------------------------------------------------
         CNS STYLING OVERRIDES
 -------------------------------------------------------- */
+/* HERO images on smaller screens
+-------------------------------------------------------- */
+@media only screen and (max-width: 992px) {
+  .heroBanner {
+    background-size: cover !important; } }
+
 /* OVERFLOW issues
 -------------------------------------------------------- */
 @media (max-width: 768px) {
@@ -1667,6 +1673,8 @@ main.mainContent .mainContent__sideNav ul li a {
         filter: grayscale(100%); }
 
 @media (min-width: 992px) {
+  .about .heroBanner-sectionFront {
+    height: 66vh; }
   .about .mainContent__mainCol {
     margin-bottom: 64px; }
     .about .mainContent__mainCol section.prl-about-essence .prl-row .prl-about-essence-item {
