@@ -1,11 +1,11 @@
 <div class="mura-async-object mura-object mura-object-select d-lg-none d-xl-none prl-brand-guide-main-page-TOC" data-async="false" data-class="d-lg-none d-xl-none prl-brand-guide-main-page-TOC" data-cssclass="d-lg-none d-xl-none prl-brand-guide-main-page-TOC" data-inited="true" data-instanceid="C533C329-FB4F-40E4-A171A77720DF07F6" data-listtype="ul" data-maxdepth="2" data-object="toc" data-objecticonclass="mi-list" data-objectid="EA5FFCCD-5338-4743-978E78C479173945" data-objectname="Table of Contents" data-render="client" data-title="Table of Contents" style=""></div>
 
-<!-- Floating side menu -->
+<!-- Sticky side menu -->
 <aside id="prl-sticky-nav" aria-label="Menu with links to navigate this page">
 	<div class="prl-sticky-nav-inner">
 		<div class="prl-sticky-nav-title">Menu</div>
 		<!-- Unordered list will be populated here -->
-	 </div>
+	</div>
 	<div class="aside-helper">
 		Hover here for navigation.
 	</div>
@@ -531,8 +531,6 @@
 			&nbsp;&nbsp;&lt;/figure&gt;<br />
 			&lt;/div&gt;</code></div>
 	</section>
-	
-
 
 <section class="layout">
 	<h2>Layout</h2>
@@ -564,6 +562,58 @@
 		&lt;div class=&quot;prl-narrow-container&quot;&gt;<br />
 		&nbsp; &lt;p&gt;Content goes in here&lt;/p&gt;<br />
 		&lt;/div&gt;</code></div>
+</section>
+
+<section class="progress-bar">
+	<h2>Progress Bar</h2>
+	<p>
+		The progress bar tracks how far a user has scrolled through a page. 
+		The bar is fixed to the bottom of the browser window and its background color is primary PRL green. 
+		See the demo on this page.
+	</p>
+		<p>
+			The component uses the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API">Intersection Observer API</a> 
+			to detect when specific elements become visible on the page, in order to calculate the width 
+			of the progress bar. These elements are the following HTML tags: h1, h2, h3, p, img, 
+			and, on this page, code.
+		</p>
+		<p>
+			The progress bar can only be added to pages through the PRL custom JavaScript file. 
+			It is currently used on <a href="/news-events/news/">News articles</a>.
+		</p>
+</section>
+
+<section class="sticky-side-menu">
+	<h2>Sticky Side Menu</h2>
+	<p>
+		This component scrapes and extracts all h1 and h2 tags and then populates a sticky side 
+		menu with these tags’ text content. The menu is fixed to the right of the browser window and 
+		will stay in view as a user scrolls through a page,as seen in the demo on this page.
+		 (For a realistic view of this component in practice, visit the <a href="/about/">About page</a>. 
+		 The demo here is unrealistically tall due to the uncharacteristically high number of 
+		 header tags on this page.)
+	</p>
+	<p>
+		Functionality: Clicking any of the menu items causes the browser to scroll to the 
+		relevant section on the page. Once per browser session, a helper text pop up explains 
+		the menu’s function to users. The menu is hidden on smaller screens, such as mobile devices.
+	</p>
+	<p>
+		To add a sticky side menu to any page on the PRL website, add the following code. This markup
+		is also available as a backend Mura component.
+	</p>
+	<div class="prl-code-area">
+		<code tabindex="0">
+			&lt;!-- Sticky side menu --&gt;<br />
+			&lt;aside aria-label=&quot;Menu with links to navigate this page&quot; id=&quot;prl-sticky-nav&quot;&gt;<br />
+			&nbsp; &lt;div class=&quot;prl-sticky-nav-inner&quot;&gt;<br />
+			&nbsp; &nbsp; &lt;div class=&quot;prl-sticky-nav-title&quot;&gt;Menu&lt;/div&gt;<br />
+			&nbsp; &nbsp; &lt;!-- Unordered list will be populated here through JavaScript --&gt;<br />
+			&nbsp; 	&lt;/div&gt;<br />
+			&nbsp; 	&lt;div class=&quot;aside-helper&quot;&gt;Hover here for navigation.<&lt;/div&gt;<br />
+			&lt;/aside&gt;
+		</code>
+	</div>
 </section>
 
 <section class="tooltips">
@@ -713,22 +763,34 @@
 					<h3>Tracking light wavelength quality</h3>
 		
 					<p>Cyanos sink or float in water to position themselves favorably in their environments, and the surrounding light quality varies with depth.<br />
-						For example, on the surface, cyanos are exposed to rich amounts of red light. As they sink deeper, red light grows scarcer while green light remains abundant. Cyanos constantly track light quality and <a href="https://prl.natsci.msu.edu/news-events/news/montgomery-publishes-on-light-harvesting-efficiency/">adjust themselves to capture the most available wavelength at any time</a>.&nbsp;</p>
+						For example, on the surface, cyanos are exposed to rich amounts of red light. As they sink deeper, red light grows scarcer while green light remains abundant. Cyanos constantly track light quality and <a href="https://prl.natsci.msu.edu/news-events/news/montgomery-publishes-on-light-harvesting-efficiency/">adjust themselves to capture the most available wavelength at any time</a>.</p>
 				</div>
 			</div>
 		</div>
 		
 		<div class="prl-code-area">
-			<p><code tabindex="0"><span style="font-size: 14.85px; letter-spacing: -0.1px;">&lt;!--&nbsp;Content - Informational Well Section with Cards --&gt;</span><br />
-				<span style="font-size: 14.85px; letter-spacing: -0.1px;">&lt;div class=&quot;prl-well&quot;&gt;<br />
-				&nbsp; </span><span style="font-size: 14.85px; letter-spacing: -0.1px;">&lt;div class=&quot;prl-card-w-border&quot;&gt;<br />
-				&nbsp; &nbsp; </span><span style="font-size: 14.85px; letter-spacing: -0.1px;">&lt;div class=&quot;prl-card-body&quot;&gt;<br />
-				&nbsp; &nbsp; </span><span style="font-size: 14.85px; letter-spacing: -0.1px;">&lt;h3&gt;Tracking light wavelength quality&lt;/h3&gt;<br />
-				&nbsp; &nbsp;&nbsp;</span><span style="font-size: 14.85px; letter-spacing: -0.1px;">&lt;p&gt;Cyanos sink or float in water to position themselves favorably in&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; their environments, and the surrounding light quality varies with&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; depth.&lt;br /&gt;</span><span style="font-size: 14.85px; letter-spacing: -0.1px;">For example, on the surface, cyanos are exposed to rich&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; amounts of red light. As they sink deeper, red light grows scarcer&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; while green light remains abundant. Cyanos constantly track light&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; quality and &lt;a href=&quot;https://prl.natsci.msu.edu/news-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; events/news/montgomery-publishes-on-light-harvesting-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; efficiency/&quot;&gt;adjust themselves to capture the most available&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; wavelength at any time&lt;/a&gt;.&amp;nbsp;&lt;br /&gt;<br />
-				&nbsp; &lt;/div&gt;<br />
-				&lt;/div&gt;</span></code></p>
+			<p>
+				<code tabindex="0">
+					&lt;!--&nbsp;Content - Informational Well Section with Cards --&gt;<br />
+					&lt;div class=&quot;prl-well&quot;&gt;<br />
+					&nbsp; &lt;div class=&quot;prl-card-w-border&quot;&gt;<br />
+					&nbsp; &nbsp; &lt;div class=&quot;prl-card-body&quot;&gt;<br />
+					&nbsp; &nbsp; &nbsp; &lt;h3&gt;Tracking light wavelength quality&lt;/h3&gt;<br />
+					&nbsp; &nbsp; &nbsp; &lt;p&gt;Cyanos sink or float in water to position themselves favorably in their environments, and the surrounding light quality varies with depth.&lt;br /&gt; For example, on the surface, cyanos are exposed to rich amounts of red light. As they sink deeper, red light grows scarcer while green light remains abundant. Cyanos constantly track light quality and efficiency and adjust themselves to capture the most available wavelength at any time.<br />
+					&nbsp; &nbsp; &nbsp; &lt;/p&gt;<br />
+					&nbsp; &nbsp; &lt;/div&gt;<br />
+					&nbsp; &lt;/div&gt;<br />
+					&lt;/div&gt;
+				</code>
+			</p>
 		</div>
 
 </section>
 
-<div><a class="prl-back-to-top-btn prl-back-to-top-btn-hide" href="#"><span class="fa fa-chevron-circle-up"></span><span class="sr-only" role="button">Chevron circle up</span></a></div>
+<!-- Back to top button -->
+<div>
+	<a class="prl-back-to-top-btn prl-back-to-top-btn-hide" href="#">
+		<span class="fa fa-chevron-circle-up"></span>
+		<span class="sr-only" role="button">Chevron circle up</span>
+	</a>
+</div>
