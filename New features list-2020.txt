@@ -30,7 +30,20 @@
     is in 'Section Front' format.
     Graduate Program Overview, Research Projects, and CAAPP pages are all in Secondary Page format.
   - DONE remove BES grant number
+
   - add prominent alumni/findings (the Zoom timeline has a feature that could work for this)
+    Notes: do it with former faculty - genes gallore from Arabidopsis - cover of science for Hans Kende and Chris Sommerville on ethalene receptor mutant - Zeevart discovered important thigs for ABA biosynthesis - Jasmonate receptor story Sheng Yang and Gregg Howe - BMC with Cheryl - Keegstra and cell wall, science paper with Natasha Raikhel - Lee McIntosh 2KD protein with Charlie Artzen - mention NAS members, ASPB members, etc - CBF1 Michael Thomashow
+    
+    Could add fFamous PRL alumni
+    
+    Screen former PRL faculty members and see highly cited papers. Could have a formula where you divide citations by number of years since publication date, to account for recency.
+    
+    How to define who goes on the list: have a larger list and automate 
+    
+    Title for section: PRL Discoveries that people care about 
+
+    Have a randomized rotating list on the live version 
+
 - DONE News story progress bar and stating number of minutes:
     https://ghost.org/tutorials/show-reading-time-progress/
     https://codepen.io/rgg/details/QbRyOq
