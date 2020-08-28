@@ -44,6 +44,22 @@
 
     Have a randomized rotating list on the live version 
 
+    1. Understanding the problem: create a randomized list of PRL achievements and stats to display on the About Page
+    Inputs: stats from faculy, alumni, in Excel and then JSON
+    Output: DOM list element on About page under Brief History section
+    Labels: 
+      function addAchievementsOnAboutPage()
+      perhaps fetch() and sort a JSON file stored on Mura backend
+
+    2. Some Examples
+
+    3. Solve: need to have a master Excel file for ease of editing.
+      need to convert to JSON for upload into Mura
+      function will fetch 10 random items from JSON file to display on the webpage (shall we have categories: major awards, alumni, major findings, etc)
+      have a fallback static HTML version on the website, in case the JS doesn't work
+      if the JS works (Promise.all??), replace the static HTML version with the 10 fetched items
+      display the fetched items by looping over them and using string literals to populate the items
+
 - DONE News story progress bar and stating number of minutes:
     https://ghost.org/tutorials/show-reading-time-progress/
     https://codepen.io/rgg/details/QbRyOq
