@@ -44,16 +44,23 @@
 
   // Add comments to HTML 
   const addCommentsToMarkup = (commentsArray) => {
-    const ul = document.createElement('ul');
-    const body = document.body
     
-    body.appendChild(ul) 
-    
+    // throw new Error('Testing fallback');
+    const newList = document.createElement('ul');
+
+    // If there is an array of comments, remove the fallback list and replace with new comments
+    if (commentsArray && commentsArray.length > 0) { 
+      const fallbackList = document.body.querySelector('ul')
+      fallbackList.before(newList)
+      fallbackList.remove() 
+    } else { return }
+       
+    // Create list elements for each comment
     commentsArray.forEach(comment => {
       const li = document.createElement('li')
       const textNode = document.createTextNode(comment)
       li.appendChild(textNode)
-      ul.appendChild(li)
+      newList.appendChild(li)
     })
   }
 
@@ -83,7 +90,7 @@
 // DONE Grab the 'note' from each entry and display as a list.
 // DONE querySelector Web API to find the appropriate location in markup and replace the fallback/placeholder info. Determine markup later.
 // DONE Repeat this process on each reload. This ensures no two lists are the same.
-// Have a hard coded HTML fallback in case the fetch doesn't work.
+// DONE Have a hard coded HTML fallback in case the fetch doesn't work.
 
 // Labels: 
   // * function fetchSciwheelAPI
