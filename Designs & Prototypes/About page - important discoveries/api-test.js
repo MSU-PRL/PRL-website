@@ -1,27 +1,36 @@
 // ONLY FOR NODE DEBUGGING
 // const fetch = require("node-fetch");
-// const { toNamespacedPath, resolve } = require("path");
-// const { get } = require("http");
+
 
 (function fetchSciwheelAPI () {
   
   let comments = []; // This array will be passed in to addCommentsToMarkup() 
-  
   let urls = [];
-  // Ids of tags defined in Sciwheel: 243694: currentpi - 243695: historical - 243782: achievements
-  let tagIdsArray = ['243782','243694','243695']
-
-  // Sort categories provided by API
-  let sortCategories = 
-    ['relevance', 'title', 'firstAuthor', 'lastAuthor', 'publishedDate', 'addedDate', 
-    'journalName', 'volume', 'doi', 'pubMedId', 'issue', 'publisher'];
-
-  // For each tag ID, get two random references based on the API sorting key-value pairs
-  tagIdsArray.forEach(tag => {
-    let category = sortCategories[Math.floor(Math.random() * sortCategories.length)]
-    urls.push(`https://sciwheel.com/extapi/work/references?projectId=475188&tagIds=${tag}&sort=${category}:desc&size=2`)
-  })
-
+  
+  // Create array of URLs to fetch references from Sciwheel
+  const createURLArray = () => {
+    let tagIdsArray = ['243782','243694','243695']  // Ids of tags defined in Sciwheel: 243694: currentpi - 243695: historical - 243782: achievements
+    // Sort categories provided by API
+    let sortCategories = 
+      ['relevance', 'title', 'firstAuthor', 'lastAuthor', 'publishedDate', 'addedDate', 
+      'journalName', 'volume', 'doi', 'pubMedId', 'issue', 'publisher', 'url', 'itemType',
+      'firstEditor', 'itemId'];
+    
+    window.localStorage.getItem('prlPubSort') === null
+      ? window.localStorage.setItem('prlPubSort', 'desc')
+      : window.localStorage.getItem('prlPubSort') === 'desc' 
+        ? window.localStorage.setItem('prlPubSort', 'asc')
+        : window.localStorage.setItem('prlPubSort', 'desc')
+    
+    let direction = window.localStorage.getItem('prlPubSort') || 'desc'
+  
+    // For each tag ID, get two random references based on the API sorting key-value pairs
+    tagIdsArray.forEach(tag => {
+      let category = sortCategories[Math.floor(Math.random() * sortCategories.length)]
+      urls.push(`https://sciwheel.com/extapi/work/references?projectId=475188&tagIds=${tag}&sort=${category}:${direction}&size=2`)
+    })
+  }
+  
   // Initial reference fetch
   const getReferences = (url) => {
     return fetch(url, {
@@ -64,6 +73,10 @@
     })
   }
 
+
+  // THIS IS WHERE THE MAGIC HAPPENS
+  
+  createURLArray()
   // Get the references from the URLs
   return Promise.all(urls.map(url => getReferences(url))) 
     .then(data => {

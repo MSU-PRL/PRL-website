@@ -13,7 +13,9 @@
         "${workspaceFolder}/node_modules/**/*.js",
         "${workspaceFolder}/lib/**/*.js",
         "<node_internals>/**/*.js"
-      ]
+      ],
+      "console": "internalConsole", 
+      "outputCapture": "std",
     },
     {
       "name": "Debug display data in Chrome",
