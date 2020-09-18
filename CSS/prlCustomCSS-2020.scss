@@ -736,7 +736,6 @@
         // Driver brand images
         padding: 0;
         border-radius: $border-radius-material-design-card;
-        -webkit-box-shadow: $img-shadow;
         box-shadow: $img-shadow;
       }
     }
@@ -779,6 +778,27 @@
               margin-top: 0;
             }
           }
+        }
+      }
+    }
+    section.prl-about-milestones {
+      // Milestones section
+      .prl-row {
+        margin-top: 64px;
+      }
+      ul {
+        flex: 0 0 50%;
+        padding-top: 50px;
+        color: $med-grey-text;
+        font-weight: 300;
+      }
+      .prl-about-milestones-img {
+        flex-basis: 45%;
+        margin-left: auto;
+        img {
+          padding: 0;
+          border-radius: $border-radius-material-design-card;
+          box-shadow: $img-shadow;
         }
       }
     }
@@ -899,6 +919,11 @@
           }
         }
       }
+      section.prl-about-milestones .prl-row{
+        ul {
+          padding-top: 0;
+        }
+      }
     }
   }
 }
@@ -975,6 +1000,18 @@
           }
         }
       }
+      section.prl-about-milestones {
+        .prl-row {
+          margin-top: 25px;
+          ul {
+            flex: 0 0 100%;
+          }
+          .prl-about-milestones-img {
+            visibility: hidden;
+            display: none;
+          }
+        }
+      } 
       section.prl-about-funders {
         .prl-row > div {
           // 2 non-DOE BES logos per line

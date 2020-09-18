@@ -1605,7 +1605,7 @@ main.mainContent .mainContent__sideNav ul li a {
     padding: 0;
     border-radius: 12px;
     -webkit-box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0, 0, 0.12);
-    box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0, 0, 0.12); }
+            box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0, 0, 0.12); }
 
 .about .mainContent__mainCol .prl-about-header-area {
   max-width: 850px;
@@ -1634,6 +1634,27 @@ main.mainContent .mainContent__sideNav ul li a {
     font-size: 15px;
     color: #666;
     margin-top: 0; }
+
+.about .mainContent__mainCol section.prl-about-milestones .prl-row {
+  margin-top: 64px; }
+
+.about .mainContent__mainCol section.prl-about-milestones ul {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  padding-top: 50px;
+  color: #666;
+  font-weight: 300; }
+
+.about .mainContent__mainCol section.prl-about-milestones .prl-about-milestones-img {
+  -ms-flex-preferred-size: 45%;
+      flex-basis: 45%;
+  margin-left: auto; }
+  .about .mainContent__mainCol section.prl-about-milestones .prl-about-milestones-img img {
+    padding: 0;
+    border-radius: 12px;
+    -webkit-box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0, 0, 0.12);
+            box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0, 0, 0.12); }
 
 .about .mainContent__mainCol section.prl-about-funders {
   text-align: center;
@@ -1708,7 +1729,9 @@ main.mainContent .mainContent__sideNav ul li a {
             flex: 0 0 50% !important;
     max-width: 50% !important; }
   .about .mainContent__mainCol section.prl-about-what .prl-about-what-text h3 {
-    margin-top: 0; } }
+    margin-top: 0; }
+  .about .mainContent__mainCol section.prl-about-milestones .prl-row ul {
+    padding-top: 0; } }
 
 @media (max-width: 767px) {
   .about .mainContent__mainCol .pageTitle {
@@ -1754,6 +1777,15 @@ main.mainContent .mainContent__sideNav ul li a {
     padding-left: 0; }
   .about .mainContent__mainCol section.prl-about-essence .prl-row .prl-about-essence-item:nth-child(odd) {
     padding-right: 0; }
+  .about .mainContent__mainCol section.prl-about-milestones .prl-row {
+    margin-top: 25px; }
+    .about .mainContent__mainCol section.prl-about-milestones .prl-row ul {
+      -webkit-box-flex: 0;
+          -ms-flex: 0 0 100%;
+              flex: 0 0 100%; }
+    .about .mainContent__mainCol section.prl-about-milestones .prl-row .prl-about-milestones-img {
+      visibility: hidden;
+      display: none; }
   .about .mainContent__mainCol section.prl-about-funders .prl-row > div {
     -ms-flex-preferred-size: 45%;
         flex-basis: 45%;
