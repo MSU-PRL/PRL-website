@@ -1,5 +1,4 @@
 // SCROLLABLE BACK TO TOP BUTTON
-
 (function returnToTopButton() {
   const button = document.querySelector('.prl-back-to-top-btn');
 
@@ -72,7 +71,6 @@
 
 
 // ACCESSIBLE TOOLTIP
-
 document.addEventListener("DOMContentLoaded", function makeTooltipAccessible() {
   // Look for all tooltip elements in document
   const toolTipsList = document.querySelectorAll('.prl-tooltip')
@@ -125,7 +123,6 @@ document.addEventListener("DOMContentLoaded", function makeTooltipAccessible() {
 
 
 // ACCESSIBLE ACCORDION
-
 // Check for <template> support
 if ('content' in document.createElement('template')) {
   const tmpl = document.createElement('template')
@@ -307,7 +304,6 @@ if ('content' in document.createElement('template')) {
 
 
 // STICKY/FLOATING, MENU COMPONENT
-
 (function populateStickySideMenu() {
   // This script looks for an HTML div element with class name 'prl-sticky-nav'
   // in order to build the menu
@@ -485,7 +481,6 @@ if ('content' in document.createElement('template')) {
 
 
 // PROGRESS BAR FOR NEWS ARTICLES AND OTHER SELECTED PAGES
-
 (function addProgressBar() {
   // Target pages to add progress bar
   // Currently the pages are "Web Components Demo" or any news article
@@ -561,8 +556,108 @@ if ('content' in document.createElement('template')) {
 }());
 
 
-// TEMP SCRIPT FOR 'RETURN TO WORK' PAGES
+// FETCH NOTES FROM SCIWHEEL DATABASE AND ADD TO 'SELECTED MILESTONES & ACHIEVEMENTS' on About page
+(function addMilestonesToAboutPage () {
+  if(document.querySelector('.about.depth-1') || document.querySelector('.about.depth-2')){
+    
+    let comments = []; // This array will be passed in to addCommentsToMarkup() 
+    let urls = [];
+    
+    // Create array of URLs to fetch references from Sciwheel
+    const createURLArray = () => {
+      let tagIdsArray = ['243782','243694','243695']  // Ids of tags defined in Sciwheel: 243694: currentpi - 243695: historical - 243782: achievements
+      // Sort categories provided by API
+      let sortCategories = 
+        ['relevance', 'title', 'firstAuthor', 'lastAuthor', 'publishedDate', 'addedDate', 
+        'journalName', 'volume', 'doi', 'pubMedId', 'issue', 'publisher', 'url', 'itemType',
+        'firstEditor', 'itemId'];
+      
+      window.localStorage.getItem('prlPubSort') === null
+        ? window.localStorage.setItem('prlPubSort', 'desc')
+        : window.localStorage.getItem('prlPubSort') === 'desc' 
+          ? window.localStorage.setItem('prlPubSort', 'asc')
+          : window.localStorage.setItem('prlPubSort', 'desc')
+      
+      let direction = window.localStorage.getItem('prlPubSort') || 'desc'
+    
+      // For each tag ID, get two random references based on the API sorting key-value pairs
+      tagIdsArray.forEach(function (tag) {
+        var category = sortCategories[Math.floor(Math.random() * sortCategories.length)];
+        urls.push("https://sciwheel.com/extapi/work/references?projectId=475188&tagIds=".concat(tag, "&sort=").concat(category, ":").concat(direction, "&size=2"));
+      });
+    }
+    
+    // Initial reference fetch
+    const getReferences = (url) => {
+      return fetch(url, {
+        method: 'Get',
+        headers: {'Authorization': 'Bearer 3E6D88C2CB9D47494DE94FFF891FB9E7',}
+      })
+      .then(response => response.json())
+      .catch(err => console.log('error fetching references', err))
+    }
+  
+    // Get notes for each reference
+    const getReferenceNotes = function getReferenceNotes(reference) {
+      return fetch("https://sciwheel.com/extapi/work/references/".concat(reference.id, "/notes"), {
+        method: 'Get',
+        headers: {
+          'Authorization': 'Bearer 3E6D88C2CB9D47494DE94FFF891FB9E7'
+        }
+      }).then(function (res) {
+        return res.json();
+      }).catch(function (err) {
+        return console.log('error fetching reference notes', err);
+      });
+    };
+  
+    // Add comments to HTML 
+    const addCommentsToMarkup = (commentsArray) => {
 
+      // throw new Error('Testing fallback');
+      const fallbackList = new Array(document.body.querySelectorAll('section.prl-about-milestones ul li'));
+      const ul = document.body.querySelector('section.prl-about-milestones ul')
+  
+      // If there is an array of comments, remove the fallback list items
+      if (commentsArray && commentsArray.length > 0) { 
+        fallbackList[0].forEach(el => el.remove())
+      }
+         
+      // Create list elements for each new comment and add to document
+      commentsArray.forEach(comment => {
+        const li = document.createElement('li')
+        const textNode = document.createTextNode(comment)
+        li.appendChild(textNode)
+        ul.appendChild(li)
+      })
+    }
+  
+  
+    // THIS IS WHERE THE MAGIC HAPPENS
+    
+    createURLArray()
+    // Get the references from the URLs
+    return Promise.all(urls.map(url => getReferences(url))) 
+      .then(data => {
+        // Make a temporary array to store all references
+        tempArray = [] 
+        data.map(i => tempArray.push(i.results));
+        // fetch the notes data for each reference 
+        return Promise.all(tempArray.flat().map(ref => getReferenceNotes(ref)))
+        .then(res => {
+          // Push each reference's comment to the comments array
+          res.flat().map(x => comments.push(x.comment))
+          // Add the comments to the HTML markup
+          return addCommentsToMarkup(comments)
+        })
+    }) 
+      .catch(err => console.log('error accessing API data' , err))
+  }
+  
+})();
+
+
+// TEMP SCRIPT FOR 'RETURN TO WORK' PAGES
 (function updateSideNavTitle() {
   signInOutSection = document.getElementsByTagName('body')
   // Check if body id element is 'prlsigninout'

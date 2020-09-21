@@ -46,13 +46,12 @@
       ????Could add famous PRL alumni
     
     
-    Screen former PRL faculty members and see highly cited papers. Could have a formula where 
-    you divide citations by number of years since publication date, to account for recency.
+    Screen former PRL faculty members and see highly cited papers.
     
-    How to define who goes on the list: have a larger list and automate process to publish on website.
-    Have a randomized rotating list on the live version  
+    DONE How to define who goes on the list: have a larger list and automate process to publish on website.
+    DONE Have a randomized rotating list on the live version  
     
-    Title for section: PRL Discoveries that people care about - Important Milestones/Achievements
+    DONE Title for section: PRL Discoveries that people care about - Important Milestones/Achievements
 
 
 - DONE News story progress bar and stating number of minutes:
