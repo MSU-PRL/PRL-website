@@ -1,4 +1,4 @@
-- PRL About page: 
+- DONE PRL About page:
   - DONE add inline navigation
     Reading material: 
       (have read) https://www.smashingmagazine.com/2017/05/long-scrolling/ 
@@ -30,33 +30,15 @@
     is in 'Section Front' format.
     Graduate Program Overview, Research Projects, and CAAPP pages are all in Secondary Page format.
   - DONE remove BES grant number
-
-  - add prominent alumni/findings (the Zoom timeline has a feature that could work for this)
-    Notes: do it with former faculty
-      genes gallore from Arabidopsis
-      DONE cover of science for Hans Kende and Chris Sommerville on ethalene receptor mutant
-      DONE Zeevart discovered important thigs for ABA biosynthesis
-      DONE Jasmonate receptor story Sheng Yang and Gregg Howe
-      DONE BMC with Cheryl
-      DONE Keegstra and cell wall, science paper with Natasha Raikhel
-      DONE Lee McIntosh 2KD protein with Charlie Artzen
-      DONE CBF1 Michael Thomashow
-      DONE awards etc: NAS members, ASPB members, etc
-
-      ????Could add famous PRL alumni
-    
-    
-    Screen former PRL faculty members and see highly cited papers.
-    
-    DONE How to define who goes on the list: have a larger list and automate process to publish on website.
-    DONE Have a randomized rotating list on the live version  
-    
-    DONE Title for section: PRL Discoveries that people care about - Important Milestones/Achievements
-
-
+  - DONE add prominent alumni/findings section
+      Notes: do it with former faculty
+      DONE How to define who goes on the list: have a larger list and automate process to publish on website.
+      DONE Have a randomized rotating list on the live version  
+      DONE Title for section: PRL Discoveries that people care about - Important Milestones/Achievements
 - DONE News story progress bar and stating number of minutes:
     https://ghost.org/tutorials/show-reading-time-progress/
     https://codepen.io/rgg/details/QbRyOq
 - DONE Refactored 'back to top' button to use vanilla JS and not jQuery
 - DONE Performance enhancement: Zoom Timeline scripts and style sheets dynamically added on About page only
+
 - New ‘for the public’ page, including BMC videos. Need to figure out a narrative for this
