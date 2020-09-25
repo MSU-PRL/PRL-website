@@ -895,7 +895,7 @@ aside#prl-sticky-nav .aside-appear {
 .prl-progress-bar {
   position: fixed;
   z-index: 100;
-  height: 12px;
+  height: 9px;
   bottom: 0;
   -webkit-transition: 0.5s;
   transition: 0.5s;
