@@ -179,10 +179,9 @@
             border-bottom: 0px solid transparent;
             img {
               border-radius: $border-radius-material-design-card;
-              -webkit-box-shadow: $img-shadow;
               box-shadow: $img-shadow;
-              -webkit-transition: $tran-half-sec;
               transition: $tran-half-sec;
+              width: 100%;
               &:hover {
                 opacity: $img-hover-opacity
               }
