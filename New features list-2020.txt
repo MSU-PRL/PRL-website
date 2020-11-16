@@ -42,3 +42,6 @@
 - DONE Performance enhancement: Zoom Timeline scripts and style sheets dynamically added on About page only
 
 - New ‘for the public’ page, including BMC videos. Need to figure out a narrative for this
+  - Nov 2020 update: not a good idea due to potentially low page view numbers. Instead:
+    - redo 'Research Projects' section to match new DOE grant.
+    - simplify language and shorten research descriptions for 3 PRL subprojects 
