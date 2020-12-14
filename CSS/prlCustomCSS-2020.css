@@ -1473,8 +1473,8 @@ main.mainContent .mainContent__sideNav ul li a {
           grid-template-areas: "tt tt im im im" "dt dt im im im" "sm sm sm sm sm";
       -ms-grid-columns: (1fr)[2] (9%)[3];
           grid-template-columns: repeat(2, 1fr) repeat(3, 9%);
-      -ms-grid-rows: 0fr 2.75ch auto;
-          grid-template-rows: 0fr 2.75ch auto;
+      -ms-grid-rows: 0fr 2ch auto;
+          grid-template-rows: 0fr 2ch auto;
       gap: 4px 2px;
       padding: 16px;
       margin-bottom: 0;
