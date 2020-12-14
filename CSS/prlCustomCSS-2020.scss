@@ -1301,210 +1301,109 @@
   }
 }
 
-/* --------------------------------------------------------
-                MAIN NEWS PAGE CARD DISPLAY
--------------------------------------------------------- */
+/* ----------------------------------------------------------------
+                MAIN NEWS & RESEARCH HIGHLIGHTS PAGES
+---------------------------------------------------------------- */
 
-#newsevents.news {
-  #MainContent {
-    .mura-collection.mura-grid-two {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
-      width: auto;
-      float: none;
-      margin-bottom: 16px; /* Space between news items and pagination nav */
-      display: flex;
-      justify-content: flex-start;
-      .mura-collection-item {
-        width: 48%; // For non-flex devices
-        flex-basis: calc(50% - 9px);
-        display: flex;
-        float: left;
+// This is a new website section, as of October 2019. Two new approaches are used: 1. CSS Grid for layout and 2. Mobile-first design.
+div.prl-research-highlights, div.prl-news-folder {
+  .hasImage {
+    // Container around each item
+    @extend .prl-card-outline; // For outline, but number of overrides, below.
+    display: inline-block;
+    min-height: 0px !important;
+    padding: 0 0 16px !important;
+    border-bottom: 1px solid $x-light-grey;
+    border-radius: 0px;
+    box-shadow: none;
+    .image {
+      //position: relative;
+      @extend .prl-card-image;
+      grid-area: im;
+      margin: 0 0 6px 6px;
+      width: 33%;
+      float: right;
+      img {
+        padding: 0px;
+        @extend .prl-card-image-hover;
+        border-radius: $border-radius-material-design-card;
+        border: 1px solid $x-light-grey;
       }
-      .mura-collection-item:nth-child(odd) {
-        margin-right: 16px;
-      }
-      .mura-collection-item__holder {
-        height: auto;
-        width: 100%;
-        position: relative;
-        margin-top: 0;
-        padding: 0;
-        overflow: hidden;
-        @extend .prl-card-outline;
-        .mura-item-content {
-          position: relative;
-          margin: 0;
-          height: 14.4rem;
-          overflow: hidden;
-          a {
-            img {
-              width: 100%;
-              padding: 0;
-              -webkit-transform: translateY(-0.625rem);
-              transform: translateY(-0.625rem); // makes the card slightly smaller
-              border-radius: 0; // Overrides Natsci CSS
-              -webkit-box-shadow: none;
-              box-shadow: none; // Overrides Natsci CSS
-            }
-            &:focus {
-              opacity: 0.9;
-            }
-          }
-        }
-        .mura-item-meta {
-          @extend .prl-card-body;
-          .mura-item-meta__title {
-            @extend .prl-card-title;
-          }
-          .mura-item-meta__date {
-            @extend .prl-card-date;
-          }
-          .mura-item-meta__summary {
-            @extend .prl-card-summary;
-            overflow: hidden;
-            margin-bottom: 25px;
-          }
-          .mura-item-meta__tags {
-            position: absolute;
-            padding: 4px 16px;
-            margin-left: -16px;
-            z-index: 1000;
-            bottom: 0;
-            font-size: 0.75rem !important;
-            background: #f5f5f5;
-            width: 100%;
-            .labelel {
-              display: none;
-            }
-            a {
-              font-weight: 300;
-              line-height: 1.4;
-              border-bottom: none;
-            }
-            span:after {
-              // Comma after each tag item is in primary color
-              color: $primary-color;
-            }
-          }
-          .mura-item-meta__readmore {
-            @extend .prl-readmore-fill-container;
-          }
-        }
-        &:hover {
-          @extend .prl-card-hover;
+    }
+    .title {
+      grid-area: tt;
+      font-size: 1rem !important;
+      @extend .prl-card-title;
+      a { 
+        text-decoration: underline;
+        &:focus, &:hover {
+          text-decoration: none;
         }
       }
     }
-  }
-}
-
-@media (min-width: 992px) and (max-width: 1199px) {
-  #newsevents.news {
-    // Adjusting News page cards to small desktop
-    #MainContent {
-      .mura-collection.mura-grid-two {
-        .mura-collection-item {
-          width: 47% !important; // For non-flex devices
-          .mura-collection-item__holder {
-            .mura-item-content {
-              height: 30vh !important;
-              height: 13.3rem !important;
-            }
-            .mura-item-meta {
-              .mura-item-meta__tags {
-                font-size: 0.7rem !important;
-                letter-spacing: -0.8px;
-              }
-            }
-          }
-        }
+    .summary {
+      @extend .prl-card-summary; 
+      grid-area: sm;
+    }
+    .date.releaseDate {
+      @extend .prl-card-date;
+      grid-area: dt;
+      padding: 8px 0 0 0;
+      line-height: 1.4;
+      font-size: 12px;
+    }
+    .tags {
+      grid-area: tg;
+      padding-top: 8px;
+      font-size: 12px;
+      line-height: 1.4;
+      .labelel {
+        display: none;
       }
     }
   }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  #newsevents.news {
-    // Adjusting News page cards to tablets and small desktop
-    #MainContent {
-      .mura-collection.mura-grid-two {
-        .mura-collection-item {
-          width: 47% !important; // For non-flex devices
-          .mura-collection-item__holder {
-            border-bottom: $primary-color 5px solid; // extend .prl-card-w-border component
-            .mura-item-content {
-              height: 13.3rem !important;
-            }
-            .mura-item-meta__summary {
-              margin-bottom: 0px !important;
-            }
-            .mura-item-meta {
-              .mura-item-meta__tags {
-                display: none;
-              }
-            }
-            &:after {
-              content: none;
-            }
-          }
-        }
-      }
-    }
+  .last.hasImage {
+    border-bottom: 0px;
   }
 }
 
-@media (max-width: 767px) {
-  // Media query for all mobile devices
-  #newsevents.news {
-    #MainContent {
-      .mura-collection.mura-grid-two {
-        .mura-collection-item {
-          width: 100% !important; // For non-flex devices
-        }
-        .mura-collection-item__holder {
-          border-bottom: $primary-color 5px solid; // extend .prl-card-w-border component
-          .mura-item-content {
-            height: auto !important;
-            max-height: 17rem !important; // limiting the height of images
-          }
-          .mura-item-meta {
-            .mura-item-meta__title {
-              font-size: 1rem;
-            }
-            .mura-item-meta__summary {
-              margin-bottom: 0px !important;
-            }
-            .mura-item-meta__tags {
-              display: none;
-            }
-          }
-          &:after {
-            content: none;
-          }
+@media (min-width: 568px) {
+  // Styles for small mobile, landscape, and larger screens. Uses CSS Grid.
+  div.prl-research-highlights, div.prl-news-folder {
+    .hasImage {
+      display: grid;
+      // Container around each item
+      grid-template-areas:
+      "tt tt im im im"
+      "sm sm im im im"
+      "dt tg tg tg . ";
+      grid-template-columns: [col] auto 1fr repeat(3,9%);
+      padding: 16px !important;
+      border: 1px solid $x-light-grey;
+      border-radius: 12px;
+      .image {
+        width: auto;
+        margin: 0 0 8px 8px;
+      }
+      .title {
+        font-size: 1.125rem !important;
+        padding-right: 16px;
+      }
+      .summary {
+        padding-right: 16px;
+      }
+      .date.releaseDate {
+        &:after {
+          content: "|";
+          padding-right: 5px;
         }
       }
     }
-  }
-}
-
-@media (max-width: 580px) {
-  // Media query for smaller mobile devices, only one news item per row
-  #newsevents.news {
-    #MainContent {
-      .mura-collection.mura-grid-two {
-        .mura-collection-item, .mura-collection-item:nth-child(odd) {
-          -ms-flex-preferred-size: 100%;
-          flex-basis: 100%;
-          margin-right: 0;
-        }
-      }
+    .last.hasImage {
+      border: 1px solid $x-light-grey;
     }
   }
 }
-
 
 /* --------------------------------------------------------
                 NEWS STORIES
@@ -1612,105 +1511,6 @@
   // Hide "Categories" menu in news stories.
   .prl-categories-aside {
     display: none;
-  }
-}
-
-
-/* --------------------------------------------------------
-                MAIN RESEARCH HIGHLIGHTS PAGE
--------------------------------------------------------- */
-
-// This is a new website section, as of October 2019. Two new approaches are used: 1. CSS Grid for layout and 2. Mobile-first design.
-div.prl-research-highlights {
-  .hasImage {
-    // Container around each item
-    @extend .prl-card-outline; // For outline, but number of overrides, below.
-    display: inline-block;
-    min-height: 0px !important;
-    padding: 0 0 16px !important;
-    border-bottom: 1px solid $x-light-grey;
-    border-radius: 0px;
-    -webkit-box-shadow: none;
-            box-shadow: none;
-    .image {
-      //position: relative;
-      @extend .prl-card-image;
-      grid-area: im;
-      margin: 0 0 6px 6px;
-      width: 33%;
-      float: right;
-      img {
-        padding: 0px;
-        @extend .prl-card-image-hover;
-        border-radius: $border-radius-material-design-card;
-        border: 1px solid $x-light-grey;
-      }
-    }
-    .title {
-      grid-area: tt;
-      font-size: 1rem !important;
-      @extend .prl-card-title;
-    }
-    .summary {
-      @extend .prl-card-summary; 
-      grid-area: sm;
-    }
-    .date.releaseDate {
-      @extend .prl-card-date;
-      grid-area: dt;
-      padding: 8px 0 0 0;
-      line-height: 1.4;
-      font-size: 12px;
-    }
-    .tags {
-      grid-area: tg;
-      padding-top: 8px;
-      font-size: 12px;
-      line-height: 1.4;
-      .labelel {
-        display: none;
-      }
-    }
-  }
-  .last.hasImage {
-    border-bottom: 0px;
-  }
-}
-@media (min-width: 568px) {
-  // Styles for small mobile, landscape, and larger screens. Uses CSS Grid.
-  div.prl-research-highlights {
-    .hasImage {
-      display: grid;
-      // Container around each item
-      grid-template-areas:
-      "tt tt im im im"
-      "sm sm im im im"
-      "dt tg tg tg . ";
-      grid-template-columns: [col] auto 1fr repeat(3,9%);
-      padding: 16px !important;
-      border: 1px solid $x-light-grey;
-      border-radius: 12px;
-      .image {
-        width: auto;
-        margin: 0 0 8px 8px;
-      }
-      .title {
-        font-size: 1.125rem !important;
-        padding-right: 16px;
-      }
-      .summary {
-        padding-right: 16px;
-      }
-      .date.releaseDate {
-        &:after {
-          content: "|";
-          padding-right: 5px;
-        }
-      }
-    }
-    .last.hasImage {
-      border: 1px solid $x-light-grey;
-    }
   }
 }
 

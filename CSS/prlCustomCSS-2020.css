@@ -349,7 +349,7 @@ nav#sideNavMultilevel.mainContent__sideNav > h2.mainContent__sideNavTitle {
 /* ---------------------------------------------------------------------------------
         CARD COMPONENTS - ALSO USED FOR ITEMS IN NEWS AND HOMEPAGE EVENTS
 ------------------------------------------------------------------------------------ */
-.prl-card-outline, .prl-relcontent-body, .prl-card, .prl-card-w-border, .prl-card-hover-effect, .prl-home-event-cards.mura-object .mura-collection-item, #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder, div.prl-research-highlights .hasImage {
+.prl-card-outline, .prl-relcontent-body, .prl-card, .prl-card-w-border, .prl-card-hover-effect, .prl-home-event-cards.mura-object .mura-collection-item, div.prl-research-highlights .hasImage, div.prl-news-folder .hasImage {
   background: #fff;
   border-bottom: 0px transparent;
   border-radius: 12px;
@@ -359,13 +359,13 @@ nav#sideNavMultilevel.mainContent__sideNav > h2.mainContent__sideNavTitle {
   -webkit-transition: 0.35s;
   transition: 0.35s; }
 
-.prl-card-hover, .prl-relcontent-body:hover, .prl-card-hover-effect:hover, .prl-home-event-cards.mura-object .mura-collection-item:hover, #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder:hover {
+.prl-card-hover, .prl-relcontent-body:hover, .prl-card-hover-effect:hover, .prl-home-event-cards.mura-object .mura-collection-item:hover {
   -webkit-box-shadow: 0px 6px 6px -3px rgba(0, 0, 0, 0.2), 0px 10px 14px 1px rgba(0, 0, 0, 0.14), 0px 4px 18px 3px rgba(0, 0, 0, 0.12);
   box-shadow: 0px 6px 6px -3px rgba(0, 0, 0, 0.2), 0px 10px 14px 1px rgba(0, 0, 0, 0.14), 0px 4px 18px 3px rgba(0, 0, 0, 0.12); }
 
-.prl-card-image, div.prl-research-highlights .hasImage .image, .prl-card-image-only {
+.prl-card-image, div.prl-research-highlights .hasImage .image, div.prl-news-folder .hasImage .image, .prl-card-image-only {
   position: relative; }
-  .prl-card-image .prl-card-image-overlay, div.prl-research-highlights .hasImage .image .prl-card-image-overlay, .prl-card-image .prl-card-image-no-summary-overlay, div.prl-research-highlights .hasImage .image .prl-card-image-no-summary-overlay, .prl-card-image-only .prl-card-image-overlay, .prl-card-image-only .prl-card-image-no-summary-overlay {
+  .prl-card-image .prl-card-image-overlay, div.prl-research-highlights .hasImage .image .prl-card-image-overlay, div.prl-news-folder .hasImage .image .prl-card-image-overlay, .prl-card-image .prl-card-image-no-summary-overlay, div.prl-research-highlights .hasImage .image .prl-card-image-no-summary-overlay, div.prl-news-folder .hasImage .image .prl-card-image-no-summary-overlay, .prl-card-image-only .prl-card-image-overlay, .prl-card-image-only .prl-card-image-no-summary-overlay {
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -374,27 +374,37 @@ nav#sideNavMultilevel.mainContent__sideNav > h2.mainContent__sideNavTitle {
     font-weight: 400 !important;
     margin: 0;
     padding: 16px; }
-    .prl-card-image .prl-card-image-overlay h1, div.prl-research-highlights .hasImage .image .prl-card-image-overlay h1,
+    .prl-card-image .prl-card-image-overlay h1, div.prl-research-highlights .hasImage .image .prl-card-image-overlay h1, div.prl-news-folder .hasImage .image .prl-card-image-overlay h1,
     .prl-card-image .prl-card-image-overlay h2,
     div.prl-research-highlights .hasImage .image .prl-card-image-overlay h2,
+    div.prl-news-folder .hasImage .image .prl-card-image-overlay h2,
     .prl-card-image .prl-card-image-overlay h3,
     div.prl-research-highlights .hasImage .image .prl-card-image-overlay h3,
+    div.prl-news-folder .hasImage .image .prl-card-image-overlay h3,
     .prl-card-image .prl-card-image-overlay h4,
     div.prl-research-highlights .hasImage .image .prl-card-image-overlay h4,
+    div.prl-news-folder .hasImage .image .prl-card-image-overlay h4,
     .prl-card-image .prl-card-image-overlay h5,
     div.prl-research-highlights .hasImage .image .prl-card-image-overlay h5,
+    div.prl-news-folder .hasImage .image .prl-card-image-overlay h5,
     .prl-card-image .prl-card-image-overlay h6,
-    div.prl-research-highlights .hasImage .image .prl-card-image-overlay h6, .prl-card-image .prl-card-image-no-summary-overlay h1, div.prl-research-highlights .hasImage .image .prl-card-image-no-summary-overlay h1,
+    div.prl-research-highlights .hasImage .image .prl-card-image-overlay h6,
+    div.prl-news-folder .hasImage .image .prl-card-image-overlay h6, .prl-card-image .prl-card-image-no-summary-overlay h1, div.prl-research-highlights .hasImage .image .prl-card-image-no-summary-overlay h1, div.prl-news-folder .hasImage .image .prl-card-image-no-summary-overlay h1,
     .prl-card-image .prl-card-image-no-summary-overlay h2,
     div.prl-research-highlights .hasImage .image .prl-card-image-no-summary-overlay h2,
+    div.prl-news-folder .hasImage .image .prl-card-image-no-summary-overlay h2,
     .prl-card-image .prl-card-image-no-summary-overlay h3,
     div.prl-research-highlights .hasImage .image .prl-card-image-no-summary-overlay h3,
+    div.prl-news-folder .hasImage .image .prl-card-image-no-summary-overlay h3,
     .prl-card-image .prl-card-image-no-summary-overlay h4,
     div.prl-research-highlights .hasImage .image .prl-card-image-no-summary-overlay h4,
+    div.prl-news-folder .hasImage .image .prl-card-image-no-summary-overlay h4,
     .prl-card-image .prl-card-image-no-summary-overlay h5,
     div.prl-research-highlights .hasImage .image .prl-card-image-no-summary-overlay h5,
+    div.prl-news-folder .hasImage .image .prl-card-image-no-summary-overlay h5,
     .prl-card-image .prl-card-image-no-summary-overlay h6,
-    div.prl-research-highlights .hasImage .image .prl-card-image-no-summary-overlay h6, .prl-card-image-only .prl-card-image-overlay h1,
+    div.prl-research-highlights .hasImage .image .prl-card-image-no-summary-overlay h6,
+    div.prl-news-folder .hasImage .image .prl-card-image-no-summary-overlay h6, .prl-card-image-only .prl-card-image-overlay h1,
     .prl-card-image-only .prl-card-image-overlay h2,
     .prl-card-image-only .prl-card-image-overlay h3,
     .prl-card-image-only .prl-card-image-overlay h4,
@@ -412,15 +422,19 @@ nav#sideNavMultilevel.mainContent__sideNav > h2.mainContent__sideNavTitle {
       padding-bottom: 0 !important;
       text-transform: initial;
       line-height: 1.4; }
-    .prl-card-image .prl-card-image-overlay p, div.prl-research-highlights .hasImage .image .prl-card-image-overlay p,
+    .prl-card-image .prl-card-image-overlay p, div.prl-research-highlights .hasImage .image .prl-card-image-overlay p, div.prl-news-folder .hasImage .image .prl-card-image-overlay p,
     .prl-card-image .prl-card-image-overlay ul,
     div.prl-research-highlights .hasImage .image .prl-card-image-overlay ul,
+    div.prl-news-folder .hasImage .image .prl-card-image-overlay ul,
     .prl-card-image .prl-card-image-overlay ol,
-    div.prl-research-highlights .hasImage .image .prl-card-image-overlay ol, .prl-card-image .prl-card-image-no-summary-overlay p, div.prl-research-highlights .hasImage .image .prl-card-image-no-summary-overlay p,
+    div.prl-research-highlights .hasImage .image .prl-card-image-overlay ol,
+    div.prl-news-folder .hasImage .image .prl-card-image-overlay ol, .prl-card-image .prl-card-image-no-summary-overlay p, div.prl-research-highlights .hasImage .image .prl-card-image-no-summary-overlay p, div.prl-news-folder .hasImage .image .prl-card-image-no-summary-overlay p,
     .prl-card-image .prl-card-image-no-summary-overlay ul,
     div.prl-research-highlights .hasImage .image .prl-card-image-no-summary-overlay ul,
+    div.prl-news-folder .hasImage .image .prl-card-image-no-summary-overlay ul,
     .prl-card-image .prl-card-image-no-summary-overlay ol,
-    div.prl-research-highlights .hasImage .image .prl-card-image-no-summary-overlay ol, .prl-card-image-only .prl-card-image-overlay p,
+    div.prl-research-highlights .hasImage .image .prl-card-image-no-summary-overlay ol,
+    div.prl-news-folder .hasImage .image .prl-card-image-no-summary-overlay ol, .prl-card-image-only .prl-card-image-overlay p,
     .prl-card-image-only .prl-card-image-overlay ul,
     .prl-card-image-only .prl-card-image-overlay ol, .prl-card-image-only .prl-card-image-no-summary-overlay p,
     .prl-card-image-only .prl-card-image-no-summary-overlay ul,
@@ -428,7 +442,7 @@ nav#sideNavMultilevel.mainContent__sideNav > h2.mainContent__sideNavTitle {
       color: white !important;
       font-weight: 400 !important;
       margin: 0; }
-  .prl-card-image .prl-card-image-no-summary-overlay, div.prl-research-highlights .hasImage .image .prl-card-image-no-summary-overlay, .prl-card-image-only .prl-card-image-no-summary-overlay {
+  .prl-card-image .prl-card-image-no-summary-overlay, div.prl-research-highlights .hasImage .image .prl-card-image-no-summary-overlay, div.prl-news-folder .hasImage .image .prl-card-image-no-summary-overlay, .prl-card-image-only .prl-card-image-no-summary-overlay {
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px; }
 
@@ -439,32 +453,27 @@ nav#sideNavMultilevel.mainContent__sideNav > h2.mainContent__sideNavTitle {
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px; }
 
-.prl-card-image-hover, div.prl-research-highlights .hasImage .image img {
+.prl-card-image-hover, div.prl-research-highlights .hasImage .image img, div.prl-news-folder .hasImage .image img {
   -webkit-transition: 0.5s;
   transition: 0.5s; }
-  .prl-card-image-hover:hover, div.prl-research-highlights .hasImage .image img:hover {
+  .prl-card-image-hover:hover, div.prl-research-highlights .hasImage .image img:hover, div.prl-news-folder .hasImage .image img:hover {
     opacity: 0.8; }
 
-.prl-card-body, .prl-home-event-cards.mura-object .mura-collection-item .mura-collection-item__holder .mura-item-meta, #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta {
+.prl-card-body, .prl-home-event-cards.mura-object .mura-collection-item .mura-collection-item__holder .mura-item-meta {
   padding: 16px; }
-  .prl-card-body h1, .prl-home-event-cards.mura-object .mura-collection-item .mura-collection-item__holder .mura-item-meta h1, #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta h1,
+  .prl-card-body h1, .prl-home-event-cards.mura-object .mura-collection-item .mura-collection-item__holder .mura-item-meta h1,
   .prl-card-body h2,
   .prl-home-event-cards.mura-object .mura-collection-item .mura-collection-item__holder .mura-item-meta h2,
-  #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta h2,
   .prl-card-body h3,
   .prl-home-event-cards.mura-object .mura-collection-item .mura-collection-item__holder .mura-item-meta h3,
-  #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta h3,
   .prl-card-body h4,
   .prl-home-event-cards.mura-object .mura-collection-item .mura-collection-item__holder .mura-item-meta h4,
-  #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta h4,
   .prl-card-body h5,
   .prl-home-event-cards.mura-object .mura-collection-item .mura-collection-item__holder .mura-item-meta h5,
-  #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta h5,
   .prl-card-body h6,
-  .prl-home-event-cards.mura-object .mura-collection-item .mura-collection-item__holder .mura-item-meta h6,
-  #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta h6 {
+  .prl-home-event-cards.mura-object .mura-collection-item .mura-collection-item__holder .mura-item-meta h6 {
     text-transform: initial; }
-  .prl-card-body p, .prl-home-event-cards.mura-object .mura-collection-item .mura-collection-item__holder .mura-item-meta p, #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta p {
+  .prl-card-body p, .prl-home-event-cards.mura-object .mura-collection-item .mura-collection-item__holder .mura-item-meta p {
     margin: 0; }
 
 .prl-card-title, .prl-card h1, .prl-card-w-border h1, .prl-card-hover-effect h1,
@@ -482,20 +491,20 @@ nav#sideNavMultilevel.mainContent__sideNav > h2.mainContent__sideNavTitle {
 .prl-card-hover-effect h5,
 .prl-card h6,
 .prl-card-w-border h6,
-.prl-card-hover-effect h6, .prl-home-event-cards.mura-object .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__title, #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__title, div.prl-research-highlights .hasImage .title {
+.prl-card-hover-effect h6, .prl-home-event-cards.mura-object .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__title, div.prl-research-highlights .hasImage .title, div.prl-news-folder .hasImage .title {
   padding-bottom: 8px;
   margin-bottom: 0px;
   font-size: 1.125rem !important;
   line-height: 1.42857143;
   letter-spacing: -0.25px;
   font-weight: 600; }
-  .prl-card-title a, .prl-card h1 a, .prl-card-w-border h1 a, .prl-card-hover-effect h1 a, .prl-card h2 a, .prl-card-w-border h2 a, .prl-card-hover-effect h2 a, .prl-card h3 a, .prl-card-w-border h3 a, .prl-card-hover-effect h3 a, .prl-card h4 a, .prl-card-w-border h4 a, .prl-card-hover-effect h4 a, .prl-card h5 a, .prl-card-w-border h5 a, .prl-card-hover-effect h5 a, .prl-card h6 a, .prl-card-w-border h6 a, .prl-card-hover-effect h6 a, .prl-home-event-cards.mura-object .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__title a, #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__title a, div.prl-research-highlights .hasImage .title a {
+  .prl-card-title a, .prl-card h1 a, .prl-card-w-border h1 a, .prl-card-hover-effect h1 a, .prl-card h2 a, .prl-card-w-border h2 a, .prl-card-hover-effect h2 a, .prl-card h3 a, .prl-card-w-border h3 a, .prl-card-hover-effect h3 a, .prl-card h4 a, .prl-card-w-border h4 a, .prl-card-hover-effect h4 a, .prl-card h5 a, .prl-card-w-border h5 a, .prl-card-hover-effect h5 a, .prl-card h6 a, .prl-card-w-border h6 a, .prl-card-hover-effect h6 a, .prl-home-event-cards.mura-object .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__title a, div.prl-research-highlights .hasImage .title a, div.prl-news-folder .hasImage .title a {
     text-decoration: none;
     border-bottom: none !important;
     color: #444 !important;
     line-height: 1.2; }
 
-.prl-card-date, .prl-home-event-cards.mura-object .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__date, #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__date, div.prl-research-highlights .hasImage .date.releaseDate {
+.prl-card-date, .prl-home-event-cards.mura-object .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__date, div.prl-research-highlights .hasImage .date.releaseDate, div.prl-news-folder .hasImage .date.releaseDate {
   padding-bottom: 16px;
   margin: 0;
   color: #757575;
@@ -505,12 +514,12 @@ nav#sideNavMultilevel.mainContent__sideNav > h2.mainContent__sideNavTitle {
 .prl-card-summary, .prl-relcontent-body p, .prl-card p, .prl-card-w-border p, .prl-card-hover-effect p, .prl-card ul, .prl-card-w-border ul, .prl-card-hover-effect ul,
 .prl-card ol,
 .prl-card-w-border ol,
-.prl-card-hover-effect ol, .prl-home-event-cards.mura-object .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__summary, #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__summary, div.prl-research-highlights .hasImage .summary {
+.prl-card-hover-effect ol, .prl-home-event-cards.mura-object .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__summary, div.prl-research-highlights .hasImage .summary, div.prl-news-folder .hasImage .summary {
   font-size: 0.91rem !important;
   line-height: 1.5 !important;
   font-weight: 400;
   color: #757575; }
-  .prl-card-summary p, .prl-relcontent-body p p, .prl-card p p, .prl-card-w-border p p, .prl-card-hover-effect p p, .prl-card ul p, .prl-card-w-border ul p, .prl-card-hover-effect ul p, .prl-card ol p, .prl-card-w-border ol p, .prl-card-hover-effect ol p, .prl-home-event-cards.mura-object .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__summary p, #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__summary p, div.prl-research-highlights .hasImage .summary p,
+  .prl-card-summary p, .prl-relcontent-body p p, .prl-card p p, .prl-card-w-border p p, .prl-card-hover-effect p p, .prl-card ul p, .prl-card-w-border ul p, .prl-card-hover-effect ul p, .prl-card ol p, .prl-card-w-border ol p, .prl-card-hover-effect ol p, .prl-home-event-cards.mura-object .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__summary p, div.prl-research-highlights .hasImage .summary p, div.prl-news-folder .hasImage .summary p,
   .prl-card-summary ul,
   .prl-relcontent-body p ul,
   .prl-card p ul,
@@ -523,8 +532,8 @@ nav#sideNavMultilevel.mainContent__sideNav > h2.mainContent__sideNavTitle {
   .prl-card-w-border ol ul,
   .prl-card-hover-effect ol ul,
   .prl-home-event-cards.mura-object .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__summary ul,
-  #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__summary ul,
   div.prl-research-highlights .hasImage .summary ul,
+  div.prl-news-folder .hasImage .summary ul,
   .prl-card-summary ol,
   .prl-relcontent-body p ol,
   .prl-card p ol,
@@ -537,8 +546,8 @@ nav#sideNavMultilevel.mainContent__sideNav > h2.mainContent__sideNavTitle {
   .prl-card-w-border ol ol,
   .prl-card-hover-effect ol ol,
   .prl-home-event-cards.mura-object .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__summary ol,
-  #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__summary ol,
-  div.prl-research-highlights .hasImage .summary ol {
+  div.prl-research-highlights .hasImage .summary ol,
+  div.prl-news-folder .hasImage .summary ol {
     margin: 0; }
 
 .prl-card-readmore-btns {
@@ -549,7 +558,7 @@ nav#sideNavMultilevel.mainContent__sideNav > h2.mainContent__sideNavTitle {
     margin: 4px;
     display: inline-block !important; }
 
-.prl-readmore-fill-container, .prl-home-event-cards.mura-object .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__readmore, #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__readmore {
+.prl-readmore-fill-container, .prl-home-event-cards.mura-object .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__readmore {
   position: absolute;
   top: 0;
   left: 0;
@@ -557,7 +566,7 @@ nav#sideNavMultilevel.mainContent__sideNav > h2.mainContent__sideNavTitle {
   height: 100%;
   font-size: 0;
   z-index: 100; }
-  .prl-readmore-fill-container a, .prl-home-event-cards.mura-object .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__readmore a, #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__readmore a {
+  .prl-readmore-fill-container a, .prl-home-event-cards.mura-object .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__readmore a {
     display: inline-block;
     width: 100%;
     height: 100%;
@@ -1970,123 +1979,74 @@ main.mainContent .mainContent__sideNav ul li a {
   padding: 0px;
   list-style-type: none; }
 
-/* --------------------------------------------------------
-                MAIN NEWS PAGE CARD DISPLAY
--------------------------------------------------------- */
-#newsevents.news #MainContent .mura-collection.mura-grid-two {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-flow: row wrap;
-  flex-flow: row wrap;
-  width: auto;
-  float: none;
-  margin-bottom: 16px;
-  /* Space between news items and pagination nav */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start; }
-  #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item {
-    width: 48%;
-    -ms-flex-preferred-size: calc(50% - 9px);
-        flex-basis: calc(50% - 9px);
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    float: left; }
-  #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item:nth-child(odd) {
-    margin-right: 16px; }
-  #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder {
-    height: auto;
-    width: 100%;
-    position: relative;
-    margin-top: 0;
-    padding: 0;
-    overflow: hidden; }
-    #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-content {
-      position: relative;
-      margin: 0;
-      height: 14.4rem;
-      overflow: hidden; }
-      #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-content a img {
-        width: 100%;
-        padding: 0;
-        -webkit-transform: translateY(-0.625rem);
-        transform: translateY(-0.625rem);
-        border-radius: 0;
-        -webkit-box-shadow: none;
-        box-shadow: none; }
-      #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-content a:focus {
-        opacity: 0.9; }
-    #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__summary {
-      overflow: hidden;
-      margin-bottom: 25px; }
-    #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__tags {
-      position: absolute;
-      padding: 4px 16px;
-      margin-left: -16px;
-      z-index: 1000;
-      bottom: 0;
-      font-size: 0.75rem !important;
-      background: #f5f5f5;
-      width: 100%; }
-      #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__tags .labelel {
-        display: none; }
-      #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__tags a {
-        font-weight: 300;
-        line-height: 1.4;
-        border-bottom: none; }
-      #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__tags span:after {
-        color: #2E4D4D; }
-
-@media (min-width: 992px) and (max-width: 1199px) {
-  #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item {
-    width: 47% !important; }
-    #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item .mura-collection-item__holder .mura-item-content {
-      height: 30vh !important;
-      height: 13.3rem !important; }
-    #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__tags {
-      font-size: 0.7rem !important;
-      letter-spacing: -0.8px; } }
-
-@media (min-width: 768px) and (max-width: 991px) {
-  #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item {
-    width: 47% !important; }
-    #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item .mura-collection-item__holder {
-      border-bottom: #2E4D4D 5px solid; }
-      #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item .mura-collection-item__holder .mura-item-content {
-        height: 13.3rem !important; }
-      #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item .mura-collection-item__holder .mura-item-meta__summary {
-        margin-bottom: 0px !important; }
-      #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__tags {
-        display: none; }
-      #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item .mura-collection-item__holder:after {
-        content: none; } }
-
-@media (max-width: 767px) {
-  #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item {
-    width: 100% !important; }
-  #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder {
-    border-bottom: #2E4D4D 5px solid; }
-    #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-content {
-      height: auto !important;
-      max-height: 17rem !important; }
-    #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__title {
-      font-size: 1rem; }
-    #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__summary {
-      margin-bottom: 0px !important; }
-    #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-meta .mura-item-meta__tags {
+/* ----------------------------------------------------------------
+                MAIN NEWS & RESEARCH HIGHLIGHTS PAGES
+---------------------------------------------------------------- */
+div.prl-research-highlights .hasImage, div.prl-news-folder .hasImage {
+  display: inline-block;
+  min-height: 0px !important;
+  padding: 0 0 16px !important;
+  border-bottom: 1px solid #e6e6e6;
+  border-radius: 0px;
+  -webkit-box-shadow: none;
+          box-shadow: none; }
+  div.prl-research-highlights .hasImage .image, div.prl-news-folder .hasImage .image {
+    grid-area: im;
+    margin: 0 0 6px 6px;
+    width: 33%;
+    float: right; }
+    div.prl-research-highlights .hasImage .image img, div.prl-news-folder .hasImage .image img {
+      padding: 0px;
+      border-radius: 12px;
+      border: 1px solid #e6e6e6; }
+  div.prl-research-highlights .hasImage .title, div.prl-news-folder .hasImage .title {
+    grid-area: tt;
+    font-size: 1rem !important; }
+    div.prl-research-highlights .hasImage .title a, div.prl-news-folder .hasImage .title a {
+      text-decoration: underline; }
+      div.prl-research-highlights .hasImage .title a:focus, div.prl-research-highlights .hasImage .title a:hover, div.prl-news-folder .hasImage .title a:focus, div.prl-news-folder .hasImage .title a:hover {
+        text-decoration: none; }
+  div.prl-research-highlights .hasImage .summary, div.prl-news-folder .hasImage .summary {
+    grid-area: sm; }
+  div.prl-research-highlights .hasImage .date.releaseDate, div.prl-news-folder .hasImage .date.releaseDate {
+    grid-area: dt;
+    padding: 8px 0 0 0;
+    line-height: 1.4;
+    font-size: 12px; }
+  div.prl-research-highlights .hasImage .tags, div.prl-news-folder .hasImage .tags {
+    grid-area: tg;
+    padding-top: 8px;
+    font-size: 12px;
+    line-height: 1.4; }
+    div.prl-research-highlights .hasImage .tags .labelel, div.prl-news-folder .hasImage .tags .labelel {
       display: none; }
-    #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder:after {
-      content: none; } }
 
-@media (max-width: 580px) {
-  #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item, #newsevents.news #MainContent .mura-collection.mura-grid-two .mura-collection-item:nth-child(odd) {
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
-    margin-right: 0; } }
+div.prl-research-highlights .last.hasImage, div.prl-news-folder .last.hasImage {
+  border-bottom: 0px; }
+
+@media (min-width: 568px) {
+  div.prl-research-highlights .hasImage, div.prl-news-folder .hasImage {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "tt tt im im im" "sm sm im im im" "dt tg tg tg . ";
+    -ms-grid-columns: [col] auto 1fr (9%)[3];
+        grid-template-columns: [col] auto 1fr repeat(3, 9%);
+    padding: 16px !important;
+    border: 1px solid #e6e6e6;
+    border-radius: 12px; }
+    div.prl-research-highlights .hasImage .image, div.prl-news-folder .hasImage .image {
+      width: auto;
+      margin: 0 0 8px 8px; }
+    div.prl-research-highlights .hasImage .title, div.prl-news-folder .hasImage .title {
+      font-size: 1.125rem !important;
+      padding-right: 16px; }
+    div.prl-research-highlights .hasImage .summary, div.prl-news-folder .hasImage .summary {
+      padding-right: 16px; }
+    div.prl-research-highlights .hasImage .date.releaseDate:after, div.prl-news-folder .hasImage .date.releaseDate:after {
+      content: "|";
+      padding-right: 5px; }
+  div.prl-research-highlights .last.hasImage, div.prl-news-folder .last.hasImage {
+    border: 1px solid #e6e6e6; } }
 
 /* --------------------------------------------------------
                 NEWS STORIES
@@ -2133,71 +2093,6 @@ main.mainContent .mainContent__sideNav ul li a {
 
 #newsevents.depth-3 .prl-categories-aside {
   display: none; }
-
-/* --------------------------------------------------------
-                MAIN RESEARCH HIGHLIGHTS PAGE
--------------------------------------------------------- */
-div.prl-research-highlights .hasImage {
-  display: inline-block;
-  min-height: 0px !important;
-  padding: 0 0 16px !important;
-  border-bottom: 1px solid #e6e6e6;
-  border-radius: 0px;
-  -webkit-box-shadow: none;
-  box-shadow: none; }
-  div.prl-research-highlights .hasImage .image {
-    grid-area: im;
-    margin: 0 0 6px 6px;
-    width: 33%;
-    float: right; }
-    div.prl-research-highlights .hasImage .image img {
-      padding: 0px;
-      border-radius: 12px;
-      border: 1px solid #e6e6e6; }
-  div.prl-research-highlights .hasImage .title {
-    grid-area: tt;
-    font-size: 1rem !important; }
-  div.prl-research-highlights .hasImage .summary {
-    grid-area: sm; }
-  div.prl-research-highlights .hasImage .date.releaseDate {
-    grid-area: dt;
-    padding: 8px 0 0 0;
-    line-height: 1.4;
-    font-size: 12px; }
-  div.prl-research-highlights .hasImage .tags {
-    grid-area: tg;
-    padding-top: 8px;
-    font-size: 12px;
-    line-height: 1.4; }
-    div.prl-research-highlights .hasImage .tags .labelel {
-      display: none; }
-
-div.prl-research-highlights .last.hasImage {
-  border-bottom: 0px; }
-
-@media (min-width: 568px) {
-  div.prl-research-highlights .hasImage {
-    display: -ms-grid;
-    display: grid;
-        grid-template-areas: "tt tt im im im" "sm sm im im im" "dt tg tg tg . ";
-    -ms-grid-columns: [col] auto 1fr (9%)[3];
-        grid-template-columns: [col] auto 1fr repeat(3, 9%);
-    padding: 16px !important;
-    border: 1px solid #e6e6e6;
-    border-radius: 12px; }
-    div.prl-research-highlights .hasImage .image {
-      width: auto;
-      margin: 0 0 8px 8px; }
-    div.prl-research-highlights .hasImage .title {
-      font-size: 1.125rem !important;
-      padding-right: 16px; }
-    div.prl-research-highlights .hasImage .summary {
-      padding-right: 16px; }
-    div.prl-research-highlights .hasImage .date.releaseDate:after {
-      content: "|";
-      padding-right: 5px; }
-  div.prl-research-highlights .last.hasImage {
-    border: 1px solid #e6e6e6; } }
 
 /* ---------------------------------------------------
                 RESEARCH HIGHLIGHTS
