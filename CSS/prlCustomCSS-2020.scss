@@ -458,6 +458,7 @@
 -------------------------------------------------------- */
 
 .prl-home-events {
+  // Styles for title header and 'View all events' button
   h2 {
     @extend .prl-h2-alternate;
     margin-bottom: 50px;
@@ -471,165 +472,103 @@
   }
 }
 
-.prl-home-event-cards.mura-object {
-  margin-bottom: 2rem;
-  margin-right: 0; // overrides Mura default
-  div.mura-collection.mura-grid-three {
-    .mura-collection-item:first-child {
-      float: left;
-      margin-right: 1.75%;
-      margin-left: 1%;
-    }
-    .mura-collection-item:last-child {
-      float: right;
-      margin-right: 1%;
-    }
-  }
-  .mura-collection-item {
-    width: 31.5%;
-    @extend .prl-card-outline;
-    .mura-collection-item__holder {
-      padding: 0;
+.prl-home-event-cards .mura-object-content .mura-index {
+  // Card styles
+  border-top: none;
+  div {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 2rem;
+    margin-right: 0; // overrides Mura default
+    .hasImage {
+      @extend .prl-card-outline;
+      flex-basis: 32%;
+      display: grid;
+      grid-template-areas:
+        "tt tt im im im"
+        "dt dt im im im"
+        "sm sm sm sm sm";
+      grid-template-columns: repeat(2, 1fr) repeat(3, 9%);
+      grid-template-rows: 0fr 2.75ch auto;
+      gap: 4px 2px;
+      padding: 16px;
+      margin-bottom: 0;
+      border: 1px solid $x-light-grey;
+      box-shadow: none;
       border-radius: $border-radius-material-design-card;
-      -webkit-transition: $tran-half-sec;
-      transition: $tran-half-sec;
-      .mura-item-content {
-        border-radius: $border-radius-material-design-card $border-radius-material-design-card 0 0;
+      .image {
+        grid-area: im;
         position: relative;
-        margin: 0;
-        display: block;
-        overflow: hidden; // Image filling the div
-        height: auto;
-        width: 100%;
-        -webkit-transition: $tran-half-sec;
+        margin: 0 0 6px 6px;
         transition: $tran-half-sec;
-        border-bottom: 1px solid $material-border-bottomORtop-color;
         a {
-          display: block; // somehow solves weird bug where <a> takes up space in addition to the image
-          margin-bottom: -10px;
           border-bottom: none;
           img {
-            width: 100%;
+            border-radius: $border-radius-material-design-card;
+            border: 1px solid $x-light-grey;
           }
         }
         &:hover {
           opacity: $img-hover-opacity;
         }
       }
-      .mura-item-meta {
-        @extend .prl-card-body;
-        position: relative;
-        .mura-item-meta__title {
-          @extend .prl-card-title;
-        }
-        .mura-item-meta__date {
-          @extend .prl-card-date;
-        }
-        .mura-item-meta__summary {
-          @extend .prl-card-summary;
-          .prl-event-type {
-            // CRUCIAL: First <p> should be the event type for this styling
-            display: inline-block;
-            margin-bottom: 3px;
-            border-bottom: 1px solid $material-border-bottomORtop-color;
-            font-weight: 500;
-            color: $light-grey-text;
+      .title {
+        grid-area: tt;
+        @extend .prl-card-title;
+        padding-bottom: 0;
+        font-size: 1rem !important;
+        a {
+          text-decoration: underline;
+          &:hover, &:focus {
+            text-decoration: none;
           }
         }
-        .mura-item-meta__readmore {
-          @extend .prl-readmore-fill-container;
-        }
       }
-    }
-    &:hover {
-      @extend .prl-card-hover;
-    }
-  }
-}
-
-@media (min-width: 992px) and (max-width: 1199px) {
-  // Adjusting dimensions to the small desktop breakpoint
-  .prl-home-event-cards.mura-object {
-    padding: 0 15px; // as not to hug the edges
-    div.mura-collection.mura-grid-three {
-      .mura-collection-item:first-child {
-        float: left;
-        margin-left: 0;
-        margin-right: 1.25%;
+      .date {
+        grid-area: dt;
+        @extend .prl-card-date;
+        padding-bottom: 0;
       }
-      .mura-collection-item:last-child {
-        margin-right: 0px;
-      }
-    }
-    .mura-collection-item {
-      width: 32.5%;
-      .mura-collection-item__holder {
-        .mura-item-meta__title {
-          display: block;
-          white-space: nowrap;
-          text-overflow: ellipsis;
-          overflow: hidden;
+      .summary {
+        grid-area: sm;
+        @extend .prl-card-summary;
+        .prl-event-type {
+          // CRUCIAL: First <p> should be the event type for this styling
+          display: inline-block;
+          margin-bottom: 3px;
+          border-bottom: 1px solid $material-border-bottomORtop-color;
+          font-weight: 500;
+          color: $light-grey-text;
         }
       }
     }
   }
-}
+} 
 
 @media (max-width: 767px) {
-  // Adjusting dimensions to mobile breakpoint*/
-  .prl-home-event-cards.mura-object {
-    div.mura-collection.mura-grid-three {
-      // From Google Material Design Specs Padding from edge of screen to card: 8dp
-      /* margin-left: -16px;
-      margin-right: -16px; Keeps margins aligned with the rest of the page, on mobile */
-      .mura-collection-item:first-child {
-        margin-left: auto;
-        margin-right: auto;
+  // Adjusting card dimensions to mobile breakpoint*/
+  .prl-home-event-cards .mura-object-content .mura-index div {
+    .hasImage {
+      display: inline-block;
+      flex-basis: 100%;
+      margin-bottom: 16px;
+      .image {
+        width: 30%;
+        float: right;
       }
-      .mura-collection-item:last-child {
-        margin-left: auto;
-        margin-right: auto;
+      .date {
+        padding-top: 8px;
       }
-    }
-    .mura-collection-item {
-      float: left;
-      width: 100%;
-      margin: 0 auto 16px auto;
-      .mura-item-meta__readmore {
-        margin: 16px -16px -16px !important; // Creates distance between button and summary
+      .summary {
+        padding-top: 8px;
       }
     }
-  }
+    .last.hasImage {
+      margin-bottom: 0;
+    }
+  } 
 }
-
-@media (min-width: 768px)and(max-width: 991px) {
-  // Adjusting dimensions to tablet breakpoints
-  .prl-home-event-cards {
-    div.mura-collection.mura-grid-three {
-      .mura-collection-item:first-child {
-        margin-right: 2.25%;
-        margin-left: 0.5%;
-      }
-      .mura-collection-item:last-child {
-        margin-right: 0.5%;
-      }
-    }
-    .mura-collection-item {
-      .mura-item-meta__title {
-        display: block;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        overflow: hidden;
-      }
-      .mura-item-meta__summary {
-        .prl-event-type {
-          display: block;
-        }
-      }
-    }
-  }
-}
-
 
 /* --------------------------------------------------------
                 ABOUT PAGE
