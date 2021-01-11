@@ -41,7 +41,12 @@ button#expand, button#collapse {
   padding: 2px 8px; }
 
 prl-accordion-section {
-  display: block; }
+  display: block;
+  /* smaller font inside table body */ }
+  prl-accordion-section td, prl-accordion-section th {
+    border: 1px solid #ddd; }
+  prl-accordion-section > * {
+    font-size: 87%; }
 
 prl-accordion-section[role="region"] {
   border-width: 2px 0;

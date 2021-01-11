@@ -159,6 +159,13 @@ $shadow-depth-24: 0px 11px 15px -7px rgba(0, 0, 0, 0.2),
  prl-accordion-section {
   // Custom elements are inline by default
   display: block;
+  td, th {
+    border: 1px solid #ddd;
+  }
+  /* smaller font inside table body */
+  > * {
+    font-size: 87%;
+  }
  }
  
  prl-accordion-section[role="region"] {
