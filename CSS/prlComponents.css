@@ -203,6 +203,8 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
   border: none;
   text-align: center;
   padding: 0; }
+  figure img, figure.prl-figure img, figure.cke_widget_element img, .secondaryPageWrapper figure img {
+    display: inline; }
   figure a, figure.prl-figure a, figure.cke_widget_element a, .secondaryPageWrapper figure a {
     color: #113D34 !important; }
     figure a:hover, figure.prl-figure a:hover, figure.cke_widget_element a:hover, .secondaryPageWrapper figure a:hover {

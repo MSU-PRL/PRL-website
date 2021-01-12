@@ -353,6 +353,9 @@ figure, figure.prl-figure, figure.cke_widget_element, .secondaryPageWrapper figu
   text-align: center; // Center aligns the image
   // Overriding Mura CNS styles, as of January 2020
   padding: 0;
+  img{
+    display: inline;
+  }
   a {
     // overriding NatSci figure styles and reverting to PRL Link styles
     color: $natsci-complementary !important; // transition: $tran-short;
