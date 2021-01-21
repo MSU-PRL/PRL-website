@@ -1530,10 +1530,12 @@ main.mainContent .mainContent__sideNav ul li a {
         grid-area: sm; }
         .prl-home-event-cards .mura-object-content .mura-index div .hasImage .summary .prl-event-type {
           display: inline-block;
-          margin-bottom: 3px;
-          border-bottom: 1px solid rgba(160, 160, 160, 0.2);
-          font-weight: 500;
-          color: #757575; }
+          color: #757575;
+          font-style: italic; }
+        .prl-home-event-cards .mura-object-content .mura-index div .hasImage .summary p:last-child {
+          border-top: 1px solid rgba(160, 160, 160, 0.2);
+          margin-top: 3px;
+          padding-top: 3px; }
 
 @media (max-width: 767px) {
   .prl-home-event-cards .mura-object-content .mura-index div .hasImage {
@@ -1548,6 +1550,13 @@ main.mainContent .mainContent__sideNav ul li a {
       padding-top: 8px; }
     .prl-home-event-cards .mura-object-content .mura-index div .hasImage .summary {
       padding-top: 8px; }
+      .prl-home-event-cards .mura-object-content .mura-index div .hasImage .summary .prl-event-type {
+        border-bottom: 1px solid rgba(160, 160, 160, 0.2);
+        padding-bottom: 3px;
+        width: 65%; }
+      .prl-home-event-cards .mura-object-content .mura-index div .hasImage .summary p:last-child {
+        border-top: none;
+        margin-top: 0px; }
   .prl-home-event-cards .mura-object-content .mura-index div .last.hasImage {
     margin-bottom: 0; } }
 

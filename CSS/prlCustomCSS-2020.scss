@@ -536,10 +536,14 @@
         .prl-event-type {
           // CRUCIAL: First <p> should be the event type for this styling
           display: inline-block;
-          margin-bottom: 3px;
-          border-bottom: 1px solid $material-border-bottomORtop-color;
-          font-weight: 500;
           color: $light-grey-text;
+          font-style: italic;
+        }
+        p:last-child{
+          // CRUCIAL: Second and last <p> should be event summary
+          border-top: 1px solid $material-border-bottomORtop-color;
+          margin-top: 3px;
+          padding-top: 3px;
         }
       }
     }
@@ -562,6 +566,15 @@
       }
       .summary {
         padding-top: 8px;
+        .prl-event-type {
+          border-bottom: 1px solid $material-border-bottomORtop-color;
+          padding-bottom: 3px;
+          width: 65%;
+        }
+        p:last-child{
+          border-top: none;
+          margin-top: 0px;
+        }
       }
     }
     .last.hasImage {
