@@ -2404,7 +2404,8 @@ div.prl-research-highlights .last.hasImage, div.prl-news-folder .last.hasImage {
           border-radius: 100%;
           padding: 0;
           -webkit-transition: 0.5s;
-          transition: 0.5s; }
+          transition: 0.5s;
+          width: 80px; }
       .faculty #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-content:hover img,
       .faculty #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-content:focus img,
       .fixed-term-faculty #MainContent .mura-collection.mura-grid-two .mura-collection-item__holder .mura-item-content:hover img,
@@ -2591,7 +2592,7 @@ div.prl-research-highlights .last.hasImage, div.prl-news-folder .last.hasImage {
     .fixed-term-faculty #MainContent .mura-collection.mura-grid-two .mura-collection-item .mura-collection-item__holder .mura-item-content a img,
     .emeritus-faculty #MainContent .mura-collection.mura-grid-two .mura-collection-item .mura-collection-item__holder .mura-item-content a img,
     .staff #MainContent .mura-collection.mura-grid-two .mura-collection-item .mura-collection-item__holder .mura-item-content a img {
-      width: 93%; }
+      width: calc(80px * 0.93); }
     .faculty #MainContent .mura-collection.mura-grid-two .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__title,
     .fixed-term-faculty #MainContent .mura-collection.mura-grid-two .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__title,
     .emeritus-faculty #MainContent .mura-collection.mura-grid-two .mura-collection-item .mura-collection-item__holder .mura-item-meta .mura-item-meta__title,

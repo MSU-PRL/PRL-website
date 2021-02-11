@@ -1923,6 +1923,7 @@ div.prl-research-highlights, div.prl-news-folder {
               padding: 0; // Hover effect for cards with images.
               -webkit-transition: $tran-half-sec;
               transition: $tran-half-sec;
+              width: 80px; // allows for using large version of file, with best resolution
             }
           }
           &:hover img,
@@ -2099,7 +2100,7 @@ div.prl-research-highlights, div.prl-news-folder {
             .mura-item-content {
               a {
                 img {
-                  width: 93%;
+                  width: calc(80px * 0.93);
                 }
               }
             }
