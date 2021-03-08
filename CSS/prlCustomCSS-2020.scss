@@ -1325,10 +1325,16 @@ div.prl-research-highlights, div.prl-news-folder {
     .hasImage {
       display: grid;
       // Container around each item
+
+      // grid-template-areas:
+      // "tt tt im im im"
+      // "sm sm im im im"
+      // "dt tg tg tg . ";
+
       grid-template-areas:
-      "tt tt im im im"
+      "tt tt im im im" 
       "sm sm im im im"
-      "dt tg tg tg . ";
+      "dt tg im im im";
       grid-template-columns: [col] auto 1fr repeat(3,9%);
       padding: 16px !important;
       border: 1px solid $x-light-grey;

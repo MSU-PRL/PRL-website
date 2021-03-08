@@ -2051,7 +2051,7 @@ div.prl-research-highlights .last.hasImage, div.prl-news-folder .last.hasImage {
   div.prl-research-highlights .hasImage, div.prl-news-folder .hasImage {
     display: -ms-grid;
     display: grid;
-        grid-template-areas: "tt tt im im im" "sm sm im im im" "dt tg tg tg . ";
+        grid-template-areas: "tt tt im im im"  "sm sm im im im" "dt tg im im im";
     -ms-grid-columns: [col] auto 1fr (9%)[3];
         grid-template-columns: [col] auto 1fr repeat(3, 9%);
     padding: 16px !important;
